@@ -194,7 +194,7 @@ screens: {
 
 fonts: {
   'sans': [
-    'Roboto',
+    'Raleway',
     'system-ui',
     'BlinkMacSystemFont',
     '-apple-system',
@@ -209,7 +209,7 @@ fonts: {
     'sans-serif',
   ],
   'serif': [
-    'Merriweather',
+    'Bitter',
     'Constantia',
     'Lucida Bright',
     'Lucidabright',

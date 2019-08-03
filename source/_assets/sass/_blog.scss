@@ -1,22 +1,18 @@
 // Your custom blog styles here
 .site-logo {
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Bitter', serif;
+  @apply font-bold;
 }
 
 .hero {
   span {
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Bitter', serif;
     letter-spacing: 0.08em;
   }
-}
-.hero.hero-red {
-  background-image: $gradient-linear-red-dark;
-}
 
-footer {
-  background-image: $gradient-linear-grey-dark;
-  ul {
-    list-style: none;
+  &.hero-red {
+    //background-image: $gradient-linear-red-dark;
+    background-image: $gradient-1;
   }
 }
 

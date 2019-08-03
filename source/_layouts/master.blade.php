@@ -25,7 +25,7 @@
             @include('_partials.google_analytics')
         @endif
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,300i,400,400i,700,700i,800,800i|Alfa+Slab+One|Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Bitter" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
