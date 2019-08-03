@@ -11,9 +11,11 @@
         </div>
 
         <div id="vue-search" class="flex flex-1 justify-end items-center">
-            <search
-                data-belongs-to-blog="{{ $page->belongsTo('/blog') }}"
-            ></search>
+            @if($page->belongsTo('/blog'))
+                <search
+                    data-belongs-to-blog="{{ $page->belongsTo('/blog') }}"
+                ></search>
+            @endif
 
             @include('_nav.menu')
 
