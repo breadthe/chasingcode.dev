@@ -3,14 +3,14 @@
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'omigosh Labs',
-    'siteDescription' => 'omigosh Labs - Software that doesn\'t go boom!',
-    'siteAuthor' => 'The Dev',
+    'siteName' => 'Chasing Code',
+    'siteDescription' => 'Full stack dev from Chicago | Laravel | PHP | Vue | TailwindCSS',
+    'siteAuthor' => 'Constantin',
 
     // collections
     'collections' => [
         'posts' => [
-            'author' => 'The Dev', // Default author, if not provided in a post
+            'author' => 'Constantin', // Default author, if not provided in a post
             'sort' => '-date',
             'path' => function ($page)
             {
