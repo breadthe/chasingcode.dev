@@ -1,0 +1,45 @@
+// Your custom blog styles here
+.site-logo {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.hero {
+  span {
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 0.08em;
+  }
+}
+.hero.hero-red {
+  background-image: $gradient-linear-red-dark;
+}
+
+footer {
+  background-image: $gradient-linear-grey-dark;
+  ul {
+    list-style: none;
+  }
+}
+
+form {
+  @apply mx-auto;
+  @apply max-w-md;
+  @apply bg-grey-light;
+  @apply p-4;
+  @apply rounded;
+  @apply shadow-md;
+
+  input,
+  textarea {
+    @apply w-full;
+    @apply shadow-inner;
+    @apply rounded;
+    @apply p-2;
+  }
+
+  button[type='submit'] {
+    @apply p-2;
+    @apply bg-grey-dark;
+    @apply text-white;
+    @apply rounded;
+  }
+}
