@@ -1,4 +1,5 @@
-<section class="hero h-auto flex items-center flex-col {{ $page->belongsTo('/blog') ? 'pt-0 sm:pt-8' : 'hero-red py-6 sm:py-12' }}">
+<section class="hero h-auto flex items-center flex-col {{ $page->belongsTo('/blog') ? 'pt-0 sm:pt-8' : 'hero-gradient py-6 sm:py-12' }}">
+<section class="hero h-auto flex items-center flex-col {{ $page->belongsTo('/blog') ? 'pt-0 sm:pt-8' : 'hero-gradient py-6 sm:py-12' }}">
         <div class="text-center mb-2 flex items-center">
             @if ($page->belongsTo('/blog'))
                 <a href="/blog/feed.atom" class="mt-5 mr-2">
