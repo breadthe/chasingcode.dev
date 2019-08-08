@@ -2,7 +2,6 @@
 @import 'variables';
 
 @import "~tailwindcss/base";
-@import "~tailwindcss/components";
 
 // Code syntax highlighting,
 // powered by https://highlightjs.org
@@ -13,4 +12,5 @@
 @import 'mailchimp';
 @import 'blog';
 
+@import "~tailwindcss/components";
 @import "~tailwindcss/utilities";

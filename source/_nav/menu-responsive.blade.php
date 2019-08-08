@@ -1,5 +1,5 @@
 <nav id="js-nav-menu" class="nav-menu hidden lg:hidden {{ $page->belongsTo('/blog') ? 'bg-grey-lighter' : 'bg-red' }}">
-    <ul class="list-reset my-0">
+    <ul class="my-0">
         <li class="pl-4">
             <a
                 title="{{ $page->siteName }} Blog"
