@@ -1,4 +1,4 @@
-<nav id="js-nav-menu" class="nav-menu hidden lg:hidden {{ $page->belongsTo('/blog') ? 'bg-grey-lighter' : 'bg-red' }}">
+<nav id="js-nav-menu" class="nav-menu hidden lg:hidden">
     <ul class="my-0">
         <li class="pl-4">
             <a
@@ -8,8 +8,8 @@
                     nav-menu__item
                     {{
                         $page->belongsTo('/blog') ?
-                        'active text-grey-darkest hover:text-grey-darkest font-bold' :
-                        'text-pink-lightest hover:text-white'
+                        'active text-gray-600 hover:text-gray-900 font-bold' :
+                        ''
                     }}
                 "
 
@@ -23,8 +23,8 @@
                     nav-menu__item
                     {{
                         $page->belongsTo('/contact') ?
-                        'active text-white hover:text-white font-bold' :
-                        ($page->belongsTo('/blog') ? 'text-grey-dark hover:text-grey-darkest': 'text-pink-lightest hover:text-white')
+                        'active text-gray-600 hover:text-gray-900 font-bold' :
+                        'text-gray-600 hover:text-gray-900'
                     }}
                 "
             >Contact</a>

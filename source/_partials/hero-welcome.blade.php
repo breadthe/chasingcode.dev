@@ -1,6 +1,6 @@
 <section class="hero hero-gradient h-auto py-4 sm:py-16 flex items-center">
 
-    <div class="container mx-auto max-w-xl bg-white shadow" style="transform: rotate(2deg)">
+    <div class="container mx-auto max-w-4xl bg-white shadow" style="transform: rotate(2deg)">
         <div class="w-full p-8 mb-8" style="transform: rotate(-2deg)">
             <div class="text-center mb-2">
                 <h1 class="text-3xl sm:text-5xl font-light font-serif">SOFTWARE EXPERIMENTS</h1>

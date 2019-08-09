@@ -12,7 +12,7 @@
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
     @endif
 
-    <h1 class="font-serif font-light text-4xl text-pink-dark leading-normal text-center mb-2">{{ $page->title }}</h1>
+    <h1 class="font-serif text-4xl leading-normal text-center mb-2">{{ $page->title }}</h1>
 
     <p class="text-grey-darker text-md text-center md:mt-0">
         {{ $page->author }}  •  {{ date('F j, Y', $page->date) }}
@@ -20,7 +20,7 @@
 
     @include('_partials.post-hero-image')
 
-    <div class="border-b border-pink text-2xl font-light text-grey-darkest mb-10 pb-4" v-pre>
+    <div class="border-b border-gray-500 text-2xl font-light text-grey-darkest mb-10 pb-4" v-pre>
         @yield('content')
 
         @if ($page->categories)
@@ -28,7 +28,7 @@
                 <a
                         href="{{ '/blog/categories/' . $category }}"
                         title="View posts in {{ $category }}"
-                        class="inline-block bg-pink-lighter hover:bg-pink leading-loose tracking-wide text-white hover:text-white uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+                        class="inline-block bg-indigo-100 hover:bg-indigo-500 leading-loose tracking-wider text-indigo-900 hover:text-indigo-100 uppercase text-xs font-normal rounded mr-4 px-3 pt-px"
                 >{{ $category }}</a>
             @endforeach
         @endif

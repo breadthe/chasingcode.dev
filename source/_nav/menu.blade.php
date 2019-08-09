@@ -6,8 +6,8 @@
             ml-6
             {{
                 $page->belongsTo('/blog') ?
-                'active text-grey-darkest hover:text-grey-darkest border-b-2 border-grey-darkest' :
-                'text-pink-lightest hover:text-white'
+                'active text-gray-900 border-b-2 border-gray-900' :
+                ''
             }}"
     >
         Blog
@@ -20,8 +20,8 @@
             ml-6
             {{
                 $page->belongsTo('/contact') ?
-                'active text-white hover:text-white border-b-2 border-white' :
-                ($page->belongsTo('/blog') ? 'text-grey-dark hover:text-grey-darkest': 'text-pink-lightest hover:text-white')
+                'active text-gray-900 border-b-2 border-gray-900' :
+                ''
             }}"
     >
         Contact

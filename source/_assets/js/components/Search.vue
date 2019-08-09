@@ -10,7 +10,7 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast relative block h-10 w-full lg:w-1/2 lg:focus:w-3/4 bg-grey-lightest border border-grey focus:border-pink-light outline-none cursor-pointer text-grey-darker px-4 pb-0 shadow-inner"
+                class="transition-fast relative block h-10 w-full lg:w-1/2 lg:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-gray-600 outline-none cursor-pointer text-gray-600 px-4 pb-0 shadow-inner"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
@@ -22,16 +22,16 @@
 
             <button
                 v-if="query || searching"
-                class="absolute pin-t pin-r h-10 font-light text-3xl text-pink hover:text-pink-dark focus:outline-none -mt-px pr-7 md:pr-3"
+                class="absolute pin-t pin-r h-10 font-light text-3xl text-gray-500 hover:text-gray-600 focus:outline-none -mt-px pr-7 md:pr-3"
                 @click="reset"
             >&times;</button>
 
             <transition name="fade">
                 <div v-if="query" class="absolute pin-l pin-r md:pin-none w-full lg:w-3/4 text-left mb-4 md:mt-10">
-                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-pink-light rounded-b shadow-lg mx-4 md:mx-0">
+                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-gray-200 rounded-b shadow-lg mx-4 md:mx-0">
                         <a
                             v-for="(result, index) in results"
-                            class="bg-white hover:bg-pink-lightest border-b border-pink-light text-xl cursor-pointer p-4"
+                            class="bg-white hover:bg-gray-100 border-b border-gray-200 text-xl cursor-pointer p-4"
                             :class="{ 'rounded-b' : (index === results.length - 1) }"
                             :href="result.link"
                             :title="result.title"
@@ -40,12 +40,12 @@
                         >
                             {{ result.title }}
 
-                            <span class="block font-normal text-grey-darker text-sm my-1" v-html="result.snippet"></span>
+                            <span class="block font-normal text-gray-600 text-sm my-1" v-html="result.snippet"></span>
                         </a>
 
                         <div
                             v-if="! results.length"
-                            class="bg-white w-full hover:bg-pink-lightest border-b border-pink-light rounded-b-lg shadow cursor-pointer p-4"
+                            class="bg-white w-full hover:bg-gray-100 border-b border-gray-200 rounded-b-lg shadow cursor-pointer p-4"
                         >
                             <p class="my-0">No results for <strong>{{ query }}</strong></p>
                         </div>
@@ -111,14 +111,10 @@ export default {
             return this.query ? this.fuse.search(this.query) : [];
         },
         classes() {
-            return this.belongsToBlog ?
-                    'bg-grey-lighter border-grey-lighter' :
-                    'bg-red border-red';
+            return 'bg-gray-200 border-gray-200';
         },
         svgFill() {
-            return this.belongsToBlog ?
-                '#748294' : // text-grey-darker
-                '#ffffff';
+            return '#748294'; // text-gray-600
         }
     },
     methods: {

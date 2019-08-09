@@ -1,17 +1,18 @@
 // Your custom blog styles here
 .site-logo {
-  font-family: 'Bitter', serif;
+  @apply font-serif;
   @apply font-bold;
 }
 
 .hero {
   span {
-    font-family: 'Bitter', serif;
-    letter-spacing: 0.08em;
+    @apply font-serif;
+    @apply leading-loose;
+    //letter-spacing: 0.08em;
   }
 
   &.hero-gradient {
-    background-image: $gradient-2;
+    //background-image: $gradient-2;
   }
 }
 

@@ -18,7 +18,7 @@
 <h3>Get In Touch</h3>
 <p>We'll get back to you ASAP as possible!</p>
 
-<section class="container max-w-xl">
+<section class="container max-w-4xl">
     <form
         name="contact"
         method="post"
