@@ -8,7 +8,7 @@
                 <a
                         href="{{ '/blog/categories/' . $category }}"
                         title="View posts in {{ $category }}"
-                        class="bg-grey hover:bg-pink-lighter text-white hover:text-white text-xs capitalize rounded px-1"
+                        class="bg-gray-100 hover:bg-gray-700 text-gray-700 hover:text-gray-100 text-xs capitalize rounded px-1"
                 >{{ $category }}</a>
             @endforeach
         @endif
@@ -18,7 +18,7 @@
         <a
             href="{{ $post->getUrl() }}"
             title="Read more - {{ $post->title }}"
-            class="text-pink-dark hover:text-pink-darker font-extrabold leading-normal"
+            class="text-gray-700 hover:text-gray-900 font-extrabold leading-normal"
         >{{ $post->title }}</a>
     </h2>
 
@@ -30,7 +30,7 @@
                 <a
                         href="{{ $post->getUrl() }}"
                         title="Read more - {{ $post->title }}"
-                        class="text-pink-dark hover:text-pink-darker font-extrabold"
+                        class="text-gray-600 hover:text-gray-700 font-extrabold"
                 >
                     <img
                             src="{{ $image }}"
@@ -50,6 +50,6 @@
     <a
         href="{{ $post->getUrl() }}"
         title="Read more - {{ $post->title }}"
-        class="uppercase text-sm tracking-wide mb-2 hover:no-underline text-pink-dark hover:text-pink-darker text-right"
+        class="uppercase text-sm tracking-wide mb-2 hover:no-underline text-gray-600 hover:text-gray-700 text-right"
     >Read Full Post</a>
 </div>

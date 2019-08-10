@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
+    <body class="flex flex-col justify-between bg-grey-lightest text-grey-darkest leading-normal font-sans">
 
         @include('_partials.header')
 

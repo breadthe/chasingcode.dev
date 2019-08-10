@@ -36,7 +36,7 @@ pagination:
                 <a
                     href="{{ $previous }}"
                     title="Previous Page"
-                    class="bg-grey-lighter hover:bg-grey-light rounded mr-3 px-5 py-3"
+                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 leading-loose"
                 >&LeftArrow;</a>
             @endif
 
@@ -44,13 +44,13 @@ pagination:
                 @if($pagination->currentPage == $pageNumber)
                         <span
                                 title="Page {{ $pageNumber }}"
-                                class="bg-grey-lighter rounded mr-3 px-5 py-3 text-grey-dark"
+                                class="bg-gray-200 rounded mr-3 px-5 py-3 leading-loose"
                         >{{ $pageNumber }}</span>
                 @else
                         <a
                                 href="{{ $path }}"
                                 title="Go to Page {{ $pageNumber }}"
-                                class="bg-grey-lighter hover:bg-grey-light rounded mr-3 px-5 py-3 text-pink-dark"
+                                class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 leading-loose"
                         >{{ $pageNumber }}</a>
                 @endif
             @endforeach
@@ -59,7 +59,7 @@ pagination:
                 <a
                     href="{{ $next }}"
                     title="Next Page"
-                    class="bg-grey-lighter hover:bg-grey-light rounded mr-3 px-5 py-3"
+                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 leading-loose"
                 >&RightArrow;</a>
             @endif
         </nav>

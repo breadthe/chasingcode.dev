@@ -726,7 +726,7 @@ a:hover {
 }
 
 blockquote {
-  border-color: #ed64a6;
+  border-color: #a0aec0;
   border-left-width: 4px;
   font-weight: 400;
   font-style: italic;
@@ -812,7 +812,7 @@ h6 {
 
 hr {
   border-bottom-width: 1px;
-  border-color: #fed7e2;
+  border-color: #a0aec0;
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 9999px;

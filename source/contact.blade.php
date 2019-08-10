@@ -9,40 +9,41 @@
 
 @section('hero')
     @include('_partials.hero',[
-        'title' => 'Contact Us',
+        'title' => 'Contact Me',
         'description' => '',
     ])
 @endsection
 
 @section('body')
 <h3>Get In Touch</h3>
-<p>We'll get back to you ASAP as possible!</p>
+<p>I'll get back to you ASAP as possible!</p>
 
 <section class="container max-w-4xl">
     <form
         name="contact"
         method="post"
         data-netlify="true"
+        class="bg-gray-200 border shadow"
     >
         <div
             class="flex justify-start pb-4"
         >
             <div class="w-full">
-                <input placeholder="Your Name" type="text" id="name" name="name" />
+                <input class="shadow-inner border" placeholder="Your Name" type="text" id="name" name="name" />
             </div>
         </div>
         <div
             class="flex justify-start pb-4"
         >
             <div class="w-full">
-                <input placeholder="Your Email" type="email" id="email" name="email" />
+                <input class="shadow-inner border" placeholder="Your Email" type="email" id="email" name="email" />
             </div>
         </div>
         <div
             class="flex justify-start pb-4"
         >
             <div class="w-full">
-                <textarea placeholder="Message" id="message" name="message"></textarea>
+                <textarea class="shadow-inner border" placeholder="Message" id="message" name="message"></textarea>
             </div>
         </div>
         <div class="text-right">

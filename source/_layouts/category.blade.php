@@ -15,7 +15,7 @@
 @endsection
 
 @section('body')
-    <div class="text-2xl border-b border-pink mb-6 pb-10">
+    <div class="text-2xl border-b border-gray-500 mb-6 pb-10">
         <a href="/blog" title="Back to Blog index">
             &LeftArrow; Back to Blog
         </a>
