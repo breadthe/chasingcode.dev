@@ -35,7 +35,30 @@
 
     <div class="mt-8 first:mt-0">
         <div class="text-2xl font-black leading-none text-teal-700 flex flex-col justify-start mb-4">
-            Tech Stack
+            This website
+            <hr class="m-0 mt-2 border-b-2 border-gray-400 w-16 text-left">
+        </div>
+
+        <div class="mb-4">
+            Built with ❤️ and...
+        </div>
+
+        <div class="mb-4">
+            <span class="font-black uppercase"><a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co">Jigsaw</a></span>
+        </div>
+
+        <div class="mb-4">
+            <span class="font-black uppercase"><a href="https://tailwindcss.com/" title="TailwindCSS">TailwindCSS</a></span>
+        </div>
+
+        <div class="mb-4">
+            Hosted on <span class="font-black uppercase"><a href="https://www.netlify.com/" title="Hosted on Netlify">Netlify</a></span>
+        </div>
+    </div>
+
+    <div class="mt-8 first:mt-0">
+        <div class="text-2xl font-black leading-none text-teal-700 flex flex-col justify-start mb-4">
+            My tech stack
             <hr class="m-0 mt-2 border-b-2 border-gray-400 w-16 text-left">
         </div>
 
