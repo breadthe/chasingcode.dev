@@ -22,7 +22,7 @@
         @stack('meta')
 
         @if ($page->production)
-            @include('_partials.google_analytics')
+            @include('_partials.google-analytics')
         @endif
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900|Bitter" rel="stylesheet">
