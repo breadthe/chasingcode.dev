@@ -11,67 +11,85 @@
     </div>
 
     <div class="mt-8 first:mt-0">
-        <div class="text-2xl font-black leading-none text-teal-700 flex flex-col justify-start mb-4">
+        <h3 class="text-2xl font-black leading-none text-teal-700 font-sans mb-2">
             Stats/Bio
-            <hr class="m-0 mt-2 border-b-2 border-gray-400 w-16 text-left">
+        </h3>
+
+        <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
+
+        <div class="mb-4 flex -mx-2">
+            <a href="https://twitter.com/brbcoding" class="mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com/breadthe" class="mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
         </div>
 
-        <div class="mb-4">
-            <span class="font-black uppercase">Heritage</span> Romanian
-        </div>
+        <dl>
+            <div class="mb-4">
+                <dt class="inline font-black uppercase">Heritage</dt> <dd class="inline ml-2">Romanian</dd>
+            </div>
 
-        <div class="mb-4">
-            <span class="font-black uppercase">Age</span> I'll buy you a 🍺 if you guess correctly
-        </div>
+            <div class="mb-4">
+                <dt class="inline font-black uppercase">Age</dt> <dd class="inline ml-2">I'll buy you a 🍺 if you guess correctly</dd>
+            </div>
 
-        <div class="mb-4">
-            <span class="font-black uppercase">Interests</span> Coding, lifting, cycling, skiing, reading. Making things.
-        </div>
+            <div class="mb-4">
+                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">Coding, lifting, cycling, skiing, reading. Making things.</dd>
+            </div>
 
-        <div class="mb-4">
-            <span class="font-black uppercase">Trivia</span> Lived > 50% of my life outside my country of birth.
-        </div>
+            <div class="mb-4">
+                <dt class="inline font-black uppercase">Trivia</dt> <dd class="inline ml-2">Lived > 50% of my life outside my country of birth.</dd>
+            </div>
+        </dl>
     </div>
 
     <div class="mt-8 first:mt-0">
-        <div class="text-2xl font-black leading-none text-teal-700 flex flex-col justify-start mb-4">
+        <h3 class="text-2xl font-black leading-none text-teal-700 font-sans mb-2">
             This website
-            <hr class="m-0 mt-2 border-b-2 border-gray-400 w-16 text-left">
-        </div>
+        </h3>
 
-        <div class="mb-4">
-            Built with ❤️ and...
-        </div>
+        <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
-        <div class="mb-4">
-            <span class="font-black uppercase"><a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co">Jigsaw</a></span>
-        </div>
+        <dl>
+            <div class="mb-4">
+                Built with ❤️ and...
+            </div>
 
-        <div class="mb-4">
-            <span class="font-black uppercase"><a href="https://tailwindcss.com/" title="TailwindCSS">TailwindCSS</a></span>
-        </div>
+            <div class="mb-4">
+                <dd class="font-black uppercase"><a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co">Jigsaw</a></dd>
+            </div>
 
-        <div class="mb-4">
-            Hosted on <span class="font-black uppercase"><a href="https://www.netlify.com/" title="Hosted on Netlify">Netlify</a></span>
-        </div>
+            <div class="mb-4">
+                <dd class="font-black uppercase"><a href="https://tailwindcss.com/" title="TailwindCSS">TailwindCSS</a></dd>
+            </div>
+
+            <div class="mb-4">
+                Hosted on <dd class="font-black uppercase"><a href="https://www.netlify.com/" title="Hosted on Netlify">Netlify</a></dd>
+            </div>
+        </dl>
     </div>
 
     <div class="mt-8 first:mt-0">
-        <div class="text-2xl font-black leading-none text-teal-700 flex flex-col justify-start mb-4">
+        <h3 class="text-2xl font-black leading-none text-teal-700 font-sans mb-2">
             My tech stack
-            <hr class="m-0 mt-2 border-b-2 border-gray-400 w-16 text-left">
-        </div>
+        </h3>
 
-        <div class="mb-4">
-            <span class="font-black uppercase">Laravel</span>
-        </div>
+        <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
-        <div class="mb-4">
-            <span class="font-black uppercase">Vue.js</span>
-        </div>
+        <dl>
+            <div class="mb-4">
+                <dd class="font-black uppercase">Laravel</dd>
+            </div>
 
-        <div class="mb-4">
-            <span class="font-black uppercase">TailwindCSS</span>
-        </div>
+            <div class="mb-4">
+                <dd class="font-black uppercase">Vue.js</dd>
+            </div>
+
+            <div class="mb-4">
+                <dd class="font-black uppercase">TailwindCSS</dd>
+            </div>
+        </dl>
     </div>
 </div>
