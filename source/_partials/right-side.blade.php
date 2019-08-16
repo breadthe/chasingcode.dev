@@ -1,4 +1,4 @@
-<div class="w-full sm:w-1/3 p-4 sm:p-16 bg-gray-200 text-gray-700">
+<aside class="w-full sm:w-1/3 p-4 sm:p-16 bg-gray-200 text-gray-700">
     <div class="relative flex items-center justify-center mt-4 sm:mt-0">
         {{--<img src="assets/images/portrait-bg.svg" class="absolute">--}}
         {{--<svg viewBox="0 0 20 20" width="20pt" height="20pt">
@@ -52,21 +52,21 @@
 
         <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
-        <dl>
+        <dl class="flex flex-col">
             <div class="mb-4">
                 Built with ❤️ and...
             </div>
 
             <div class="mb-4">
-                <dd class="font-black uppercase"><a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co">Jigsaw</a></dd>
+                <dd class="inline font-black uppercase"><a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co">Jigsaw</a></dd>
             </div>
 
             <div class="mb-4">
-                <dd class="font-black uppercase"><a href="https://tailwindcss.com/" title="TailwindCSS">TailwindCSS</a></dd>
+                <dd class="inline font-black uppercase"><a href="https://tailwindcss.com/" title="TailwindCSS">TailwindCSS</a></dd>
             </div>
 
             <div class="mb-4">
-                Hosted on <dd class="font-black uppercase"><a href="https://www.netlify.com/" title="Hosted on Netlify">Netlify</a></dd>
+                Hosted on <dd class="inline font-black uppercase"><a href="https://www.netlify.com/" title="Hosted on Netlify">Netlify</a></dd>
             </div>
         </dl>
     </div>
@@ -92,4 +92,4 @@
             </div>
         </dl>
     </div>
-</div>
+</aside>

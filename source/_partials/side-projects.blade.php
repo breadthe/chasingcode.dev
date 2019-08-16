@@ -1,9 +1,10 @@
-<section class="mb-8 -mt-10 flex items-center">
+<article class="m-4 sm:-mt-10 flex items-center">
 
-    <div class="container mx-auto max-w-4xl p-4 bg-white shadow">
+    <div class="container mx-auto max-w-4xl p-4 bg-white border border-gray-200 shadow-xl">
 
-        <div class="text-3xl sm:text-5xl font-light text-center text-grey-darkest">
-            <span class="pb-2 border-b-2 font-serif">What I'm working on...</span>
+        <div class="relative text-3xl sm:text-5xl font-light text-center text-grey-darkest">
+            <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin mb-8">Side projects</h1>
+            <div class="absolute top-0 left-0 -ml-2 px-4 py-1 bg-teal-400 rounded-full shadow text-xl sm:text-2xl text-teal-100 border-2 border-teal-100 border-dashed" style="transform: skew(20deg, -20deg);">Serious stuff!</div>
         </div>
 
         <div class="mt-1 flex flex-wrap items-start justify-center">
@@ -38,4 +39,4 @@
 
     </div>
 
-</section>
+</article>

@@ -2,5 +2,6 @@
 
 @section('hero')
     @include('_partials.hero-welcome')
-    @include('_partials.our-products')
+    @include('_partials.side-projects')
+    @include('_partials.fun-projects')
 @endsection

@@ -1,4 +1,4 @@
-<header class="flex items-center h-20 sm:h-24 py-4 bg-gray-200 {{ $page->belongsTo('/blog') ? '' : '' }}" role="banner">
+<header class="flex items-center h-20 sm:h-24 py-4 {{ $page->belongsTo('/blog') ? '' : '' }}" role="banner">
     <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
         <div class="flex items-center">
             <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
