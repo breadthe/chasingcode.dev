@@ -1,10 +1,12 @@
 <article class="m-4 sm:-mt-10 flex items-center">
 
-    <div class="container mx-auto max-w-4xl p-4 bg-white border border-gray-200 shadow-xl">
+    <div class="container relative overflow-hidden mx-auto max-w-4xl p-4 bg-white border border-gray-200 shadow-xl">
 
-        <div class="relative text-3xl sm:text-5xl font-light text-center text-grey-darkest">
+        <div class="-mr-24 -mt-10 absolute bg-teal-400 border-2 border-dashed border-teal-100 flex h-24 items-end justify-center pt-32 right-0 shadow sm:text-2xl text-teal-100 text-xl top-0 w-64" style="transform: rotate(45deg);">Serious stuff!</div>
+
+        <div class="text-3xl sm:text-5xl font-light text-center text-grey-darkest">
             <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin mb-8">Side projects</h1>
-            <div class="absolute top-0 left-0 -ml-2 px-4 py-1 bg-teal-400 rounded-full shadow text-xl sm:text-2xl text-teal-100 border-2 border-teal-100 border-dashed" style="transform: skew(20deg, -20deg);">Serious stuff!</div>
+            {{--<div class="absolute top-0 left-0 -ml-2 px-4 py-1 bg-teal-400 rounded-full shadow text-xl sm:text-2xl text-teal-100 border-2 border-teal-100 border-dashed" style="transform: skew(20deg, -20deg);">Serious stuff!</div>--}}
         </div>
 
         <div class="mt-1 flex flex-wrap items-start justify-center">
