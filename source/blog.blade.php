@@ -1,7 +1,7 @@
 ---
 pagination:
     collection: posts
-    perPage: 4
+    perPage: 5
 ---
 @extends('_layouts.master')
 
@@ -20,13 +20,13 @@ pagination:
 @endsection
 
 @section('body')
-    <hr class="border-b my-6">
+    <hr class="border-0 border-t border-teal-700 my-6">
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
 
         @if ($post != $pagination->items->last())
-            <hr class="border-b my-6">
+            <hr class="border-0 border-t border-teal-700 my-6">
         @endif
     @endforeach
 
