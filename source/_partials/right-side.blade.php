@@ -28,15 +28,19 @@
 
         <dl>
             <div class="mb-4">
-                <dt class="inline font-black uppercase">Heritage</dt> <dd class="inline ml-2">Romanian</dd>
+                <dt class="inline font-black uppercase">Background</dt> <dd class="inline ml-2">🇷🇴 Romanian</dd>
             </div>
 
             <div class="mb-4">
-                <dt class="inline font-black uppercase">Age</dt> <dd class="inline ml-2">I'll buy you a 🍺 if you guess correctly</dd>
+                <dt class="inline font-black uppercase">Living in</dt> <dd class="inline ml-2">Illinois, USA</dd>
             </div>
 
             <div class="mb-4">
-                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">Coding, lifting, cycling, skiing, reading. Making things.</dd>
+                <dt class="inline font-black uppercase">Age</dt> <dd class="inline ml-2">Old enough to enjoy a nice, cold hefeweizen 🍺.</dd>
+            </div>
+
+            <div class="mb-4">
+                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">⌨️ Coding and 🛠 making things. 💪 Lifting, 🚲 cycling, ⛷ skiing. 📖 Reading.</dd>
             </div>
 
             <div class="mb-4">
