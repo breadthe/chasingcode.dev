@@ -1,14 +1,14 @@
 <div class="flex flex-col mb-4">
-    <p class="text-sm text-grey-dark my-2">
+    <p class="text-base text-gray-600 my-2">
         {{ $post->getDate()->format('F j, Y') }}
 
         @if ($post->categories)
-            &nbsp;|&nbsp;
+            &nbsp;&bull;&nbsp;
             @foreach ($post->categories as $i => $category)
                 <a
                         href="{{ '/blog/categories/' . $category }}"
                         title="View posts in {{ $category }}"
-                        class="bg-gray-100 hover:bg-gray-700 text-gray-700 hover:text-gray-100 text-xs capitalize rounded px-1"
+                        class="bg-teal-100 px-2 border border-dashed border-teal-400 hover:bg-teal-400 hover:text-teal-100 text-teal-400 rounded px-1"
                 >{{ $category }}</a>
             @endforeach
         @endif
@@ -18,7 +18,7 @@
         <a
             href="{{ $post->getUrl() }}"
             title="Read more - {{ $post->title }}"
-            class="text-gray-700 hover:text-gray-900 font-extrabold leading-normal"
+            class="text-teal-700 hover:text-teal-900 leading-normal"
         >{{ $post->title }}</a>
     </h2>
 
@@ -30,7 +30,6 @@
                 <a
                         href="{{ $post->getUrl() }}"
                         title="Read more - {{ $post->title }}"
-                        class="text-gray-600 hover:text-gray-700 font-extrabold"
                 >
                     <img
                             src="{{ $image }}"
@@ -50,6 +49,6 @@
     <a
         href="{{ $post->getUrl() }}"
         title="Read more - {{ $post->title }}"
-        class="uppercase text-sm tracking-wide mb-2 hover:no-underline text-gray-600 hover:text-gray-700 text-right"
-    >Read Full Post</a>
+        class="uppercase text-base tracking-wide mb-2 hover:no-underline text-gray-600 hover:text-gray-900 text-right font-semibold"
+    >Read Full Post →</a>
 </div>

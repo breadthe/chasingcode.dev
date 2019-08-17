@@ -40,6 +40,25 @@ form {
   }
 }
 
+.post {
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply font-semibold;
+    @apply text-gray-700;
+    //background-image: linear-gradient(to bottom, transparent 70%, #FAF089 70%); // Tailwind yellow-300
+    background-image: linear-gradient(to bottom, transparent 70%, #81E6D9 70%); // Tailwind teal-400
+
+    &:hover {
+      //@apply bg-yellow-100;
+      @apply bg-teal-200;
+      @apply text-gray-900;
+    }
+  }
+}
+
 /* =================== Highlight =================== */
 .highlight {
   background-image: $highlight-yellow;

@@ -20,13 +20,13 @@ pagination:
 @endsection
 
 @section('body')
-    <hr class="border-0 border-t border-teal-700 my-6">
+    <hr class="border-0 border-t my-6">
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
 
         @if ($post != $pagination->items->last())
-            <hr class="border-0 border-t border-teal-700 my-6">
+            <hr class="border-0 border-t my-6">
         @endif
     @endforeach
 
@@ -36,7 +36,7 @@ pagination:
                 <a
                     href="{{ $previous }}"
                     title="Previous Page"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 leading-loose"
+                    class="hover:bg-teal-400 text-teal-400 hover:text-teal-100 font-semibold rounded mr-3 px-5 py-3 leading-loose"
                 >&LeftArrow;</a>
             @endif
 
@@ -44,13 +44,14 @@ pagination:
                 @if($pagination->currentPage == $pageNumber)
                         <span
                                 title="Page {{ $pageNumber }}"
-                                class="bg-gray-200 rounded mr-3 px-5 py-3 leading-loose"
+                                class="text-teal-700 font-semibold rounded mr-3 px-5 py-3 leading-loose"
+                                style="background-image: linear-gradient(to bottom, transparent 70%, #4FD1C5 70%);"
                         >{{ $pageNumber }}</span>
                 @else
                         <a
                                 href="{{ $path }}"
                                 title="Go to Page {{ $pageNumber }}"
-                                class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 leading-loose"
+                                class="hover:bg-teal-400 text-teal-400 hover:text-teal-100 font-semibold rounded mr-3 px-5 py-3 leading-loose"
                         >{{ $pageNumber }}</a>
                 @endif
             @endforeach
@@ -59,7 +60,7 @@ pagination:
                 <a
                     href="{{ $next }}"
                     title="Next Page"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 leading-loose"
+                    class="hover:bg-teal-400 text-teal-400 hover:text-teal-100 font-semibold rounded mr-3 px-5 py-3 leading-loose"
                 >&RightArrow;</a>
             @endif
         </nav>

@@ -20,7 +20,7 @@
 
     @include('_partials.post-hero-image')
 
-    <div class="border-b border-gray-500 text-2xl font-light text-grey-darkest mb-10 pb-4" v-pre>
+    <div class="post border-b border-gray-500 text-2xl font-light text-grey-darkest mb-10 pb-4" v-pre>
         @yield('content')
 
         @if ($page->categories)
@@ -28,7 +28,8 @@
                 <a
                         href="{{ '/blog/categories/' . $category }}"
                         title="View posts in {{ $category }}"
-                        class="inline-block bg-indigo-100 hover:bg-indigo-500 leading-loose tracking-wider text-indigo-900 hover:text-indigo-100 uppercase text-xs font-normal rounded mr-4 px-3 pt-px"
+                        class="bg-teal-100 px-2 border border-dashed border-teal-400 hover:bg-teal-400 hover:text-teal-100 text-xl rounded px-1"
+                        style="background-image: none;"
                 >{{ $category }}</a>
             @endforeach
         @endif

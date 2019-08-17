@@ -8,7 +8,7 @@
             {{ $title }}
         </h1>
 
-        <div class="text-center px-6 sm:px-0 max-w-md">
+        <div class="text-center px-6 sm:px-0 max-w-2xl">
             <h2 class="text-2xl sm:text-3xl text-gray-600 leading-normal font-sans font-light">
                 {{ $description }}
             </h2>
