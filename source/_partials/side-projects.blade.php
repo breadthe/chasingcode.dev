@@ -2,40 +2,41 @@
 
     <div class="container relative overflow-hidden mx-auto max-w-4xl p-4 bg-white border border-gray-200 shadow-xl">
 
-        <div class="-mr-24 -mt-10 absolute bg-teal-400 border-2 border-dashed border-teal-100 flex h-24 items-end justify-center pt-32 right-0 shadow sm:text-2xl text-teal-100 text-xl top-0 w-64" style="transform: rotate(45deg);">Serious stuff!</div>
-
-        <div class="text-3xl sm:text-5xl font-light text-center text-grey-darkest">
-            <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin mb-8">Side projects</h1>
-            {{--<div class="absolute top-0 left-0 -ml-2 px-4 py-1 bg-teal-400 rounded-full shadow text-xl sm:text-2xl text-teal-100 border-2 border-teal-100 border-dashed" style="transform: skew(20deg, -20deg);">Serious stuff!</div>--}}
+        <div class="text-center mb-8 sm:mb-4">
+            <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin">Side projects</h1>
         </div>
 
-        <div class="mt-1 flex flex-wrap items-start justify-center">
-            <div class="w-5/6 sm:w-1/4 p-2 m-4 text-lg text-center">
+        <div class="mt-1 flex flex-wrap items-start justify-around">
+            <div class="w-full sm:w-1/4 p-2 text-lg text-center">
                 <div class="flex items-center justify-center">
                     <img src="/assets/images/sikrt-logo.png" width="30" height="30">&nbsp;
-                    <span class="font-bold">Sikrt</span>&nbsp;
-                    &bullet;&nbsp;
-                    <a href="https://sikrt.com">sikrt.com</a>
+                    <span class="font-bold">Sikrt</span>
+                    &nbsp;&bull;&nbsp;
+                    <a href="https://sikrt.com" class="flex items-center justify-center" target="_blank">
+                        sikrt.com
+                    </a>
                 </div>
-                <p class="">
-                    Share sensitive information securely via encrypted, short duration, self-destructing URLs.
-                </p>
+                <div class="bg-blue-500 text-blue-100 border-blue-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                    Share sensitive messages and documents securely via encrypted, short duration, self-destructing URLs.
+                </div>
             </div>
-            <div class="w-5/6 sm:w-1/4 p-2 m-4 text-lg text-center text-grey-darkest">
+            <div class="w-full sm:w-1/4 p-2 text-lg text-center text-grey-darkest">
                 <div class="flex items-center justify-center">
-                    <span class="font-bold">AllMySh*</span>&nbsp;
-                    &bullet;&nbsp;
-                    <a href="https://allmy.sh">allmy.sh</a>
+                    <span class="font-bold">AllMySh*</span>
+                    &nbsp;&bull;&nbsp;
+                    <a href="https://allmy.sh" class="flex items-center justify-center" target="_blank">
+                        allmy.sh
+                    </a>
                 </div>
-                <p class="">
-                    Catalog, track, and document your personal possessions.
-                </p>
+                <div class="bg-green-800 text-green-100 border-green-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                    Catalog, track, and document your personal possessions. Lifespan and expense statistics.
+                </div>
             </div>
-            <div class="w-5/6 sm:w-1/4 p-2 m-4 text-lg text-center text-grey-darkest">
-                <span class="font-bold">And More...</span>
-                <p class="">
-                    Our motto: "There's no shortage of ideas".
-                </p>
+            <div class="w-full sm:w-1/4 p-2 text-lg text-center text-grey-darkest">
+                <span class="font-bold">And more...</span>
+                <div class="bg-teal-700 text-teal-100 border-teal-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                    I have a ton of product and app ideas. On average I get a new one every 2 weeks. Need. More. Time.
+                </div>
             </div>
         </div>
 
