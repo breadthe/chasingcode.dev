@@ -1,12 +1,12 @@
-<nav class="hidden lg:flex items-center justify-end text-lg">
+<nav class="hidden sm:flex items-center justify-end text-lg">
     <a
         title="{{ $page->siteName }} Blog"
         href="/blog"
         class="
-            ml-6
+            ml-6 text-teal-200 hover:text-teal-400
             {{
                 $page->belongsTo('/blog') ?
-                'active text-gray-900 border-b-2 border-gray-900' :
+                'active border-b-2 border-teal-400' :
                 ''
             }}"
     >
@@ -17,10 +17,10 @@
         title="{{ $page->siteName }} Contact"
         href="/contact"
         class="
-            ml-6
+            ml-6 text-teal-200 hover:text-teal-400
             {{
                 $page->belongsTo('/contact') ?
-                'active text-gray-900 border-b-2 border-gray-900' :
+                'active border-b-2 border-teal-400' :
                 ''
             }}"
     >

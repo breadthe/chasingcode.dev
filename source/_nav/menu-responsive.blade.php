@@ -1,14 +1,14 @@
-<nav id="js-nav-menu" class="nav-menu hidden lg:hidden">
+<nav id="js-nav-menu" class="nav-menu hidden sm:hidden bg-gray-800">
     <ul class="my-0">
         <li class="pl-4">
             <a
                 title="{{ $page->siteName }} Blog"
                 href="/blog"
                 class="
-                    nav-menu__item
+                    nav-menu__item inline-block text-teal-200 text-2xl
                     {{
                         $page->belongsTo('/blog') ?
-                        'active text-gray-600 hover:text-gray-900 font-bold' :
+                        'active hover:text-teal-400 border-b-2 border-teal-400' :
                         ''
                     }}
                 "
@@ -20,11 +20,11 @@
                 title="{{ $page->siteName }} Contact"
                 href="/contact"
                 class="
-                    nav-menu__item
+                    nav-menu__item inline-block text-teal-200 text-2xl
                     {{
                         $page->belongsTo('/contact') ?
-                        'active text-gray-600 hover:text-gray-900 font-bold' :
-                        'text-gray-600 hover:text-gray-900'
+                        'active hover:text-teal-400 border-b-2 border-teal-400' :
+                        ''
                     }}
                 "
             >Contact</a>
