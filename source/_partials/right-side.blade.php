@@ -19,10 +19,10 @@
 
         <div class="mb-4 flex -mx-2">
             <a href="https://twitter.com/brbcoding" class="mx-2" title="@brbcoding on Twitter">
-                @include('_partials.icons.twitter')
+                @include('_partials.icons._svg', ['icon' => 'twitter'])
             </a>
             <a href="https://github.com/breadthe" class="mx-2" title="@breadthe on Github">
-                @include('_partials.icons.github')
+                @include('_partials.icons._svg', ['icon' => 'github'])
             </a>
         </div>
 
@@ -32,7 +32,7 @@
                 <dd class="inline-flex items-center ml-2">
                     <a href="https://en.wikipedia.org/wiki/Romania" title="Romania" class="inline-flex items-center text-gray-700">
                         🇷🇴 Romanian
-                        <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </dd>
             </div>
@@ -92,7 +92,7 @@
             <div class="mb-4">
                 <dd class="inline font-black uppercase">
                     <a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co" class="inline-flex items-center">
-                        Jigsaw <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                        Jigsaw <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </dd>
             </div>
@@ -100,7 +100,7 @@
             <div class="mb-4">
                 <dd class="inline font-black uppercase">
                     <a href="https://tailwindcss.com/" title="TailwindCSS" class="inline-flex items-center">
-                        TailwindCSS <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                        TailwindCSS <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </dd>
             </div>
@@ -108,7 +108,7 @@
             <div class="mb-4">
                 Hosted on <dd class="inline font-black uppercase">
                     <a href="https://www.netlify.com/" title="Hosted on Netlify" class="inline-flex items-center">
-                        Netlify <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                        Netlify <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </dd>
             </div>
