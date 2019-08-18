@@ -1,4 +1,4 @@
-<aside class="w-full sm:w-1/3 p-4 sm:p-16 bg-gray-200 text-gray-700">
+<aside class="w-full sm:w-1/3 p-4 sm:p-8 bg-gray-200 text-gray-700">
     <div class="relative flex items-center justify-center mt-4 sm:mt-0">
         {{--<img src="assets/images/portrait-bg.svg" class="absolute">--}}
         {{--<svg viewBox="0 0 20 20" width="20pt" height="20pt">
@@ -18,17 +18,23 @@
         <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
         <div class="mb-4 flex -mx-2">
-            <a href="https://twitter.com/brbcoding" class="mx-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            <a href="https://twitter.com/brbcoding" class="mx-2" title="@brbcoding on Twitter">
+                @include('_partials.icons.twitter')
             </a>
-            <a href="https://github.com/breadthe" class="mx-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <a href="https://github.com/breadthe" class="mx-2" title="@breadthe on Github">
+                @include('_partials.icons.github')
             </a>
         </div>
 
         <dl>
             <div class="mb-4">
-                <dt class="inline font-black uppercase">Background</dt> <dd class="inline ml-2">🇷🇴 Romanian</dd>
+                <dt class="inline font-black uppercase">Background</dt>
+                <dd class="inline-flex items-center ml-2">
+                    <a href="https://en.wikipedia.org/wiki/Romania" title="Romania" class="inline-flex items-center text-gray-700">
+                        🇷🇴 Romanian
+                        <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                    </a>
+                </dd>
             </div>
 
             <div class="mb-4">
@@ -40,11 +46,33 @@
             </div>
 
             <div class="mb-4">
-                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">⌨️ Coding and 🛠 making things. 💪 Lifting, 🚲 cycling, ⛷ skiing. 📖 Reading.</dd>
+                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">⌨️ Coding &bull; 🛠 Making things &bull; 💪 Lifting &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 📖 Reading</dd>
             </div>
 
             <div class="mb-4">
                 <dt class="inline font-black uppercase">Trivia</dt> <dd class="inline ml-2">Lived > 50% of my life outside my country of birth.</dd>
+            </div>
+        </dl>
+    </div>
+
+    <div class="mt-8 first:mt-0">
+        <h3 class="text-2xl font-black leading-none text-teal-700 font-sans mb-2">
+            My {{ date('Y') }} tech stack
+        </h3>
+
+        <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
+
+        <dl>
+            <div class="mb-4">
+                <dd class="font-black uppercase">Laravel</dd>
+            </div>
+
+            <div class="mb-4">
+                <dd class="font-black uppercase">Vue.js</dd>
+            </div>
+
+            <div class="mb-4">
+                <dd class="font-black uppercase">TailwindCSS</dd>
             </div>
         </dl>
     </div>
@@ -62,37 +90,27 @@
             </div>
 
             <div class="mb-4">
-                <dd class="inline font-black uppercase"><a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co">Jigsaw</a></dd>
+                <dd class="inline font-black uppercase">
+                    <a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co" class="inline-flex items-center">
+                        Jigsaw <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                    </a>
+                </dd>
             </div>
 
             <div class="mb-4">
-                <dd class="inline font-black uppercase"><a href="https://tailwindcss.com/" title="TailwindCSS">TailwindCSS</a></dd>
+                <dd class="inline font-black uppercase">
+                    <a href="https://tailwindcss.com/" title="TailwindCSS" class="inline-flex items-center">
+                        TailwindCSS <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                    </a>
+                </dd>
             </div>
 
             <div class="mb-4">
-                Hosted on <dd class="inline font-black uppercase"><a href="https://www.netlify.com/" title="Hosted on Netlify">Netlify</a></dd>
-            </div>
-        </dl>
-    </div>
-
-    <div class="mt-8 first:mt-0">
-        <h3 class="text-2xl font-black leading-none text-teal-700 font-sans mb-2">
-            My tech stack
-        </h3>
-
-        <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
-
-        <dl>
-            <div class="mb-4">
-                <dd class="font-black uppercase">Laravel</dd>
-            </div>
-
-            <div class="mb-4">
-                <dd class="font-black uppercase">Vue.js</dd>
-            </div>
-
-            <div class="mb-4">
-                <dd class="font-black uppercase">TailwindCSS</dd>
+                Hosted on <dd class="inline font-black uppercase">
+                    <a href="https://www.netlify.com/" title="Hosted on Netlify" class="inline-flex items-center">
+                        Netlify <span class="ml-1 text-gray-500">@include('_partials.icons.external-link', ['width' => 20, 'height' => 20])</span>
+                    </a>
+                </dd>
             </div>
         </dl>
     </div>

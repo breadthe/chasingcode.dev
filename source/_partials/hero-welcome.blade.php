@@ -1,4 +1,4 @@
-<section class="hero hero-gradient flex flex-col sm:flex-row bg-gray-800">
+<section class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row">
 
     @include('_partials.left-side')
 
