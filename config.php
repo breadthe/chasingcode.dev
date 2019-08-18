@@ -4,7 +4,7 @@ return [
     'baseUrl' => '',
     'production' => false,
     'siteName' => 'Chasing Code',
-    'siteDescription' => 'Full stack dev from Chicago | Laravel | PHP | Vue | TailwindCSS',
+    'siteDescription' => 'Full stack dev in Chicago | Laravel | PHP | Vue | TailwindCSS',
     'siteAuthor' => 'Constantin',
 
     // collections

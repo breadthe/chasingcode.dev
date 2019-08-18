@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://omigo.sh',
+    'baseUrl' => 'https://chasingcode.dev',
     'production' => true,
 ];
