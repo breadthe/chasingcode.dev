@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-1 justify-end items-center text-right px-4">
         <div
-            class="absolute md:relative w-full justify-end pin-l pin-t z-10 mt-7 md:mt-0 px-4 md:px-0"
-            :class="{'hidden md:flex': ! searching}"
+            class="absolute sm:relative w-full justify-end top-0 left-0 z-10 px-4 sm:mt-0 sm:px-0 bg-gray-800"
+            :class="{'hidden sm:flex': ! searching}"
         >
             <label for="search" class="hidden">Search</label>
 
@@ -10,7 +10,7 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast relative block h-10 w-full lg:w-1/2 lg:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-gray-600 outline-none cursor-pointer text-gray-600 px-4 pb-0 shadow-inner"
+                class="transition-fast block h-10 w-full sm:w-1/2 sm:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-teal-400 outline-none cursor-pointer text-gray-600 px-4 shadow-inner"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
@@ -22,16 +22,16 @@
 
             <button
                 v-if="query || searching"
-                class="absolute pin-t pin-r h-10 font-light text-3xl text-gray-500 hover:text-gray-600 focus:outline-none -mt-px pr-7 md:pr-3"
+                class="absolute top-0 right-0 h-10 font-light text-3xl text-gray-500 hover:text-gray-600 focus:outline-none mr-2"
                 @click="reset"
             >&times;</button>
 
             <transition name="fade">
-                <div v-if="query" class="absolute pin-l pin-r md:pin-none w-full lg:w-3/4 text-left mb-4 md:mt-10">
-                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-gray-200 rounded-b shadow-lg mx-4 md:mx-0">
+                <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full sm:w-3/4 text-left mb-4 sm:mt-10">
+                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 shadow-lg mx-4 sm:mx-0">
                         <a
                             v-for="(result, index) in results"
-                            class="bg-white hover:bg-gray-100 border-b border-gray-200 text-xl cursor-pointer p-4"
+                            class="bg-white hover:bg-gray-100 border-b border-teal-400 text-xl cursor-pointer p-4"
                             :class="{ 'rounded-b' : (index === results.length - 1) }"
                             :href="result.link"
                             :title="result.title"
@@ -45,7 +45,7 @@
 
                         <div
                             v-if="! results.length"
-                            class="bg-white w-full hover:bg-gray-100 border-b border-gray-200 rounded-b-lg shadow cursor-pointer p-4"
+                            class="bg-white w-full hover:bg-gray-100 border-b border-teal-400 rounded-b-lg shadow cursor-pointer p-4"
                         >
                             <p class="my-0">No results for <strong>{{ query }}</strong></p>
                         </div>
@@ -57,7 +57,7 @@
         <button
             title="Start searching"
             type="button"
-            class="flex md:hidden justify-center items-center border rounded-full focus:outline-none h-10 px-3"
+            class="flex sm:hidden justify-center items-center border rounded-full focus:outline-none h-10 px-3"
             :class="classes"
             @click.prevent="showInput"
         >

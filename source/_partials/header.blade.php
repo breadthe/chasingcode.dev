@@ -5,7 +5,7 @@
                 <img class="h-12 mr-3" src="/assets/images/chasingcode-logo.png" alt="{{ $page->siteName }} logo" />
             </a>
 
-            <h1 class="text-2xl sm:text-3xl my-0">
+            <h1 class="hidden sm:block text-2xl sm:text-3xl my-0">
                 <a href="/" title="{{ $page->siteName }} home" class="font-normal text-teal-200 hover:text-teal-400">
                     {{ $page->siteName }}
                 </a>
