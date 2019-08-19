@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-1 justify-end items-center text-right px-4">
         <div
-            class="absolute sm:relative w-full justify-end top-0 left-0 z-10 px-4 sm:mt-0 sm:px-0 bg-gray-800"
+            class="absolute sm:relative w-full justify-end top-0 left-0 z-10 py-4 sm:py-0 px-4 sm:px-0 bg-gray-800"
             :class="{'hidden sm:flex': ! searching}"
         >
             <label for="search" class="hidden">Search</label>
@@ -10,7 +10,7 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast block h-10 w-full sm:w-1/2 sm:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-teal-400 outline-none cursor-pointer text-gray-600 px-4 shadow-inner"
+                class="transition-fast h-12 w-full sm:w-1/2 sm:focus:w-3/4 bg-gray-900 shadow border border-gray-700 focus:border-teal-400 focus:bg-gray-200 outline-none cursor-pointer px-4 shadow-inner"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
@@ -22,12 +22,12 @@
 
             <button
                 v-if="query || searching"
-                class="absolute top-0 right-0 h-10 font-light text-3xl text-gray-500 hover:text-gray-600 focus:outline-none mr-2"
+                class="absolute top-0 right-0 font-light text-3xl text-gray-500 hover:text-gray-600 focus:outline-none mt-4 sm:mt-0 pr-6 sm:pr-2"
                 @click="reset"
             >&times;</button>
 
             <transition name="fade">
-                <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full sm:w-3/4 text-left mb-4 sm:mt-10">
+                <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full sm:w-1/2 text-left mb-4 mt-16 sm:mt-12">
                     <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 shadow-lg mx-4 sm:mx-0">
                         <a
                             v-for="(result, index) in results"
@@ -57,15 +57,14 @@
         <button
             title="Start searching"
             type="button"
-            class="flex sm:hidden justify-center items-center border rounded-full focus:outline-none h-10 px-3"
-            :class="classes"
+            class="flex sm:hidden justify-center items-center border rounded-full focus:outline-none h-10 px-3 bg-gray-900 border-gray-700"
             @click.prevent="showInput"
         >
             <!--
             Formerly <img src="/assets/images/magnifying-glass.svg" alt="search icon" class="h-4 w-4 max-w-none">
             -->
             <svg
-                class="h-4 w-4 max-w-none"
+                class="h-4 w-8"
                 :class="{ 'text-white': !belongsToBlog }"
                 width="13px"
                 height="13px"
@@ -109,9 +108,6 @@ export default {
     computed: {
         results() {
             return this.query ? this.fuse.search(this.query) : [];
-        },
-        classes() {
-            return 'bg-gray-200 border-gray-200';
         },
         svgFill() {
             return '#748294'; // text-gray-600
