@@ -1,4 +1,4 @@
-<section class="hero h-auto flex items-center flex-col mt-8">
+<section class="hero h-auto flex items-center flex-col mt-8 {{ $page->belongsTo('/blog') ? 'mb-4' : '' }}">
         <h1 class="text-3xl sm:text-5xl font-light uppercase flex items-center">
             @if ($page->belongsTo('/blog'))
                 <a href="/blog/feed.atom" class="mr-2">

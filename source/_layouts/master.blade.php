@@ -35,7 +35,7 @@
 
         @yield('hero')
 
-        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-8 px-6">
+        <main role="main" class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/contact') ? 'bg-white shadow-xl' : '' }} max-w-4xl mx-auto py-8 px-6">
             @yield('body')
         </main>
 
