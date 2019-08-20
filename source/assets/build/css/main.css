@@ -3779,6 +3779,10 @@ form button[type=submit] {
   cursor: not-allowed;
 }
 
+.cursor-zoom-in{
+  cursor: zoom-in;
+}
+
 .block{
   display: block;
 }
@@ -15652,6 +15656,10 @@ form button[type=submit] {
 
   .sm\:cursor-not-allowed{
     cursor: not-allowed;
+  }
+
+  .sm\:cursor-zoom-in{
+    cursor: zoom-in;
   }
 
   .sm\:block{
@@ -27530,6 +27538,10 @@ form button[type=submit] {
     cursor: not-allowed;
   }
 
+  .md\:cursor-zoom-in{
+    cursor: zoom-in;
+  }
+
   .md\:block{
     display: block;
   }
@@ -39406,6 +39418,10 @@ form button[type=submit] {
     cursor: not-allowed;
   }
 
+  .lg\:cursor-zoom-in{
+    cursor: zoom-in;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -51280,6 +51296,10 @@ form button[type=submit] {
 
   .xl\:cursor-not-allowed{
     cursor: not-allowed;
+  }
+
+  .xl\:cursor-zoom-in{
+    cursor: zoom-in;
   }
 
   .xl\:block{
