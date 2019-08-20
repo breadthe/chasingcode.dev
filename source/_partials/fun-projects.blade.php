@@ -10,56 +10,110 @@
             Casual little projects that I built mostly for fun, and to explore new technologies. Open source and free to use by anyone.
         </div>
 
-        <div class="mt-1 flex flex-wrap items-start justify-around">
-            <div class="w-full sm:w-1/4 p-2 text-lg text-center text-grey-darkest mt-8 sm:mt-0">
-                <div class="flex flex-col items-center justify-center">
-                    <span class="font-bold">Craftnautica</span>
-                    <a href="https://craftnautica.netlify.com" class="flex items-center justify-center" target="_blank">
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4">
+                <a href="/assets/images/craftnautica.png" class="cursor-zoom-in" target="_blank" title="Craftnautica">
+                    <img src="/assets/images/craftnautica.png" class="" title="Craftnautica" alt="Craftnautica">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold">Craftnautica</span>
+                    <a href="https://craftnautica.netlify.com" class="inline-flex items-center" target="_blank" title="Craftnautica on Netlify">
                         craftnautica.netlify.com
-                    </a>
-                    <a href="https://github.com/breadthe/craftnautica" class="inline-flex items-center mx-2" title="Craftnautica on Github">
-                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
+                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
-                {{--<div class="bg-green-800 text-green-100 border-green-200 font-light mt-4 border-2 border-dashed p-2 shadow">--}}
-                    <img src="/assets/images/craftnautica.png" class="mt-4" title="craftnautica.netlify.com" alt="craftnautica.netlify.com">
-                {{--</div>--}}
-                <div class="bg-blue-900 text-blue-400 border-blue-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                <div class="bg-blue-900 text-blue-400 border-blue-200 font-light mt-2 border-2 border-dashed p-2 shadow">
                     Crafting and inventory management tool for Subnautica and Subnautica: Below Zero.
                 </div>
-            </div>
-            <div class="w-full sm:w-1/4 p-2 text-lg text-center">
-                <div class="flex flex-col items-center justify-center">
-                    <span class="font-bold">Folio</span>
-                    &nbsp;
-                    <a href="https://github.com/breadthe/folio" class="inline-flex items-center mx-2" title="Folio on Github">
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span><strong>Tech: </strong> Vue.js &bull; TailwindCSS &bull; Netlify</span>
+                    <a href="https://github.com/breadthe/craftnautica" class="inline-flex items-center mt-2 sm:mt-0" title="Craftnautica on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
+                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
-                </div>
-                <div class="p-0">
-                    <img src="/assets/images/folio.png" class="mt-4" title="Crypto coin portfolio" alt="Crypto coin portfolio">
-                </div>
-                <div class="bg-gray-900 text-gray-400 border-gray-400 font-light mt-4 border-2 border-dashed p-2 shadow">
-                    Crypto coin portfolio and price tracker desktop app.
-                </div>
-            </div>
-            <div class="w-full sm:w-1/4 p-2 text-lg text-center">
-                <div class="flex flex-col items-center justify-center">
-                    <span class="font-bold">Moviebuff</span>
-                    <a href="https://moviebuff.surge.sh" class="flex items-center justify-center" target="_blank">
-                        moviebuff.surge.sh
-                    </a>
-                    <a href="https://github.com/breadthe/moviebuff" class="inline-flex items-center mx-2" title="Moviebuff on Github">
-                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
-                    </a>
-                </div>
-                <img src="/assets/images/moviebuff.png" class="mt-4" title="moviebuff.surge.sh" alt="moviebuff.surge.sh">
-                <div class="bg-yellow-500 text-yellow-100 border-yellow-200 font-light mt-4 border-2 border-dashed p-2 shadow">
-                    Simple movie watch- and seen-list.
                 </div>
             </div>
         </div>
 
-    </div>
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4">
+                <a href="/assets/images/folio.png" class="cursor-zoom-in" target="_blank" title="Folio - Crypto coin portfolio">
+                    <img src="/assets/images/folio.png" class="" title="Folio - Crypto coin portfolio" alt="Folio - Crypto coin portfolio">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold">Folio</span>
+                </div>
+                <div class="bg-gray-900 text-gray-400 border-gray-400 font-light mt-4 border-2 border-dashed p-2 shadow">
+                    Crypto coin portfolio and price tracker desktop app.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span><strong>Tech: </strong> Vue.js &bull; Electron &bull; TailwindCSS</span>
+                    <a href="https://github.com/breadthe/folio" class="inline-flex items-center mt-2 sm:mt-0" title="Folio on Github">
+                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
+                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4">
+                <a href="assets/images/moviebuff.png" class="cursor-zoom-in" target="_blank" title="Moviebuff - Movie watchlist">
+                    <img src="/assets/images/moviebuff.png" class="" title="Moviebuff - Movie watchlist" alt="Moviebuff - Movie watchlist">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold">Moviebuff</span>
+                    <a href="https://moviebuff.surge.sh" class="inline-flex items-center" target="_blank" title="Moviebuff on Surge.sh">
+                        moviebuff.surge.sh
+                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+                <div class="bg-yellow-500 text-yellow-900 border-yellow-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                    Simple movie watch- and seen-list.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span><strong>Tech: </strong> Vue.js &bull; Bulma &bull; Surge.sh</span>
+                    <a href="https://github.com/breadthe/moviebuff" class="inline-flex items-center mt-2 sm:mt-0" title="Moviebuff on Github">
+                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
+                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4">
+                <a href="/assets/images/moviebuff-monolith.png" class="cursor-zoom-in" target="_blank" title="Moviebuff monolith - Movie watchlist on Laravel">
+                    <img src="/assets/images/moviebuff-monolith.png" class="" title="Moviebuff monolith - Movie watchlist on Laravel" alt="Moviebuff monolith - Movie watchlist on Laravel">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold">Moviebuff monolith</span>
+                </div>
+                <div class="bg-yellow-500 text-yellow-900 border-yellow-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                    Similar to the static Vue app above, this version is more advanced, benefiting from a Laravel back-end. It features more complex list management: move and copy movies between existing and new lists.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span><strong>Tech: </strong> Laravel &bull; Vue.js &bull; Bootstrap</span>
+                    <a href="https://github.com/breadthe/moviebuff-monolith" class="inline-flex items-center mt-2 sm:mt-0" title="Moviebuff monolith on Github">
+                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
+                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
 </article>
