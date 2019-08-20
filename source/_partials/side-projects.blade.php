@@ -13,7 +13,7 @@
         <div class="mt-1 flex flex-wrap items-start justify-around">
             <div class="w-full sm:w-1/4 p-2 text-lg text-center">
                 <div class="flex items-center justify-center">
-                    <img src="/assets/images/sikrt-logo.png" width="30" height="30">&nbsp;
+                    <img src="/assets/images/sikrt-logo.png" width="30" height="30" title="Sikrt.com" alt="Sikrt.com">&nbsp;
                     <span class="font-bold">Sikrt</span>
                     &nbsp;&bull;&nbsp;
                     <a href="https://sikrt.com" class="flex items-center justify-center" target="_blank">
