@@ -21,7 +21,7 @@
 
         @include('_partials.post-hero-image')
 
-        <div class="post border-b border-gray-500 text-2xl font-light text-grey-darkest mb-10 pb-4" v-pre>
+        <div class="post border-b border-gray-500 text-2xl font-light text-grey-darkest mb-10 pb-4 mt-8 sm:mt-4" v-pre>
             @yield('content')
 
             @if ($page->categories)
