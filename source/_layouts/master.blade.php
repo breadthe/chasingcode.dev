@@ -33,9 +33,10 @@
 
         @include('_partials.header')
 
-        @yield('hero')
 
-        <main role="main" class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/contact') ? 'bg-white shadow-xl' : '' }} max-w-4xl mx-auto py-8 px-6">
+        <main role="main" class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/contact') ? 'bg-white max-w-4xl' : 'max-w-6xl' }} mx-auto">
+            @yield('hero')
+
             @yield('body')
         </main>
 

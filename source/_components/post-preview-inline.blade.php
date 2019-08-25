@@ -1,4 +1,4 @@
-<div class="flex flex-col mb-4">
+<article class="flex flex-col mb-4">
     <p class="text-base text-gray-600 my-2">
         {{ $post->getDate()->format('F j, Y') }}
 
@@ -51,4 +51,4 @@
         title="Read more - {{ $post->title }}"
         class="uppercase text-base tracking-wide mb-2 hover:no-underline text-gray-600 hover:text-gray-900 text-right font-semibold"
     >Read Full Post →</a>
-</div>
+</article>

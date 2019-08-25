@@ -15,10 +15,11 @@
 @endsection
 
 @section('body')
-<h3>Get In Touch</h3>
-<p>I'll get back to you ASAP as possible!</p>
 
-<section class="container max-w-4xl">
+<section class="p-6 shadow-xl">
+    <h3>Get In Touch</h3>
+    <p>I'll get back to you ASAP as possible!</p>
+
     <form
         name="contact"
         method="post"
