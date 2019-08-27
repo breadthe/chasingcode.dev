@@ -40,7 +40,7 @@
             </div>
 
             <div class="mb-4">
-                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">⌨️ Coding &bull; 🛠 Making things &bull; 💪 Lifting &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 📖 Reading</dd>
+                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">⌨️ Coding &bull; 🛠 Making things &bull; 💪 Lifting &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 🐠 Freediving &bull; 📖 Reading &bull; 🕹 Gaming</dd>
             </div>
 
             <div class="mb-4">
