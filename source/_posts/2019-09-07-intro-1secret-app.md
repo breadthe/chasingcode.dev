@@ -6,8 +6,8 @@ date: 2019-09-07
 description: Introducing my side project and SaaS, 1Secret.app.
 categories: [1Secret]
 featured: false
-image: 
-image_thumb: 
+image: /assets/img/2019-09-07-1secret.jpg
+image_thumb: /assets/img/2019-09-07-1secret.jpg
 image_author: 
 image_author_url: 
 image_unsplash: 
