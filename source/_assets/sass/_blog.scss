@@ -43,6 +43,10 @@ form {
 .post {
   p {
     @apply leading-relaxed;
+
+    strong {
+      @apply font-semibold;
+    }
   }
 
   a {

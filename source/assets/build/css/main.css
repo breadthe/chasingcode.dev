@@ -1007,6 +1007,10 @@ form button[type=submit] {
   line-height: 1.625;
 }
 
+.post p strong {
+  font-weight: 600;
+}
+
 .post a {
   font-weight: 600;
   color: #4a5568;
