@@ -134,7 +134,7 @@ tmpfs           996M     0  996M   0% /sys/fs/cgroup
 tmpfs           200M     0  200M   0% /run/user/1001
 ```
 
-# `du storage/ -cah -d 1 -t 20M | sort -hr`
+# du storage/ -cah -d 1 -t 20M | sort -hr
 
 Disk usage. Useful to check how much space a directory, its subdirectories, and files, occupy. These are just some of the most useful flags and options that I use.
 
