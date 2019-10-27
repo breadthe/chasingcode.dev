@@ -135,6 +135,27 @@ pre {
     }
 }
 
+table {
+    @apply w-full;
+    @apply text-xl;
+    thead {
+        th {
+            @apply border-b-4;
+            @apply bg-gray-100;
+            @apply font-semibold;
+            @apply p-1;
+        }
+    }
+    tbody {
+        tr {
+            @apply border-b;
+        }
+        td {
+            @apply p-2;
+        }
+    }
+}
+
 ::selection {
     @apply bg-blue-500;
     @apply text-white;

@@ -41,6 +41,7 @@ form {
 }
 
 .post {
+  @apply overflow-auto;
   p {
     @apply leading-relaxed;
 
@@ -59,6 +60,13 @@ form {
       //@apply bg-yellow-100;
       @apply bg-teal-200;
       @apply text-gray-900;
+    }
+  }
+
+  ul {
+    @apply list-disc;
+    li {
+      @apply list-inside;
     }
   }
 }
