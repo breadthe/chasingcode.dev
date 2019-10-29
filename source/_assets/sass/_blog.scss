@@ -48,6 +48,10 @@ form {
     strong {
       @apply font-semibold;
     }
+
+    img {
+      @apply mx-auto;
+    }
   }
 
   a {

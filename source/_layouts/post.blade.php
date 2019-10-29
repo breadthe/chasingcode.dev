@@ -13,7 +13,7 @@
             <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
         @endif
 
-        <h1 class="font-serif text-4xl leading-normal text-center mb-2">{{ $page->title }}</h1>
+        <h1 class="font-serif text-4xl text-center mb-2">{{ $page->title }}</h1>
 
         <p class="text-grey-darker text-md text-center md:mt-0">
             {{ $page->author }}  •  {{ date('F j, Y', $page->date) }}
@@ -21,7 +21,7 @@
 
         @include('_partials.post-hero-image')
 
-        <div class="post border-b border-gray-500 text-2xl font-light text-grey-darkest mb-10 pb-4 mt-8 sm:mt-4" v-pre>
+        <div class="post border-b border-gray-500 sm:text-2xl font-light text-grey-darkest mb-10 pb-4 mt-8 sm:mt-4" v-pre>
             @yield('content')
 
             @if ($page->categories)
