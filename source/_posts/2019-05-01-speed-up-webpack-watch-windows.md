@@ -4,7 +4,7 @@ section: content
 title: Speed Up Webpack Watch in Windows
 date: 2019-05-01
 description: A technique to massively improve the speed of Webpack's watch command in Windows.
-categories: [Laravel, Vue, Webpack]
+categories: [Laravel, Vue, Webpack, Windows10]
 featured: false
 image: https://source.unsplash.com/L9VXW4A9QZM/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/L9VXW4A9QZM/?fit=max&w=200&q=75
