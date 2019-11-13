@@ -12,18 +12,18 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4">
-                <a href="/assets/images/sikrt.com.jpg" class="cursor-zoom-in" target="_blank" title="Sikrt.com">
-                    <img src="/assets/images/sikrt.com.jpg" loading="lazy" class="" title="Sikrt.com" alt="Sikrt.com">
+                <a href="/assets/images/1secret.app.jpg" class="cursor-zoom-in" target="_blank" title="1Secret.app">
+                    <img src="/assets/images/1secret.app.jpg" loading="lazy" class="" title="1Secret.app" alt="1Secret.app">
                 </a>
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
                     <span class="text-2xl font-bold flex items-center">
-                        <img src="/assets/images/sikrt-logo.png" class="h-full" width="30" height="30" title="Sikrt.com" alt="Sikrt.com">&nbsp;
-                        Sikrt
+                        <img src="/assets/images/1secret-logo.png" class="h-full" width="30" height="30" title="1Secret.app" alt="1Secret.app">&nbsp;
+                        1Secret
                     </span>
-                    <a href="https://sikrt.com" class="inline-flex items-center" target="_blank" title="Craftnautica on Netlify">
-                        sikrt.com
+                    <a href="https://1secret.app" class="inline-flex items-center" target="_blank" title="1Secret.app">
+                        1secret.app
                         <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
@@ -40,14 +40,14 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4">
-                <a href="/assets/images/allmy.sh.jpg" class="cursor-zoom-in" target="_blank" title="Sikrt.com">
-                    <img src="/assets/images/allmy.sh.jpg" loading="lazy" class="" title="Sikrt.com" alt="Sikrt.com">
+                <a href="/assets/images/allmy.sh.jpg" class="cursor-zoom-in" target="_blank" title="Allmy.sh">
+                    <img src="/assets/images/allmy.sh.jpg" loading="lazy" class="" title="Allmy.sh" alt="Allmy.sh">
                 </a>
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
                     <span class="text-2xl font-bold">AllMySh*</span>
-                    <a href="https://sikrt.com" class="inline-flex items-center" target="_blank" title="Allmy.sh">
+                    <a href="https://allmy.sh" class="inline-flex items-center" target="_blank" title="Allmy.sh">
                         allmy.sh
                         <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
