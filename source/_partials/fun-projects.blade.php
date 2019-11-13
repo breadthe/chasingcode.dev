@@ -13,7 +13,7 @@
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4">
                 <a href="/assets/images/craftnautica.jpg" class="cursor-zoom-in" target="_blank" title="Craftnautica">
-                    <img src="/assets/images/craftnautica.jpg" loading="lazy" class="" title="Craftnautica" alt="Craftnautica">
+                    <img src="/assets/images/craftnautica-sm.jpg" loading="lazy" class="" title="Craftnautica" alt="Craftnautica">
                 </a>
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
@@ -42,7 +42,7 @@
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4">
                 <a href="/assets/images/folio.jpg" class="cursor-zoom-in" target="_blank" title="Folio - Crypto coin portfolio">
-                    <img src="/assets/images/folio.jpg" loading="lazy" class="" title="Folio - Crypto coin portfolio" alt="Folio - Crypto coin portfolio">
+                    <img src="/assets/images/folio-sm.jpg" loading="lazy" class="" title="Folio - Crypto coin portfolio" alt="Folio - Crypto coin portfolio">
                 </a>
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
@@ -67,7 +67,7 @@
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4">
                 <a href="assets/images/moviebuff.jpg" class="cursor-zoom-in" target="_blank" title="Moviebuff - Movie watchlist">
-                    <img src="/assets/images/moviebuff.jpg" loading="lazy" class="" title="Moviebuff - Movie watchlist" alt="Moviebuff - Movie watchlist">
+                    <img src="/assets/images/moviebuff-sm.jpg" loading="lazy" class="" title="Moviebuff - Movie watchlist" alt="Moviebuff - Movie watchlist">
                 </a>
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
@@ -96,7 +96,7 @@
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4">
                 <a href="/assets/images/moviebuff-monolith.jpg" class="cursor-zoom-in" target="_blank" title="Moviebuff monolith - Movie watchlist on Laravel">
-                    <img src="/assets/images/moviebuff-monolith.jpg" loading="lazy" class="" title="Moviebuff monolith - Movie watchlist on Laravel" alt="Moviebuff monolith - Movie watchlist on Laravel">
+                    <img src="/assets/images/moviebuff-monolith-sm.jpg" loading="lazy" class="" title="Moviebuff monolith - Movie watchlist on Laravel" alt="Moviebuff monolith - Movie watchlist on Laravel">
                 </a>
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
