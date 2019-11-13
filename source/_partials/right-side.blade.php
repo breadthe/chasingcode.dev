@@ -10,7 +10,6 @@
                 @include('_partials.icons._svg', ['icon' => 'github', 'width' => 32, 'height' => 32])
             </a>
         </div>
-
     </div>
 
     <div class="mt-8 first:mt-0">
@@ -20,32 +19,22 @@
 
         <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
-        <dl>
-            <div class="mb-4">
-                <dt class="inline font-black uppercase">Background</dt>
-                <dd class="inline-flex items-center ml-2">
-                    <a href="https://en.wikipedia.org/wiki/Romania" title="Romania" class="inline-flex items-center text-gray-700">
-                        🇷🇴 Romanian
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
-                    </a>
-                </dd>
-            </div>
+        <dl class="flex flex-wrap">
+            <dt class="w-full inline font-black uppercase">Background</dt>
+            <dd class="inline-flex items-center mb-4">
+                <a href="https://en.wikipedia.org/wiki/Romania" title="Romania" class="inline-flex items-center text-gray-700">
+                    🇷🇴 Romanian
+                    <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                </a>
+            </dd>
 
-            <div class="mb-4">
-                <dt class="inline font-black uppercase">Living in</dt> <dd class="inline ml-2">Illinois, USA</dd>
-            </div>
+            <dt class="w-full inline font-black uppercase">Living in</dt> <dd class="inline mb-4">Illinois, USA</dd>
 
-            <div class="mb-4">
-                <dt class="inline font-black uppercase">Age</dt> <dd class="inline ml-2">Old enough to enjoy a nice, cold hefeweizen 🍺.</dd>
-            </div>
+            <dt class="w-full inline font-black uppercase">Age</dt> <dd class="inline mb-4">Old enough to enjoy a nice, cold hefeweizen 🍺.</dd>
 
-            <div class="mb-4">
-                <dt class="inline font-black uppercase">Interests</dt> <dd class="inline ml-2">⌨️ Coding &bull; 🛠 Making things &bull; 💪 Lifting &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 🐠 Freediving &bull; 📖 Reading &bull; 🕹 Gaming</dd>
-            </div>
+            <dt class="w-full inline font-black uppercase">Interests</dt> <dd class="inline mb-4">⌨️ Coding &bull; 🛠 Making things &bull; 💪 Lifting &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 🐠 Freediving &bull; 📖 Reading &bull; 🕹 Gaming</dd>
 
-            <div class="mb-4">
-                <dt class="inline font-black uppercase">Trivia</dt> <dd class="inline ml-2">Lived > 50% of my life outside my country of birth.</dd>
-            </div>
+            <dt class="w-full inline font-black uppercase">Trivia</dt> <dd class="inline mb-4">Lived > 50% of my life outside my country of birth.</dd>
         </dl>
     </div>
 
@@ -57,17 +46,11 @@
         <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
         <dl>
-            <div class="mb-4">
-                <dd class="font-black uppercase">Laravel</dd>
-            </div>
+            <dd class="mb-4 font-black uppercase">Laravel</dd>
 
-            <div class="mb-4">
-                <dd class="font-black uppercase">Vue.js</dd>
-            </div>
+            <dd class="mb-4 font-black uppercase">Vue.js</dd>
 
-            <div class="mb-4">
-                <dd class="font-black uppercase">TailwindCSS</dd>
-            </div>
+            <dd class="mb-4 font-black uppercase">TailwindCSS</dd>
         </dl>
     </div>
 
@@ -79,33 +62,28 @@
         <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
         <dl class="flex flex-col">
-            <div class="mb-4">
+            <dd class="mb-4">
                 Built with ❤️ and...
-            </div>
+            </dd>
 
-            <div class="mb-4">
-                <dd class="inline font-black uppercase">
-                    <a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co" class="inline-flex items-center">
-                        Jigsaw <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
-                    </a>
-                </dd>
-            </div>
+            <dd class="inline mb-4">
+                <a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co" class="inline-flex items-center font-black uppercase">
+                    Jigsaw <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                </a>
+            </dd>
 
-            <div class="mb-4">
-                <dd class="inline font-black uppercase">
-                    <a href="https://tailwindcss.com/" title="TailwindCSS" class="inline-flex items-center">
-                        TailwindCSS <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
-                    </a>
-                </dd>
-            </div>
+            <dd class="inline mb-4">
+                <a href="https://tailwindcss.com/" title="TailwindCSS" class="inline-flex items-center font-black uppercase">
+                    TailwindCSS <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                </a>
+            </dd>
 
-            <div class="mb-4">
-                Hosted on <dd class="inline font-black uppercase">
-                    <a href="https://www.netlify.com/" title="Hosted on Netlify" class="inline-flex items-center">
-                        Netlify <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
-                    </a>
-                </dd>
-            </div>
+            <dd class="inline mb-4">
+                Hosted on
+                <a href="https://www.netlify.com/" title="Hosted on Netlify" class="inline-flex items-center font-black uppercase">
+                    Netlify <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                </a>
+            </dd>
         </dl>
     </div>
 </aside>
