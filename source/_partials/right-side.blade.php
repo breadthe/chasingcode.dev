@@ -3,10 +3,10 @@
         <img src="assets/images/me.jpg" alt="Picture of me" title="Picture of me" class="rounded-full border-8 border-double border-teal-700 w-64 h-64">
 
         <div class="flex mt-8">
-            <a href="https://twitter.com/brbcoding" class="mx-2 text-blue-500 hover:text-blue-700" title="@brbcoding on Twitter">
+            <a href="https://twitter.com/brbcoding" class="mx-2 text-blue-500 hover:text-blue-700" title="Follow me on Twitter - @brbcoding" aria-label="Follow me on Twitter - @brbcoding">
                 @include('_partials.icons._svg', ['icon' => 'twitter', 'width' => 32, 'height' => 32])
             </a>
-            <a href="https://github.com/breadthe" class="mx-2 text-green-500 hover:text-green-700" title="@breadthe on Github">
+            <a href="https://github.com/breadthe" class="mx-2 text-green-500 hover:text-green-700" title="Find my projects on Github - @breadthe" aria-label="Find my projects on Github - @breadthe">
                 @include('_partials.icons._svg', ['icon' => 'github', 'width' => 32, 'height' => 32])
             </a>
         </div>

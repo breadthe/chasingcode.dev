@@ -19,12 +19,12 @@
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
                     <span class="text-2xl font-bold">Craftnautica</span>
-                    <a href="https://craftnautica.netlify.com" class="inline-flex items-center" target="_blank" title="Craftnautica on Netlify">
+                    <a href="https://craftnautica.netlify.com" class="inline-flex items-center" target="_blank" rel="noopener" title="Craftnautica on Netlify">
                         craftnautica.netlify.com
                         <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
-                <div class="bg-blue-900 text-blue-400 border-blue-200 font-light mt-2 border-2 border-dashed p-2 shadow">
+                <div class="bg-blue-900 text-blue-200 border-blue-200 font-light mt-2 border-2 border-dashed p-2 shadow">
                     Crafting and inventory management tool for Subnautica and Subnautica: Below Zero.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
@@ -73,7 +73,7 @@
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
                     <span class="text-2xl font-bold">Moviebuff</span>
-                    <a href="https://moviebuff.surge.sh" class="inline-flex items-center" target="_blank" title="Moviebuff on Surge.sh">
+                    <a href="https://moviebuff.surge.sh" class="inline-flex items-center" target="_blank" rel="noopener" title="Moviebuff on Surge.sh">
                         moviebuff.surge.sh
                         <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>

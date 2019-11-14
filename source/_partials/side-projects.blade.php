@@ -22,12 +22,12 @@
                         <img src="/assets/images/1secret-logo.png" class="h-full" width="30" height="30" title="1Secret.app" alt="1Secret.app">&nbsp;
                         1Secret
                     </span>
-                    <a href="https://1secret.app" class="inline-flex items-center" target="_blank" title="1Secret.app">
+                    <a href="https://1secret.app" class="inline-flex items-center" target="_blank" rel="noopener" title="1Secret.app">
                         1secret.app
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
-                <div class="bg-blue-500 text-blue-100 border-blue-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                <div class="bg-blue-700 text-blue-100 border-blue-200 font-light mt-4 border-2 border-dashed p-2 shadow">
                     Share sensitive messages and documents securely via encrypted, short duration, self-destructing URLs.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
@@ -47,9 +47,9 @@
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
                     <span class="text-2xl font-bold">AllMySh*</span>
-                    <a href="https://allmy.sh" class="inline-flex items-center" target="_blank" title="Allmy.sh">
+                    <a href="https://allmy.sh" class="inline-flex items-center" target="_blank" rel="noopener" title="Allmy.sh">
                         allmy.sh
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
                 <div class="bg-green-800 text-green-100 border-green-200 font-light mt-4 border-2 border-dashed p-2 shadow">
