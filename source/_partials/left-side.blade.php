@@ -20,62 +20,62 @@
         I've worked in a variety of <span class="inline-block bg-teal-700 px-1 rounded leading-tight font-medium" style="transform: skew(-10deg, 0deg)">industries</span> throughout my career. Here are some of them.
     </div>
 
-    <dl class="text-left font-thin flex flex-wrap m-4 -mx-4">
+    <section class="text-left font-thin flex flex-wrap m-4 -mx-4">
         <div class="flex-auto w-full sm:w-1/2 p-4">
-            <div class="flex flex-col h-full rounded-sm">
-                <div>
+            <div class="flex flex-col h-full">
+                <dl class="flex-1">
                     <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">Transportation & Freight</dt>
-                    <dd class="text-justify">Full lifecycle app for receiving cargo shipping orders, processing pickups and deliveries, and generating bills of lading. Internal/external APIs connecting various systems.</dd>
-                </div>
-                <div>
+                    <dd class="tracking-wide">Full lifecycle app for receiving cargo shipping orders, processing pickups and deliveries, and generating bills of lading. Internal/external APIs connecting various systems.</dd>
+                </dl>
+                <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
                     <dd class="italic text-teal-200">Laravel/PHP &bull; Vue.js/JavaScript &bull; TailwindCSS</dd>
-                </div>
+                </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
         </div>
 
         <div class="flex-auto w-full sm:w-1/2 p-4">
-            <div class="flex flex-col h-full rounded-sm">
-                <div>
+            <div class="flex flex-col h-full">
+                <dl class="flex-1">
                     <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">SaaS</dt>
-                    <dd class="text-justify">Front-end UI work for the SPA part of an emerging lowcode/nocode SaaS app. Secure document handling and image manipulation.</dd>
-                </div>
-                <div>
+                    <dd class="tracking-wide">Front-end UI work for the SPA part of an emerging lowcode/nocode SaaS app. Secure document handling and image manipulation.</dd>
+                </dl>
+                <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
-                    <dd class="italic text-teal-200">Ember.js &bull; JavaScript</dd>
-                </div>
+                    <dd class="italic text-teal-200">Ember.js/JavaScript</dd>
+                </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
         </div>
 
         <div class="flex-auto w-full sm:w-1/2 p-4">
-            <div class="flex flex-col h-full rounded-sm">
-                <div>
+            <div class="flex flex-col h-full">
+                <dl class="flex-1">
                     <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">Student Testing & Education</dt>
-                    <dd class="text-justify">Built new modules and functionality into an existing framework to extend the features of the online testing platform. Did both UI and back-end work.</dd>
-                </div>
-                <div>
+                    <dd class="tracking-wide">Built new modules and functionality into an existing framework to extend the features of the online testing platform. Did both UI and back-end work.</dd>
+                </dl>
+                <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
                     <dd class="italic text-teal-200">PHP &bull; MySQL &bull; jQuery/JavaScript</dd>
-                </div>
+                </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
         </div>
 
         <div class="flex-auto w-full sm:w-1/2 p-4">
-            <div class="flex flex-col h-full rounded-sm">
-                <div>
+            <div class="flex flex-col h-full">
+                <dl class="flex-1">
                     <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">eCommerce</dt>
-                    <dd class="text-justify">Built a brand new website for a well-known local retailer. First year sales improved 90% compared to the old website. Made many enhancements to the site, leading to increasing sales year over year.</dd>
-                </div>
-                <div>
+                    <dd class="tracking-wide">Built a brand new website for a well-known local retailer. First year sales improved 90% compared to the old website. Made many enhancements to the site, leading to increasing sales year over year.</dd>
+                </dl>
+                <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
                     <dd class="italic text-teal-200">PHP &bull; MySQL &bull; jQuery/JavaScript</dd>
-                </div>
+                </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
         </div>
-    </dl>
+    </section>
 
 </section>

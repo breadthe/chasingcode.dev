@@ -11,7 +11,7 @@
         </div>
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
-            <div class="w-full sm:w-1/4">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/1secret.app.jpg" class="cursor-zoom-in" target="_blank" title="1Secret.app">
                     <img src="/assets/images/1secret.app-sm.jpg" loading="lazy" class="" title="1Secret.app" alt="1Secret.app">
                 </a>
@@ -39,7 +39,7 @@
         <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
-            <div class="w-full sm:w-1/4">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/allmy.sh.jpg" class="cursor-zoom-in" target="_blank" title="Allmy.sh">
                     <img src="/assets/images/allmy.sh-sm.jpg" loading="lazy" class="" title="Allmy.sh" alt="Allmy.sh">
                 </a>

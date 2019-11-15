@@ -45,13 +45,13 @@
 
         <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
-        <dl>
-            <dd class="mb-4 font-black uppercase">Laravel</dd>
+        <ul>
+            <li class="mb-4 font-black uppercase">Laravel</li>
 
-            <dd class="mb-4 font-black uppercase">Vue.js</dd>
+            <li class="mb-4 font-black uppercase">Vue.js</li>
 
-            <dd class="mb-4 font-black uppercase">TailwindCSS</dd>
-        </dl>
+            <li class="mb-4 font-black uppercase">TailwindCSS</li>
+        </ul>
     </div>
 
     <div class="mt-8 first:mt-0">
@@ -61,29 +61,29 @@
 
         <hr class="m-0 mb-4 border-b-2 border-gray-400 w-16 text-left">
 
-        <dl class="flex flex-col">
-            <dd class="mb-4">
+        <ul class="flex flex-col">
+            <li class="mb-4">
                 Built with ❤️ and...
-            </dd>
+            </li>
 
-            <dd class="inline mb-4">
+            <li class="mb-4">
                 <a href="https://jigsaw.tighten.co/" title="Jigsaw by Tighten.co" class="inline-flex items-center font-black uppercase">
                     Jigsaw <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                 </a>
-            </dd>
+            </li>
 
-            <dd class="inline mb-4">
+            <li class="mb-4">
                 <a href="https://tailwindcss.com/" title="TailwindCSS" class="inline-flex items-center font-black uppercase">
                     TailwindCSS <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                 </a>
-            </dd>
+            </li>
 
-            <dd class="inline mb-4">
+            <li class="mb-4">
                 Hosted on
                 <a href="https://www.netlify.com/" title="Hosted on Netlify" class="inline-flex items-center font-black uppercase">
                     Netlify <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                 </a>
-            </dd>
-        </dl>
+            </li>
+        </ul>
     </div>
 </aside>

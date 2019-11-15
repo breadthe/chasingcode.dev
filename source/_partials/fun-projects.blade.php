@@ -11,7 +11,7 @@
         </div>
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
-            <div class="w-full sm:w-1/4">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/craftnautica.jpg" class="cursor-zoom-in" target="_blank" title="Craftnautica">
                     <img src="/assets/images/craftnautica-sm.jpg" loading="lazy" class="" title="Craftnautica" alt="Craftnautica">
                 </a>
@@ -21,7 +21,7 @@
                     <span class="text-2xl font-bold">Craftnautica</span>
                     <a href="https://craftnautica.netlify.com" class="inline-flex items-center" target="_blank" rel="noopener" title="Craftnautica on Netlify">
                         craftnautica.netlify.com
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
                 <div class="bg-blue-900 text-blue-200 border-blue-200 font-light mt-2 border-2 border-dashed p-2 shadow">
@@ -31,7 +31,7 @@
                     <span><strong>Tech: </strong> Vue.js &bull; TailwindCSS &bull; Netlify</span>
                     <a href="https://github.com/breadthe/craftnautica" class="inline-flex items-center mt-2 sm:mt-0" title="Craftnautica on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
             </div>
@@ -40,7 +40,7 @@
         <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
-            <div class="w-full sm:w-1/4">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/folio.jpg" class="cursor-zoom-in" target="_blank" title="Folio - Crypto coin portfolio">
                     <img src="/assets/images/folio-sm.jpg" loading="lazy" class="" title="Folio - Crypto coin portfolio" alt="Folio - Crypto coin portfolio">
                 </a>
@@ -56,7 +56,7 @@
                     <span><strong>Tech: </strong> Vue.js &bull; Electron &bull; TailwindCSS</span>
                     <a href="https://github.com/breadthe/folio" class="inline-flex items-center mt-2 sm:mt-0" title="Folio on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
             </div>
@@ -65,7 +65,7 @@
         <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
-            <div class="w-full sm:w-1/4">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="assets/images/moviebuff.jpg" class="cursor-zoom-in" target="_blank" title="Moviebuff - Movie watchlist">
                     <img src="/assets/images/moviebuff-sm.jpg" loading="lazy" class="" title="Moviebuff - Movie watchlist" alt="Moviebuff - Movie watchlist">
                 </a>
@@ -75,7 +75,7 @@
                     <span class="text-2xl font-bold">Moviebuff</span>
                     <a href="https://moviebuff.surge.sh" class="inline-flex items-center" target="_blank" rel="noopener" title="Moviebuff on Surge.sh">
                         moviebuff.surge.sh
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
                 <div class="bg-yellow-500 text-yellow-900 border-yellow-200 font-light mt-4 border-2 border-dashed p-2 shadow">
@@ -85,7 +85,7 @@
                     <span><strong>Tech: </strong> Vue.js &bull; Bulma &bull; Surge.sh</span>
                     <a href="https://github.com/breadthe/moviebuff" class="inline-flex items-center mt-2 sm:mt-0" title="Moviebuff on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
             </div>
@@ -94,7 +94,7 @@
         <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
-            <div class="w-full sm:w-1/4">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/moviebuff-monolith.jpg" class="cursor-zoom-in" target="_blank" title="Moviebuff monolith - Movie watchlist on Laravel">
                     <img src="/assets/images/moviebuff-monolith-sm.jpg" loading="lazy" class="" title="Moviebuff monolith - Movie watchlist on Laravel" alt="Moviebuff monolith - Movie watchlist on Laravel">
                 </a>
@@ -110,7 +110,7 @@
                     <span><strong>Tech: </strong> Laravel &bull; Vue.js &bull; Bootstrap</span>
                     <a href="https://github.com/breadthe/moviebuff-monolith" class="inline-flex items-center mt-2 sm:mt-0" title="Moviebuff monolith on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
-                        <span class="ml-1 text-gray-500">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
             </div>
