@@ -1040,13 +1040,13 @@ form button[type=submit] {
   margin-right: auto;
 }
 
-.post a {
+.post a:not(.category--tag) {
   font-weight: 600;
   color: #4a5568;
   background-image: linear-gradient(to bottom, transparent 70%, #81E6D9 70%);
 }
 
-.post a:hover {
+.post a:not(.category--tag):hover {
   background-color: #b2f5ea;
   color: #1a202c;
 }

@@ -8,7 +8,7 @@
                 <a
                         href="{{ '/blog/categories/' . $category }}"
                         title="View posts in {{ $category }}"
-                        class="bg-teal-100 px-2 border border-dashed border-teal-700 hover:bg-teal-400 hover:text-teal-100 text-teal-700 rounded px-1"
+                        class="category--tag px-2 border border-dashed border-teal-700 hover:border-teal-100 bg-teal-100 hover:bg-teal-400 text-teal-700 hover:text-teal-100 font-semibold rounded px-1"
                 >{{ $category }}</a>
             @endforeach
         @endif
