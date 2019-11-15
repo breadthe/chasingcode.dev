@@ -16,6 +16,7 @@
                 name="search"
                 placeholder="Search"
                 type="text"
+                aria-label="Search the blog"
                 @keyup.esc="reset"
                 @blur="reset"
             >

@@ -1,5 +1,5 @@
 <article class="flex flex-col mb-4">
-    <p class="text-base text-gray-600 my-2">
+    <p class="text-base text-gray-700 my-2">
         {{ $post->getDate()->format('F j, Y') }}
 
         @if ($post->categories)
@@ -8,7 +8,7 @@
                 <a
                         href="{{ '/blog/categories/' . $category }}"
                         title="View posts in {{ $category }}"
-                        class="bg-teal-100 px-2 border border-dashed border-teal-400 hover:bg-teal-400 hover:text-teal-100 text-teal-400 rounded px-1"
+                        class="bg-teal-100 px-2 border border-dashed border-teal-700 hover:bg-teal-400 hover:text-teal-100 text-teal-700 rounded px-1"
                 >{{ $category }}</a>
             @endforeach
         @endif
@@ -30,6 +30,7 @@
                 <a
                         href="{{ $post->getUrl() }}"
                         title="Read more - {{ $post->title }}"
+                        aria-label="Read more - {{ $post->title }}"
                 >
                     <img
                             src="{{ $image }}"
@@ -49,6 +50,6 @@
     <a
         href="{{ $post->getUrl() }}"
         title="Read more - {{ $post->title }}"
-        class="uppercase text-base tracking-wide mb-2 hover:no-underline text-gray-600 hover:text-gray-900 text-right font-semibold"
+        class="uppercase text-base tracking-wide mb-2 hover:no-underline text-gray-700 hover:text-gray-900 text-right font-semibold"
     >Read Full Post →</a>
 </article>
