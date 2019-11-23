@@ -1040,6 +1040,10 @@ form button[type=submit] {
   margin-right: auto;
 }
 
+.post blockquote {
+  font-size: 1.25rem;
+}
+
 .post a:not(.category--tag) {
   font-weight: 600;
   color: #4a5568;

@@ -54,6 +54,10 @@ form {
     }
   }
 
+  blockquote {
+    @apply text-xl;
+  }
+
   a:not(.category--tag) {
     @apply font-semibold;
     @apply text-gray-700;
