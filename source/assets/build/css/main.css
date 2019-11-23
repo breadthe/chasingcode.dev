@@ -1044,13 +1044,13 @@ form button[type=submit] {
   font-size: 1.25rem;
 }
 
-.post a:not(.category--tag, .author--section) {
+.post a:not(.category--tag):not(.author--section) {
   font-weight: 600;
   color: #4a5568;
   background-image: linear-gradient(to bottom, transparent 70%, #81E6D9 70%);
 }
 
-.post a:not(.category--tag, .author--section):hover {
+.post a:not(.category--tag):not(.author--section):hover {
   background-color: #b2f5ea;
   color: #1a202c;
 }
