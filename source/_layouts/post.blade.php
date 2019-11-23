@@ -16,7 +16,7 @@
         <h1 class="font-serif text-4xl text-center mb-2">{{ $page->title }}</h1>
 
         <p class="text-grey-darker text-md text-center md:mt-0">
-            {{ $page->author }}  •  {{ date('F j, Y', $page->date) }}
+            {{ date('F j, Y', $page->date) }}
         </p>
 
         @include('_partials.post-hero-image')
@@ -34,6 +34,8 @@
                     >{{ $category }}</a>
                 @endforeach
             @endif
+
+            @include('_partials.author')
 
         </div>
 
