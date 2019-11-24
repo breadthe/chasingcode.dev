@@ -87,7 +87,7 @@ return [
 
         if ($page->image_unsplash) {
             if ($html) {
-                $str .= ' on <a href="https://unsplash.com" title="Unsplashs">Unsplash</a>';
+                $str .= ' on <a href="https://unsplash.com" title="Unsplash">Unsplash</a>';
             } else {
                 $str .= ' on Unsplash (https://unsplash.com)';
             }
