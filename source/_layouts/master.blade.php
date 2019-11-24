@@ -11,7 +11,7 @@
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
         @if($image = $page->image)
-            <meta property="og:image" content="{{ Str::contains($image, 'unsplash.com') ? $image : $page->baseUrl . $image }}" />
+            <meta property="og:image" content="{{ Illuminate\Support\Str::contains($image, 'unsplash.com') ? $image : $page->baseUrl . $image }}" />
         @endif
 
         <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
