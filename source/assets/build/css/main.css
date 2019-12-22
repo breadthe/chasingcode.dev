@@ -1046,16 +1046,21 @@ form button[type=submit] {
 
 .post a:not(.category--tag):not(.author--section) {
   font-weight: 600;
-  color: #4a5568;
-  background-image: linear-gradient(to bottom, transparent 70%, #81E6D9 70%);
+  color: #000;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #4fd1c5;
 }
 
 .post a:not(.category--tag):not(.author--section):hover {
-  background-color: #b2f5ea;
-  color: #1a202c;
+  background-color: #e6fffa;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #000;
 }
 
 .post ul {
+  line-height: 1.625;
   list-style-type: disc;
 }
 
