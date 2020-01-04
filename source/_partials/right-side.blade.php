@@ -1,4 +1,4 @@
-<aside class="w-full sm:w-1/3 p-4 sm:p-8 bg-gray-200 text-gray-700">
+<aside class="sm:w-1/2 lg:w-1/3 p-4 sm:p-8 bg-gray-200 text-gray-700">
     <div class="flex flex-col items-center justify-center mt-4 sm:mt-0">
         <img src="assets/images/me.jpg" alt="Picture of me" title="Picture of me" class="rounded-full border-8 border-double border-teal-700 w-64 h-64">
 

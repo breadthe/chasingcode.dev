@@ -1,4 +1,4 @@
-<button class="flex justify-center items-center h-10 px-4 rounded-full lg:hidden focus:outline-none {{ $page->belongsTo('/blog') ? '' : '' }}"
+<button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none {{ $page->belongsTo('/blog') ? '' : '' }}"
     onclick="navMenu.toggle()"
 >
     <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"

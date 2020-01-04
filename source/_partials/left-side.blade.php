@@ -1,4 +1,4 @@
-<section class="w-full sm:w-2/3 px-4 py-8 sm:p-8 bg-gray-800 text-gray-100 text-right">
+<section class="flex-1 px-4 py-8 sm:p-8 bg-gray-800 text-gray-100 text-right">
     <div class="text-6xl font-light leading-none">Hello.</div>
     <div class="text-5xl font-light leading-none">I'm <span class="font-black text-teal-200">Constantin</span></div>
     <div class="text-xl font-light leading-loose">I'm a web dev and maker in Chicago.</div>
