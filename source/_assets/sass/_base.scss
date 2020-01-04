@@ -63,32 +63,32 @@ h6 {
 
 h1 {
     @apply font-bold;
-    @apply text-5xl;
+    @apply text-4xl;
 }
 
 h2 {
     @apply font-medium;
-    @apply text-4xl;
+    @apply text-3xl;
 }
 
 h3 {
     @apply font-bold;
-    @apply text-3xl;
+    @apply text-2xl;
 }
 
 h4 {
     @apply font-normal;
-    @apply text-2xl;
+    @apply text-xl;
 }
 
 h5 {
     @apply font-normal;
-    @apply text-xl;
+    @apply text-lg;
 }
 
 h6 {
     @apply font-light;
-    @apply text-lg;
+    @apply text-base;
 }
 
 hr {

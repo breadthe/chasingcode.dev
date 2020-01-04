@@ -782,32 +782,32 @@ h6:first-child {
 
 h1 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 h2 {
   font-weight: 500;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
 }
 
 h3 {
   font-weight: 700;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
 }
 
 h4 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h5 {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 h6 {
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 hr {
