@@ -674,7 +674,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Consolas, Menlo, Monaco, Liberation Mono, Courier New, monospace;
 }
 
 /**
@@ -711,7 +711,7 @@ video {
 }
 
 body {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #4a5568;
   line-height: 1.625;
 }
@@ -4088,7 +4088,7 @@ form button[type=submit] {
 }
 
 .font-sans{
-  font-family: Raleway, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Lato, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-serif{
@@ -4096,7 +4096,7 @@ form button[type=submit] {
 }
 
 .font-mono{
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Consolas, Menlo, Monaco, Liberation Mono, Courier New, monospace;
 }
 
 .font-hairline{
@@ -15967,7 +15967,7 @@ form button[type=submit] {
   }
 
   .sm\:font-sans{
-    font-family: Raleway, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Lato, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif{
@@ -15975,7 +15975,7 @@ form button[type=submit] {
   }
 
   .sm\:font-mono{
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Consolas, Menlo, Monaco, Liberation Mono, Courier New, monospace;
   }
 
   .sm\:font-hairline{
@@ -27847,7 +27847,7 @@ form button[type=submit] {
   }
 
   .md\:font-sans{
-    font-family: Raleway, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Lato, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif{
@@ -27855,7 +27855,7 @@ form button[type=submit] {
   }
 
   .md\:font-mono{
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Consolas, Menlo, Monaco, Liberation Mono, Courier New, monospace;
   }
 
   .md\:font-hairline{
@@ -39727,7 +39727,7 @@ form button[type=submit] {
   }
 
   .lg\:font-sans{
-    font-family: Raleway, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Lato, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif{
@@ -39735,7 +39735,7 @@ form button[type=submit] {
   }
 
   .lg\:font-mono{
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Consolas, Menlo, Monaco, Liberation Mono, Courier New, monospace;
   }
 
   .lg\:font-hairline{
@@ -51607,7 +51607,7 @@ form button[type=submit] {
   }
 
   .xl\:font-sans{
-    font-family: Raleway, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Lato, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif{
@@ -51615,7 +51615,7 @@ form button[type=submit] {
   }
 
   .xl\:font-mono{
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Consolas, Menlo, Monaco, Liberation Mono, Courier New, monospace;
   }
 
   .xl\:font-hairline{

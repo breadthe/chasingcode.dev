@@ -3,7 +3,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 'sans': [
-                    'Raleway',
+                    'Lato',
                     'system-ui',
                     'BlinkMacSystemFont',
                     '-apple-system',
@@ -31,9 +31,9 @@ module.exports = {
                     'serif',
                 ],
                 'mono': [
+                    'Consolas',
                     'Menlo',
                     'Monaco',
-                    'Consolas',
                     'Liberation Mono',
                     'Courier New',
                     'monospace',
