@@ -181,6 +181,17 @@ Finally, there's also a `x-cloak` directive which prevents hidden elements from 
 
 > If you're wondering why I'm using the same `x-show` on both parent and child elements, there was some weirdness going on with the Stripe form (which is rendered via magic provided by `stripe.js`). This was my solution for handling that.
 
+## Demo
+
+I also made an (even more simplified) Codepen demo for convenience.
+
+<p class="codepen" data-height="265" data-theme-id="default" data-default-tab="html,result" data-user="brbcoding-the-selector" data-slug-hash="dyPZOxL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Payment Form">
+  <span>See the Pen <a href="https://codepen.io/brbcoding-the-selector/pen/dyPZOxL">
+  Payment Form</a> by Constantin (<a href="https://codepen.io/brbcoding-the-selector">@brbcoding-the-selector</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## Conclusion
 
 [Alpine.js](https://github.com/alpinejs/alpine) is one of the coolest things in the dev world that came out of 2019, in my opinion. It should make quick work of simple behavior that we traditionally turned to jQuery, Vue/React, or plain JavaScript for.
