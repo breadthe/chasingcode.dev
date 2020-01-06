@@ -58,7 +58,7 @@ form {
     @apply text-xl;
   }
 
-  a:not(.category--tag):not(.author--section) {
+  a:not(.category--tag):not(.author--section):not(.social--share--icon) {
     @apply font-semibold;
     @apply text-black;
     @apply border-b border-solid border-teal-400;

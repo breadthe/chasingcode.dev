@@ -26,6 +26,8 @@
 
             @include('_partials.tags')
 
+            @include('_partials.social-share-icons')
+
             @include('_partials.author')
 
         </div>

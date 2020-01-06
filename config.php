@@ -6,6 +6,7 @@ return [
     'siteName' => 'Chasing Code',
     'siteDescription' => 'Full stack dev in Chicago | Laravel | PHP | Vue | TailwindCSS',
     'siteAuthor' => 'Constantin',
+    'twitterHandle' => 'brbcoding',
 
     // collections
     'collections' => [

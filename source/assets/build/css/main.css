@@ -1044,7 +1044,7 @@ form button[type=submit] {
   font-size: 1.25rem;
 }
 
-.post a:not(.category--tag):not(.author--section) {
+.post a:not(.category--tag):not(.author--section):not(.social--share--icon) {
   font-weight: 600;
   color: #000;
   border-bottom-width: 1px;
@@ -1052,7 +1052,7 @@ form button[type=submit] {
   border-color: #4fd1c5;
 }
 
-.post a:not(.category--tag):not(.author--section):hover {
+.post a:not(.category--tag):not(.author--section):not(.social--share--icon):hover {
   background-color: #e6fffa;
   border-bottom-width: 1px;
   border-style: solid;
