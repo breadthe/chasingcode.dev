@@ -24,16 +24,7 @@
         <div class="post border-b border-gray-500 sm:text-2xl font-light text-grey-darkest mb-10 pb-4 mt-8 sm:mt-4" v-pre>
             @yield('content')
 
-            @if ($page->categories)
-                @foreach ($page->categories as $i => $category)
-                    <a
-                            href="{{ '/blog/categories/' . $category }}"
-                            title="View posts in {{ $category }}"
-                            class="category--tag px-2 border border-dashed border-teal-700 hover:border-teal-100 bg-teal-100 hover:bg-teal-400 text-teal-700 hover:text-teal-100 font-semibold rounded px-1"
-                            style="background-image: none;"
-                    >{{ $category }}</a>
-                @endforeach
-            @endif
+            @include('_partials.tags')
 
             @include('_partials.author')
 
