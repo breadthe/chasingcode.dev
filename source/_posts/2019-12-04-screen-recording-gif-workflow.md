@@ -71,4 +71,4 @@ Finally hit *Upload to Giphy*. Once it finishes uploading it directs you to the 
 
 ## Update: 10 January 2020
 
-I came across [Kap](https://getkap.co/), an "open-source screen recorder built with web technology" and I changed my workflow to accommodate it. It's simpler than QuickTime, it can capture portions of the screen, and it exports GIFs directly, so I can bypass Giphy. I highly recommend it.
+I came across [Kap](https://getkap.co/), an "open-source screen recorder built with web technology" and I changed my workflow to accommodate it. It's simpler than QuickTime, it can capture portions of the screen, and it exports GIFs directly, so I can bypass Giphy. I highly recommend it. Mac only.
