@@ -68,3 +68,7 @@ I'm not sure what *Source URL* is, but I assume it's there if you upload a video
 I recommend tagging the clip, using comma separated terms, such as `code editor, ide, php, phpstorm`.
 
 Finally hit *Upload to Giphy*. Once it finishes uploading it directs you to the GIF's page where you can share it to social media or, my preference, *Copy link*. This option opens a dialog with several flavors of URLs. The "Short Link" is handy for sharing on Twitter.
+
+## Update: 10 January 2020
+
+I came across [Kap](https://getkap.co/), an "open-source screen recorder built with web technology" and I changed my workflow to accommodate it. It's simpler than QuickTime, it can capture portions of the screen, and it exports GIFs directly, so I can bypass Giphy. I highly recommend it.
