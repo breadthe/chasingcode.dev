@@ -44,6 +44,7 @@ form {
   @apply overflow-auto;
   p {
     @apply leading-relaxed;
+    @apply text-xl;
 
     strong {
       @apply font-semibold;
