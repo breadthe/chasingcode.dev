@@ -8,7 +8,7 @@
 @endpush
 
 @section('body')
-    <section class="p-6 shadow-xl">
+    <section class="p-4 sm:p-6 shadow-xl">
         @if ($page->cover_image)
             <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
         @endif

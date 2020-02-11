@@ -15,7 +15,7 @@
 @endsection
 
 @section('body')
-    <section class="p-6 shadow-xl">
+    <section class="p-4 sm:p-6 shadow-xl">
         <div class="text-2xl border-b border-gray-500 mb-6 pb-6">
             <a href="/blog" title="Back to Blog index">
                 &LeftArrow; Back to Blog

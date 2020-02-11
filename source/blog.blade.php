@@ -20,7 +20,7 @@ pagination:
 @endsection
 
 @section('body')
-    <section class="p-6 shadow-xl">
+    <section class="p-4 sm:p-6 shadow-xl">
         @foreach ($pagination->items as $post)
             @include('_components.post-preview-inline')
 
