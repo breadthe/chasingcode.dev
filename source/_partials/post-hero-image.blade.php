@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <img src="{{ $image }}" alt="{{ $page->imageAttribution() }}" title="{{ $page->imageAttribution() }}">
+        <img src="{{ $image }}" alt="{{ $page->imageAttribution() ?: $page->title }}">
 
         @if($imageAttribution = $page->imageAttribution(true))
             <small class="block text-center text-xs">
