@@ -70,12 +70,21 @@ form {
     }
   }
 
-  ul {
+  ol, ul {
+    @apply text-xl;
     @apply leading-relaxed;
-    @apply list-disc;
     li {
       @apply list-inside;
     }
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  /* Center embedded Tweets */
+  .twitter-tweet.twitter-tweet-rendered {
+    @apply mx-auto;
   }
 }
 
