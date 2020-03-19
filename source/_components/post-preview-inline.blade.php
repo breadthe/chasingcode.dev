@@ -26,6 +26,7 @@
         @if($image = $post->image_thumb)
             <div
                     class="overflow-hidden sm:mr-4 mb-4 sm:w-1/4 text-center"
+                    style="max-height: 150px;"
             >
                 <a
                         href="{{ $post->getUrl() }}"
