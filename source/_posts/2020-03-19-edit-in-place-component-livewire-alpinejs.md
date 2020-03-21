@@ -22,6 +22,9 @@ What follows is a complete guide on how I built this feature using [Livewire](ht
 
 **TLDR** Don't feel like reading through the entire thing? No problem, here's the [repo](https://github.com/breadthe/laravel-livewire-demo) so you can dive right in.
 
+> **UPDATED March 21, 2020** Additional tinkering revealed some quirks with nested Livewire components in combination with AlpineJS. Instead of rewriting the entire guide (for the 3rd time), I'll show you my solution at the end. The repo has already been updated to reflect the changes.   
+> <a href="#update-2020-03-21">Jump to the update →</a>
+
 ## Installation
 
 > You'll find the code for this demo [here](https://github.com/breadthe/laravel-livewire-demo). Currently it contains an additional Livewire component that handles real-time tag & text search filtering.
@@ -338,3 +341,168 @@ Notice that the dirty state represented by `$newName` will persist in the text i
 There you go, awesome inline editing capabilities with a minimum of JavaScript. If this isn't a new golden age for the monolith, I don't know what is!
 
 The [code for the demo](https://github.com/breadthe/laravel-livewire-demo) should you wish to peruse it.
+
+<a name="update-2020-03-21"></a>
+
+## Update: March 21, 2020 - Fixing the nested component functionality
+
+The purpose of the original guide was to show how inline editing can be done with Livewire and Alpine. Mission accomplished, *however*, I built this functionality on top of an existing project, nesting the edit-in-place component inside the previous Livewire component. So the (now) parent component deals with filtering items (or widgets as I call them) on the page through either text search or tag selection. At the same time, each widget's name can be edited in place.
+
+Livewire has some rules and, dare I say, limitations around nested components. Here are some of these:
+
+- The child component must have a single root element.
+- (undocumented) That root element must be a `div`.
+- If the child component is part of a loop, it must have a `key` prop with a unique value, otherwise Livewire will get confused when it tries to update the DOM (e.g. filtering items). An example of a unique value would be the current items's id.
+- (undocumented) If the child is inside a loop (typically `@foreach`), it should be the first line in the loop, i.e. it cannot be nested inside, say, another div.
+- The root `div` in the child component must not have Alpine directives assigned to it. In other words, if you want put `x-data` on the root div, you'll have to nest another div inside it, and initiate Alpine inside *that one*. While this rule is illustrated in the code samples from the [official documentation](https://laravel-livewire.com/docs/alpine-js) it is not explicitly mentioned. A fellow dev pointed it out on Github before I noticed it.  
+
+I ran into some of these limitations while experimenting on how to fix the issues that started appearing after my original implementation.
+
+Essentially what happened was that initial filtering (whether through text or tags) of widgets succeeded, meaning that the list of items was reduced properly. Removing the filter by deleting the text in the search box or deselecting the tags, however, produced garbled content, e.g. items not being actually restored to the correct state, or items being restored with the wrong tags. In addition, errors were thrown in the browser dev console and the JS functionality broke at this point, requiring a page reload before functionality could be restored.
+
+So here's what I did to fix this. First, in the parent component `resources/views/livewire/widgets.blade.php`.
+
+**Before**
+
+Inside the `@foreach` is a div which contains, in order: the edit-in-place Livewire child component, and the list of tags for the current widget in the loop. This wrapper div is part of the problem, as it relates to the rules above.
+
+```html
+...
+@foreach($widgets as $widget)
+    <div class="flex items-center justify-between p-2 -mx-2 hover:bg-gray-100">
+        @livewire('edit-name', compact('widget'), key($widget->id))
+
+        @if($tags = $widget->tags)
+            <div class="-mx-1 text-right">
+                @foreach($tags as $tag)
+                    <small class="mx-1 {{ in_array($tag->id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-2 shadow">
+                        {{ $tag->name }}
+                    </small>
+                @endforeach
+            </div>
+        @endif
+    </div>
+@endforeach
+```
+
+**After**
+
+Now the Livewire child component becomes the first element in the loop. This takes care of one problem.
+
+If you're wondering why this works now, I'm pretty certain it relates to the `key` part I mentioned earlier. Previously, the wrapper div had no unique identifier assigned to it. This confused Livewire when the filters were removed, but now the first element in the loop is identified by `key($widget->id)`, so items can be redrawn properly.
+
+```html
+...
+@foreach($widgets as $widget)
+    @livewire('edit-name', compact('widget'), key($widget->id))
+
+    @if($tags = $widget->tags)
+        <div class="mb-4 -mt-1 -mx-2">
+            @foreach($tags as $tag)
+                <small class="mx-1 {{ in_array($tag->id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-2 shadow">
+                    {{ $tag->name }}
+                </small>
+            @endforeach
+        </div>
+    @endif
+@endforeach
+```
+
+Moving on to the child component, where the inline editing is handled, `resources/views/livewire/edit-name.blade.php`.
+
+**Before**
+
+Alpine directives are on the root div. Now I know that this is not OK.
+
+```html
+<div
+    x-data="
+        {
+             isEditing: false,
+             isName: '{{ $isName }}',
+             focus: function() {
+                const textInput = this.$refs.textInput;
+                textInput.focus();
+                textInput.select();
+             }
+        }
+    "
+    x-cloak
+>
+    <!-- the rest of the code -->
+</div>
+```
+
+**After**
+
+Instead, I've added a wrapper div with some of the styling pulled from the parent component (after removing the div that previously wrapped the child). Now the desired functionality has been restored.
+
+```html
+<div class="flex items-center justify-between -mx-2 hover:bg-gray-100">
+    <div
+        class="p-2"
+        x-show=!isEditing
+        class="flex items-center justify-between w-full"
+        x-data="
+            {
+                 isEditing: false,
+                 isName: '{{ $isName }}',
+                 focus: function() {
+                    const textInput = this.$refs.textInput;
+                    textInput.focus();
+                    textInput.select();
+                 }
+            }
+        "
+        x-cloak
+    >
+        <!-- the rest of the code -->
+    </div>
+</div>
+```
+
+**But...**
+
+There still remains a minor annoyance that I'm momentarily at a loss for how to fix. Take a look:
+
+![After fixing nested Livewire components](/assets/img/2020-03-21-livewire-nested-components-fix.png)
+
+This newly-discovered paradigm forced me to change the layout a little. While previously the widget name and tag list were displayed inline (name on the left, tags on the right), now the tags are below. Why? Because of what goes on in the loop:
+
+**Before**
+
+```html
+...
+@foreach($widgets as $widget)
+    <div class="flex items-center justify-between">
+        <div>
+            <!-- Widget name -->
+        </div>
+        <div>
+            <!-- Widget tags -->
+        </div>
+    </div>
+@endforeach
+```
+
+**After**
+
+```html
+...
+@foreach($widgets as $widget)
+    <div>
+        <!-- Widget name -->
+    </div>
+    <div>
+        <!-- Widget tags -->
+    </div>
+@endforeach
+```
+
+Now granted, I have also experimented with moving the tags inside the child component, while also passing through the `$filters` array from the parent. This worked, but now the filtered tags weren't highlighted anymore.
+
+I suspect the broken highlighting micro-feature comes from the lack of reactivity between parent -> child, as [documented here](https://laravel-livewire.com/docs/nesting-components). To quote: "*Nested components CAN accept data parameters from their parents, HOWEVER they are not reactive like props from a Vue component.*".
+
+And this makes a lot of sense, since I update the `$filters` array in the parent.
+
+At the end of the day this little annoyance is something that I managed to work around, but at the same time I believe it was worth mentioning for posterity.
