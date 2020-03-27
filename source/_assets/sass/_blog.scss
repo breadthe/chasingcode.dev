@@ -73,7 +73,14 @@ form {
   ol, ul {
     @apply text-xl;
     @apply leading-relaxed;
+    @apply ml-4;
+
+    @screen sm {
+      @apply ml-8;
+    }
+
     li {
+      @apply leading-loose;
       @apply list-inside;
     }
   }
