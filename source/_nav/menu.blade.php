@@ -14,6 +14,20 @@
     </a>
 
     <a
+        title="Uses"
+        href="/uses"
+        class="
+            ml-6 text-teal-200 hover:text-teal-400
+            {{
+                $page->belongsTo('/uses') ?
+                'active border-b-2 border-teal-400' :
+                ''
+            }}"
+    >
+        Uses
+    </a>
+
+    <a
         title="{{ $page->siteName }} Contact"
         href="/contact"
         class="
