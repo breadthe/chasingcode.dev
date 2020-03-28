@@ -14,6 +14,20 @@
     </a>
 
     <a
+        title="Archive"
+        href="/archive"
+        class="
+            ml-6 text-teal-200 hover:text-teal-400
+            {{
+                $page->belongsTo('/archive') ?
+                'active border-b-2 border-teal-400' :
+                ''
+            }}"
+    >
+        Archive
+    </a>
+
+    <a
         title="Uses"
         href="/uses"
         class="

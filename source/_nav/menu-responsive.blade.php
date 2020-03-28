@@ -17,6 +17,20 @@
         </li>
         <li class="pl-4">
             <a
+                title="Archive"
+                href="/archive"
+                class="
+                    nav-menu__item inline-block text-teal-200 text-2xl
+                    {{
+                        $page->belongsTo('/archive') ?
+                        'active hover:text-teal-400 border-b-2 border-teal-400' :
+                        ''
+                    }}
+                "
+            >Archive</a>
+        </li>
+        <li class="pl-4">
+            <a
                 title="Uses"
                 href="/uses"
                 class="
