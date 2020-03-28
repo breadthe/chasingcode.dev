@@ -15,7 +15,7 @@
 @endsection
 
 @section('body')
-    <section class="p-4 sm:p-6 shadow-xl">
+    <section class="bg-white p-4 sm:p-6 shadow-xl">
         @foreach ($posts->groupBy(function ($post) { return $post->getDate()->format('Y'); }) as $year => $yearPosts)
             <div class="mb-8">
                 <h2 class="flex items-center justify-between text-teal-700">
