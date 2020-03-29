@@ -29,7 +29,7 @@
                 "
             >Archive</a>
         </li>
-        <li class="pl-4">
+        {{--<li class="pl-4">
             <a
                 title="Uses"
                 href="/uses"
@@ -42,7 +42,7 @@
                     }}
                 "
             >Uses</a>
-        </li>
+        </li>--}}
         <li class="pl-4">
             <a
                 title="{{ $page->siteName }} Contact"
