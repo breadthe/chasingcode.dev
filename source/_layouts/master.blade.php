@@ -6,10 +6,8 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
 
-        <meta property="og:title" content="{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ $page->getUrl() }}"/>
-        <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
+        @stack('meta')
+
         @if($image = $page->image)
             <meta property="og:image" content="{{ Illuminate\Support\Str::contains($image, 'unsplash.com') ? $image : $page->baseUrl . $image }}" />
         @endif
@@ -21,8 +19,6 @@
         @include('_partials.favicon')
 
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Blog">
-
-        @stack('meta')
 
         @if ($page->production)
             @include('_partials.google-analytics')
