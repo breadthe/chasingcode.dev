@@ -1,5 +1,6 @@
 <?php
 
+use Breadthe\PhpContrast\HexColorPair;
 use Illuminate\Support\Collection;
 
 return [
@@ -22,6 +23,7 @@ return [
         ],
         'categories' => [
             'path' => '/blog/categories/{filename}',
+            'sort' => '-title',
             'posts' => function ($page, Collection $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
                     return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;
@@ -96,5 +98,19 @@ return [
         }
 
         return $str;
+    },
+    /**
+     * Input: tag/category name
+     * Output: "#9fa96e"
+     */
+    'bgColor' => function ($category) {
+        return sprintf("#%s",substr(md5($category), 0, 6));
+    },
+    /**
+     * Accessible text to go with the tag/category background
+     * Output: "#14e5c5"
+     */
+    'fgColor' => function ($category) {
+        return HexColorPair::minContrast(5)->getSibling(substr(md5($category), 0, 6))->hex;
     },
 ];
