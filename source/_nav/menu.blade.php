@@ -27,7 +27,7 @@
         Archive
     </a>
 
-    {{--<a
+    <a
         title="Uses"
         href="/uses"
         class="
@@ -39,7 +39,7 @@
             }}"
     >
         Uses
-    </a>--}}
+    </a>
 
     <a
         title="{{ $page->siteName }} Contact"
