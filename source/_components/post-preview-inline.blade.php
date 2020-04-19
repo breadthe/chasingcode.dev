@@ -25,7 +25,7 @@
     <section class="flex flex-col sm:flex-row justify-start mb-4 mt-0">
         @if($image = $post->image_thumb)
             <div
-                    class="overflow-hidden sm:mr-4 mb-4 sm:w-1/4 text-center"
+                    class="flex items-center justify-center overflow-hidden sm:mr-4 mb-4 sm:w-1/4"
                     style="max-height: 150px;"
             >
                 <a
