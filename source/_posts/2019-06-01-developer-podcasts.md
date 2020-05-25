@@ -57,7 +57,7 @@ Let's dissect each of the developer podcasts I've listed, to see what makes them
 
 **Spotify?** Yes
 
-**What is is about?** Adam's background is Laravel and Vue.js, and of course [Tailwind CSS](https://tailwindcss.com/) so a fair number of episodes revolve around this ecosystem, but there are a numerous discussions on a variety of industry topics, to quote, "everything from user experience and product design to unit testing and system administration". More often than not he interviews developers, designers, and people from the software development community.
+**What is it about?** Adam's background is Laravel and Vue.js, and of course [Tailwind CSS](https://tailwindcss.com/) so a fair number of episodes revolve around this ecosystem, but there are a numerous discussions on a variety of industry topics, to quote, "everything from user experience and product design to unit testing and system administration". More often than not he interviews developers, designers, and people from the software development community.
 
 If there's one podcast above all else that I would pick, this would be it. Once I discovered it, I listened to all the episodes, going back in time all the way to the beginning. I've learned something new or interesting from every single episode - 115 and counting as of this writing.
 
@@ -71,7 +71,7 @@ If there's one podcast above all else that I would pick, this would be it. Once 
 
 **Spotify?** Yes
 
-**What is is about?** Wes and Scott are full stack developers deeply embedded in React-land. React is not really my cup of tea (Vue.js FTW) but this is my second most listened podcast because most episodes are not React-specific but rather touch heavily on general JavaScript issues, as well as a diverse range of topics relevant to developers. The two have great chemistry and are absolutely hilarious to listen to.
+**What is it about?** Wes and Scott are full stack developers deeply embedded in React-land. React is not really my cup of tea (Vue.js FTW) but this is my second most listened podcast because most episodes are not React-specific but rather touch heavily on general JavaScript issues, as well as a diverse range of topics relevant to developers. The two have great chemistry and are absolutely hilarious to listen to.
 
 I found out about Wes Bos when I attended his talk on CSS Grid at Laracon 2018. Both him and Scott run their own businesses focused mainly on creating premium video tutorials on React and JavaScript-related subjects.
 
@@ -83,7 +83,7 @@ I found out about Wes Bos when I attended his talk on CSS Grid at Laracon 2018. 
 
 **Spotify?** Yes
 
-**What is is about?** As the title suggests, this podcast is mostly about things happening in Laravel-land. Each week or so, Jake and Michael discuss new features that are added to the framework, as well as new packages and various other related topics. If you want to become a better Laravel developer I highly recommend it.
+**What is it about?** As the title suggests, this podcast is mostly about things happening in Laravel-land. Each week or so, Jake and Michael discuss new features that are added to the framework, as well as new packages and various other related topics. If you want to become a better Laravel developer I highly recommend it.
 
 I started listening to this podcast recently and, once again, I fired up my time machine and went back all the way to the first episode. I didn't adopt Laravel very early on so I missed a lot of the goodness that happened in older versions. Because Laravel is my universe for the foreseeable future, I want to absorb as much of it as I can, so it makes sense to me to witness "history in the making", if you'll forgive the pun.
 
@@ -97,7 +97,7 @@ I started listening to this podcast recently and, once again, I fired up my time
 
 **Spotify?** Yes
 
-**What is is about?** Two developers from [Tighten](https://tighten.co/) discuss programming topics for a quick and succinct 20-30 minutes. Since both are Laravel devs, quite a few discussions touch Laravel to some extent but I really enjoy the light, friendly banter between the two. It's like having a conversation over a beer with your best bud about programming and work-related stuff. Very insightful, relaxing, and I appreciate the short length of each episode, which makes it easy to pick one up at odd moments when I don't have a full hour to dedicate to another podcast.
+**What is it about?** Two developers from [Tighten](https://tighten.co/) discuss programming topics for a quick and succinct 20-30 minutes. Since both are Laravel devs, quite a few discussions touch Laravel to some extent but I really enjoy the light, friendly banter between the two. It's like having a conversation over a beer with your best bud about programming and work-related stuff. Very insightful, relaxing, and I appreciate the short length of each episode, which makes it easy to pick one up at odd moments when I don't have a full hour to dedicate to another podcast.
 
 ### [Rework](https://rework.fm/)
 
@@ -109,7 +109,7 @@ I started listening to this podcast recently and, once again, I fired up my time
 
 **Spotify?** Yes
 
-**What is is about?** While this podcast is not specifically about programming, it is produced by one of my favorite companies in the world, and the subjects are nonetheless incredibly fascinating. Many of the episodes are about better ways to run a business, as well as various pitfalls that the company has encountered. Most episodes feature interviews with employees of the company in diverse positions (which makes it fascinating to take a peek inside Basecamp) but also with industry peers who hold similar views or face similar challenges. Overall it's a great insight into how a well-run company operates. The episodes are short and to the point, which makes them easily digestible at a moment's notice.
+**What is it about?** While this podcast is not specifically about programming, it is produced by one of my favorite companies in the world, and the subjects are nonetheless incredibly fascinating. Many of the episodes are about better ways to run a business, as well as various pitfalls that the company has encountered. Most episodes feature interviews with employees of the company in diverse positions (which makes it fascinating to take a peek inside Basecamp) but also with industry peers who hold similar views or face similar challenges. Overall it's a great insight into how a well-run company operates. The episodes are short and to the point, which makes them easily digestible at a moment's notice.
 
 ### [The Laravel Snippet](https://blog.laravel.com/)
 
@@ -119,7 +119,7 @@ I started listening to this podcast recently and, once again, I fired up my time
 
 **Spotify?** No
 
-**What is is about?** Very quick snippets by Taylor Otwell, the creator of Laravel. This one is a little weird because it's not a podcast per-se, rather more of an audio blog where he gives updates on how his work on Laravel and related products is progressing. Must-listen if you are a Laravel dev, as it gives insight into Taylor's mindset.
+**What is it about?** Very quick snippets by Taylor Otwell, the creator of Laravel. This one is a little weird because it's not a podcast per-se, rather more of an audio blog where he gives updates on how his work on Laravel and related products is progressing. Must-listen if you are a Laravel dev, as it gives insight into Taylor's mindset.
 
 ### [The Laracasts Snippet](https://laracasts.simplecast.fm/) or directly from [Laracasts](https://laracasts.com/podcast)
 
@@ -129,7 +129,7 @@ I started listening to this podcast recently and, once again, I fired up my time
 
 **Spotify?** No
 
-**What is is about?** Short random snippets, some touching on programming, others not so much, by Jeffrey Way. Jeffrey is a huge contributor to the Laravel community and the creator and owner of Laracasts and I enjoy these tidbits a lot. Too bad they're not up on Spotify.
+**What is it about?** Short random snippets, some touching on programming, others not so much, by Jeffrey Way. Jeffrey is a huge contributor to the Laravel community and the creator and owner of Laracasts and I enjoy these tidbits a lot. Too bad they're not up on Spotify.
 
 ### [Twenty Percent Time](https://podcasts.apple.com/us/podcast/twenty-percent-time/id1231652815)
 
@@ -141,5 +141,5 @@ I started listening to this podcast recently and, once again, I fired up my time
 
 **Spotify?** No
 
-**What is is about?** As far as I can tell, Twenty Percent Time morphed into No Plans to Merge. Both are hosted, of course, by Daniel and Caleb. I plan to go back and listen to this podcast as well, because I like the duo so much.
+**What is it about?** As far as I can tell, Twenty Percent Time morphed into No Plans to Merge. Both are hosted, of course, by Daniel and Caleb. I plan to go back and listen to this podcast as well, because I like the duo so much.
 
