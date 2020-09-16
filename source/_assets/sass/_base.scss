@@ -30,6 +30,9 @@ code {
     @apply py-px;
     @apply rounded;
     @apply text-lg;
+    &:not(.hljs) {
+        @apply text-black border-b-2 border-teal-400;
+    }
 }
 
 code.hljs {
