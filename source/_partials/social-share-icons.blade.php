@@ -1,4 +1,4 @@
-<section class="mt-4">
+<section class="mt-8">
     <div>
         Liked this article? Share it on your favorite platform.
     </div>
