@@ -2,12 +2,12 @@
 extends: _layouts.post
 section: content
 title: My First Side Project - BankAlt.com
-date: 2020-11-11
+date: 2020-11-03
 description: 
 categories: [Career, SideProject, PHP]
 featured: false
-image: /assets/img/2020-11-11-bankalt.jpg
-image_thumb: /assets/img/2020-11-11-bankalt-thumb.jpg 
+image: /assets/img/2020-11-03-bankalt.jpg
+image_thumb: /assets/img/2020-11-03-bankalt-thumb.jpg 
 image_author: 
 image_author_url: 
 image_unsplash: 
@@ -70,7 +70,7 @@ While browsing the Web Archive under the influence of nostalgia, a wild thought 
 
 The **bankalt.com** domain has long expired, and I do not plan on buying it back. For curiosity, I checked to see if it's available, and I was a little dismayed to find out that it is currently listed for $2900.
 
-![Cost of the bankalt.com domain](/assets/img/2020-11-11-bankalt-com-domain.png)
+![Cost of the bankalt.com domain](/assets/img/2020-11-03-bankalt-com-domain.png)
 
 Consequently, buying the original domain is out of the question. If I do manage to restore the site to a working state, I will host it on one of my other domains. But if you, dear reader, have money burning a hole in your pocket, feel free to buy it back for me 🤑.
 
@@ -95,8 +95,8 @@ While the Wayback Machine keeps archives of all the pages, I wanted to capture t
 
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
     <div class="space-y-2">
-        <a href="/assets/img/2020-11-11-bankalt-home.jpg" title="bankalt.com - Landing page" target="blank">
-            <img src="/assets/img/2020-11-11-bankalt-home-thumb.jpg" alt="bankalt.com - Landing page"/>
+        <a href="/assets/img/2020-11-03-bankalt-home.jpg" title="bankalt.com - Landing page" target="blank">
+            <img src="/assets/img/2020-11-03-bankalt-home-thumb.jpg" alt="bankalt.com - Landing page"/>
         </a>    
         <div class="text-sm">
             <strong>Landing page</strong>
@@ -105,8 +105,8 @@ While the Wayback Machine keeps archives of all the pages, I wanted to capture t
         </div>
     </div>
     <div class="space-y-2">
-        <a href="/assets/img/2020-11-11-bankalt-news.jpg" title="bankalt.com - News page" target="blank">
-            <img src="/assets/img/2020-11-11-bankalt-news-thumb.jpg" alt="bankalt.com - News page"/>
+        <a href="/assets/img/2020-11-03-bankalt-news.jpg" title="bankalt.com - News page" target="blank">
+            <img src="/assets/img/2020-11-03-bankalt-news-thumb.jpg" alt="bankalt.com - News page"/>
         </a>    
         <div class="text-sm">
             <strong>News page</strong>
@@ -115,8 +115,8 @@ While the Wayback Machine keeps archives of all the pages, I wanted to capture t
         </div>
     </div>
     <div class="space-y-2">
-        <a href="/assets/img/2020-11-11-bankalt-about.jpg" title="bankalt.com - About page" target="blank">
-            <img src="/assets/img/2020-11-11-bankalt-about-thumb.jpg" alt="bankalt.com - About page"/>
+        <a href="/assets/img/2020-11-03-bankalt-about.jpg" title="bankalt.com - About page" target="blank">
+            <img src="/assets/img/2020-11-03-bankalt-about-thumb.jpg" alt="bankalt.com - About page"/>
         </a>    
         <div class="text-sm">
             <strong>About page</strong>
@@ -125,8 +125,8 @@ While the Wayback Machine keeps archives of all the pages, I wanted to capture t
         </div>
     </div>
     <div class="space-y-2">
-        <a href="/assets/img/2020-11-11-bankalt-contact.jpg" title="bankalt.com - Contact page" target="blank">
-            <img src="/assets/img/2020-11-11-bankalt-contact-thumb.jpg" alt="bankalt.com - Contact page"/>
+        <a href="/assets/img/2020-11-03-bankalt-contact.jpg" title="bankalt.com - Contact page" target="blank">
+            <img src="/assets/img/2020-11-03-bankalt-contact-thumb.jpg" alt="bankalt.com - Contact page"/>
         </a>    
         <div class="text-sm">
             <strong>Contact page</strong>
@@ -135,8 +135,8 @@ While the Wayback Machine keeps archives of all the pages, I wanted to capture t
         </div>
     </div>
     <div class="space-y-2">
-        <a href="/assets/img/2020-11-11-bankalt-help.jpg" title="bankalt.com - Help page" target="blank">
-            <img src="/assets/img/2020-11-11-bankalt-help-thumb.jpg" alt="bankalt.com - Help page"/>
+        <a href="/assets/img/2020-11-03-bankalt-help.jpg" title="bankalt.com - Help page" target="blank">
+            <img src="/assets/img/2020-11-03-bankalt-help-thumb.jpg" alt="bankalt.com - Help page"/>
         </a>    
         <div class="text-sm">
             <strong>Help page</strong>
@@ -145,8 +145,8 @@ While the Wayback Machine keeps archives of all the pages, I wanted to capture t
         </div>
     </div>
     <div class="space-y-2">
-        <a href="/assets/img/2020-11-11-bankalt-faq.jpg" title="bankalt.com - FAQ page" target="blank">
-            <img src="/assets/img/2020-11-11-bankalt-faq-thumb.jpg" alt="bankalt.com - FAQ page"/>
+        <a href="/assets/img/2020-11-03-bankalt-faq.jpg" title="bankalt.com - FAQ page" target="blank">
+            <img src="/assets/img/2020-11-03-bankalt-faq-thumb.jpg" alt="bankalt.com - FAQ page"/>
         </a>    
         <div class="text-sm">
             <strong>FAQ page</strong>
@@ -155,8 +155,8 @@ While the Wayback Machine keeps archives of all the pages, I wanted to capture t
         </div>
     </div>
     <div class="space-y-2">
-        <a href="/assets/img/2020-11-11-bankalt-profession.jpg" title="bankalt.com - Profession page" target="blank">
-            <img src="/assets/img/2020-11-11-bankalt-profession-thumb.jpg" alt="bankalt.com - Profession page"/>
+        <a href="/assets/img/2020-11-03-bankalt-profession.jpg" title="bankalt.com - Profession page" target="blank">
+            <img src="/assets/img/2020-11-03-bankalt-profession-thumb.jpg" alt="bankalt.com - Profession page"/>
         </a>    
         <div class="text-sm">
             <strong>Profession page</strong>
