@@ -12,15 +12,15 @@ A comprehensive list of my favorite hardware, software, and gear, from the persp
 
 I prefer coding on Macs, exclusively. While I've coded successfully on PCs, I find that I'm a lot more productive, have a lot less frustrations, and my dev tools just work on a Mac.
 
-- Day job laptop: [2019 MacBook Pro 16"](https://amzn.to/33A3Hmm) 2.4 GHz 8-core Intel Core i9 32GB RAM 1TB SSD
-- After-work laptop: **2015 MacBook Pro 15"** 2.5 GHz 4-core Intel Core i7 16GB RAM 512GB SSD
-- Backup laptop (if all other Macs 💥): **2014 MacBook Pro 13"** 2.6 GHz 2-core Intel Core i5 8GB RAM 128GB SSD
+- Day job laptop: [2019 MacBook Pro 16"](https://amzn.to/33A3Hmm) 2.4 GHz 8-core Intel Core i9, 32GB RAM, 1TB SSD
+- Personal laptop: [2020 MacBook Air M1](https://amzn.to/3k7K3Xe) 8-core GPU, 16GB RAM, 512 GB SSD
 
 ## Mac peripherals/accessories
 
 - Wireless keyboard: [Apple Magic Keyboard 2](https://amzn.to/2y01l4D) - best coding keyboard I've ever used
 - Wireless trackpad: [Apple Magic Trackpad 2](https://amzn.to/33Chitn) - Apple has the best trackpad implementation of any manufacturer, and the wireless one is an absolute must for trackpad fans
 - USB-C dongle (for 16" Mac): [VAVA USB-C Hub](https://amzn.to/3dpKOaz) 8-in-1 4K HDMI, 1Gbps RJ45 ethernet port, USB 3.0, SD/TF card reader, 100W charging port
+- 2020 M1 MacBook Air case: [IBENZER New 2020 MacBook Air 13 inch Case M1 A2337 A2179 A1932](https://amzn.to/2ZDtclu) - excellent transparent case that shows off the Mac chassis. Comes with a screen protector that is fairly easy to install, as well as a silicone keyboard skin thin enough to make typing feel natural
 - 16" MacBook Pro case: [MOSISO MacBook Pro 16 inch Case, Crystal Clear](https://amzn.to/3bdWmLZ) - while the laptop was purchased by the company I work for, I wanted to protect it with a case as well as being able to put whatever stickers I want on it. I'm very happy with this case - it also comes with a screen protector and a keyboard cover if you're into that sort of thing. 
 
 ## Mac/development software
