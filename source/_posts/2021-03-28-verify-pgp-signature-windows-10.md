@@ -23,7 +23,7 @@ Unfortunately Windows 10 does not offer any tools out of the box, instead requir
 
 After downloading and installing from the link above, the [SignTool](https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool) utility should become available. This is what you'll be using to verify PGP signatures.
 
-## Checking the PHP signature
+## Checking the PGP signature
 
 Let's assume you downloaded a file called `installer.exe` from whatever website. If the website provided a PGP signature, it will likely be named `installer.exe.asc`, so download it in the same folder as the `.exe`.
 
