@@ -78,11 +78,6 @@ form {
     @screen sm {
       @apply ml-8;
     }
-
-    li {
-      @apply leading-loose;
-      @apply list-inside;
-    }
   }
 
   ul {
