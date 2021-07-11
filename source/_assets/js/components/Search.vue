@@ -29,7 +29,7 @@
 
             <transition name="fade">
                 <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full sm:w-1/2 text-left mb-4 mt-16 sm:mt-12">
-                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 shadow-lg mx-4 sm:mx-0">
+                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 shadow-lg mx-4 sm:mx-0 max-w-xs sm:max-w-sm lg:max-w-lg" style="width: 520px;">
                         <a
                             v-for="(result, index) in results"
                             class="bg-white hover:bg-gray-100 border-b border-teal-400 text-xl cursor-pointer p-4"
