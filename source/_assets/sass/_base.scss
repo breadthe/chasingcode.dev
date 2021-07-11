@@ -25,13 +25,15 @@ blockquote {
 }
 
 code {
-    @apply bg-teal-100;
+    //@apply bg-teal-100;
+    background-color: $pastel-yellow;
     @apply px-2;
     @apply py-px;
     @apply rounded;
     @apply text-lg;
     &:not(.hljs) {
-        @apply text-black border-b-2 border-teal-400;
+        //@apply text-black border-b-2 border-teal-400;
+        //@apply text-black;
     }
 }
 
