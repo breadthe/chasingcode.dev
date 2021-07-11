@@ -15,7 +15,7 @@ pagination:
 @section('hero')
     @include('_partials.hero',[
         'title' => 'Blog',
-        'description' => 'Pontificating on all things Laravel // Vue.js // TailwindCSS // and more...',
+        'description' => 'Pontificating on Laravel // Livewire // Alpine.js // Svelte // Vue.js // Electron // TailwindCSS // and more...',
     ])
 @endsection
 
