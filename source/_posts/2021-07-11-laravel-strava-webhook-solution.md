@@ -312,7 +312,7 @@ Route::get('/webhook', function (Request $request) {
 
 Whenever there's an event, Strava will fire a `POST /webhook` request with the following data.
 
-The app needs respond with `200 OK` within 2s, otherwise Strava will retry 2 more times before it stops.
+The app needs respond with `200 OK` within 2s, otherwise Strava will retry 3 more times before it stops.
 
 ```php
 Route::post('/webhook', function (Request $request) {
