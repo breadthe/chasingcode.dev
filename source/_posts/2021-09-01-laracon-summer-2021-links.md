@@ -36,6 +36,8 @@ Gathered from [@driesvints](https://twitter.com/driesvints) 's *Getting The Most
 - [Cashier Paddle Talk repo](https://github.com/driesvints/cashier-paddle-talk)
 - [Cashier Stripe Talk repo](https://github.com/driesvints/cashier-stripe-talk)
 
+- [Test Form Request gist](https://gist.github.com/colindecarlo/9ba9bd6524127fee7580ae66c6d4709d) gathered from [@colindecarlo](https://twitter.com/colindecarlo) 's *Practical Laravel Unit Testing* talk
+
 Gathered from [@christophrumpel](https://twitter.com/christophrumpel) 's *Why Refactoring Is The Best Tool To Write Better Code* talk:
 
 - [Source code](https://github.com/christophrumpel/larastreamers) for [Larastreamers](https://larastreamers.com/)
