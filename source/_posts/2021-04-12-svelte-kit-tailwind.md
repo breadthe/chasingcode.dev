@@ -30,19 +30,21 @@ cd my-app
 npm install
 
 # 3. Add TailwindCSS
-npx svelte-add tailwindcss  --jit
+# @see https://github.com/svelte-add/tailwindcss
+npx svelte-add@latest tailwindcss
 ```
 
 Step 3 automates most of Tailwind's configuration, by creating pre-populated configs for `postcss.config.cjs`, `tailwind.config.cjs`, and filling in the required PostCSS config in `svelte.config.cjs`.
 
-To finalize installing Tailwind, open `app.scss` and add the base Tailwind styles right at the top:
+To finalize installing Tailwind, open `app.css` and add the base Tailwind styles right at the top:
 
 ```scss
 @tailwind base;
+
+// Custom CSS goes here
+
 @tailwind components;
 @tailwind utilities;
-
-// Custom CSS from here on
 ...
 ```
 
