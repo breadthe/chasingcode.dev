@@ -1,9 +1,9 @@
 ---
 extends: _layouts.post
 section: content
-title: Svelte Kit with TailwindCSS and JIT
+title: SvelteKit with TailwindCSS and JIT
 date: 2021-04-12
-description: A guide on how to quickly create a Svelte Kit static site with TailwindCSS and JIT
+description: A guide on how to quickly create a SvelteKit static site with TailwindCSS and JIT
 categories: [Svelte,TailwindCSS]
 featured: false
 image: /assets/img/svelte-kit-tailwind.jpg
@@ -21,7 +21,7 @@ Here's a super simple setup to scaffold a Svelte Kit static site. Since I also â
 
 ```bash
 # 1. Create a new Svelte Kit site
-# My choices: no TypeScript, SCSS, ESLint, Prettier
+# My choices: no TypeScript, ESLint, Prettier
 npm init svelte@next my-app
 
 cd my-app
