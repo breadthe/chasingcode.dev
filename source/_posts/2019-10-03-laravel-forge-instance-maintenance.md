@@ -199,4 +199,23 @@ systemctl status systemd-journald supervisor redis
 
 If these are green (`Active: active (running)`), you are good to go.
 
+### Restart Nginx
+
+```bash
+# Starts the Nginx service
+sudo systemctl start nginx
+
+# Stops the Nginx service
+sudo systemctl stop nginx
+
+# Stops then starts the Nginx service
+sudo systemctl restart nginx
+
+# Gracefully restarts the Nginx service
+sudo systemctl reload nginx
+
+# Shows the status of the Nginx service
+sudo systemctl status nginx
+```
+
 This concludes my maintenance procedure for Laravel Forge provisioned servers. I will update these instructions as I see fit, but in the meantime keep on forging ahead!
