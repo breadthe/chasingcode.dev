@@ -19,6 +19,8 @@ Svelte Kit is currently in public beta, but it's caused a lot of chatter over th
 
 Here's a super simple setup to scaffold a Svelte Kit static site. Since I also ❤️ TailwindCSS, I have instructions for that as well. And to make it a complete package, it all runs on [Vite](https://vitejs.dev/), for a super fast ⚡️ development environment.
 
+Check out my newer [Svelte, Vite, TailwindCSS 3](/blog/svelte-vite-tailwindcss3-template/) article if all you need is the base Svelte framework.
+
 ```bash
 # 1. Create a new Svelte Kit site
 # My choices: no TypeScript, ESLint, Prettier
