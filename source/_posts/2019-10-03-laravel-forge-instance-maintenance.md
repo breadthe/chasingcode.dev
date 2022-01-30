@@ -169,7 +169,7 @@ sudo apt list --installed
 # lists the packages that can be upgraded
 sudo apt list --upgradeable
 
-# actually perform the packages
+# actually perform the package upgrades
 sudo apt upgrade
 
 # removes packages that are no longer required
