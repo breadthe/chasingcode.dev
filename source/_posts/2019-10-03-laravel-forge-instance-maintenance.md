@@ -28,7 +28,7 @@ If, when you SSH into your Forge instance, you see a message like below...
 
 *** System restart required ***
 Last login: Sun Sep  8 22:09:04 2019 from xxx.xxx.xxx.xxx
-``` 
+```
 
 ... that means it's probably time to update those packages. Here's my procedure for doing that, bearing in mind that I'm not a sysadmin, and everything you read below was cobbled together from various sources but works 👍 for me.
 
@@ -120,7 +120,7 @@ sudo journalctl --vacuum-time=2d
 Retain only the past 500 MB:
 
 ```bash
-sudo journalctl --vacuum-size=500MB
+sudo journalctl --vacuum-size=500M
 ```
 
 **Restrict max journal size**
@@ -190,7 +190,7 @@ Once the system has rebooted, SSH back into it. You should be greeted with this 
 0 packages can be updated.
 0 updates are security updates.
 ```
- 
+
 Now check if your vital services are running. In my case there are only 3 I care about:
 
 ```bash
