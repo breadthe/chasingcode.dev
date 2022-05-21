@@ -13,9 +13,9 @@
             <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
         @endif
 
-        <h1 class="font-serif text-4xl text-center mb-2">{{ $page->title }}</h1>
+        <h1 class="font-serif text-3xl mb-2">{{ $page->title }}</h1>
 
-        <p class="text-grey-darker text-md text-center md:mt-0">
+        <p class="text-base md:mt-0">
             {{ date('F j, Y', $page->date) }}
         </p>
 
