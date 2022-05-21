@@ -17,10 +17,24 @@
     <h1 class="text-gray-100 text-5xl font-sans font-light mb-8">Professional work</h1>
 
     <div class="text-2xl text-left sm:text-justify font-light leading-relaxed">
-        I've worked in a variety of <span class="inline-block bg-teal-700 px-1 rounded leading-tight font-medium" style="transform: skew(-10deg, 0deg)">industries</span> throughout my career. Here are some of them.
+        I've worked in a variety of <span class="inline-block bg-teal-700 px-1 rounded leading-tight font-medium" style="transform: skew(-10deg, 0deg)">industries</span> throughout my career. Here are some of the most recent.
     </div>
 
     <section class="text-left font-light flex flex-wrap m-4 -mx-4">
+        <div class="flex-auto w-full sm:w-1/2 p-4">
+            <div class="flex flex-col h-full">
+                <dl class="flex-1">
+                    <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">Parking Booking SaaS</dt>
+                    <dd class="tracking-wide">Wrote API endpoints for running parameterized reporting in a serverless AWS Lambda environment.</dd>
+                </dl>
+                <dl>
+                    <dt class="mt-4 font-semibold">Tech</dt>
+                    <dd class="italic text-teal-200 h-12">Node.js &bull; AWS</dd>
+                </dl>
+                <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
+            </div>
+        </div>
+
         <div class="flex-auto w-full sm:w-1/2 p-4">
             <div class="flex flex-col h-full">
                 <dl class="flex-1">
@@ -29,7 +43,7 @@
                 </dl>
                 <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
-                    <dd class="italic text-teal-200">Laravel/PHP &bull; Vue.js/JavaScript &bull; TailwindCSS</dd>
+                    <dd class="italic text-teal-200">Laravel &bull; Vue.js &bull; TailwindCSS &bull; AWS</dd>
                 </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
@@ -38,12 +52,12 @@
         <div class="flex-auto w-full sm:w-1/2 p-4">
             <div class="flex flex-col h-full">
                 <dl class="flex-1">
-                    <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">SaaS</dt>
+                    <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">Nocode SaaS</dt>
                     <dd class="tracking-wide">Front-end UI work for the SPA part of an emerging lowcode/nocode SaaS app. Secure document handling and image manipulation.</dd>
                 </dl>
                 <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
-                    <dd class="italic text-teal-200">Ember.js/JavaScript</dd>
+                    <dd class="italic text-teal-200">Ember.js &bull; AWS</dd>
                 </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
@@ -52,12 +66,12 @@
         <div class="flex-auto w-full sm:w-1/2 p-4">
             <div class="flex flex-col h-full">
                 <dl class="flex-1">
-                    <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">Student Testing & Education</dt>
-                    <dd class="tracking-wide">Built new modules and functionality into an existing framework to extend the features of the online testing platform. Did both UI and back-end work.</dd>
+                    <dt class="inline-block text-teal-400 text-2xl font-semibold mb-2">Online Student Testing</dt>
+                    <dd class="tracking-wide">Built new front- and back-end modules and extended functionality for a web-based K12 testing platform.</dd>
                 </dl>
                 <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
-                    <dd class="italic text-teal-200">PHP &bull; MySQL &bull; jQuery/JavaScript</dd>
+                    <dd class="italic text-teal-200">PHP &bull; MySQL &bull; jQuery</dd>
                 </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
@@ -71,7 +85,7 @@
                 </dl>
                 <dl>
                     <dt class="mt-4 font-semibold">Tech</dt>
-                    <dd class="italic text-teal-200">PHP &bull; MySQL &bull; jQuery/JavaScript</dd>
+                    <dd class="italic text-teal-200">PHP &bull; MySQL &bull; jQuery</dd>
                 </dl>
                 <hr class="border-0 border-t border-teal-700 m-0 mt-8 mx-auto w-24">
             </div>
