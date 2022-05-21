@@ -32,7 +32,7 @@
 
             <dt class="w-full inline font-black uppercase">Age</dt> <dd class="inline mb-4">Old enough to enjoy a nice, cold hefeweizen 🍺.</dd>
 
-            <dt class="w-full inline font-black uppercase">Interests</dt> <dd class="inline mb-4">⌨️ Coding &bull; 🛠 Making software &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 🐠 Freediving &bull; 📖 Reading &bull; 🕹 Gaming</dd>
+            <dt class="w-full inline font-black uppercase">Interests</dt> <dd class="inline mb-4">⌨️&nbsp; Coding &bull; 🛠&nbsp; Making software &bull; 🚲&nbsp; Cycling &bull; ⛷&nbsp; Skiing &bull; 🐠&nbsp; Freediving &bull; 📖&nbsp; Reading &bull; 🕹&nbsp; Gaming</dd>
 
             <dt class="w-full inline font-black uppercase">Trivia</dt> <dd class="inline mb-4">Lived > 50% of my life outside my country of birth.</dd>
         </dl>
