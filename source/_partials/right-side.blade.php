@@ -32,7 +32,7 @@
 
             <dt class="w-full inline font-black uppercase">Age</dt> <dd class="inline mb-4">Old enough to enjoy a nice, cold hefeweizen 🍺.</dd>
 
-            <dt class="w-full inline font-black uppercase">Interests</dt> <dd class="inline mb-4">⌨️ Coding &bull; 🛠 Making things &bull; 💪 Lifting &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 🐠 Freediving &bull; 📖 Reading &bull; 🕹 Gaming</dd>
+            <dt class="w-full inline font-black uppercase">Interests</dt> <dd class="inline mb-4">⌨️ Coding &bull; 🛠 Making software &bull; 🚲 Cycling &bull; ⛷ Skiing &bull; 🐠 Freediving &bull; 📖 Reading &bull; 🕹 Gaming</dd>
 
             <dt class="w-full inline font-black uppercase">Trivia</dt> <dd class="inline mb-4">Lived > 50% of my life outside my country of birth.</dd>
         </dl>
@@ -48,9 +48,13 @@
         <ul>
             <li class="mb-4 font-black uppercase">Laravel</li>
 
-            <li class="mb-4 font-black uppercase">Vue.js</li>
+            <li class="mb-4 font-black uppercase">Livewire</li>
 
             <li class="mb-4 font-black uppercase">TailwindCSS</li>
+
+            <li class="mb-4 font-black uppercase">Svelte</li>
+
+            <li class="mb-4 font-black uppercase">Electron</li>
         </ul>
     </div>
 
