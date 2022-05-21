@@ -8,7 +8,7 @@
 @endpush
 
 @section('body')
-    <section class="p-4 sm:p-6 shadow-xl">
+    <section class="p-2 sm:p-6 shadow-xl">
         @if ($page->cover_image)
             <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
         @endif
@@ -32,7 +32,7 @@
 
         </div>
 
-        <nav class="flex justify-between text-sm md:text-base">
+        <nav class="flex justify-between text-sm md:text-base mb-4 sm:mb-0">
             <div>
                 @if ($next = $page->getNext())
                     <a href="{{ $next->getUrl() }}" title="Older Post: {{ $next->title }}">
