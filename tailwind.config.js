@@ -1,6 +1,9 @@
 module.exports = {
     theme: {
         extend: {
+            colors:  {
+                "strava-orange": '#fc4c02',
+            },
             fontFamily: {
                 'sans': [
                     'Lato',
