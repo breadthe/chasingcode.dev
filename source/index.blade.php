@@ -9,7 +9,7 @@
 
 @section('hero')
     @include('_partials.hero-welcome')
-    @include('_partials.side-projects')
-    @include('_partials.fun-projects')
+    @include('_partials.closed-source')
+    @include('_partials.open-source')
     @include('_partials.packages')
 @endsection

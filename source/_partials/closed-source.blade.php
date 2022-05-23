@@ -3,11 +3,11 @@
     <div class="container mx-auto max-w-4xl p-4 bg-white border border-gray-200 shadow-xl">
 
         <div class="text-center mb-8 sm:mb-4">
-            <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin">Side projects</h1>
+            <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin">Closed Source</h1>
         </div>
 
         <div class="mx-auto sm:max-w-lg text-center mb-8 sm:mb-4 text-lg text-teal-700">
-            Complex SaaS (Software as a Service) apps that ① solve a problem I have and ② may solve others' problems.
+            SaaS (Software as a Service) projects or complex applications that solve a specific problem.
         </div>
 
         <div class="flex flex-col sm:flex-row items-start mt-8">

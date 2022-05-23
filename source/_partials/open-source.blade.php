@@ -3,11 +3,11 @@
     <div class="container mx-auto max-w-4xl p-4 bg-white border border-gray-200 shadow-xl">
 
         <div class="text-center mb-8 sm:mb-4">
-            <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin">Fun projects</h1>
+            <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin">Open Source</h1>
         </div>
 
         <div class="mx-auto sm:max-w-lg text-center mb-8 sm:mb-4 text-lg text-teal-700">
-            Casual little projects that I built mostly for fun, and to explore new technologies. Open source and free to use by anyone.
+            Open source projects free to use by anyone.
         </div>
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
