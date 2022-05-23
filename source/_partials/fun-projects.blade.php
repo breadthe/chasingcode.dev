@@ -54,11 +54,18 @@
                     </a>
                 </div>
                 <div class="bg-blue-900 text-blue-200 border-blue-200 font-light mt-2 border-2 border-dashed p-2 shadow">
-                    Crafting and inventory management tool for Subnautica and Subnautica: Below Zero.
+                    Crafting and inventory management tool for Subnautica and Subnautica: Below Zero. Svelte and Vue 2 versions.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span>Svelte &bull; TailwindCSS &bull; Netlify</span>
+                    <a href="https://github.com/breadthe/craftnautica2" class="inline-flex items-center mt-2 sm:mt-0" title="Craftnautica in Svelte on Github">
+                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
                     <span>Vue.js &bull; TailwindCSS &bull; Netlify</span>
-                    <a href="https://github.com/breadthe/craftnautica" class="inline-flex items-center mt-2 sm:mt-0" title="Craftnautica on Github">
+                    <a href="https://github.com/breadthe/craftnautica" class="inline-flex items-center mt-2 sm:mt-0" title="Craftnautica in Vue 2 on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
