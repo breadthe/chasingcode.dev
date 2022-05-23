@@ -97,7 +97,10 @@
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
-                    <span class="text-2xl font-bold">SVGX</span>
+                    <span class="text-2xl font-bold flex items-center">
+                        <img src="/assets/images/svgx-logo.png" class="h-full" width="30" height="30" title="SVGX logo" alt="SVGX logo">&nbsp;
+                        SVGX
+                    </span>
                     <a href="https://svgx.app" class="inline-flex items-center" target="_blank" rel="noopener" title="SVGX">
                         svgx.app
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
