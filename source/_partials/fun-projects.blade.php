@@ -28,7 +28,7 @@
                     Free desktop SVG icon & asset manager for Mac and PC. Paid source code.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Svelte &bull; Electron &bull; TailwindCSS</span>
+                    <span>Svelte &bull; Electron &bull; TailwindCSS</span>
                     <a href="https://gumroad.com/l/svgx-source" class="inline-flex items-center mt-2 sm:mt-0" title="Buy the source code on Github" target="_blank" rel="noopener">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">$ buy source on Github</span>
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
@@ -57,7 +57,7 @@
                     Crafting and inventory management tool for Subnautica and Subnautica: Below Zero.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Vue.js &bull; TailwindCSS &bull; Netlify</span>
+                    <span>Vue.js &bull; TailwindCSS &bull; Netlify</span>
                     <a href="https://github.com/breadthe/craftnautica" class="inline-flex items-center mt-2 sm:mt-0" title="Craftnautica on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
@@ -82,7 +82,7 @@
                     Crypto coin portfolio and price tracker desktop app.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Vue.js &bull; Electron &bull; TailwindCSS</span>
+                    <span>Vue.js &bull; Electron &bull; TailwindCSS</span>
                     <a href="https://github.com/breadthe/folio" class="inline-flex items-center mt-2 sm:mt-0" title="Folio on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
@@ -111,7 +111,7 @@
                     Simple movie watch- and seen-list.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Vue.js &bull; Bulma &bull; Surge.sh</span>
+                    <span>Vue.js &bull; Bulma &bull; Surge.sh</span>
                     <a href="https://github.com/breadthe/moviebuff" class="inline-flex items-center mt-2 sm:mt-0" title="Moviebuff on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
@@ -136,7 +136,7 @@
                     Similar to the static Vue app above, this version is more advanced, benefiting from a Laravel back-end. It features more complex list management: move and copy movies between existing and new lists.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Laravel &bull; Vue.js &bull; Bootstrap</span>
+                    <span>Laravel &bull; Vue.js &bull; Bootstrap</span>
                     <a href="https://github.com/breadthe/moviebuff-monolith" class="inline-flex items-center mt-2 sm:mt-0" title="Moviebuff monolith on Github">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
