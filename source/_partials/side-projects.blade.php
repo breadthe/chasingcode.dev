@@ -7,7 +7,7 @@
         </div>
 
         <div class="mx-auto sm:max-w-lg text-center mb-8 sm:mb-4 text-lg text-teal-700">
-            Major SaaS-type (Software as a service) apps that ① solve a problem I have and ② will hopefully solve others' problems.
+            Complex SaaS (Software as a Service) apps that ① solve a problem I have and ② may solve others' problems.
         </div>
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
@@ -40,6 +40,32 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4 flex justify-center">
+                <a href="/assets/images/nextbike.jpg" class="cursor-zoom-in" target="_blank" title="NextBike">
+                    <img src="/assets/images/nextbike-sm.jpg" loading="lazy" width="213" height="250" class="" title="NextBike" alt="NextBike">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold flex items-center">
+                        <img src="/assets/images/nextbike-logo.png" class="h-full" width="30" height="30" title="NextBike" alt="NextBike">&nbsp;
+                        NextBike
+                    </span>
+                    <a href="https://nextbike.mumu.pw/" class="inline-flex items-center" target="_blank" rel="noopener" title="NextBike">
+                        nextbike.mumu.sh
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+                <div class="bg-strava-orange text-orange-100 border-orange-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+                    Data tables, charts, and statistics for your Strava cycling activities.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span><strong>Tech: </strong> Laravel &bull; Livewire &bull; Alpine.js &bull; TailwindCSS</span>
+                </div>
+            </div>
+        </div>
+
+        {{--<div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/allmy.sh.jpg" class="cursor-zoom-in" target="_blank" title="Allmy.sh">
                     <img src="/assets/images/allmy.sh-sm.jpg" loading="lazy" width="213" height="250" class="" title="Allmy.sh" alt="Allmy.sh">
                 </a>
@@ -59,7 +85,7 @@
                     <span><strong>Tech: </strong> Laravel &bull; Vue.js &bull; TailwindCSS &bull; Forge &bull; Linode</span>
                 </div>
             </div>
-        </div>
+        </div>--}}
 
         <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
 
