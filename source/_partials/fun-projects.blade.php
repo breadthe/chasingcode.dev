@@ -12,6 +12,35 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4 flex justify-center">
+                <a href="/assets/images/svgx.jpg" class="cursor-zoom-in" target="_blank" title="SVGX">
+                    <img src="/assets/images/svgx-sm.jpg" loading="lazy" width="213" height="163" title="SVGX" alt="SVGX">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold">SVGX</span>
+                    <a href="https://svgx.app" class="inline-flex items-center" target="_blank" rel="noopener" title="SVGX">
+                        svgx.app
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+                <div class="text-black border-black font-light mt-2 border-2 border-dashed p-2 shadow">
+                    Free desktop SVG icon & asset manager for Mac and PC. Paid source code.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span><strong>Tech: </strong> Svelte &bull; Electron &bull; TailwindCSS</span>
+                    <a href="https://gumroad.com/l/svgx-source" class="inline-flex items-center mt-2 sm:mt-0" title="Buy the source code on Github" target="_blank" rel="noopener">
+                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">$ buy source on Github</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/craftnautica.jpg" class="cursor-zoom-in" target="_blank" title="Craftnautica">
                     <img src="/assets/images/craftnautica-sm.jpg" loading="lazy" width="213" height="163" title="Craftnautica" alt="Craftnautica">
                 </a>
