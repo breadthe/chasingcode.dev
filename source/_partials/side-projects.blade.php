@@ -31,7 +31,7 @@
                     Share sensitive messages and documents securely via encrypted, short duration, self-destructing URLs.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Laravel &bull; Vue.js &bull; TailwindCSS &bull; Forge &bull; Linode</span>
+                    <span>Laravel &bull; Vue.js &bull; TailwindCSS &bull; Forge &bull; Linode</span>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                     Data tables, charts, and statistics for your Strava cycling activities.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Laravel &bull; Livewire &bull; Alpine.js &bull; TailwindCSS</span>
+                    <span>Laravel &bull; Livewire &bull; Alpine.js &bull; TailwindCSS</span>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                     Catalog, track, and document your personal possessions. Lifespan and expense statistics.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span><strong>Tech: </strong> Laravel &bull; Vue.js &bull; TailwindCSS &bull; Forge &bull; Linode</span>
+                    <span>Laravel &bull; Vue.js &bull; TailwindCSS &bull; Forge &bull; Linode</span>
                 </div>
             </div>
         </div>--}}
