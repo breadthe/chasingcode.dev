@@ -122,6 +122,35 @@
         <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4 flex justify-center">
+                <a href="/assets/images/traildemon.jpg" class="cursor-zoom-in" target="_blank" title="Traildemon">
+                    <img src="/assets/images/traildemon-sm.jpg" loading="lazy" width="213" height="163" title="Traildemon" alt="Traildemon">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold flex items-center">
+                        <img src="/assets/images/traildemon-logo.png" class="h-full" width="30" height="30"
+                             title="Traildemon logo" alt="Traildemon logo">&nbsp;
+                        Traildemon
+                    </span>
+                    <a href="https://mtb.mumu.pw" class="inline-flex items-center" target="_blank" rel="noopener" title="Traildemon">
+                        mtb.mumu.pw
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+                <div class="text-black border-black font-light mt-2 border-2 border-dashed p-2 shadow">
+                    Trail condition updates for local mountain bike trails.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span>Laravel &bull; TailwindCSS</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4 flex h-32 items-center justify-center text-6xl">
                 🦄
             </div>
