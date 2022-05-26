@@ -108,6 +108,37 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4 flex justify-center">
+                <a href="/assets/images/tw2-colors.jpg" class="cursor-zoom-in" target="_blank" title="Tailwind 2 Colors">
+                    <img src="/assets/images/tw2-colors-sm.jpg" loading="lazy" width="213" height="163" title="Tailwind 2 Colors" alt="Tailwind 2 Colors">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold flex items-center">
+                        Tailwind 2 Colors
+                    </span>
+                    <a href="https://tailwind2-colors.netlify.app" class="inline-flex items-center" target="_blank" rel="noopener" title="Tailwind 2 Colors on Netlify">
+                        tailwind2-colors.netlify.app
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+                <div class="bg-indigo-700 text-pink-100 border-pink-200 font-light mt-2 border-2 border-dashed p-2 shadow">
+                    TailwindCSS 2 color palette visualizer.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span>Svelte &bull; TailwindCSS &bull; Netlify</span>
+                    <a href="https://github.com/breadthe/tailwind2-colors" class="inline-flex items-center mt-2 sm:mt-0" title="Tailwind 2 Colors in Svelte on Github">
+                        @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/folio.jpg" class="cursor-zoom-in" target="_blank" title="Folio - Crypto coin portfolio">
                     <img src="/assets/images/folio-sm.jpg" loading="lazy" width="213" height="166" title="Folio - Crypto coin portfolio" alt="Folio - Crypto coin portfolio">
                 </a>
