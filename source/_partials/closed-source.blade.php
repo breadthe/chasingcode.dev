@@ -151,6 +151,30 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4 flex justify-center">
+                <a href="/assets/images/ampersand.jpg" class="cursor-zoom-in" target="_blank" title="Ampersand">
+                    <img src="/assets/images/ampersand-sm.jpg" loading="lazy" width="213" height="163" title="Ampersand" alt="Ampersand">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold flex items-center">
+                        <img src="/assets/images/ampersand-logo.png" class="h-full" width="30" height="30" title="Ampersand logo" alt="Ampersand logo">&nbsp;
+                        Ampersand
+                    </span>
+                </div>
+                <div class="text-black border-black font-light mt-2 border-2 border-dashed p-2 shadow">
+                    Unreleased desktop HTML entity browser.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span>Svelte &bull; Electron &bull; TailwindCSS</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/traildemon.jpg" class="cursor-zoom-in" target="_blank" title="Traildemon">
                     <img src="/assets/images/traildemon-sm.jpg" loading="lazy" width="213" height="163" title="Traildemon" alt="Traildemon">
                 </a>
