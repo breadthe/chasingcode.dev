@@ -43,7 +43,10 @@
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
-                    <span class="text-2xl font-bold">GitHub Diff</span>
+                    <span class="text-2xl font-bold flex items-center">
+                        <img src="/assets/images/git-diff-logo.png" class="h-full" width="30" height="30" title="GitHub Diff logo" alt="GitHub Diff logo">&nbsp;
+                        GitHub Diff
+                    </span>
                     <a href="https://git-diff.netlify.app" class="inline-flex items-center" target="_blank" rel="noopener" title="GitHub Diff on Netlify">
                         git-diff.netlify.app
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
@@ -53,7 +56,7 @@
                     Get the diff between two GitHub branches, commits, or tags.
                 </div>
                 <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                    <span>Svelte &bull; TailwindCSS</span>
+                    <span>Svelte &bull; TailwindCSS &bull; Netlify</span>
                     <a href="https://github.com/breadthe/svelte-git-diff" class="inline-flex items-center mt-2 sm:mt-0" title="Source code on Github" target="_blank" rel="noopener">
                         @include('_partials.icons._svg', ['icon' => 'github']) <span class="ml-1">Github</span>
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
@@ -72,7 +75,10 @@
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
                 <div class="flex flex-col sm:flex-row items-center justify-between">
-                    <span class="text-2xl font-bold">Craftnautica</span>
+                    <span class="text-2xl font-bold flex items-center">
+                        <img src="/assets/images/craftnautica-logo.png" class="h-full" width="30" height="30" title="Craftnautica logo" alt="Craftnautica logo">&nbsp;
+                        Craftnautica
+                    </span>
                     <a href="https://craftnautica.netlify.com" class="inline-flex items-center" target="_blank" rel="noopener" title="Craftnautica on Netlify">
                         craftnautica.netlify.com
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
