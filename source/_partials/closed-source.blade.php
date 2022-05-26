@@ -123,6 +123,34 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4 flex justify-center">
+                <a href="/assets/images/color-app.jpg" class="cursor-zoom-in" target="_blank" title="Untitled Color App">
+                    <img src="/assets/images/color-app-sm.jpg" loading="lazy" width="213" height="163" title="Untitled Color App" alt="Untitled Color App">
+                </a>
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold flex items-center">
+                        <img src="/assets/images/color-app-logo.png" class="h-full" width="30" height="30" title="Untitled Color App logo" alt="Untitled Color App logo">&nbsp;
+                        Untitled Color App
+                    </span>
+                    <a href="https://untitled-color-app.vercel.app" class="inline-flex items-center" target="_blank" rel="noopener" title="Untitled Color App">
+                        untitled-color-app.vercel.app
+                        <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
+                    </a>
+                </div>
+                <div class="text-black border-black font-light mt-2 border-2 border-dashed p-2 shadow">
+                    Browser-based color swatch organizer.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span>Svelte &bull; TailwindCSS &bull; Vercel</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4 flex justify-center">
                 <a href="/assets/images/traildemon.jpg" class="cursor-zoom-in" target="_blank" title="Traildemon">
                     <img src="/assets/images/traildemon-sm.jpg" loading="lazy" width="213" height="163" title="Traildemon" alt="Traildemon">
                 </a>
