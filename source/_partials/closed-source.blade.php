@@ -204,6 +204,27 @@
 
         <div class="flex flex-col sm:flex-row items-start mt-8">
             <div class="w-full sm:w-1/4 flex h-32 items-center justify-center text-6xl">
+                🔭
+            </div>
+            <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-2xl font-bold flex items-center">
+                        Secret debugging tool
+                    </span>
+                </div>
+                <div class="text-black border-black font-light mt-2 border-2 border-dashed p-2 shadow">
+                    A desktop debugging tool for PHP that I reversed-engineered from a commercial app, and rebuilt in my own vision. Strictly for personal use.
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
+                    <span>Svelte &bull; Electron &bull; TailwindCSS</span>
+                </div>
+            </div>
+        </div>
+
+        {{--<hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
+
+        <div class="flex flex-col sm:flex-row items-start mt-8">
+            <div class="w-full sm:w-1/4 flex h-32 items-center justify-center text-6xl">
                 🦄
             </div>
             <div class="w-full sm:w-3/4 ml-2 flex flex-col text-lg">
@@ -214,7 +235,7 @@
                     I have a ton of product and app ideas. On average I get a new one every 2 weeks. Need. More. Time.
                 </div>
             </div>
-        </div>
+        </div>--}}
 
     </div>
 
