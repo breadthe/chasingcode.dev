@@ -79,8 +79,8 @@
                         <img src="/assets/images/craftnautica-logo.png" class="h-full" width="30" height="30" title="Craftnautica logo" alt="Craftnautica logo">&nbsp;
                         Craftnautica
                     </span>
-                    <a href="https://craftnautica.netlify.com" class="inline-flex items-center" target="_blank" rel="noopener" title="Craftnautica on Netlify">
-                        craftnautica.netlify.com
+                    <a href="https://craftnautica.netlify.app" class="inline-flex items-center" target="_blank" rel="noopener" title="Craftnautica on Netlify">
+                        craftnautica.netlify.app
                         <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 20, 'height' => 20])</span>
                     </a>
                 </div>
