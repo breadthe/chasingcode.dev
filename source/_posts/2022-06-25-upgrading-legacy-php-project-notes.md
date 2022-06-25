@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: Notes on Upgrading a Legacy PHP 5.X Project to a More Modern Stack
+title: Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022
 date: 2022-06-25
 description: Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1
 categories: [PHP]
@@ -35,7 +35,7 @@ The code is all procedural, which is fine for such a small project. It does not 
 
 ## Revival goals
 
-Why revive this project at all? Why not let it fade into memory? Nostalgia. BankAlt was a labor of love and very dear to me at the time. Besides, I was curious how much of a lift it would be to update it to a modern stack.
+Why revive this project at all? Why not let it fade into memory? Nostalgia. BankAlt was a labor of love and very dear to me at the time. Besides, I was curious how much of a lift it would be to update it to a modern 2022 stack.
 
 **Main goals:**
 
