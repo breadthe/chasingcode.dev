@@ -1,9 +1,9 @@
 ---
 extends: _layouts.post
 section: content
-title: Notes on Upgrading a Legacy PHP 5.6 Project to a More Modern Stack
+title: Notes on Upgrading a Legacy PHP 5.X Project to a More Modern Stack
 date: 2022-06-25
-description: Notes and observations about reviving an old PHP 5.6 project and making it run on PHP 8.1
+description: Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1
 categories: [PHP]
 featured: false
 image: /assets/img/2020-11-03-bankalt.jpg
@@ -13,7 +13,7 @@ image_author_url:
 image_unsplash:
 ---
 
-I talked before about [BankAlt.com](/blog/my-first-side-project/), the first side-project with dynamic PHP/MySQL functionality I ever shipped. In that article I expressed my desire to resurrect the legacy PHP 5.6 project and make it run on PHP 8.1.
+I talked before about [BankAlt.com](/blog/my-first-side-project/), the first side-project with dynamic PHP/MySQL functionality I ever shipped. In that article I expressed my desire to resurrect the legacy PHP 5.X project and make it run on PHP 8.1.
 
 What follows is a list of notes I made while reviving BankAlt. It is by no means an exhaustive guide, rather a list of steps I took to declare myself satisfied with the outcome.
 
@@ -26,8 +26,8 @@ The code is all procedural, which is fine for such a small project. It does not 
 ## The stack
 
 * Apache
-* PHP 5.6
-* MySQL (5.1 I believe), with lots of stored procedures
+* PHP 5.2 (or 5.3) - hard to tell exactly
+* MySQL 5.1.20, with lots of stored procedures
 * jQuery
 * plain CSS
 * hosted on a shared server run by a friend
@@ -331,7 +331,7 @@ These come from JS/Ajax, so the src paths need to be updated in all the `.js` fi
 
 ## Fix `addslashes` deprecation... the lazy way
 
-There was liberal usage of `addslashes($some_string_variable)` throughout the app (in ~100 places). Unfortunately I was getting *"Deprecated:  addslashes(): Passing null to parameter #1 ($string) of type string is deprecated"* errors in various places. I guess in PHP 5.6 it wasn't a problem to pass `null` to this function, but 8.1 complains. 
+There was liberal usage of `addslashes($some_string_variable)` throughout the app (in ~100 places). Unfortunately I was getting *"Deprecated:  addslashes(): Passing null to parameter #1 ($string) of type string is deprecated"* errors in various places. I guess in PHP 5.X it wasn't a problem to pass `null` to this function, but 8.1 complains. 
 
 Sometimes it's ok to be lazy to quickly fix or get around a problem. Instead of putting null checks in all 100 places I opted to create a similarly-named global function called `__addslashes` with built-in null checking. Then I did a global search-replace of all instances of `addslashes` with the new `__addslashes` function.
 
