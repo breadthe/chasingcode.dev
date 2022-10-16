@@ -168,6 +168,10 @@ And here's how the chart looks now.
 
 ![Month gaps displaying correctly with MySQL CTE](/assets/img/2022-03-26-month-gaps-fixed-mysql-cte.jpg "Month gaps displaying correctly with MySQL CTE")
 
+## Additional reading
+
+[Tobias Petry](https://twitter.com/tobias_petry) wrote a article about [filling gaps in statistical time series results](https://sqlfordevs.com/statistical-results-fill-gaps) with MySQL and PostgreSQL examples and a detailed explanation. He also recently launched a free ebook on [advanced databased techniques](https://sqlfordevs.com/ebook) which is a must-read.
+
 ## Caveats and conclusion
 
 Not everything is perfect:
