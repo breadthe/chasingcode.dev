@@ -5,4 +5,4 @@ publish = "build_production"
 
 [build.environment]
 
-PHP_VERSION = "8.1"
+PHP_VERSION = "7.4"
