@@ -26,6 +26,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900|Bitter" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+        <link href="https://github.com/breadthe" rel="me">
     </head>
 
     <body class="flex flex-col justify-between bg-gray-100 text-grey-darkest leading-normal font-sans">
