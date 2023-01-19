@@ -13,6 +13,8 @@ image_author_url:
 image_unsplash:
 ---
 
+**UPDATED January 19, 2023**
+
 A list of Laravel and PHP packages I **absolutely** need in every project, continuously updated.
 
 This list is relatively short because I follow the principle "avoid packages until it hurts". I use packages that encapsulate complex functionality and features that would take too long to implement from scratch. I also heavily favor those that are well maintained, which is why you'll see a lot of Spatie ones on the list.
@@ -20,9 +22,10 @@ This list is relatively short because I follow the principle "avoid packages unt
 ## Must-have
 
 * [livewire/livewire](https://github.com/livewire/livewire) - Laravel Livewire.
+* [wire-elements/modal](https://github.com/wire-elements/modal) - Wire Elements Modal, a modal component for Laravel Livewire.
 * [spatie/laravel-google-fonts](https://github.com/spatie/laravel-google-fonts) - Manage self-hosted Google Fonts in Laravel apps.
-* [wire-elements/modal](https://github.com/wire-elements/modal) - Wire Elements Modal.
 * [spatie/laravel-backup](https://github.com/spatie/laravel-backup) - A modern backup solution for Laravel apps.
+* [opcodesio/log-viewer](https://github.com/opcodesio/log-viewer) - Easy-to-use, fast, and beautiful log viewer for Laravel apps.
 * [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar) **dev** - Laravel Debugbar.
 * [spatie/laravel-ray](https://github.com/spatie/laravel-ray) **dev** - Laravel adapter for Ray.
 
@@ -35,6 +38,7 @@ This list is relatively short because I follow the principle "avoid packages unt
 * [roach-php/laravel](https://github.com/roach-php/laravel) - Web Scraping for Laravel.
 * [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) - PHP dotenv / Loads environment variables from .env to getenv(), $_ENV and $_SERVER automagically.
 * [bringyourownideas/laravel-backblaze](https://github.com/bringyourownideas/laravel-backblaze) - B2-Backblaze Storage Adapter for Laravel 5+.
+* [brendt/php-sparkline](https://github.com/brendt/php-sparkline) - Generate [sparkline](https://en.wikipedia.org/wiki/Sparkline) SVGs in PHP.
 
 ## My packages
 
