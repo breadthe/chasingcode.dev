@@ -39,6 +39,7 @@ This list is relatively short because I follow the principle "avoid packages unt
 * [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) - PHP dotenv / Loads environment variables from .env to getenv(), $_ENV and $_SERVER automagically.
 * [bringyourownideas/laravel-backblaze](https://github.com/bringyourownideas/laravel-backblaze) - B2-Backblaze Storage Adapter for Laravel 5+.
 * [brendt/php-sparkline](https://github.com/brendt/php-sparkline) - Generate [sparkline](https://en.wikipedia.org/wiki/Sparkline) SVGs in PHP.
+    * [YouTube - Building the SparkLine package](https://www.youtube.com/watch?v=N_6Y09NLaqM)
 
 ## My packages
 
