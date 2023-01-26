@@ -13,7 +13,7 @@ image_author_url: https://unsplash.com/@amandagraphc
 image_unsplash: true
 ---
 
-If you've read my [2022 Programming Stack](/blog/2021-12-09-2022-programming-stack) article, then it shouldn't be much of a surprise to hear that it hasn't changed much for 2023, with one notable exception: I've replaced Electron with Tauri.
+If you've read my [2022 Programming Stack](/blog/2022-programming-stack) article, then it shouldn't be much of a surprise to hear that it hasn't changed much for 2023, with one notable exception: I've replaced Electron with Tauri.
 
 TL;DR
 - TALL stack (**Laravel** + **Livewire** + **AlpineJS** + **TailwindCSS**), **Svelte** + **SvelteKit**, **Tauri**.
