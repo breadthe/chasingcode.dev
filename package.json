@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "axios": "^0.19.0",
-        "browser-sync": "^2.26.7",
+        "browser-sync": "^2.27.11",
         "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^3.2.3",
         "extra-watch-webpack-plugin": "^1.0.3",
