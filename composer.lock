@@ -928,16 +928,16 @@
         },
         {
             "name": "samdark/sitemap",
-            "version": "2.2.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/samdark/sitemap.git",
-                "reference": "dcfef471e79abca9d3c4d83dd6a7861cec1a596a"
+                "reference": "a7ba091766afeb5fad1ea3056b30f26c3a620962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samdark/sitemap/zipball/dcfef471e79abca9d3c4d83dd6a7861cec1a596a",
-                "reference": "dcfef471e79abca9d3c4d83dd6a7861cec1a596a",
+                "url": "https://api.github.com/repos/samdark/sitemap/zipball/a7ba091766afeb5fad1ea3056b30f26c3a620962",
+                "reference": "a7ba091766afeb5fad1ea3056b30f26c3a620962",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +969,21 @@
             "keywords": [
                 "Sitemap"
             ],
-            "time": "2019-03-27T09:31:20+00:00"
+            "support": {
+                "issues": "https://github.com/samdark/sitemap/issues",
+                "source": "https://github.com/samdark/sitemap"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/samdark",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/samdark",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-10-02T04:04:28+00:00"
         },
         {
             "name": "symfony/console",
@@ -1813,12 +1827,12 @@
             "version": "v1.3.15",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tightenco/jigsaw.git",
+                "url": "https://github.com/tighten/jigsaw.git",
                 "reference": "f32360f4dd20a6c24c8d9360694d6ec0a226f4cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/jigsaw/zipball/f32360f4dd20a6c24c8d9360694d6ec0a226f4cb",
+                "url": "https://api.github.com/repos/tighten/jigsaw/zipball/f32360f4dd20a6c24c8d9360694d6ec0a226f4cb",
                 "reference": "f32360f4dd20a6c24c8d9360694d6ec0a226f4cb",
                 "shasum": ""
             },
@@ -1847,12 +1861,12 @@
             ],
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "TightenCo\\Jigsaw\\": "src/"
-                },
                 "files": [
                     "src/Support/helpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "TightenCo\\Jigsaw\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1876,6 +1890,10 @@
                 "site",
                 "static"
             ],
+            "support": {
+                "issues": "https://github.com/tighten/jigsaw/issues",
+                "source": "https://github.com/tighten/jigsaw/tree/v1.3.15"
+            },
             "time": "2020-01-02T13:49:50+00:00"
         },
         {
@@ -1943,5 +1961,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
