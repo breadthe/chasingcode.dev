@@ -52,7 +52,7 @@
         const src = e.target.getAttribute("data-src");
 
         // Get the Mastodon domain
-        const domain = prompt("Enter your Mastodon domain", "mastodon.social");
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
 
         if (domain === "" || domain == null) {
             return;
