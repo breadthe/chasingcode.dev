@@ -59,6 +59,7 @@ export default {
         return {
           // https://webmention.io/api/mentions.jf2?target=https://yourblog.com/blog/blog-post-slug/&per-page=100&page=0}
           webmentionIoUrl: 'https://webmention.io/api/mentions.jf2',
+          siteUrl: 'https://chasingcode.dev',
           link: '',
           favorites: [],
           boosts: [],
@@ -71,12 +72,8 @@ export default {
     methods: {
       async loadWebmentions() {
         let mentions = await this.getMentions(this.pageUrl);
-        console.log(mentions)
 
         if (mentions.length) {
-          // pageUrl in production doesn't have a trailing "/" but wm-target does
-          mentions = mentions.filter(m => m['wm-target'] === `${this.pageUrl}/`);
-
           this.link = mentions
               // find mentions that contain my Mastodon URL
               .filter((m) => m.url.startsWith('https://indieweb.social/@brbcoding'))
@@ -91,14 +88,14 @@ export default {
           this.replies = mentions.filter((m) => m['wm-property'] === 'in-reply-to');
         }
       },
-      async getMentions(url) {
+      async getMentions(pageUrl) {
         let mentions = [];
         let page = 0;
         const perPage = 100;
 
         while (true) {
           const results = await fetch(
-              `${this.webmentionIoUrl}?target=${url}&per-page=${perPage}&page=${page}`
+              `${this.webmentionIoUrl}?target=${this.siteUrl}${pageUrl}&per-page=${perPage}&page=${page}`
           ).then((r) => r.json());
 
           mentions = mentions.concat(results.children);
