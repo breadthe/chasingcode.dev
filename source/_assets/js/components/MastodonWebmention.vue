@@ -85,7 +85,6 @@ export default {
               .map(({ url }) => url.split('#')[0])
               // take the first one
               .shift();
-          console.log(mentions)
 
           // use the wm-property to make lists of favourites, boosts & replies
           this.favorites = mentions.filter((m) => m['wm-property'] === 'like-of');
