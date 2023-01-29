@@ -21,18 +21,19 @@
 
         @include('_partials.post-hero-image')
 
-        <div class="post border-b border-gray-500 sm:text-2xl font-light text-gray-900 tracking-wide mb-10 pb-4 mt-8 sm:mt-4" v-pre>
+        <div class="post sm:text-2xl font-light text-gray-900 tracking-wide pb-4 mt-8 sm:mt-4" v-pre>
             @yield('content')
 
             @include('_partials.tags')
 
             @include('_partials.social-share-icons')
-
-            @include('_partials.author')
-
         </div>
 
-        <nav class="flex justify-between text-sm md:text-base mb-4 sm:mb-0">
+        @include('_partials.mastodon-webmention')
+
+        @include('_partials.author')
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
             <div>
                 @if ($next = $page->getNext())
                     <a href="{{ $next->getUrl() }}" title="Older Post: {{ $next->title }}">

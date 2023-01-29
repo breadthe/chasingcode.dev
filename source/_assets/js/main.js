@@ -2,6 +2,7 @@ window.axios = require('axios');
 window.fuse = require('fuse.js');
 window.Vue = require('vue');
 
+import MastodonWebmention from './components/MastodonWebmention.vue';
 import Search from './components/Search.vue';
 // import VIcon from './components/icons/VIcon';
 import hljs from 'highlight.js/lib/highlight';
@@ -25,6 +26,12 @@ document.querySelectorAll('pre code').forEach((block) => {
 });
 
 Vue.config.productionTip = false;
+
+new Vue({
+    components: {
+        MastodonWebmention
+    },
+}).$mount('#mastodon-webmention');
 
 new Vue({
     components: {
