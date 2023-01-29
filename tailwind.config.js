@@ -3,6 +3,7 @@ module.exports = {
         extend: {
             colors:  {
                 "strava-orange": '#fc4c02',
+                "mastodon-purple": '#595aff',
             },
             fontFamily: {
                 'sans': [

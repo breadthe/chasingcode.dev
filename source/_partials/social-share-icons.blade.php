@@ -6,8 +6,7 @@
     <a href="javascript:void(0);"
             id="mastodon-share"
             data-src="{{ $page->description }}&amp;url={{ $page->getUrl() }}"
-            style="background: #595aff;"
-            class="social--share--icon text-lg text-white hover:text-white rounded font-mono px-2 py-1"
+            class="bg-mastodon-purple social--share--icon text-lg text-white hover:text-white rounded font-mono px-2 py-1"
     >Mastodon</a>
 
     <a href="https://twitter.com/share?url={{ $page->getUrl() }}&text={{ $page->description }}&via={{ $page->twitterHandle }}"
