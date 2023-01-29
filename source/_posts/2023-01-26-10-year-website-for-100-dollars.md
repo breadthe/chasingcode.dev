@@ -11,6 +11,7 @@ image_thumb: /assets/img/2023-01-26-10-year-100-dollar-website.png
 image_author: 
 image_author_url: 
 image_unsplash: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/109757724306432082
 ---
 
 Someone near and dear to me recently opened a business (let's call it Generic Company) that runs entirely offline and is pretty low-tech. The owner does not need or want an online presence.

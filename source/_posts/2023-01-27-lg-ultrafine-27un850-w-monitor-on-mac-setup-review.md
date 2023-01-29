@@ -11,6 +11,7 @@ image_thumb: /assets/img/2023-01-27-lg-ultrafine-27un850-w-thumb.jpg
 image_author: 
 image_author_url: 
 image_unsplash: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/109762878002531481
 ---
 
 I bought a new 27" 4K monitor for coding and light graphics/design work on the Mac. The full name is [

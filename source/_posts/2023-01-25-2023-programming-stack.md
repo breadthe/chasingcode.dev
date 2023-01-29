@@ -11,6 +11,7 @@ image_thumb: https://source.unsplash.com/feLC4ZCxGqk/?fit=max&w=200&q=75
 image_author: Amanda Jones
 image_author_url: https://unsplash.com/@amandagraphc
 image_unsplash: true
+mastodon_toot_url: https://indieweb.social/@brbcoding/109752681071200026
 ---
 
 If you've read my [2022 Programming Stack](/blog/2022-programming-stack) article, then it shouldn't be much of a surprise to hear that it hasn't changed much for 2023, with one notable exception: I've replaced Electron with Tauri.
