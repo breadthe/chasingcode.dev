@@ -58,6 +58,8 @@ module.exports = {
     },
     variants: {
         margin: ['responsive', 'first'],
+        textColor: ['hover', 'group-hover'],
+        textDecoration: ['hover', 'group-hover'],
     },
     plugins: []
 }

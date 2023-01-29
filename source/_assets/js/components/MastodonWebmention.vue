@@ -1,26 +1,26 @@
 <template>
-  <div class="my-4 sm:my-8 p-2 sm:p-4 bg-gray-100 shadow rounded">
+  <div :class="replies.length || boosts.length || favorites.length ? 'my-4 flex flex-col gap-4' : ''">
     <div v-if="replies.length">
-      <h6 class="text-xl text-mastodon-purple font-bold border-b border-mastodon-purple">Mastodon Replies</h6>
+      <h6 class="mb-2 text-xl text-mastodon-purple font-bold">Replies</h6>
 
-      <div class="flex flex-col gap-4">
-        <div v-for="reply in replies" :key="reply.url">
-          <a :href="reply.author.url" class="flex gap-2 items-center text-base text-mastodon-purple font-bold" target="_blank">
+      <div class="flex flex-col gap-2">
+        <div v-for="reply in replies" :key="reply.url" class="p-2 border-2 border-mastodon-purple rounded">
+          <a :href="reply.author.url" class="flex gap-2 items-center text-base text-mastodon-purple font-bold group" target="_blank">
             <img :src="reply.author.photo" :alt="reply.author.name" class="w-16 rounded-lg">
 
             <div class="flex flex-col">
-              <span class="font-normal">{{ reply.author.name }}</span>
+              <span class="font-normal group-hover:text-mastodon-purple group-hover:underline">{{ reply.author.name }}</span>
               <span class="text-sm text-gray-600 font-light">{{ authorUrlToMastodonUrl(reply.author.url) }}</span>
             </div>
           </a>
-          <a :href="reply.url" class="mt-2 text-gray-900 hover:text-black text-sm font-light" target="_blank">
-            {{ reply.content.text }}
-          </a>
+
+          <div class="mt-2 text-gray-900 text-sm font-light">
+            <p class="text-black">{{ reply.content.text }}</p>
+
+            <a :href="reply.url" target="_blank" class="block -mt-4 text-right text-mastodon-purple hover:text-mastodon-purple hover:underline">Reply</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div v-else>
-      <p class="text-gray-600 text-lg">No replies yet.</p>
     </div>
   </div>
 </template>
@@ -52,8 +52,6 @@ export default {
     methods: {
       async loadWebmentions() {
         let mentions = await this.getMentions(this.pageUrl);
-        console.log(this.pageUrl)
-        console.log(mentions)
 
         if (mentions.length) {
           mentions = mentions.filter(m => m['wm-target'] === this.pageUrl);
