@@ -59,7 +59,6 @@ export default {
         return {
           // https://webmention.io/api/mentions.jf2?target=https://yourblog.com/blog/blog-post-slug/&per-page=100&page=0}
           webmentionIoUrl: 'https://webmention.io/api/mentions.jf2',
-          siteUrl: 'https://chasingcode.dev',
           link: '',
           favorites: [],
           boosts: [],
@@ -95,7 +94,7 @@ export default {
 
         while (true) {
           const results = await fetch(
-              `${this.webmentionIoUrl}?target=${this.siteUrl}${pageUrl}&per-page=${perPage}&page=${page}`
+              `${this.webmentionIoUrl}?target=${pageUrl}/&per-page=${perPage}&page=${page}`
           ).then((r) => r.json());
 
           mentions = mentions.concat(results.children);
