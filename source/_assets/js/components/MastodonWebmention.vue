@@ -57,10 +57,8 @@ export default {
     },
     data() {
         return {
-          // webmentionIoUrl: `https://webmention.io/api/mentions.jf2?target=${url}&per-page=${perPage}&page=${page}`,
+          // https://webmention.io/api/mentions.jf2?target=https://yourblog.com/blog/blog-post-slug/&per-page=100&page=0}
           webmentionIoUrl: 'https://webmention.io/api/mentions.jf2',
-          webmentionIoToken: 'XtXA3XxJfC6WK6sD2-oR-A',
-          domain: 'chasingcode.dev',
           link: '',
           favorites: [],
           boosts: [],
@@ -73,6 +71,7 @@ export default {
     methods: {
       async loadWebmentions() {
         let mentions = await this.getMentions(this.pageUrl);
+        console.log(mentions)
 
         if (mentions.length) {
           // pageUrl in production doesn't have a trailing "/" but wm-target does
@@ -95,11 +94,11 @@ export default {
       async getMentions(url) {
         let mentions = [];
         let page = 0;
-        let perPage = 100;
+        const perPage = 100;
 
         while (true) {
           const results = await fetch(
-              `${this.webmentionIoUrl}?domain=${this.domain}&token=${this.webmentionIoToken}`
+              `${this.webmentionIoUrl}?target=${url}&per-page=${perPage}&page=${page}`
           ).then((r) => r.json());
 
           mentions = mentions.concat(results.children);
