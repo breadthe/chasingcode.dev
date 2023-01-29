@@ -6,21 +6,22 @@ date: 2020-03-21
 description: Hardware, software, and gear I use on a daily basis
 ---
 
-A comprehensive list of my favorite hardware, software, and gear, from the perspective of a Laravel/PHP and Vue/Svelte/JavaScript full stack developer, updated for **2020**.
+A comprehensive list of my favorite hardware, software, and gear, from the perspective of a Laravel/PHP and Vue/Svelte/JavaScript full stack developer, updated for **2023**.
 
 ## Work hardware
 
 I prefer coding on Macs, exclusively. While I've coded successfully on PCs, I find that I'm a lot more productive, have a lot less frustrations, and my dev tools just work on a Mac.
 
-- Day job laptop: [2019 MacBook Pro 16"](https://amzn.to/33A3Hmm) 2.4 GHz 8-core Intel Core i9, 32GB RAM, 1TB SSD
-- Personal laptop: [2020 MacBook Air M1](https://amzn.to/3k7K3Xe) 8-core GPU, 16GB RAM, 512 GB SSD
+- Personal laptop 1: [2020 MacBook Air M1](https://amzn.to/3k7K3Xe) 8-core GPU, 16GB RAM, 512 GB SSD
+- Personal laptop 2: [2019 MacBook Pro 16"](https://amzn.to/33A3Hmm) 2.4 GHz 8-core Intel Core i9, 32GB RAM, 1TB SSD
 
 ## Mac peripherals/accessories
 
-- Wireless keyboard: [Apple Magic Keyboard 2](https://amzn.to/2y01l4D) - best coding keyboard I've ever used
-- Wireless trackpad: [Apple Magic Trackpad 2](https://amzn.to/33Chitn) - Apple has the best trackpad implementation of any manufacturer, and the wireless one is an absolute must for trackpad fans
-- USB-C dongle (for 16" Mac): [VAVA USB-C Hub](https://amzn.to/3dpKOaz) 8-in-1 4K HDMI, 1Gbps RJ45 ethernet port, USB 3.0, SD/TF card reader, 100W charging port
-- 2020 M1 MacBook Air case: [IBENZER New 2020 MacBook Air 13 inch Case M1 A2337 A2179 A1932](https://amzn.to/2ZDtclu) - excellent transparent case that shows off the Mac chassis. Comes with a screen protector that is fairly easy to install, as well as a silicone keyboard skin thin enough to make typing feel natural
+- Monitor: [LG UltraFine 27UN850-W](https://amzn.to/3Ylbu2T) 27" 4K (3840x2160) IPS USB-C monitor - I reviewed it [here](/blog/lg-ultrafine-27un850-w-monitor-on-mac-setup-review).
+- Wireless keyboard: [Apple Magic Keyboard 2](https://amzn.to/2y01l4D) - best coding keyboard I've ever used.
+- Wireless trackpad: [Apple Magic Trackpad 2](https://amzn.to/33Chitn) - Apple has the best trackpad implementation of any manufacturer, and the wireless one is an absolute must for trackpad fans.
+- USB-C dongle (for 16" Mac): [VAVA USB-C Hub](https://amzn.to/3dpKOaz) 8-in-1 4K HDMI, 1Gbps RJ45 ethernet port, USB 3.0, SD/TF card reader, 100W charging port.
+- 2020 M1 MacBook Air case: [IBENZER New 2020 MacBook Air 13 inch Case M1 A2337 A2179 A1932](https://amzn.to/2ZDtclu) - excellent transparent case that shows off the Mac chassis. Comes with a screen protector that is fairly easy to install, as well as a silicone keyboard skin thin enough to make typing feel natural.
 - 16" MacBook Pro case: [MOSISO MacBook Pro 16 inch Case, Crystal Clear](https://amzn.to/3bdWmLZ) - while the laptop was purchased by the company I work for, I wanted to protect it with a case as well as being able to put whatever stickers I want on it. I'm very happy with this case - it also comes with a screen protector and a keyboard cover if you're into that sort of thing. 
 
 ## Mac/development software
@@ -36,11 +37,12 @@ I prefer coding on Macs, exclusively. While I've coded successfully on PCs, I fi
 - Project management: **Trello** - I use it to manage my side-projects. I love the simplicity and the slickness of the UI. Too bad it got acquired by Atlassian (I hate all their products), but I hope it stays the way it is.
 - 💵 [Tinkerwell](https://tinkerwell.app/) - probably the best tool to come out of the Laravel/PHP ecosystem. An offline REPL tool that you can use for rapid prototyping, and testing/validating PHP code snippets. At $15 it's dirt cheap for how much it has boosted my Laravel productivity.
 - 💵 [Pixelmator Pro](https://www.pixelmator.com/pro/) - I was lucky to buy the Pro version on sale and it's the best $20 I ever spent on software. It has most of Photoshop's features in an offline, truly affordable package, with a simple UI and familiar key mappings.
+- 💵 [Affinity Designer](https://affinity.serif.com/) - Affinity Designer is an awesome alternative to Adobe Illustrator. You pay once and own it forever. It goes on sale sometimes, and I was fortunate to pay $20 for it. It has become my vector design tool of choice.
+- 💵 [CleanshotX](https://cleanshot.com/) - Powerful screen capture/annotation tool.
 - [Dash](https://kapeli.com/dash) - offline documentation for the developer technology of your choice. Invaluable when traveling or when you don't have internet access.
-- Window manager: [Spectacle](https://www.spectacleapp.com/) - apparently there are better window managers but I got used to this one and it works fine for me.
+- [Rectangle](https://rectangleapp.com/) - window manager.
 - Keyboard rebinding: [Karabiner Elements](https://karabiner-elements.pqrs.org/) - if there's one thing I miss on the Mac is middle-button click to open links in a new tab or to close a tab. I use Karabiner to remap the Caps Lock key to act as a middle-click. So if I hover over a link and tap Caps, it will open the link in a new tab. Likewise, Caps over a tab will close it.
 - [Vanilla](https://matthewpalmer.net/vanilla/) - hides the menu bar icons that you don't need to see all the time.  
-- [Kap](https://getkap.co/) - a tiny screen capture utility. I use it a lot for capturing animated portions of my screen, as [explained here](/blog/screen-recording-gif-workflow/).
 
 ## X-platform software
 
@@ -81,7 +83,18 @@ I am a PC gamer thru & thru. I've never owned a console of any kind, and likely 
 
 ## Phone
 
-- **Samsung Galaxy Note 8** - Despite my love for Macs, I've never been a huge fan of iPhones/iOS. The Note 8 is the best phone for me at the moment. It may be several generations behind modern phones but I love the stylus and how well Samsung integrated it with the software. The battery and speed are still good, it has a headphone jack, and it takes decent photos. I'm planning to hang on to it for as long as possible, especially considering the initial price. After that it gets tricky. I would very much like to continue having a stylus, but I don't like the direction Samsung is following with their phones, and the prices are becoming ridiculous. There's a chance I may switch to an iPhone in the future.
+- **Samsung Galaxy S21 Ultra** - Despite my love for Macs, I've never been a huge fan of iPhones/iOS. The S1 Ultra is the best phone for me at the moment. What I like best about this phone is the camera array. The 10x optical zoom is nothing to sneeze at. There's a very good chance I will switch to iPhone in the future though, as soon as the rumored 10x camera comes out. It's super convenient to be in the same ecosystem as my Macs and iPad, as I can transfer files between them with ease.
+
+## Tablet
+
+- [2021 12.9 iPad Pro](https://amzn.to/3XSnEjW) - 512GB storage. I use it to sketch, read comics, watch movies, play a couple of games, browse the web, and a bunch of other stuff that is harder to do on a laptop.  
+- [Apple Pencil 2nd Gen](https://amzn.to/3wDK0cQ) - I use it to draw and sketch things.
+
+## Tablet software
+
+- 💵 **Procreate** - One of the best apps for freeform drawing on the iPad.
+- 💵 **Affinity Designer 2** - Yep, I bought it again for the iPad.
+- **Panels** - Comic book reader.
 
 ## Other gear & accessories
 
