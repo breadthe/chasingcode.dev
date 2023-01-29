@@ -22,6 +22,27 @@
         </div>
       </div>
     </div>
+
+    <div v-if="boosts.length">
+      <h6 class="mb-2 text-xl text-mastodon-purple font-bold">Boosted</h6>
+
+      <div class="flex flex-wrap gap-2">
+        <a v-for="boost in boosts" :key="boost.url" :href="boost.author.url" target="_blank">
+          <img :src="boost.author.photo" :alt="boost.author.name" class="w-16 rounded-lg">
+        </a>
+      </div>
+    </div>
+
+    <div v-if="favorites.length">
+      <h6 class="mb-2 text-xl text-mastodon-purple font-bold">Favorited</h6>
+
+      <div class="flex flex-wrap gap-2">
+        <a v-for="favorite in favorites" :key="favorite.url" :href="favorite.author.url" target="_blank">
+          <img :src="favorite.author.photo" :alt="favorite.author.name" class="w-16 rounded-lg">
+        </a>
+      </div>
+    </div>
+
   </div>
 </template>
 
