@@ -75,7 +75,8 @@ export default {
         let mentions = await this.getMentions(this.pageUrl);
 
         if (mentions.length) {
-          mentions = mentions.filter(m => m['wm-target'] === this.pageUrl);
+          // pageUrl in production doesn't have a trailing "/" but wm-target does
+          mentions = mentions.filter(m => m['wm-target'] === `${this.pageUrl}/`);
 
           this.link = mentions
               // find mentions that contain my Mastodon URL
