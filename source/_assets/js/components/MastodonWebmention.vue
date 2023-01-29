@@ -52,6 +52,8 @@ export default {
     methods: {
       async loadWebmentions() {
         let mentions = await this.getMentions(this.pageUrl);
+        console.log(this.pageUrl)
+        console.log(mentions)
 
         if (mentions.length) {
           mentions = mentions.filter(m => m['wm-target'] === this.pageUrl);
