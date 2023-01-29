@@ -27,11 +27,13 @@ document.querySelectorAll('pre code').forEach((block) => {
 
 Vue.config.productionTip = false;
 
-new Vue({
-    components: {
-        MastodonWebmention
-    },
-}).$mount('#mastodon-webmention');
+if (document.getElementById('mastodon-webmention')) {
+    new Vue({
+        components: {
+            MastodonWebmention
+        },
+    }).$mount('#mastodon-webmention');
+}
 
 new Vue({
     components: {
