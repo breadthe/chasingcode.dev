@@ -1,5 +1,14 @@
 <template>
-  <div :class="replies.length || boosts.length || favorites.length ? 'my-4 flex flex-col gap-4' : ''">
+  <div :class="mastodonTootUrl.length || replies.length || boosts.length || favorites.length ? 'my-4 flex flex-col gap-4' : ''">
+    <a
+        v-if="mastodonTootUrl.length"
+        :href="mastodonTootUrl"
+        class="w-full p-2 text-center text-xl text-mastodon-purple hover:text-white bg-indigo-100 hover:bg-mastodon-purple rounded font-bold"
+        target="_blank"
+    >
+      Discuss this article on Mastodon
+    </a>
+
     <div v-if="replies.length">
       <h6 class="mb-2 text-xl text-mastodon-purple font-bold">Replies</h6>
 
@@ -53,7 +62,12 @@ export default {
             type: String,
             required: true,
             default: '/blog',
-        }
+        },
+        mastodonTootUrl: {
+            type: String,
+            required: true,
+            default: '',
+        },
     },
     data() {
         return {
