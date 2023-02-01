@@ -11,7 +11,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/109790916876534199
 ---
 
 🎉 After many years this blog finally has a comments section of sorts! I have recently added Mastodon replies to blog posts.
