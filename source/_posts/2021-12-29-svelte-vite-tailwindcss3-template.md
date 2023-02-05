@@ -13,6 +13,8 @@ image_author_url:
 image_unsplash:
 ---
 
+**UPDATED February 4, 2023**
+
 At the end of 2021 I decided to create a very basic Svelte/Vite/TailwindCSS 3 template that would provide a starting point for future projects. Thanks to modern tooling and automation, the procedure is pretty simple, but I am documenting it here nonetheless.
 
 Why not SvelteKit? Two reasons.
@@ -42,17 +44,18 @@ npm install
 
 This step automates most of Tailwind's configuration, by creating pre-populated configs for `postcss.config.cjs`, `tailwind.config.cjs`, and filling in the required PostCSS config in `svelte.config.cjs`.
 
-Finally open `app.css` and verify that it looks like this:
+Finally open `app.postcss` and verify that it looks like this:
 
 ```css
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
-@tailwind components;
 
 /* Custom classes go here */
 /* This will always be included in your compiled CSS */
 
+@tailwind components;
+
 @tailwind utilities;
 ```
 
-That's it! Now run the site in dev mode with `npm run dev`.
+That's it! Now run the site in dev mode with `npm run dev`, or build for production with `npm run build`.
