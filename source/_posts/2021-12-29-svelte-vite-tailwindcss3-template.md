@@ -59,3 +59,36 @@ Finally open `app.postcss` and verify that it looks like this:
 ```
 
 That's it! Now run the site in dev mode with `npm run dev`, or build for production with `npm run build`.
+
+If you want additional customizations, read on.
+
+## Add Prettier
+
+I'm not big on super-detailed customizations, but there are two things that annoy me right off the bat in a new Svelte project: the default line length (80 is too short), and having semicolons at the end of statements.
+
+In addition, I favor single quotes, as well as trailing commas in objects and arrays.
+
+So I like to add Prettier to fix those.
+
+```bash
+npm install --save-dev prettier
+```
+
+Then create a `.prettierrc.json` file in the root of the project with the following contents:
+
+```json
+{
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 120
+}
+```
+
+Finally, add a `.prettierignore` in the root file with the following contents, to ignore the build directory:
+
+```text
+dist
+```
+
+Now if you hit OPT-CMD-L (on the Mac) in VS Code, it will format the code according to the Prettier rules. If you want the formatting to be automatic, toggle Text Editor > Formatting > Format On Save.
