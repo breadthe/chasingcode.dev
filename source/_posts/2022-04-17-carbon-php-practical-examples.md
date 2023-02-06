@@ -104,7 +104,7 @@ $user = User::find($userId)->created_at;
 
 ## Calculate the local time across timezones
 
-Let's assume we are in Hawaii and we are interviewing with someone in Melbourne, Australia. The interviewer has gived us their local date and time, but we want to find out what our local time will be. Carbon can make that conversion.
+Let's assume we are in Hawaii and we are interviewing with someone in Melbourne, Australia. The interviewer has given us their local date and time, but we want to find out what our local time will be. Carbon can make that conversion.
 
 ```php
 // 12 PM in Melbourne, Australia
