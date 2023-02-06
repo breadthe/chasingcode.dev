@@ -14,7 +14,7 @@ image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/109645605072597368
 ---
 
-**UPDATED January 19, 2023**
+**UPDATED February 5, 2023**
 
 A list of Laravel and PHP packages I **absolutely** need in every project, continuously updated.
 
@@ -29,6 +29,11 @@ This list is relatively short because I follow the principle "avoid packages unt
 * [opcodesio/log-viewer](https://github.com/opcodesio/log-viewer) - Easy-to-use, fast, and beautiful log viewer for Laravel apps.
 * [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar) **dev** - Laravel Debugbar.
 * [spatie/laravel-ray](https://github.com/spatie/laravel-ray) **dev** - Laravel adapter for Ray.
+* [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper) **dev** - Laravel IDE Helper. It generates helper files that enable your IDE to provide accurate autocompletion. Especially useful to allow PHPStorm to make sense of facades. Run the following commands after installing:
+  * `php artisan clear-compiled`
+  * `php artisan ide-helper:generate`
+  * (optional) `php artisan ide-helper:models`
+  * (optional) `php artisan ide-helper:meta`
 
 ## Sometimes
 
