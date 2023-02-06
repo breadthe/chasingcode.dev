@@ -13,6 +13,8 @@ image_author_url:
 image_unsplash:
 ---
 
+**UPDATED February 6, 2023**
+
 I've been working and experimenting a lot lately with [Carbon](https://carbon.nesbot.com/), the sublime PHP date and time utility library. I've tweeted a lot of Carbon tips and decided to collect all these tips into a permanent article. 
 
 ## Laravel - Carbon\Carbon vs Illuminate\Support\Carbon
@@ -98,7 +100,23 @@ In Laravel Eloquent:
 ```php
 $userId = 123;
 $user = User::find($userId)->created_at;
+```
 
+## Calculate the local time across timezones
+
+Let's assume we are in Hawaii and we are interviewing with someone in Melbourne, Australia. The interviewer has gived us their local date and time, but we want to find out what our local time will be. Carbon can make that conversion.
+
+```php
+// 12 PM in Melbourne, Australia
+$auDateTime = 'Thursday Feb 9 2023 12:00:00';
+$auTimezone = 'Australia/Melbourne';
+
+$auTime = Carbon\CarbonImmutable::createFromTimeString($auDateTime, $auTimezone);
+
+$localTimezone = 'US/Hawaii';
+$localDateTime = $auTime->timezone($localTimezone)->toDateTimeString();
+// => "2023-02-08 15:00:00"
+// 3 PM in Hawaii, USA
 ```
 
 ## Start/end of week/month/year
