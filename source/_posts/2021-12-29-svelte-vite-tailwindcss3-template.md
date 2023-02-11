@@ -13,7 +13,7 @@ image_author_url:
 image_unsplash:
 ---
 
-**UPDATED February 4, 2023**
+**UPDATED February 11, 2023**
 
 At the end of 2021 I decided to create a very basic Svelte/Vite/TailwindCSS 3 template that would provide a starting point for future projects. Thanks to modern tooling and automation, the procedure is pretty simple, but I am documenting it here nonetheless.
 
@@ -92,3 +92,50 @@ dist
 ```
 
 Now if you hit OPT-CMD-L (on the Mac) in VS Code, it will format the code according to the Prettier rules. If you want the formatting to be automatic, toggle Text Editor > Formatting > Format On Save.
+
+## Add TypeScript
+
+If you want to use TypeScript, you can add it with the following command:
+
+```bash
+npm install --save-dev typescript @tsconfig/svelte
+```
+
+Then create a `tsconfig.json` file in the root of the project with the following contents:
+
+```json
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": [
+    "vite.config.ts",
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.svelte"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+  }
+}
+```
+
+Now you can change the `script` tag in all Svelte components where you want to use TypeScript to:
+
+```html
+<script lang="ts">
+```
