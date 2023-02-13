@@ -11,7 +11,7 @@ image_thumb: /assets/img/2023-02-13-seismic-v0.6.0-light-dark.jpg
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/109859297313321456
 ---
 
 After the devastating [2023 Turkey/Syria earthquakes](https://en.wikipedia.org/wiki/2023_Turkey%E2%80%93Syria_earthquake) I was looking at earthquake-related stuff on the interwebs and found this nice [USGS magnitude 2.5+ earthquakes in the past day](https://earthquake.usgs.gov/earthquakes/map/?extent=-89.76681,-400.78125&extent=89.76681,210.23438&map=false) website. 
