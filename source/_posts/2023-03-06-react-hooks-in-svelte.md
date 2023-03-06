@@ -11,7 +11,7 @@ image_thumb: /assets/img/2023-03-06-useState-thumb.jpg
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/109978443442070915 
 ---
 
 I came across a repo by [Josh Nussbaum](https://twitter.com/joshnuss) comparing [React hooks with Svelte](https://github.com/joshnuss/react-hooks-in-svelte) through examples, and I thought it would be fun to present it as a static website.
