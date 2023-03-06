@@ -20,6 +20,7 @@ hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
 hljs.registerLanguage('yaml', require('highlight.js/lib/languages/yaml'));
 hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));
 hljs.registerLanguage('rust', require('highlight.js/lib/languages/rust'));
+hljs.registerLanguage('ts', require('highlight.js/lib/languages/typescript'));
 
 document.querySelectorAll('pre code').forEach((block) => {
     hljs.highlightBlock(block);
