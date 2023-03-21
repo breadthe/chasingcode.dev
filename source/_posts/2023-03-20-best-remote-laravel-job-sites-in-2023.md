@@ -11,7 +11,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/110057724317287801
 ---
 
 In 2023 I changed jobs. For my next position, I was interested in two things: 100% remote work and Laravel. Thankfully, my job search was successful and I found exactly what I was looking for: a small, remote-first company with good culture and very nice people, that uses Laravel.
