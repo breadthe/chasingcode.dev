@@ -14,6 +14,8 @@ image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/110057724317287801
 ---
 
+**UPDATED March 22, 2023**
+
 In 2023 I changed jobs. For my next position, I was interested in two things: 100% remote work and Laravel. Thankfully, my job search was successful and I found exactly what I was looking for: a small, remote-first company with good culture and very nice people, that uses Laravel.
 
 If you're looking for work in a specific stack, I recommend narrowing your search to focus on sites that specialize in that stack. Likewise, there are remote-only job sites which should be high on your list, if remote is important for you.
@@ -31,6 +33,10 @@ The cool thing about LaraJobs is that you're guaranteed to find Laravel jobs ins
 Unfortunately the site seems a bit unfinished and the user experience is lacking. For example, you can't apply multiple filters at once. I can't search, say, for "TALL stack" + "Full Time" at the same time. Also, there doesn't seem a way to filter by location. Even for remote work, I would like to filter jobs on another continent.
 
 Despite the downsides, LaraJobs is razor-focused on Laravel jobs, and is updated regularly.
+
+## LaraDir
+
+[LaraDir](https://laradir.com/) is a Laravel-focused discovery-based job directory. It's different from others on this list in that you create a developer profile and then companies can find you, so it's more company oriented. It sounds like an interesting approach, but I just came across it, so I haven't used it.
 
 ## RemoteOK
 
