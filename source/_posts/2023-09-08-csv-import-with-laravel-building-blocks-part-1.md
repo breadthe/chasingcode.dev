@@ -11,7 +11,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/111031677371344658
 ---
 
 I've been hacking on a side project in Laravel that may never see the light of day, but I think it's worth talking about the building blocks I used for it. The core functionality revolves around importing data from a CSV (or XLS) file, transforming it into a [DTO](https://en.wikipedia.org/wiki/Data_transfer_object) (Data Transfer Object), and then saving it to a SQLite database.
