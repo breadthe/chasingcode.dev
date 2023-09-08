@@ -87,7 +87,7 @@ Then create a `.prettierrc.json` file in the root of the project with the follow
 
 Finally, add a `.prettierignore` in the root file with the following contents, to ignore the build directory:
 
-```text
+```bash
 dist
 ```
 
