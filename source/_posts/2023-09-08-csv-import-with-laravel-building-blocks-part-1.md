@@ -14,6 +14,8 @@ image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/111031677371344658
 ---
 
+**UPDATED September 11, 2023**
+
 I've been hacking on a side project in Laravel that may never see the light of day, but I think it's worth talking about the building blocks I used for it. The core functionality revolves around importing data from a CSV (or XLS) file, transforming it into a [DTO](https://en.wikipedia.org/wiki/Data_transfer_object) (Data Transfer Object), and then saving it to a SQLite database.
 
 For context, I've been tracking bigger personal expenses in a Google Sheet for many years. By "bigger expenses" I mean material things that tend to last for a while. For example a bike, a laptop, a phone, tools, a nice pair of shoes, etc.
@@ -80,15 +82,7 @@ class ImportCommand extends Command
 
         $this->warn('Importing from "' . Storage::path($this->fileName) . '"');
 
-        $rows = SimpleExcelReader::create(Storage::path($this->fileName))
-            ->getRows()
-            ->map(function (array $row) {
-                unset($row['days']);
-                unset($row['years']);
-                unset($row['months']);
-                unset($row['age']);
-                return $row;
-            });
+        $rows = SimpleExcelReader::create(Storage::path($this->fileName));
 
         $bar = $this->output->createProgressBar();
         $bar->start();
@@ -175,7 +169,7 @@ private function getFileName(): void
 }
 ```
 
-Next, I use `SimpleExcelReader` to read the CSV file and return a collection of rows, which I map over to remove the columns I don't need.
+Next, I use `SimpleExcelReader` to read the CSV file and return a collection of rows.
 
 I then start a progress bar and iterate over the rows, creating an `ItemData` DTO from each row, and then saving it to the SQLite database.
 
