@@ -14,7 +14,7 @@ image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/111031677371344658
 ---
 
-**UPDATED September 11, 2023**
+**UPDATED September 12, 2023**
 
 I've been hacking on a side project in Laravel that may never see the light of day, but I think it's worth talking about the building blocks I used for it. The core functionality revolves around importing data from a CSV (or XLS) file, transforming it into a [DTO](https://en.wikipedia.org/wiki/Data_transfer_object) (Data Transfer Object), and then saving it to a SQLite database.
 
@@ -27,6 +27,8 @@ These are all things that an Excel expert might accomplish easily, but my hammer
 The good news is that it doesn't take a lot of work to glue these blocks together to get a command-line CSV import working. The hard part is building the UI for all the complex visualizations I want to do. This series, however, will focus strictly on the import process.
 
 In Part 1 I want to describe the command I built with Laravel Prompts to import the CSV file.
+
+[Part 2 - The DTO](/blog/csv-import-with-laravel-building-blocks-part-2/)
 
 ## The building blocks
 
