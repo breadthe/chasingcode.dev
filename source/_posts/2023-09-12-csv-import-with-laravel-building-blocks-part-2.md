@@ -11,7 +11,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/111058634121897287
 ---
 
 In [Part 1](/blog/csv-import-with-laravel-building-blocks-part-1/) I described the command I built with Laravel Prompts to import a CSV file into a SQLite database.
