@@ -88,6 +88,11 @@ form {
   .twitter-tweet.twitter-tweet-rendered {
     @apply mx-auto;
   }
+
+  /* Center embedded Youtubes */
+  iframe[src*="youtube.com"] {
+    @apply mx-auto;
+  }
 }
 
 /* =================== Highlight =================== */
