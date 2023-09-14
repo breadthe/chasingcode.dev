@@ -14,6 +14,8 @@ image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/111058634121897287
 ---
 
+**UPDATED September 13, 2023**
+
 In [Part 1](/blog/csv-import-with-laravel-building-blocks-part-1/) I described the command I built with Laravel Prompts to import a CSV file into a SQLite database.
 
 Now, I'll dive deeper into how I used [spatie/laravel-data](https://spatie.be/docs/laravel-data/v3/introduction) for the `ItemData` DTO, plus some custom data casts for the CSV columns.
@@ -164,3 +166,9 @@ Now the data is in the database, and I can use it to build the dashboard and oth
 I've only scratched the surface of what's possible with `spatie/laravel-data`. DTOs may not make sense right away, but once they do you might find yourself reaching for the pattern more often than not.
 
 Going back to the concept of building blocks, with Laravel you don't have to build everything from scratch. Not only does it come with its own robust (and ever-growing) set of building blocks, but the surrounding ecosystem is so vast and mature that you can find a package for almost anything. Quite often it's just a matter of gluing the right packages together with a sprinkle of custom code, and voilà, you have a functional MVP!
+
+## And one more thing...
+
+Here's a video from Laracon 2023 of Mr Spatie himself (Freek Van der Herten), showing off some advanced techniques using the `spatie/laravel-data` package.
+
+<iframe width="656" height="369" src="https://www.youtube.com/embed/CrO_7Df1cBc" title="Freek Van Der Herten &quot;Enjoying Laravel Data&quot; - Laracon US 2023 Nashville" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
