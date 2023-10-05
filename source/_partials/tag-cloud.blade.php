@@ -8,12 +8,7 @@
                 <a
                         href="{{ '/blog/categories/' . $tag }}"
                         title="View posts in {{ $tag }}"
-                        class="px-2 border border-dashed rounded"
-                        style="
-                                background-color: {{ $category->bgColor() }};
-                                color: {{ $fgColor = $category->fgColor() }};
-                                border-color: {{ $fgColor }};
-                                "
+                        class="px-2 border border-dashed rounded bg-teal-100 hover:bg-teal-400 text-teal-700 hover:text-teal-100"
                 >{{ $tag }}</a>
                 <span class="text-base font-light text-right ml-4">
                             {{ $category->posts($posts)->count() }}

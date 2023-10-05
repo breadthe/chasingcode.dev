@@ -1,7 +1,7 @@
 <?php
 
-use Breadthe\PhpContrast\HexColorPair;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 return [
     'baseUrl' => '',
@@ -54,7 +54,7 @@ return [
             : $cleaned;
     },
     'isActive' => function ($page, $path) {
-        return ends_with(trimPath($page->getPath()), trimPath($path));
+        return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },
 
     /**
@@ -62,7 +62,7 @@ return [
      * Example: /blog belongs to /blog; so does /blog/my-first-post/
      */
     'belongsTo' => function ($page, $path) {
-        return starts_with(trimPath($page->getPath()), trimPath($path));
+        return Str::startsWith(trimPath($page->getPath()), trimPath($path));
     },
 
     /**
@@ -98,19 +98,5 @@ return [
         }
 
         return $str;
-    },
-    /**
-     * Input: tag/category name
-     * Output: "#9fa96e"
-     */
-    'bgColor' => function ($category) {
-        return sprintf("#%s",substr(md5($category), 0, 6));
-    },
-    /**
-     * Accessible text to go with the tag/category background
-     * Output: "#14e5c5"
-     */
-    'fgColor' => function ($category) {
-        return HexColorPair::minContrast(5)->getSibling(substr(md5($category), 0, 6))->hex;
     },
 ];
