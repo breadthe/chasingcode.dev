@@ -69,3 +69,5 @@ I will try other avenues for contacting Mr Smith. It those fail, then I guess fi
 If you read this by any chance, Mr Smith & associates, please check your LinkedIn messages, or message me on [Twitter](https://twitter.com/brbcoding/) or [Mastodon](https://indieweb.social/@brbcoding) . There's also a [Contact form](https://chasingcode.dev/contact/) that I barely check. The same applies to anyone who knows someone who's lost a GoPro 11 Black in recent months.
 
 P.S. I'll make sure to ask some relevant questions to validate the actual owner - partly why I didn't give any personal details.
+
+I'll update this if I manage to contact the owner.
