@@ -1,9 +1,8 @@
 _drafts
-/build_local/
-/build_staging/
-/build_production/
+/build_*/
 /cache
 /node_modules/
+/source/assets/build/
 /vendor/
 .DS_Store
 .idea
