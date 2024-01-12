@@ -1,6 +1,6 @@
 [build]
 
-command = "npm run production"
+command = "npm run prod"
 publish = "build_production"
 
 [build.environment]
