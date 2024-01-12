@@ -1,4 +1,4 @@
-// Your custom blog styles here
+ /*Your custom blog styles here*/
 .site-logo {
   @apply font-serif;
   @apply font-bold;
@@ -6,13 +6,13 @@
 
 .hero {
   span {
-    //@apply font-serif;
-    //@apply leading-loose;
-    //letter-spacing: 0.08em;
+    /*@apply font-serif;*/
+    /*@apply leading-loose;*/
+    /*letter-spacing: 0.08em;*/
   }
 
   &.hero-gradient {
-    //background-image: $gradient-2;
+    /*background-image: var(--gradient-2);*/
   }
 }
 
@@ -97,7 +97,7 @@ form {
 
 /* =================== Highlight =================== */
 .highlight {
-  background-image: $highlight-yellow;
+  background-image: var(--highlight-yellow);
   -webkit-border-radius: 1em 0;
   -moz-border-radius: 1em 0;
   border-radius: 1em 0;

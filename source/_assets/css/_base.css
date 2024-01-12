@@ -25,15 +25,15 @@ blockquote {
 }
 
 code {
-    //@apply bg-teal-100;
-    background-color: $pastel-yellow;
+    /*@apply bg-teal-100;*/
+    background-color: var(--pastel-yellow);
     @apply px-2;
     @apply py-px;
     @apply rounded;
     @apply text-lg;
     &:not(.hljs) {
-        //@apply text-black border-b-2 border-teal-400;
-        //@apply text-black;
+        /*@apply text-black border-b-2 border-teal-400;*/
+        /*@apply text-black;*/
     }
 }
 
@@ -168,4 +168,4 @@ table {
 ::selection {
     @apply bg-blue-500;
     @apply text-white;
-    }
+}

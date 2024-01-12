@@ -23,25 +23,25 @@
 
             <button
                 v-if="query || searching"
-                class="absolute top-0 right-0 font-light text-3xl text-gray-500 hover:text-gray-600 focus:outline-none mt-4 sm:mt-0 pr-6 sm:pr-2"
+                class="absolute top-0 right-0 leading-snug font-light text-3xl text-gray-500 hover:text-gray-600 focus:outline-none inset-y-0 pr-6 sm:pr-2"
                 @click="reset"
             >&times;</button>
 
             <transition name="fade">
-                <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full sm:w-1/2 text-left mb-4 mt-16 sm:mt-12">
-                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 shadow-lg mx-4 sm:mx-0 max-w-xs sm:max-w-sm lg:max-w-lg" style="width: 520px;">
+                <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full lg:w-3/4 text-left mb-4 mt-16 sm:mt-12">
+                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 rounded-b-lg shadow-lg mx-4 sm:mx-0">
                         <a
                             v-for="(result, index) in results"
                             class="bg-white hover:bg-gray-100 border-b border-teal-400 text-xl cursor-pointer p-4"
-                            :class="{ 'rounded-b' : (index === results.length - 1) }"
-                            :href="result.link"
-                            :title="result.title"
+                            :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
+                            :href="result.item.link"
+                            :title="result.item.title"
                             :key="result.link"
                             @mousedown.prevent
                         >
-                            {{ result.title }}
+                            {{ result.item.title }}
 
-                            <span class="block font-normal text-gray-600 text-sm my-1" v-html="result.snippet"></span>
+                            <span class="block font-normal text-gray-600 text-sm my-1" v-html="result.item.snippet"></span>
                         </a>
 
                         <div
@@ -90,9 +90,11 @@
 </template>
 
 <script>
+import Fuse from 'fuse.js';
+
 export default {
     props: {
-        'dataBelongsToBlog': {
+        dataBelongsToBlog: {
             type: String,
             required: true,
             default: '',
@@ -128,8 +130,8 @@ export default {
     },
     created() {
         axios('/index.json').then(response => {
-            this.fuse = new fuse(response.data, {
-                minMatchCharLength: 6,
+            this.fuse = new Fuse(response.data, {
+                minMatchCharLength: 4,
                 keys: ['title', 'snippet', 'categories'],
             });
         });

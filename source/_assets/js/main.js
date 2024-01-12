@@ -1,11 +1,10 @@
 window.axios = require('axios');
-window.fuse = require('fuse.js');
-window.Vue = require('vue');
+import Vue from 'vue';
 
 import MastodonWebmention from './components/MastodonWebmention.vue';
 import Search from './components/Search.vue';
 // import VIcon from './components/icons/VIcon';
-import hljs from 'highlight.js/lib/highlight';
+import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/monokai-sublime.css';
 
 // Syntax highlighting
