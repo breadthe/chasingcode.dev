@@ -8,20 +8,22 @@
 @endpush
 
 @section('body')
-    <section class="p-2 sm:p-6 shadow-xl">
-        @if ($page->cover_image)
-            <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
-        @endif
+    <article class="p-4 sm:p-6 shadow-xl">
+        <header class="mb-2 sm:mb-4">
+            @if ($page->cover_image)
+                <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
+            @endif
 
-        <h1 class="font-serif text-3xl mb-2">{{ $page->title }}</h1>
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">{{ $page->title }}</h1>
 
-        <p class="text-base md:mt-0">
-            {{ date('F j, Y', $page->date) }}
-        </p>
+            <small class="font-mono text-sm">
+                {{ date('F j, Y', $page->date) }}
+            </small>
 
-        @include('_partials.post-hero-image')
+            @include('_partials.post-hero-image')
+        </header>
 
-        <div class="post sm:text-2xl font-light text-gray-900 tracking-wide pb-4 mt-8 sm:mt-4" v-pre>
+        <div class="post sm:text-2xl font-light text-gray-900 tracking-wide pb-4" v-pre>
             @yield('content')
 
             @include('_partials.tags')
@@ -50,5 +52,5 @@
                 @endif
             </div>
         </nav>
-    </section>
+    </article>
 @endsection

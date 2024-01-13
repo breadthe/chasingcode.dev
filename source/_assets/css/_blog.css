@@ -42,12 +42,14 @@ form {
 
 .post {
   @apply overflow-auto;
-  p {
-    @apply leading-relaxed;
-    @apply text-xl;
 
-    strong {
-      @apply font-semibold;
+  p {
+    font-size: theme('fontSize.base');
+    line-height: theme('lineHeight.6');
+    font-weight: theme('fontWeight.light');
+
+ strong {
+      font-weight: theme('fontWeight.semibold');
     }
 
     img {
@@ -71,9 +73,12 @@ form {
   }
 
   ol, ul {
-    @apply text-xl;
-    @apply leading-relaxed;
+    @apply text-base;
     @apply ml-4;
+
+    strong {
+      font-weight: theme('fontWeight.semibold');
+    }
 
     @screen sm {
       @apply ml-8;
@@ -82,6 +87,10 @@ form {
 
   ul {
     @apply list-disc;
+  }
+
+  ul > li::marker {
+    color: theme('colors.teal.400');
   }
 
   /* Center embedded Tweets */
