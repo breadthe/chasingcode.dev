@@ -4,10 +4,10 @@ section: content
 title: Delete the blog or refresh it?
 date: 2024-01-12
 description: Should I delete the blog or refresh it in 2024?
-categories: [General]
+categories: [General, Jigsaw]
 featured: false
-image: 
-image_thumb: 
+image:
+image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
@@ -60,6 +60,7 @@ Nothing has changed at this point in the site design except for the fact that th
 - **tags** - similar to anchors, I want something new.
 - **tighter main article column** - in the desktop view I feel like the main column is too wide. With smaller text it will be necessary to make it narrower.
 - **landing page** - this currently acts as a pseudo-portfolio but I would like to make it an entry-point to the blog itself. The portfolio and resume stuff can move to its own section.
+- **better code highlighting** - I would very much like to use [Torchlight](https://torchlight.dev/) for code highlighting but Jigsaw uses highlight.js and I'm not sure how difficult it would be to convert. One downside of Torchlight is that it's a service, which means there's no guarantee it will be around forever.
 
 I will make no secret of the fact that I am getting inspiration from a lot of different developer blogs. I've been bookmarking awesome blog designs for years and now's a good time to borrow some of those great ideas.
 
