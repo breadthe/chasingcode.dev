@@ -37,7 +37,7 @@
 
         <main
             role="main"
-            class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/uses') || $page->belongsTo('/contact') ? 'bg-white max-w-4xl' : 'max-w-6xl' }} mx-auto"
+            class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/uses') || $page->belongsTo('/contact') ? 'bg-white max-w-2xl' : 'max-w-6xl' }} mx-auto"
         >
             @yield('hero')
 
