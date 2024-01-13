@@ -11,6 +11,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
+mastodon_toot_url: https://indieweb.social/@brbcoding/111747057739543220
 ---
 
 At the end of 2023 I found myself burnt out on side projects and coding as a hobby. One particularly bad day I decided that I would **delete this blog** and website in 2024. I was tired of the endless blogging procrastination, and that the underlying engine had been falling behind on maintenance for a long time.
