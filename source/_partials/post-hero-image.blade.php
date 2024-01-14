@@ -1,5 +1,5 @@
 @if($image = $page->image)
-    <section class="w-full flex flex-col items-center justify-center relative">
+    <section class="w-full flex flex-col items-center justify-center relative mt-2">
         @if($imageOverlayText = $page->image_overlay_text)
             <div
                     class="absolute font-black p-12 text-6xl rounded-full"
@@ -17,12 +17,12 @@
             </div>
         @endif
 
-        <img src="{{ $image }}" alt="{{ $page->imageAttribution() ?: $page->title }}">
+        <img src="{{ $image }}" alt="{{ $page->imageAttribution() ?: $page->title }}" class="rounded">
 
         @if($imageAttribution = $page->imageAttribution(true))
-            <small class="block text-center text-xs">
+            <em class="block text-center text-xs opacity-60 mt-1">
                 {!! $imageAttribution !!}
-            </small>
+            </em>
         @endif
     </section>
 @endif

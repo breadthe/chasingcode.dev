@@ -9,19 +9,19 @@
 
 @section('body')
     <article class="p-4 sm:p-6 shadow-xl">
-        <header class="mb-2 sm:mb-4">
+        <header class="mb-2">
             @if ($page->cover_image)
                 <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
             @endif
 
             <h1 class="font-serif text-3xl mb-1 md:mb-2">{{ $page->title }}</h1>
 
-            <div class="flex items-center gap-2">
+            <div class="flex flex-col md:flex-row gap-2">
                 <small class="font-mono">
                     {{ date('F j, Y', $page->date) }}
                 </small>
 
-                <small>&bull;</small>
+                <small class="hidden md:block">&bull;</small>
 
                 <x-tags :tags="$page->categories" />
             </div>
