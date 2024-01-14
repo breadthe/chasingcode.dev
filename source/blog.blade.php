@@ -22,7 +22,7 @@ pagination:
 @section('body')
     <section class="p-4 sm:p-6 shadow-xl">
         @foreach ($pagination->items as $post)
-            @include('_components.post-preview-inline')
+            <x-post-preview-inline :post="$post" />
 
             @if ($post != $pagination->items->last())
                 <hr class="border-0 border-t my-6">

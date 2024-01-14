@@ -23,7 +23,7 @@
         </div>
 
         @foreach ($page->posts($posts) as $post)
-                @include('_components.post-preview-inline')
+            <x-post-preview-inline :post="$post" />
 
             @if (! $loop->last)
                 <hr class="border-0 border-t my-6">
