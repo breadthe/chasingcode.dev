@@ -16,17 +16,21 @@
 
             <h1 class="font-serif text-3xl mb-1 md:mb-2">{{ $page->title }}</h1>
 
-            <small class="font-mono text-sm">
-                {{ date('F j, Y', $page->date) }}
-            </small>
+            <div class="flex items-center gap-2">
+                <small class="font-mono">
+                    {{ date('F j, Y', $page->date) }}
+                </small>
+
+                <small>&bull;</small>
+
+                <x-tags :tags="$page->categories" />
+            </div>
 
             @include('_partials.post-hero-image')
         </header>
 
         <div class="post sm:text-2xl font-light text-gray-900 tracking-wide pb-4" v-pre>
             @yield('content')
-
-            @include('_partials.tags')
 
             @include('_partials.social-share-icons')
         </div>

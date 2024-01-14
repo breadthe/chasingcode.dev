@@ -22,7 +22,17 @@
         >{{ $post->title }}</a>
     </h2>
 
-    <section class="flex flex-col sm:flex-row justify-start mb-4 mt-0">
+    <div class="flex items-center gap-2 opacity-60 hover:opacity-100 mb-2">
+        <small class="font-mono">
+            {{ date('F j, Y', $post->date) }}
+        </small>
+
+        <small>&bull;</small>
+
+        <x-tags :tags="$post->categories" />
+    </div>
+
+    <section class="flex flex-col sm:flex-row justify-start mb-2">
         @if($image = $post->image_thumb)
             <div
                     class="flex items-center justify-center overflow-hidden sm:mr-4 mb-4 sm:w-1/4"
