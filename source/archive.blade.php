@@ -16,7 +16,7 @@
 
 @section('body')
     <div class="flex flex-col-reverse sm:flex-row">
-        <section class="w-full bg-white p-4 sm:p-6 sm:mr-8 shadow-xl">
+        <section class="w-full p-4 sm:p-6 sm:mr-8 bg-white rounded">
             @foreach ($posts->groupBy(function ($post) { return $post->getDate()->format('Y'); }) as $year => $yearPosts)
                 <div class="mb-8">
                     <h2 class="flex items-center justify-between text-teal-700">

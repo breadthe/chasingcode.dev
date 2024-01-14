@@ -16,7 +16,7 @@
 
 @section('body')
 
-<section class="p-4 sm:p-6 shadow-xl">
+<section class="p-4 sm:p-6 bg-white rounded">
     <h3>Get In Touch</h3>
     <p>I'll get back to you ASAP as possible!</p>
 
