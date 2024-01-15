@@ -37,6 +37,6 @@
             @endforeach
         </section>
 
-        @include('_partials.tag-cloud')
+        <x-tag-cloud :categories="$categories" :posts="$posts" />
     </div>
 @stop

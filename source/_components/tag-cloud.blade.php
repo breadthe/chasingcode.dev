@@ -1,3 +1,5 @@
+@props(['categories', 'posts'])
+
 <aside class="sm:flex-1 p-4 sm:p-6 mb-8">
     <h2 class="flex items-center justify-between text-teal-700">
         Categories
