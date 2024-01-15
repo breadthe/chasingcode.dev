@@ -13,15 +13,15 @@
 
 @section('body')
 
-<section class="p-4 sm:p-6 bg-white rounded">
-    <h3>Get In Touch</h3>
+<section class="flex flex-col p-4 sm:p-6 bg-white rounded">
+    <h3>Get in touch</h3>
     <p>I'll get back to you ASAP as possible!</p>
 
     <form
         name="contact"
         method="post"
         data-netlify="true"
-        class="bg-gray-200 border shadow"
+        class="w-full mt-4 bg-gray-200 border shadow"
     >
         <div
             class="flex justify-start pb-4"
