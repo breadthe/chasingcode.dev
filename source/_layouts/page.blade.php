@@ -8,10 +8,7 @@
 @endpush
 
 @section('hero')
-    @include('_partials.hero',[
-        'title' => $page->title,
-        'description' => $page->description,
-    ])
+    <x-hero :title="$page->title" :description="$page->description" />
 @endsection
 
 @section('body')

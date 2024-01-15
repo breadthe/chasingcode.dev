@@ -8,10 +8,7 @@
 @endpush
 
 @section('hero')
-    @include('_partials.hero',[
-        'title' => 'Contact Me',
-        'description' => '',
-    ])
+    <x-hero title="Contact Me"/>
 @endsection
 
 @section('body')

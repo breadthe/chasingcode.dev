@@ -8,10 +8,7 @@
 @endpush
 
 @section('hero')
-    @include('_partials.hero',[
-        'title' => $page->title,
-        'description' => $page->description,
-    ])
+    <x-hero :title="$page->title" :description="$page->description" />
 @endsection
 
 @section('body')
@@ -26,7 +23,7 @@
             <x-post-preview-inline :post="$post" />
 
             @if (! $loop->last)
-                <hr class="border-0 border-t my-6">
+                <hr class="border-0 border-t my-2 opacity-60">
             @endif
         @endforeach
 

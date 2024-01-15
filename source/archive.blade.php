@@ -8,10 +8,7 @@
 @endpush
 
 @section('hero')
-    @include('_partials.hero',[
-        'title' => 'Blog Archive',
-        'description' => "An yearly archive of all the articles posted on $page->siteName",
-    ])
+    <x-hero title="Blog Archive" description="{{'A yearly archive of all the articles posted on ' . $page->siteName}}" />
 @endsection
 
 @section('body')
