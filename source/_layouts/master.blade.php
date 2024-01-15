@@ -20,9 +20,9 @@
 
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Blog">
 
-        @if ($page->production)
+        {{--@if ($page->production)
             @include('_partials.google-analytics')
-        @endif
+        @endif--}}
 
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <link href="https://github.com/breadthe" rel="me">
