@@ -1,27 +1,26 @@
 @props(['pagination'])
 
 @if ($pagination->pages->count() > 1)
-    <nav class="flex flex-wrap text-base">
+    <nav class="w-full mt-8 flex flex-wrap justify-between text-base">
         @if ($previous = $pagination->previous)
             <a
                     href="{{ $previous }}"
                     title="Previous Page"
-                    class="hover:bg-teal-400 text-teal-400 hover:text-white font-semibold rounded mr-3 px-5 py-3 leading-loose"
-            >&LeftArrow;</a>
+                    class="text-teal-400 pr-2"
+            >&larr;</a>
         @endif
 
         @foreach ($pagination->pages as $pageNumber => $path)
             @if($pagination->currentPage == $pageNumber)
                 <span
                         title="Page {{ $pageNumber }}"
-                        class="text-teal-700 font-semibold rounded mr-3 px-5 py-3 leading-loose"
-                        style="background-image: linear-gradient(to bottom, transparent 70%, #4FD1C5 70%);"
+                        class="text-black font-semibold px-2 border-b-2 border-black"
                 >{{ $pageNumber }}</span>
             @else
                 <a
                         href="{{ $path }}"
                         title="Go to Page {{ $pageNumber }}"
-                        class="hover:bg-teal-400 text-teal-400 hover:text-white font-semibold rounded mr-3 px-5 py-3 leading-loose"
+                        class="text-teal-400 px-2"
                 >{{ $pageNumber }}</a>
             @endif
         @endforeach
@@ -30,8 +29,8 @@
             <a
                     href="{{ $next }}"
                     title="Next Page"
-                    class="hover:bg-teal-400 text-teal-400 hover:text-white font-semibold rounded mr-3 px-5 py-3 leading-loose"
-            >&RightArrow;</a>
+                    class="text-teal-400 pl-2"
+            >&rarr;</a>
         @endif
     </nav>
 @endif
