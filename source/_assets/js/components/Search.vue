@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-1 justify-end items-center text-right px-4">
         <div
-            class="absolute sm:relative w-full justify-end top-0 left-0 z-10 py-4 sm:py-0 px-4 sm:px-0 bg-gray-800"
+            class="absolute sm:relative w-full justify-end top-0 left-0 z-20 py-4 sm:py-0 px-4 sm:px-0 bg-gray-800"
             :class="{'hidden sm:flex': ! searching}"
         >
             <label for="search" class="hidden">Search</label>
@@ -32,16 +32,16 @@
                     <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 rounded-b-lg shadow-lg mx-4 sm:mx-0">
                         <a
                             v-for="(result, index) in results"
-                            class="bg-white hover:bg-gray-100 border-b border-teal-400 text-xl cursor-pointer p-4"
+                            class="group bg-white hover:bg-gray-100 border-b border-teal-400 cursor-pointer p-4"
                             :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                             :href="result.item.link"
                             :title="result.item.title"
                             :key="result.link"
                             @mousedown.prevent
                         >
-                            {{ result.item.title }}
+                            <h2 class="font-serif text-xl leading-snug text-teal-700 group-hover:text-teal-900">{{ result.item.title }}</h2>
 
-                            <span class="block font-normal text-gray-600 text-sm my-1" v-html="result.item.snippet"></span>
+                            <span class="block font-sans font-normal text-gray-600 group-hover:text-black text-sm my-1" v-html="result.item.snippet"></span>
                         </a>
 
                         <div
