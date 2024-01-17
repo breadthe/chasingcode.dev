@@ -5,7 +5,7 @@
         title="{{ $title }}"
         class="category--tag group inline-flex items-center gap-2 font-mono bg-teal-400 hover:shadow-md rounded"
 >
-    <small @class([
+    <span @class([
         'rounded-r-none' => $count,
         'bg-teal-100',
         'group-hover:bg-teal-400',
@@ -16,7 +16,7 @@
         'rounded',
     ])>
         {{ $slot }}
-    </small>
+    </span>
 
     @if($count)
         <small class="font-light text-right pr-2 bg-teal-400 text-white rounded-r">
