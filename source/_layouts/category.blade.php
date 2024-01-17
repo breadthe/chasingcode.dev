@@ -19,13 +19,15 @@
             </a>
         </div>
 
-        @foreach ($page->posts($posts) as $post)
+        @forelse ($page->posts($posts) as $post)
             <x-post-preview-inline :post="$post" />
 
             @if (! $loop->last)
                 <hr class="border-0 border-t my-2 opacity-60">
             @endif
-        @endforeach
+        @empty
+            <p>No posts for this category.</p>
+        @endforelse
 
     {{--    @include('_components.newsletter-signup')--}}
     </section>
