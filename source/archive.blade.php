@@ -12,8 +12,8 @@
 @endsection
 
 @section('body')
-    <div class="flex flex-col-reverse sm:flex-row">
-        <section class="w-full p-4 sm:p-6 sm:mr-8 bg-white rounded">
+    <div class="grid grid-cols-1 sm:grid-cols-12 sm:gap-8">
+        <section class="sm:col-span-10 order-last sm:order-first w-full p-4 sm:p-6 bg-white rounded">
             @foreach ($posts->groupBy(function ($post) { return $post->getDate()->format('Y'); }) as $year => $yearPosts)
                 <div class="mb-8">
                     <h2 class="flex items-center justify-between text-teal-700">
@@ -37,6 +37,8 @@
             @endforeach
         </section>
 
-        <x-tag-cloud :categories="$categories" :posts="$posts" />
+        <div class="sm:col-span-2 order-first sm:order-last">
+            <x-tag-cloud :categories="$categories" :posts="$posts" />
+        </div>
     </div>
 @stop
