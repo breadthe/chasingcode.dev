@@ -1,7 +1,7 @@
 @props(['pagination'])
 
 @if ($pagination->pages->count() > 1)
-    <nav class="w-full mt-8 flex flex-wrap justify-between text-base">
+    <nav class="w-full mt-4 flex flex-wrap justify-between text-base">
         @if ($previous = $pagination->previous)
             <a
                     href="{{ $previous }}"

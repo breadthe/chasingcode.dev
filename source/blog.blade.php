@@ -21,9 +21,7 @@ pagination:
         @foreach ($pagination->items as $post)
             <x-post-preview-inline :post="$post" />
 
-            @if ($post != $pagination->items->last())
-                <hr class="border-0 border-t my-2 opacity-60">
-            @endif
+            <hr class="border-0 border-t my-2 opacity-60">
         @endforeach
 
         <x-blog-pagination :pagination="$pagination" />
