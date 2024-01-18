@@ -13,6 +13,10 @@ a {
     }
 }
 
+strong {
+    font-weight: theme('fontWeight.semibold');
+}
+
 blockquote {
     @apply border-gray-500;
     @apply border-l-4;
