@@ -1,9 +1,8 @@
 @props(['title', 'description' => null])
 
 <section class="hero bg-gray-100 flex items-center flex-col gap-6 py-8 px-6 sm:px-0">
-        <h1 class="flex items-center m-0 relative">
-            <span class="z-10 bg-white uppercase border border-black px-2">{{ $title }}</span>
-            <span class="w-full absolute top-2 left-2 bg-teal-400">&nbsp;</span>
+        <h1 class="border border-black px-2 uppercase" style="box-shadow: 6px 6px 0 0 rgba(45,212,191,1)">
+            {{ $title }}
         </h1>
 
         @if($description)
