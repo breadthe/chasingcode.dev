@@ -26,6 +26,15 @@
                 <x-tags :tags="$page->categories" />
             </div>
 
+            @if($page->updated)
+                <div class="mt-2">
+                    <small class="font-mono">
+                        <strong>Updated: </strong>
+                        {{ date('F j, Y', $page->updated) }}
+                    </small>
+                </div>
+            @endif
+
             @include('_partials.post-hero-image')
         </header>
 

@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: Must-have Laravel & PHP Packages
 date: 2023-01-06
+updated: 2023-02-05
 description: A repository of my must-have Laravel and PHP packages for every project
 categories: [Laravel, PHP]
 featured: false
@@ -13,8 +14,6 @@ image_author_url:
 image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/109645605072597368
 ---
-
-**UPDATED February 5, 2023**
 
 A list of Laravel and PHP packages I **absolutely** need in every project, continuously updated.
 

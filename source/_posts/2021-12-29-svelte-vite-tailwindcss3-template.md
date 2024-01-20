@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: Creating a Svelte, Vite, and TailwindCSS 3 Template
 date: 2021-12-29
+updated: 2023-02-11
 description: Documenting how to create a Svelte, Vite, and TailwindCSS 3 template in late 2021
 categories: [Svelte,TailwindCSS,Vite]
 featured: false
@@ -12,8 +13,6 @@ image_author:
 image_author_url:
 image_unsplash:
 ---
-
-**UPDATED February 11, 2023**
 
 At the end of 2021 I decided to create a very basic Svelte/Vite/TailwindCSS 3 template that would provide a starting point for future projects. Thanks to modern tooling and automation, the procedure is pretty simple, but I am documenting it here nonetheless.
 

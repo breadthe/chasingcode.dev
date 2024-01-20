@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: CSV import with Laravel building blocks - Part 1
 date: 2023-09-08
+updated: 2023-09-12
 description: Importing CSVs into a SQLite database with Laravel Prompts, spatie/laravel-data, and spatie/simple-excel, part 1.
 categories: [Laravel]
 featured: false
@@ -13,8 +14,6 @@ image_author_url:
 image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/111031677371344658
 ---
-
-**UPDATED September 12, 2023**
 
 I've been hacking on a side project in Laravel that may never see the light of day, but I think it's worth talking about the building blocks I used for it. The core functionality revolves around importing data from a CSV (or XLS) file, transforming it into a [DTO](https://en.wikipedia.org/wiki/Data_transfer_object) (Data Transfer Object), and then saving it to a SQLite database.
 
