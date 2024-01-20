@@ -37,8 +37,12 @@
             @endforeach
         </section>
 
-        <div class="sm:col-span-2 order-first sm:order-last">
+        <aside class="sm:col-span-2 order-first sm:order-last flex flex-col gap-4 sm:flex-1 px-4 mb-8">
+            <h2 class="flex items-center justify-between text-teal-700">
+                Categories
+            </h2>
+
             <x-tag-cloud :categories="$categories" :posts="$posts" />
-        </div>
+        </aside>
     </div>
 @stop
