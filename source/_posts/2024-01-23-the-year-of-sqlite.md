@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: The year of SQLite
-date: 2023-01-23
+date: 2024-01-23
 updated:
 description: 2024 is the year of SQLite for me
 categories: [SQLite]
