@@ -12,7 +12,7 @@
 @endsection
 
 @section('body')
-    <div class="grid grid-cols-1 sm:grid-cols-12 sm:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-12 sm:gap-4">
         <section class="sm:col-span-10 order-last sm:order-first w-full p-4 sm:p-6 bg-white rounded">
             @foreach ($posts->groupBy(function ($post) { return $post->getDate()->format('Y'); }) as $year => $yearPosts)
                 <div class="mb-8">
