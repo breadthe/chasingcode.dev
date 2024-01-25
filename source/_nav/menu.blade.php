@@ -42,6 +42,20 @@
     </a>
 
     <a
+        title="About"
+        href="/about"
+        class="
+            ml-6 text-teal-200 hover:text-teal-400
+            {{
+                $page->belongsTo('/about') ?
+                'active border-b-2 border-teal-400' :
+                ''
+            }}"
+    >
+        About
+    </a>
+
+    <a
         title="{{ $page->siteName }} Contact"
         href="/contact"
         class="
