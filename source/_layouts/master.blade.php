@@ -34,10 +34,9 @@
 
         @include('_partials.header')
 
-
         <main
             role="main"
-            class="flex-auto w-full max-w-2xl mx-auto"
+            class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/archive') || $page->belongsTo('/uses') || $page->belongsTo('/about') || $page->belongsTo('/contact') ? 'max-w-2xl' : 'max-w-6xl' }} mx-auto"
         >
             @yield('hero')
 
