@@ -1,4 +1,4 @@
-<footer class="flex flex-col gap-4 max-w-2xl mx-8 sm:mx-auto {{ $page->belongsTo('/blog') || $page->belongsTo('/contact') ? 'mt-8' : '' }} mb-8 text-center">
+<footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
     <div class="w-full flex flex-row justify-center gap-4">
         <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
             <span class="group-hover:text-teal-400">

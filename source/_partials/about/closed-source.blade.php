@@ -1,7 +1,4 @@
-<article class="m-4 sm:-mt-10 flex items-center">
-
-    <div class="container mx-auto max-w-4xl p-4 bg-white border border-gray-200 shadow-xl">
-
+<article class="flex flex-col p-4 sm:p-6 bg-white rounded">
         <div class="text-center mb-8 sm:mb-4">
             <h1 class="inline pb-2 border-b-2 border-gray-400 text-gray-900 text-5xl font-sans font-thin">Closed Source</h1>
         </div>
@@ -236,7 +233,4 @@
                 </div>
             </div>
         </div>--}}
-
-    </div>
-
 </article>

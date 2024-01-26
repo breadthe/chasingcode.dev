@@ -8,24 +8,18 @@
 @endpush
 
 @section('body')
-    <section class="flex flex-col gap-8 bg-white p-8 mb-8">
+    <section class="flex flex-col gap-8 bg-white p-8">
         <!-- Intro -->
-        <div class="mx-auto max-w-2xl">
-            <h2 class="">Hello, I'm Constantin.</h2>
+        <div class="mx-auto max-w-6xl text-center">
+            <h1 class="m-0 text-4xl text-teal-400">I build for the web</h1>
 
-            <h1 class="m-0 text-4xl font-bold text-teal-400">I build for the web.</h1>
+            <h2 class="m-0 text-gray-700 font-light">and sometimes I <a href="/blog" class="border-b border-solid border-teal-400">blog</a> about it.</h2>
 
-            <p class="text-xl font-serif text-left sm:text-justify font-light leading-relaxed">
-                I am a full-stack <strong>PHP</strong> developer. From a very early age I've been fascinated with computers, which led me to pursue a degree in <strong>Computer Science</strong>. Later, I fell in love with <strong>web development</strong> and never looked back.
-            </p>
+            <p>These days I'm really into <a href="/blog/categories/Laravel" class="border-b border-solid border-teal-400">Laravel</a>, <a href="/blog/categories/TailwindCSS" class="border-b border-solid border-teal-400">Tailwind</a>, <a href="/blog/categories/Svelte" class="border-b border-solid border-teal-400">Svelte</a>, and <a href="/blog/categories/Tauri" class="border-b border-solid border-teal-400">Tauri</a>.</p>
 
-            <p class="text-xl font-serif text-left sm:text-justify font-light leading-relaxed">
-                Currently I work full time remote as a <strong>Laravel</strong> developer, helping a <strong>SaaS</strong> start-up to grow.
-            </p>
-
-            <p class="text-xl font-serif text-left sm:text-justify font-light leading-relaxed">
-                I like to <span class="text-2xl">⌨️</span> code, <span class="text-2xl">🛠</span> make software, <span class="text-2xl">🚲</span> ride bicycles, <span class="text-2xl">🏃</span> run, <span class="text-2xl">🏊</span> swim, <span class="text-2xl">⛷</span> ski, <span class="text-2xl">📖</span> read books, <span class="text-2xl">🕹</span> play games.
-            </p>
+            <!--<p>
+                <a href="/about" class="border-b border-solid border-teal-400">More about me <span class="font-sans">&RightArrow;</span></a>
+            </p>-->
         </div>
         <!-- END Intro -->
 

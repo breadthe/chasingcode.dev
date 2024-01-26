@@ -14,8 +14,8 @@
 @section('body')
 
 <section class="flex flex-col p-4 sm:p-6 bg-white rounded">
-    <h3>Get in touch</h3>
-    <p>I'll get back to you ASAP as possible!</p>
+    <h2>Get in touch</h2>
+    <p>I'll get back to you when I get to it.</p>
 
     <form
         name="contact"

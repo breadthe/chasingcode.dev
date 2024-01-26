@@ -10,7 +10,7 @@ a {
     @apply text-gray-700;
 
     &:hover {
-        @apply text-gray-900;
+        @apply text-black;
     }
 }
 
