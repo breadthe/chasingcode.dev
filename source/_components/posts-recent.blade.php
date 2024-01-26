@@ -5,7 +5,7 @@
         <h2 class="mb-2">{{ $slot }}</h2>
 
         @if($seeAll)
-            <a href="/blog" class="text-sm tracking-wide hover:no-underline opacity-60 hover:opacity-100 text-right font-semibold">see all</a>
+            <a href="/blog" class="text-sm tracking-wide no-underline opacity-60 hover:opacity-100 text-right font-semibold">see all</a>
         @else
             &nbsp;
         @endif

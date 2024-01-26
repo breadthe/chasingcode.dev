@@ -13,9 +13,9 @@
         <div class="mx-auto max-w-6xl text-center">
             <h1 class="m-0 text-4xl text-teal-400">I build for the web</h1>
 
-            <h2 class="m-0 text-gray-700 font-light">and sometimes I <a href="/blog" class="border-b border-solid border-teal-400">blog</a> about it.</h2>
+            <h2 class="m-0 text-gray-700 font-light">and sometimes I <a href="/blog" class="underline underline-offset-2 decoration-4 decoration-teal-200 hover:decoration-teal-400 hover:text-black">blog</a> about it.</h2>
 
-            <p>These days I'm really into <a href="/blog/categories/Laravel" class="border-b border-solid border-teal-400">Laravel</a>, <a href="/blog/categories/TailwindCSS" class="border-b border-solid border-teal-400">Tailwind</a>, <a href="/blog/categories/Svelte" class="border-b border-solid border-teal-400">Svelte</a>, and <a href="/blog/categories/Tauri" class="border-b border-solid border-teal-400">Tauri</a>.</p>
+            <p>These days I'm really into <a href="/blog/categories/Laravel">Laravel</a>, <a href="/blog/categories/TailwindCSS">Tailwind</a>, <a href="/blog/categories/Svelte">Svelte</a>, and <a href="/blog/categories/Tauri">Tauri</a>.</p>
 
             <!--<p>
                 <a href="/about" class="border-b border-solid border-teal-400">More about me <span class="font-sans">&RightArrow;</span></a>
@@ -56,7 +56,7 @@
                             <p class="mt-2">{!! $featuredPost->getExcerpt() !!}</p>
                         </div>
 
-                        <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="inline-block text-sm tracking-wide hover:no-underline opacity-60 hover:opacity-100 text-right font-semibold mt-2">
+                        <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="inline-block text-sm tracking-wide no-underline opacity-60 hover:opacity-100 text-right font-semibold mt-2">
                             Read more &RightArrow;
                         </a>
                     </div>

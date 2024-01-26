@@ -61,17 +61,6 @@ form {
     @apply text-xl;
   }
 
-  a:not(.category--tag):not(.author--section):not(.social--share--icon) {
-    @apply font-semibold;
-    @apply text-black;
-    @apply border-b border-solid border-teal-400;
-
-    &:hover {
-      @apply bg-teal-100;
-      @apply border-b border-solid border-black;
-    }
-  }
-
   ol, ul {
     @apply text-base;
     @apply ml-4;

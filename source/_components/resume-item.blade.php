@@ -9,7 +9,7 @@
         <strong>Tech</strong>:
         @foreach ($tech as $tag => $url)
             @if($url)
-                <a href="{{ $url }}" class="font-semibold border-b border-solid border-teal-400 hover:text-black">{{ $tag }}</a>
+                <a href="{{ $url }}">{{ $tag }}</a>
             @else
                 {{ $tag }}
             @endif

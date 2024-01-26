@@ -51,7 +51,7 @@
         <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
             <div>
                 @if ($next = $page->getNext())
-                    <a href="{{ $next->getUrl() }}" title="Older Post: {{ $next->title }}">
+                    <a href="{{ $next->getUrl() }}" class="no-underline" title="Older Post: {{ $next->title }}">
                         &LeftArrow; {{ $next->title }}
                     </a>
                 @endif
@@ -59,7 +59,7 @@
 
             <div>
                 @if ($previous = $page->getPrevious())
-                    <a href="{{ $previous->getUrl() }}" title="Newer Post: {{ $previous->title }}">
+                    <a href="{{ $previous->getUrl() }}" class="no-underline" title="Newer Post: {{ $previous->title }}">
                         {{ $previous->title }} &RightArrow;
                     </a>
                 @endif

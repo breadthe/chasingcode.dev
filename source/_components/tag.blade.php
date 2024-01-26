@@ -3,17 +3,18 @@
 <a
         href="{{ $href }}"
         title="{{ $title }}"
-        class="category--tag group inline-flex items-center gap-2 font-mono bg-teal-400 hover:shadow-md rounded"
+        class="category--tag group inline-flex items-center gap-2 font-mono bg-teal-400 hover:shadow-md no-underline rounded"
 >
     <span @class([
+        'px-2',
+        'rounded',
         'rounded-r-none' => $count,
         'bg-teal-100',
         'group-hover:bg-teal-400',
         'text-teal-700',
         'group-hover:text-white',
-        'px-2',
+        'font-light',
         'shadow-inner',
-        'rounded',
     ])>
         {{ $slot }}
     </span>

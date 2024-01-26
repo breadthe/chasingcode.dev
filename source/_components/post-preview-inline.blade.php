@@ -47,6 +47,6 @@
     <a
         href="{{ $post->getUrl() }}"
         title="Read more - {{ $post->title }}"
-        class="text-sm tracking-wide hover:no-underline opacity-60 hover:opacity-100 text-right font-semibold"
+        class="text-sm tracking-wide no-underline opacity-60 hover:opacity-100 text-right font-semibold"
     >Read more →</a>
 </article>

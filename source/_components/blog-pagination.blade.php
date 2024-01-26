@@ -6,7 +6,7 @@
             <a
                     href="{{ $previous }}"
                     title="Previous Page"
-                    class="text-teal-400 pr-2"
+                    class="text-teal-400 pr-2 no-underline"
             >&larr;</a>
         @endif
 
@@ -20,7 +20,7 @@
                 <a
                         href="{{ $path }}"
                         title="Go to Page {{ $pageNumber }}"
-                        class="text-teal-400 px-2"
+                        class="text-teal-400 px-2 no-underline"
                 >{{ $pageNumber }}</a>
             @endif
         @endforeach
@@ -29,7 +29,7 @@
             <a
                     href="{{ $next }}"
                     title="Next Page"
-                    class="text-teal-400 pl-2"
+                    class="text-teal-400 pl-2 no-underline"
             >&rarr;</a>
         @endif
     </nav>

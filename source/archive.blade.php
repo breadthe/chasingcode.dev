@@ -23,9 +23,13 @@
 
                     @foreach ($yearPosts as $post)
                         <div class="mb-4 flex sm:flex-row flex-col justify-between">
+<!--                            <a
+                                    href="{{ $post->getUrl() }}"
+                                    class="border-b border-solid border-teal-400"
+                            >{{ $post->title }}</a>-->
                             <a
                                     href="{{ $post->getUrl() }}"
-                                    class="font-semibold text-black border-b border-solid border-teal-400 hover:bg-teal-100 hover:border-b hover:border-solid hover:border-black"
+                                    class="underline underline-offset-2 decoration-teal-200 hover:decoration-teal-400 decoration-2"
                             >{{ $post->title }}</a>
 
                             <span class="text-base font-light text-right">
