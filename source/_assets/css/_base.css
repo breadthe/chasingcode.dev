@@ -2,6 +2,7 @@ body {
     @apply text-base;
     @apply text-gray-700;
     @apply leading-relaxed;
+    font-weight: theme('fontWeight.light');
 }
 
 a {
