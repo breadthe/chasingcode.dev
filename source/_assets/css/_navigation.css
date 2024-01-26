@@ -12,4 +12,5 @@
     @apply mb-4;
     @apply mt-0;
     @apply text-sm;
+    font-weight: theme('fontWeight.light');
 }

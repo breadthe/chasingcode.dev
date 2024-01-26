@@ -3,7 +3,7 @@
         title="{{ $page->siteName }} Blog"
         href="/blog"
         class="
-            ml-6 text-teal-200 hover:text-teal-400
+            ml-6 text-teal-200 hover:text-teal-400 font-light
             {{
                 $page->belongsTo('/blog') ?
                 'active border-b-2 border-teal-400' :
@@ -17,7 +17,7 @@
         title="Archive"
         href="/archive"
         class="
-            ml-6 text-teal-200 hover:text-teal-400
+            ml-6 text-teal-200 hover:text-teal-400 font-light
             {{
                 $page->belongsTo('/archive') ?
                 'active border-b-2 border-teal-400' :
@@ -31,7 +31,7 @@
         title="Uses"
         href="/uses"
         class="
-            ml-6 text-teal-200 hover:text-teal-400
+            ml-6 text-teal-200 hover:text-teal-400 font-light
             {{
                 $page->belongsTo('/uses') ?
                 'active border-b-2 border-teal-400' :
@@ -45,7 +45,7 @@
         title="About"
         href="/about"
         class="
-            ml-6 text-teal-200 hover:text-teal-400
+            ml-6 text-teal-200 hover:text-teal-400 font-light
             {{
                 $page->belongsTo('/about') ?
                 'active border-b-2 border-teal-400' :
@@ -59,7 +59,7 @@
         title="{{ $page->siteName }} Contact"
         href="/contact"
         class="
-            ml-6 text-teal-200 hover:text-teal-400
+            ml-6 text-teal-200 hover:text-teal-400 font-light
             {{
                 $page->belongsTo('/contact') ?
                 'active border-b-2 border-teal-400' :
