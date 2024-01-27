@@ -18,6 +18,12 @@
 
             <div class="flex flex-col md:flex-row gap-2">
                 <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
                     {{ date('F j, Y', $page->date) }}
                 </small>
 
@@ -46,7 +52,7 @@
 
         @include('_partials.mastodon-webmention')
 
-        @include('_partials.author')
+        {{--@include('_partials.author')--}}
 
         <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
             <div>

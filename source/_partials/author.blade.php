@@ -7,16 +7,16 @@
     >
     <aside class="flex flex-1 flex-wrap sm:flex-col sm:h-24 justify-center ml-4">
         <h4 class="flex flex-wrap items-center m-0 mb-1">
-            <span class="text-xl font-sans font-light mr-1">by</span>{{ $page->author }}
+            <span class="font-sans font-light mr-1">by</span>{{ $page->author }}
             <a
                     href="https://twitter.com/brbcoding"
-                    class="author--section sm:ml-1 text-blue-500 hover:text-blue-700 text-xl font-sans font-light"
+                    class="author--section sm:ml-1 text-blue-500 hover:text-blue-700 font-sans font-light"
                     title="Follow me on Twitter - @brbcoding"
                     aria-label="Follow me on Twitter - @brbcoding"
             >@brbcoding</a>
         </h4>
 
-        <p class="m-0 mt-1 text-xl">
+        <p class="m-0 mt-1">
             Comments? Hit me up on Twitter.
         </p>
     </aside>
