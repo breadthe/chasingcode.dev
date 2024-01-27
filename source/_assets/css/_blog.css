@@ -48,12 +48,13 @@ form {
     line-height: theme('lineHeight.6');
     font-weight: theme('fontWeight.light');
 
- strong {
+     strong {
       font-weight: theme('fontWeight.semibold');
     }
 
     img {
-      @apply mx-auto;
+        @apply mx-auto;
+        border-radius: theme('borderRadius.DEFAULT');
     }
   }
 
