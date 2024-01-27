@@ -8,7 +8,7 @@
 @endpush
 
 @section('body')
-    <section class="flex flex-col gap-8 bg-white p-8">
+    <section class="flex flex-col gap-8 p-8 bg-white rounded">
         <!-- Intro -->
         <div class="mx-auto max-w-6xl text-center">
             <h1 class="m-0 text-4xl text-teal-400">I build for the web</h1>
@@ -34,7 +34,7 @@
                         'flex',
                         'flex-col',
                         'justify-between',
-                        'bg-gray-100',
+                        'bg-gray-50',
                         'rounded',
                         'p-4',
                     ])>
