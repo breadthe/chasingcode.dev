@@ -38,7 +38,7 @@
             @include('_partials.post-hero-image')
         </header>
 
-        <div class="post sm:text-2xl font-light text-gray-900 tracking-wide pb-4" v-pre>
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
             @yield('content')
 
             @include('_partials.social-share-icons')
