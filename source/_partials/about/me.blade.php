@@ -12,6 +12,10 @@
     </p>
 
     <p>
+        If I could only pick one encompassing technology, it would be the <strong>TALL stack</strong> (Laravel, Livewire, Alpine, Tailwind) with an <strong>SQLite</strong> database.
+    </p>
+
+    <p>
         Currently I work full time remote as a <strong>Laravel</strong> developer, helping a <strong>SaaS</strong> start-up to grow.
     </p>
 </article>
