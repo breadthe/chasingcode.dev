@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-1 justify-end items-center text-right px-4">
         <div
-            class="absolute sm:relative w-full justify-end top-0 left-0 z-20 py-4 sm:py-0 px-4 sm:px-0 bg-gray-800"
+            class="absolute sm:relative w-full justify-end top-0 left-0 z-20 py-4 sm:py-0 px-4 sm:px-0 bg-gray-50"
             :class="{'hidden sm:flex': ! searching}"
         >
             <label for="search" class="hidden">Search</label>
@@ -10,11 +10,11 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast h-12 w-full sm:w-1/2 sm:focus:w-3/4 bg-gray-900 shadow border border-gray-700 focus:border-teal-400 focus:bg-gray-200 outline-none cursor-pointer px-4 shadow-inner"
+                class="transition-fast h-12 w-full sm:w-1/2 sm:focus:w-3/4 border focus:border-teal-400 outline-none cursor-pointer px-4 shadow-inner"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
-                placeholder="Search"
+                placeholder="Search posts"
                 type="text"
                 aria-label="Search the blog"
                 @keyup.esc="reset"
@@ -58,7 +58,7 @@
         <button
             title="Start searching"
             type="button"
-            class="flex sm:hidden justify-center items-center border rounded-full focus:outline-none h-10 px-3 bg-gray-900 border-gray-700"
+            class="flex sm:hidden items-center bg-white border rounded focus:outline-none w-full h-12 pl-2"
             @click.prevent="showInput"
         >
             <!--
@@ -70,9 +70,7 @@
                 width="13px"
                 height="13px"
                 viewBox="0 0 20 20"
-                version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
             >
                 <defs></defs>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -85,6 +83,7 @@
                     </g>
                 </g>
             </svg>
+          <span class="text-gray-400">Search</span>
         </button>
     </div>
 </template>
