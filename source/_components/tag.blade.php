@@ -1,9 +1,16 @@
-@props(['href', 'title', 'count' => null])
+@props(['href', 'title', 'count' => null, 'isTagCloud' => false])
+
+@php
+    use function App\helpers\tagSize;
+@endphp
 
 <a
         href="{{ $href }}"
         title="{{ $title }}"
         class="category--tag group inline-flex items-center gap-2 font-mono bg-teal-400 hover:shadow-md no-underline rounded"
+        @if($isTagCloud)
+        style="font-size: {{ tagSize($count) }}px;"
+        @endif
 >
     <span @class([
         'px-2',
