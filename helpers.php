@@ -7,21 +7,21 @@ namespace App\helpers;
 // font pixel size for tag cloud
 function tagSize (?int $count): int {
     if ($count <= 2) {
-        return 10;
-    } elseif ($count <= 5) {
         return 12;
+    } elseif ($count <= 5) {
+        return 13;
     } elseif ($count <= 10) {
         return 14;
     } elseif ($count <= 15) {
-        return 16;
+        return 15;
     } elseif ($count <= 20) {
-        return 18;
+        return 16;
     } elseif ($count <= 25) {
-        return 20;
+        return 18;
     } elseif ($count <= 30) {
-        return 22;
+        return 20;
     } elseif ($count > 30) {
-        return 24;
+        return 22;
     } else {
         return 16;
     }

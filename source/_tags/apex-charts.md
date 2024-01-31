@@ -1,6 +1,6 @@
 ---
 extends: _layouts.tag
-title: ApexCharts
+title: Apex-Charts
 description: Data visualization and charting with ApexCharts.
 ---
 

@@ -8,7 +8,7 @@
 @endpush
 
 @section('hero')
-    <x-hero :title="$page->title" :description="$page->description" />
+    <x-hero title="{{ '#' . $page->title }}" :description="$page->description" />
 @endsection
 
 @section('body')

@@ -1,6 +1,6 @@
 ---
 extends: _layouts.tag
-title: DevTools
+title: Dev-Tools
 description: Developer tools.
 ---
 
