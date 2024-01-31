@@ -4,7 +4,7 @@ section: content
 title: Refactor Laravel Eloquent Query Conditions to a Trait
 date: 2022-06-08
 description: A possible refactoring solution for Laravel Eloquent query conditions using PHP traits
-categories: [PHP, Laravel, Livewire, Eloquent]
+tags: [php, laravel, livewire, eloquent]
 featured: false
 image: /assets/img/2022-06-08-refactor-code.jpg
 image_thumb: /assets/img/2022-06-08-refactor-code-thumb.jpg

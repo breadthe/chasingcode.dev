@@ -4,7 +4,7 @@ section: content
 title: Introducing 1Secret.app
 date: 2019-09-07
 description: Introducing my side project and SaaS, 1Secret.app.
-categories: [1Secret]
+tags: [1secret]
 featured: false
 image: /assets/img/2019-09-07-1secret.jpg
 image_thumb: /assets/img/2019-09-07-1secret.jpg

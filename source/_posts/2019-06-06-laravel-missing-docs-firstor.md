@@ -4,7 +4,7 @@ section: content
 title: Laravel - The Missing Docs - firstOr()
 date: 2019-06-06
 description: Documenting the undocumented firstOr() Eloquent method.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: /assets/img/2019-06-06-laravel-missing-docs-firstor.png
 image_thumb: /assets/img/2019-06-06-laravel-missing-docs-firstor.png

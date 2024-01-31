@@ -5,7 +5,7 @@ title: Must-have Laravel & PHP Packages
 date: 2023-01-06
 updated: 2023-02-05
 description: A repository of my must-have Laravel and PHP packages for every project
-categories: [Laravel, PHP]
+tags: [laravel, php]
 featured: false
 image:
 image_thumb:

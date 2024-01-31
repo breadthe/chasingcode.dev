@@ -5,7 +5,7 @@ title: Build an edit in place component with Livewire & Alpine.js
 date: 2020-03-19
 updated: 2020-03-21
 description: A guide for building an edit in place component using Laravel Livewire and Alpine.js.
-categories: [Laravel, Livewire, AlpineJS]
+tags: [laravel, livewire, alpinejs]
 featured: true
 image: /assets/img/2020-03-19-1secret-edit-in-place-livewire-alpine.gif
 image_thumb: /assets/img/2020-03-19-1secret-edit-in-place-livewire-alpine.gif

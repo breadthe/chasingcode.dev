@@ -4,7 +4,7 @@ section: content
 title: Laravel withoutExceptionHandling() Gotcha
 date: 2019-06-03
 description: Interesting behavior I came across while using Laravel's withoutExceptionHandling() method to help debug tests.
-categories: [Laravel, Testing]
+tags: [laravel, testing]
 featured: false
 image: /assets/img/2019-06-03-laravel-withoutexceptionhandling-gotcha.png
 image_thumb: /assets/img/2019-06-03-laravel-withoutexceptionhandling-gotcha.png

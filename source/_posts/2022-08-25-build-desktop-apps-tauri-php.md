@@ -4,7 +4,7 @@ section: content
 title: How to Build Desktop Apps with Tauri and PHP
 date: 2022-08-25
 description: A guide for building cross-platform desktop apps with Tauri, using PHP as the back-end
-categories: [PHP, Tauri, Rust, Vite]
+tags: [php, tauri, rust, vite]
 featured: false
 image:
 image_thumb:

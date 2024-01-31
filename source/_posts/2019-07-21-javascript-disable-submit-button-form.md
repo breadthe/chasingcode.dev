@@ -4,7 +4,7 @@ section: content
 title: Disable Submit Button on Form Submit with JavaScript
 date: 2019-07-21
 description: A technique to prevent multiple form submission.
-categories: [JavaScript]
+tags: [javascript]
 featured: false
 image: 
 image_thumb: 

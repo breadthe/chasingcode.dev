@@ -4,7 +4,7 @@ section: content
 title: How to Fix Laravel Public Storage
 date: 2018-12-04
 description: How to fix public storage visibility in Homestead
-categories: [Laravel]
+tags: [laravel]
 featured: false
 ---
 

@@ -4,7 +4,7 @@ section: content
 title: How to Integrate Mastodon Replies in a Laravel Jigsaw Blog With VueJS
 date: 2023-02-01
 description: A solution for integrating Mastodon replies in a Laravel Jigsaw blog with VueJS.
-categories: [Laravel, Jigsaw, VueJS, Mastodon]
+tags: [laravel, jigsaw, vue, mastodon]
 featured: false
 image:
 image_thumb:

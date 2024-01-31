@@ -4,7 +4,7 @@ section: content
 title: How to Move a Site Provisioned With Laravel Forge to a Different Domain
 date: 2019-10-27
 description: Documenting my process for moving a site provisioned with Laravel Forge to a different domain.
-categories: [Laravel, Forge]
+tags: [laravel, forge]
 featured: false
 image: https://source.unsplash.com/tjX_sniNzgQ/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/tjX_sniNzgQ/?fit=max&w=200&q=75

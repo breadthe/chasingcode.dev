@@ -4,7 +4,7 @@ section: content
 title: 10-Year Website for Less Than $100
 date: 2023-01-26
 description: How I made a 10-year website (including domain and hosting) for less than $100.
-categories: [General]
+tags: [general]
 featured: false
 image: /assets/img/2023-01-26-10-year-100-dollar-website.png
 image_thumb: /assets/img/2023-01-26-10-year-100-dollar-website.png

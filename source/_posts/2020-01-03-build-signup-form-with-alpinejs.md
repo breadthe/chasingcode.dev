@@ -4,7 +4,7 @@ section: content
 title: Build a Dynamic Sign Up Form With Alpine.js 
 date: 2020-01-03
 description: How I built the sign up form on 1secret.app using the new alpine.js micro-framework
-categories: [AlpineJS, Laravel]
+tags: [alpinejs, laravel]
 featured: false
 image: /assets/img/2020-01-03-build-signup-form-with-alpinejs.gif
 image_thumb: /assets/img/2020-01-03-build-signup-form-with-alpinejs.gif

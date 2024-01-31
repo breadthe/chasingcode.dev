@@ -4,7 +4,7 @@ section: content
 title: Upgrade the PHP CLI to 7.4 on Mac
 date: 2019-12-08
 description: How to upgrade to PHP 7.4 on Mac and run the correct version in the CLI
-categories: [Mac,PHP]
+tags: [mac,php]
 featured: false
 image: /assets/img/2019-12-08-upgrade-php-74-cli-mac.png
 image_thumb: /assets/img/2019-12-08-upgrade-php-74-cli-mac.png

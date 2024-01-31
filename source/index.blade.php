@@ -15,7 +15,7 @@
 
             <h2 class="m-0 text-gray-700 font-light">and sometimes I <a href="/blog" class="underline underline-offset-2 decoration-4 decoration-teal-200 hover:decoration-teal-400 hover:text-black">blog</a> about it.</h2>
 
-            <p>These days I'm really into <a href="/blog/categories/Laravel">Laravel</a> with <a href="/blog/categories/Livewire">Livewire</a>, <a href="/blog/categories/TailwindCSS">Tailwind</a>, <a href="/blog/categories/Svelte">Svelte</a>, and <a href="/blog/categories/Tauri">Tauri</a>.</p>
+            <p>These days I'm really into <a href="/blog/tags/laravel">Laravel</a> with <a href="/blog/tags/livewire">Livewire</a>, <a href="/blog/tags/tailwind">Tailwind</a>, <a href="/blog/tags/svelte">Svelte</a>, and <a href="/blog/tags/tauri">Tauri</a>.</p>
 
             <!--<p>
                 <a href="/about" class="border-b border-solid border-teal-400">More about me <span class="font-sans">&RightArrow;</span></a>
@@ -78,7 +78,7 @@
         <!-- Tag cloud -->
         <div>
             <h2 class="mb-2">Tag cloud</h2>
-            <x-tag-cloud :categories="$categories" :posts="$posts" />
+            <x-tag-cloud :tags="$tags" :posts="$posts" />
         </div>
         <!-- END Tag cloud -->
 

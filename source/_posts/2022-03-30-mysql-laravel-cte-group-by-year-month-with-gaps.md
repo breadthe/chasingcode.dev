@@ -4,7 +4,7 @@ section: content
 title: How to Use MySQL CTE in Laravel to Group by Year and Month with Gaps
 date: 2022-03-30
 description: Group statistics with gaps by year-month using MySQL Common Table Expressions in Laravel
-categories: [MySQL, Laravel]
+tags: [mysql, laravel]
 featured: false
 image: 
 image_thumb: 

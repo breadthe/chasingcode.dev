@@ -4,7 +4,7 @@ section: content
 title: Improve Your Site's Lighthouse Accessibility Score (and Performance) with Some Easy Fixes
 date: 2019-11-04
 description: A few quick tweaks to improve your website's Lighthouse performance score.
-categories: [Performance, 1Secret]
+tags: [performance, 1secret]
 featured: false
 image: /assets/img/2019-11-04-improve-lighthouse-accessibility-score-easy-fixes.jpg
 image_thumb: /assets/img/2019-11-04-improve-lighthouse-accessibility-score-easy-fixes.jpg

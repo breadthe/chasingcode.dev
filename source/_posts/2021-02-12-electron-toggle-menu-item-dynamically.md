@@ -4,7 +4,7 @@ section: content
 title: How to Toggle a Menu Item Dynamically in Electron
 date: 2021-02-12
 description: How to enable or disable a menu item in Electron from events in the renderer process
-categories: [Electron,Svelte]
+tags: [electron,svelte]
 featured: false
 image: /assets/img/electron-logo.jpg
 image_thumb: /assets/img/electron-logo.jpg

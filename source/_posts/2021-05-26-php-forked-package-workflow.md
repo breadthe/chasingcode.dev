@@ -4,7 +4,7 @@ section: content
 title: My PHP Forked Package Workflow
 date: 2021-05-26
 description: Documenting my workflow for dealing with forked PHP packages
-categories: [PHP]
+tags: [php]
 featured: false
 image:
 image_thumb:

@@ -5,7 +5,7 @@ title: Best Remote Laravel Job Sites in 2023
 date: 2023-03-20
 updated: 2023-03-22
 description: A list of the best remote Laravel job sites in 2023
-categories: [General, Laravel]
+tags: [general, laravel]
 featured: false
 image:
 image_thumb:

@@ -16,7 +16,7 @@
 
         <small class="hidden md:block">&bull;</small>
 
-        <x-tags :tags="$post->categories" />
+        <x-tags :tags="$post->tags" />
     </div>
 
     <section class="flex flex-col md:flex-row justify-start">

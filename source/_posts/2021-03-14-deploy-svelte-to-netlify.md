@@ -4,7 +4,7 @@ section: content
 title: How to Deploy Svelte to Netlify
 date: 2021-03-14
 description: A guide on how to deploy a Svelte static site to Netlify
-categories: [Svelte,Netlify]
+tags: [svelte,netlify]
 featured: false
 image: /assets/img/2021-03-14-deploy-svelte-to-netlify.png
 image_thumb: /assets/img/2021-03-14-deploy-svelte-to-netlify.png

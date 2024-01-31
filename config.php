@@ -7,7 +7,7 @@ return [
     'baseUrl' => '',
     'production' => false,
     'siteName' => 'Chasing Code',
-    'siteDescription' => 'Full stack dev in Chicago | Laravel | PHP | Vue | TailwindCSS',
+    'siteDescription' => 'Full stack dev in Chicago | PHP | Laravel | Livewire | Svelte | Tailwind | Tauri',
     'siteAuthor' => 'Constantin',
     'twitterHandle' => 'brbcoding',
 
@@ -21,12 +21,12 @@ return [
                 return "blog/$slug";
             },
         ],
-        'categories' => [
-            'path' => '/blog/categories/{filename}',
+        'tags' => [
+            'path' => '/blog/tags/{filename}',
             'sort' => '-title',
             'posts' => function ($page, Collection $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
-                    return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;
+                    return $post->tags ? in_array($page->getFilename(), $post->tags, true) : false;
                 });
             },
         ],

@@ -5,7 +5,7 @@ title: Carbon PHP Practical Examples
 date: 2022-04-17
 updated: 2023-02-06
 description: Carbon PHP library tips, tricks, shortcuts, utilities, patterns, and examples
-categories: [PHP, Carbon, Laravel]
+tags: [php, carbon, laravel]
 featured: false
 image: 
 image_thumb: 

@@ -4,8 +4,8 @@ section: content
 title: Delete the blog or refresh it?
 date: 2024-01-12
 description: Should I delete the blog or refresh it in 2024?
-categories: [General, Jigsaw]
-featured: false
+tags: [general, jigsaw]
+featured: true
 image:
 image_thumb:
 image_author:

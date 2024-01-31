@@ -6,7 +6,7 @@
     <x-resume-item
             title="Knowledge management SaaS"
             description="Built, maintained, and integrated features such as SCIM, payments, search, and many others, for a SaaS app that helps companies manage their internal knowledge base."
-            :tech="['Laravel' => '/blog/categories/Laravel', 'React' => null]"
+            :tech="['Laravel' => '/blog/tags/laravel', 'React' => null]"
     />
 
     <x-resume-item
@@ -18,7 +18,7 @@
     <x-resume-item
             title="Transportation & freight"
             description="Full lifecycle app for receiving cargo shipping orders, processing pickups and deliveries, and generating bills of lading. Internal/external APIs connecting various systems."
-            :tech="['Laravel' => '/blog/categories/Laravel', 'Vue.js' => '/blog/categories/VueJS', 'TailwindCSS' => '/blog/categories/TailwindCSS', 'MySQL' => '/blog/categories/MySQL', 'AWS' => null]"
+            :tech="['Laravel' => '/blog/tags/laravel', 'Vue.js' => '/blog/tags/vue', 'Tailwind CSS' => '/blog/tags/tailwind', 'MySQL' => '/blog/tags/mysql', 'AWS' => null]"
     />
 
     <x-resume-item
@@ -30,12 +30,12 @@
     <x-resume-item
             title="Online student testing"
             description="Built new front- and back-end modules and extended functionality for a web-based K12 testing platform."
-            :tech="['PHP' => '/blog/categories/PHP', 'MySQL' => '/blog/categories/MySQL', 'jQuery' => null]"
+            :tech="['PHP' => '/blog/tags/php', 'MySQL' => '/blog/tags/mysql', 'jQuery' => null]"
     />
 
     <x-resume-item
             title="eCommerce"
             description="Built a brand-new website for a well-known local retailer. First year sales improved 90% compared to the old website. Made many enhancements to the site, leading to increasing sales year over year."
-            :tech="['PHP' => '/blog/categories/PHP', 'MySQL' => '/blog/categories/MySQL', 'jQuery' => null]"
+            :tech="['PHP' => '/blog/tags/php', 'MySQL' => '/blog/tags/mysql', 'jQuery' => null]"
     />
 </article>

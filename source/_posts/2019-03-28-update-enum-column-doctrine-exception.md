@@ -4,7 +4,7 @@ section: content
 title: Update Enum Column Doctrine Exception in Laravel
 date: 2019-03-28
 description: Solving Doctrine exception when trying to update a table containing an enum column in Laravel.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: 
 image_thumb: 

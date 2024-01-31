@@ -4,7 +4,7 @@ section: content
 title: How to Fix Laravel's Dreaded "No input file specified" Error
 date: 2019-11-10
 description: A quick way to fix Laravel's "No input file specified" error when setting up a new project.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: /assets/img/2019-11-10-laravel-no-input-file-specified.jpg
 image_thumb: /assets/img/2019-11-10-laravel-no-input-file-specified.jpg

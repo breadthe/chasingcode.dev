@@ -4,7 +4,7 @@ section: content
 title: Fix cURL Error 60 SSL Certificate Problem
 date: 2019-12-12
 description: How to fix cURL error 60 in the local environment
-categories: [Windows,PHP]
+tags: [windows,php]
 featured: false
 image: /assets/img/2019-12-12-fix-curl-error-60-ssl-certificate-problem.png
 image_thumb: /assets/img/2019-12-12-fix-curl-error-60-ssl-certificate-problem.png

@@ -4,7 +4,7 @@ section: content
 title: How to Generate Mac and Windows Icons for an Electron Forge App
 date: 2020-10-09
 description: 
-categories: [Electron]
+tags: [electron]
 featured: false
 image: 
 image_thumb: 

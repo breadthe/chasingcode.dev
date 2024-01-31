@@ -4,7 +4,7 @@ section: content
 title: How to Create Dynamic Charts with Laravel Livewire and ApexCharts
 date: 2020-10-20
 description: 
-categories: [Laravel, Livewire, ApexCharts]
+tags: [laravel, livewire, apex-charts]
 featured: false
 image: /assets/img/2020-10-20-livewire-apexcharts.jpg
 image_thumb: /assets/img/2020-10-20-livewire-apexcharts-thumb.jpg 
@@ -54,7 +54,7 @@ Each generated component comes with a controller and a view.  Here's a [gist](ht
 
 👉 The chart wrapper `ApexCharts.php` must have a unique id `$chartId`, to allow multiple chart instances on the same page. I experimented with passing a UUID but settled on a static identifier like "distance-by-year".
 
-👉 To refresh the chart data when a filter is applied, I need to emit an event. Notice this part `$this->emit("refreshChartData-{$this->chartId}", [...])` in `DistanceByYear.php`. The event has a dynamic identifier which ensures that only a specific chart gets updated (in situations where multiple charts are on the same page). In this case, the event id resolves to `refreshChartData-distance-by-year`. But on the same page I have another chart which is identified as `distance-by-month`, and the corresponding event is `refreshChartData-distance-by-month`. The second argument of the event emitter is the (optional) data payload. If you've used events in [Vue](/blog/categories/VueJS/), this pattern should look familiar.
+👉 To refresh the chart data when a filter is applied, I need to emit an event. Notice this part `$this->emit("refreshChartData-{$this->chartId}", [...])` in `DistanceByYear.php`. The event has a dynamic identifier which ensures that only a specific chart gets updated (in situations where multiple charts are on the same page). In this case, the event id resolves to `refreshChartData-distance-by-year`. But on the same page I have another chart which is identified as `distance-by-month`, and the corresponding event is `refreshChartData-distance-by-month`. The second argument of the event emitter is the (optional) data payload. If you've used events in [Vue](/blog/tags/vue/), this pattern should look familiar.
 
 👉 Emitting an event is only half the equation. To actually get the chart to update, I need to listen for the event, then call a couple of ApexCharts methods responsible for updating the chart data.
 

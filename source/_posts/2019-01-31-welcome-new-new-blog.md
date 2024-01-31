@@ -4,7 +4,7 @@ section: content
 title: Welcome to the New New Blog
 date: 2019-01-31
 description: This blog, reloaded.
-categories: [Jigsaw, Laravel]
+tags: [jigsaw, laravel]
 featured: false
 image: /assets/img/2019-01-31-welcome-new-new-blog-1200.jpg
 image_thumb: /assets/img/2019-01-31-welcome-new-new-blog-200.jpg

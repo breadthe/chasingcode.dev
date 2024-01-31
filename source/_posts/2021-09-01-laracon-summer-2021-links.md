@@ -4,7 +4,7 @@ section: content
 title: Laracon Summer 2021 Links
 date: 2021-09-01
 description: A collection of interesting links .
-categories: [Laravel,Laracon]
+tags: [laravel,laracon]
 featured: false
 image: 
 image_thumb: 

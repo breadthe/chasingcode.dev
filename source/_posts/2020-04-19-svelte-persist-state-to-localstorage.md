@@ -4,7 +4,7 @@ section: content
 title: Svelte - Persist State to localStorage
 date: 2020-04-19
 description: A guide for installing a Windows 10 virtual machine on a Mac, for cross-platform testing.
-categories: [Svelte]
+tags: [svelte]
 featured: false
 image: https://svelte.dev/svelte-logo-horizontal.svg
 image_thumb: https://svelte.dev/svelte-logo-horizontal.svg
@@ -14,7 +14,7 @@ image_unsplash: false
 image_overlay_text:
 ---
 
-[Svelte](https://svelte.dev/) has quickly become my favorite framework for building SPAs, even surpassing [Vue](/blog/categories/VueJS/).
+[Svelte](https://svelte.dev/) has quickly become my favorite framework for building SPAs, even surpassing [Vue](/blog/tags/vue/).
 
 Recently I've been working on a new desktop app using Svelte and [Electron](https://www.electronjs.org/).
 

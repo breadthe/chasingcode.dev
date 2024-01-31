@@ -4,7 +4,7 @@ section: content
 title: How to Permanently Store Settings in a Svelte + Electron App 
 date: 2021-03-24
 description: A guide on how to deploy a Svelte static site to Netlify
-categories: [Svelte,Electron]
+tags: [svelte,electron]
 featured: false
 image: /assets/img/svelte-electron.jpg
 image_thumb: /assets/img/svelte-electron.jpg

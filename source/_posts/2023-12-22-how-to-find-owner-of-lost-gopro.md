@@ -4,9 +4,8 @@ section: content
 title: How to find the owner of a lost GoPro
 date: 2023-12-22
 description: Quick detective work led me to finding the owner of a lost GoPro
-categories:
-  - General
-featured: false
+tags: [general]
+featured: true
 image: 
 image_thumb: 
 image_author: 

@@ -4,7 +4,7 @@ section: content
 title: Gitware - A New Software Distribution Model
 date: 2020-12-23
 description: Give away the software product, but charge for the source code
-categories: [Opinion]
+tags: [opinion]
 featured: false
 image: https://source.unsplash.com/DuHKoV44prg/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/DuHKoV44prg/?fit=max&w=200&q=75

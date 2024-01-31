@@ -4,7 +4,7 @@ section: content
 title: My First Side Project - BankAlt.com
 date: 2020-11-03
 description: 
-categories: [Career, SideProject, PHP]
+tags: [career, side-project, php]
 featured: false
 image: /assets/img/2020-11-03-bankalt.jpg
 image_thumb: /assets/img/2020-11-03-bankalt-thumb.jpg 

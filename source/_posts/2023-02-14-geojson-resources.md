@@ -4,7 +4,7 @@ section: content
 title: GeoJSON Resources
 date: 2023-02-14
 description: A few resources related to GeoJSON
-categories: [GeoJSON]
+tags: [geojson]
 featured: false
 image:
 image_thumb:

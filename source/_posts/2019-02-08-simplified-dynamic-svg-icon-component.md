@@ -4,7 +4,7 @@ section: content
 title: Simplified Dynamic SVG Icon Component
 date: 2019-02-08
 description: An even simpler, reusable Vue component wrapper for a SVG icon library.
-categories: [VueJS, SVG, TailwindCSS]
+tags: [vue, svg, tailwind]
 featured: false
 image: /assets/img/2019-02-08-simplified-dynamic-svg-icon-component.png
 image_thumb: /assets/img/2019-02-08-simplified-dynamic-svg-icon-component.png

@@ -4,7 +4,7 @@ section: content
 title: Seismic - Desktop Taskbar App for USGS Earthquake Tracking
 date: 2023-02-13
 description: A taskbar app for tracking earthquakes from the USGS feed.
-categories: [Tauri, Svelte, GeoJSON]
+tags: [tauri, svelte, geojson]
 featured: false
 image: /assets/img/2023-02-13-seismic-v0.6.0-light-dark.jpg
 image_thumb: /assets/img/2023-02-13-seismic-v0.6.0-light-dark.jpg

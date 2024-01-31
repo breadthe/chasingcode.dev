@@ -4,7 +4,7 @@ section: content
 title: How to Install a Windows 10 VM on a Mac
 date: 2020-04-12
 description: A guide for installing a Windows 10 virtual machine on a Mac, for cross-platform testing.
-categories: [Windows10, Mac]
+tags: [windows, mac]
 featured: false
 image: /assets/img/2020-04-12-windows-10-vm-initial-state.jpg
 image_thumb: /assets/img/2020-04-12-windows-10-vm-initial-state-thumb.jpg

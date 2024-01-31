@@ -4,7 +4,7 @@ section: content
 title: How to Install the Latest (or Specific) Version of PHP in Windows 10
 date: 2019-10-31
 description: Documenting my process for installing a specific version of PHP in Windows 10 and making it available in bash.
-categories: [PHP, Windows10]
+tags: [php, windows]
 featured: false
 image: /assets/img/2019-10-31-install-specific-php-version-windows-10.jpg
 image_thumb: /assets/img/2019-10-31-install-specific-php-version-windows-10.jpg

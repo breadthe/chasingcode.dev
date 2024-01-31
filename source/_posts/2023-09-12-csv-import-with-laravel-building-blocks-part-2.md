@@ -5,7 +5,7 @@ title: CSV import with Laravel building blocks - Part 2
 date: 2023-09-12
 updated: 2023-09-13
 description: Importing CSVs into a SQLite database with Laravel Prompts, spatie/laravel-data, and spatie/simple-excel, part 2.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image:
 image_thumb:

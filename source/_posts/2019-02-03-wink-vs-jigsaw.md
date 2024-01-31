@@ -4,7 +4,7 @@ section: content
 title: Wink vs Jigsaw
 date: 2019-02-03
 description: Wink and Jigsaw blogging engines, compared.
-categories: [Jigsaw, Laravel, Wink]
+tags: [jigsaw, laravel, wink]
 featured: false
 image: /assets/img/2019-02-03-wink-vs-jigsaw-1200.jpg
 image_thumb: /assets/img/2019-02-03-wink-vs-jigsaw-200.jpg

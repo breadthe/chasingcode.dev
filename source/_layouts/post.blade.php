@@ -29,7 +29,7 @@
 
                 <small class="hidden md:block">&bull;</small>
 
-                <x-tags :tags="$page->categories" />
+                <x-tags :tags="$page->tags" />
             </div>
 
             @if($page->updated)

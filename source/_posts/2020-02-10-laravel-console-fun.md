@@ -4,7 +4,7 @@ section: content
 title: Fun at the Laravel Console 
 date: 2020-02-10
 description: How to display colored ASCII logos in the Laravel console 
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: /assets/img/2020-02-10-laravel-console-fun.png
 image_thumb: /assets/img/2020-02-10-laravel-console-fun.png

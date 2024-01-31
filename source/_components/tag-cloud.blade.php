@@ -1,9 +1,9 @@
-@props(['categories', 'posts'])
+@props(['tags', 'posts'])
 
 <div class="flex flex-wrap gap-2">
-    @foreach ($categories->sortByDesc(function ($category) use ($posts) { return $category->posts($posts)->count(); }) as $tag => $category)
-        <x-tag href="{{ '/blog/categories/' . $tag }}" title="View posts in {{ $tag }}" count="{{$category->posts($posts)->count()}}" isTagCloud>
-            {{ $tag }}
+    @foreach ($tags->sortByDesc(function ($tag) use ($posts) { return $tag->posts($posts)->count(); }) as $tag_name => $tag)
+        <x-tag href="/blog/tags/{{ $tag_name }}" title="View posts in {{ $tag_name }}" count="{{$tag->posts($posts)->count()}}" isTagCloud>
+            #{{ $tag_name }}
         </x-tag>
     @endforeach
 </div>

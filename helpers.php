@@ -22,8 +22,8 @@ function tagSize (?int $count): int {
         return 22;
     } elseif ($count > 30) {
         return 24;
+    } else {
+        return 16;
     }
-
-    return 16;
 }
 

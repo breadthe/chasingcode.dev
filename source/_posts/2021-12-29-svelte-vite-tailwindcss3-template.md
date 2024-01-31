@@ -5,7 +5,7 @@ title: Creating a Svelte, Vite, and TailwindCSS 3 Template
 date: 2021-12-29
 updated: 2023-02-11
 description: Documenting how to create a Svelte, Vite, and TailwindCSS 3 template in late 2021
-categories: [Svelte,TailwindCSS,Vite]
+tags: [svelte,tailwind,vite]
 featured: false
 image:
 image_thumb:
