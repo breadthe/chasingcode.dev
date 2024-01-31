@@ -9,9 +9,9 @@
         >{{ $post->title }}</a>
     </h2>
 
-    <div class="flex flex-col md:flex-row gap-2 opacity-60 hover:opacity-100 mb-2">
+    <div class="flex flex-col md:flex-row gap-2 mb-2">
         <small class="font-mono">
-            {{ date('F j, Y', $post->date) }}
+            {{ date('Y-m-d', $post->date) }}
         </small>
 
         <small class="hidden md:block">&bull;</small>

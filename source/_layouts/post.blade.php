@@ -24,7 +24,7 @@
                 <small class="hidden md:block">&bull;</small>
 
                 <small class="font-mono">
-                    {{ date('F j, Y', $page->date) }}
+                    {{ date('Y-m-d', $page->date) }}
                 </small>
 
                 <small class="hidden md:block">&bull;</small>
@@ -36,7 +36,7 @@
                 <div class="mt-2">
                     <small class="font-mono">
                         <strong>Updated: </strong>
-                        {{ date('F j, Y', $page->updated) }}
+                        {{ date('Y-m-d', $page->updated) }}
                     </small>
                 </div>
             @endif
