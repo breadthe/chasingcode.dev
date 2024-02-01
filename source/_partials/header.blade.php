@@ -8,7 +8,7 @@
             </a>
         </div>
 
-        <div id="vue-search" class="flex flex-1 justify-end items-center sm:gap-4">
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
             @if($page->belongsTo('/blog'))
                 <search
                     data-belongs-to-blog="{{ $page->belongsTo('/blog') }}"

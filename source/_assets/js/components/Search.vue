@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-1 justify-end items-center text-right px-4">
+    <div class="flex flex-1 justify-end items-center text-right pl-4 sm:pr-4">
         <div
             class="absolute sm:relative w-full justify-end top-0 left-0 z-20 py-4 sm:py-0 px-4 sm:px-0 bg-gray-50"
             :class="{'hidden sm:flex': ! searching}"
@@ -10,7 +10,7 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast h-12 w-full sm:w-1/2 sm:focus:w-3/4 border focus:border-teal-400 outline-none cursor-pointer px-4 shadow-inner"
+                class="transition-fast h-10 w-full sm:w-1/2 sm:focus:w-3/4 border focus:border-teal-400 outline-none cursor-pointer px-4 shadow-inner"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
@@ -58,7 +58,7 @@
         <button
             title="Start searching"
             type="button"
-            class="flex sm:hidden items-center bg-white border rounded focus:outline-none w-full h-12 pl-2"
+            class="flex sm:hidden items-center bg-white border rounded focus:outline-none w-full h-10 pl-2"
             @click.prevent="showInput"
         >
             <!--

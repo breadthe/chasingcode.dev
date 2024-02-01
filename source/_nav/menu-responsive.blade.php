@@ -1,4 +1,4 @@
-<nav id="js-nav-menu" class="hidden sm:hidden">
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
     <ul class="my-0 flex flex-col gap-4 px-4">
         <x-menu-item label="Blog" href="/blog" :page="$page" />
 
