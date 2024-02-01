@@ -4,7 +4,7 @@
             <a href="/" title="{{ $page->siteName }} home" class="flex items-center justify-center gap-2 mr-2">
                 <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="{{ $page->siteName }} logo" />
 
-                <span class="text-2xl leading-none font-serif font-bold text-teal-400">{{ $page->siteName }}</span>
+                <span class="text-xl leading-none font-bold text-teal-700">{{ $page->siteName }}</span>
             </a>
         </div>
 
