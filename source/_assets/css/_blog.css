@@ -16,30 +16,6 @@
   }
 }
 
-form {
-  @apply mx-auto;
-  @apply max-w-md;
-  @apply bg-gray-400;
-  @apply p-4;
-  @apply rounded;
-  @apply shadow-md;
-
-  input,
-  textarea {
-    @apply w-full;
-    @apply shadow-inner;
-    @apply rounded;
-    @apply p-2;
-  }
-
-  button[type='submit'] {
-    @apply p-2;
-    @apply bg-gray-600;
-    @apply text-white;
-    @apply rounded;
-  }
-}
-
 .post {
   @apply overflow-auto;
 
