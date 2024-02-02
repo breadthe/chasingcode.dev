@@ -4,7 +4,7 @@ section: content
 title: Upgrade PHP 7.4 to 8.0 on Ubuntu
 date: 2021-03-05
 description: PHP 7.3 to 8.0 upgrade procedure on Ubuntu 
-categories: [PHP,Linux]
+tags: [php,linux]
 featured: false
 image: 
 image_thumb: 

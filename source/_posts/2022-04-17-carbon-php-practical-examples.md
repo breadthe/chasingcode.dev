@@ -3,8 +3,9 @@ extends: _layouts.post
 section: content
 title: Carbon PHP Practical Examples
 date: 2022-04-17
+updated: 2023-02-06
 description: Carbon PHP library tips, tricks, shortcuts, utilities, patterns, and examples
-categories: [PHP, Carbon, Laravel]
+tags: [php, carbon, laravel]
 featured: false
 image: 
 image_thumb: 
@@ -13,8 +14,6 @@ image_author_url:
 image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/109938674293160462
 ---
-
-**UPDATED February 6, 2023**
 
 I've been working and experimenting a lot lately with [Carbon](https://carbon.nesbot.com/), the sublime PHP date and time utility library. I've tweeted a lot of Carbon tips and decided to collect all these tips into a permanent article. 
 

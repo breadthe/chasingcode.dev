@@ -4,7 +4,7 @@ section: content
 title: How to Install or Renew a SSL Certificate in Ubuntu with Nginx
 date: 2019-11-23
 description: 
-categories: [Linux,Forge]
+tags: [linux,forge]
 featured: false
 image: https://source.unsplash.com/y_ZPwFTCp84/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/y_ZPwFTCp84/?fit=max&w=200&q=75

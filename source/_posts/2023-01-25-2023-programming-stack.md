@@ -4,7 +4,7 @@ section: content
 title: My 2023 Programming Stack
 date: 2023-01-25
 description: A summary of my programming/tech stack moving into 2023.
-categories: [Laravel, Livewire, AlpineJS, TailwindCSS, Svelte, SvelteKit, Tauri]
+tags: [laravel, livewire, alpinejs, tailwind, svelte, sveltekit, tauri]
 featured: false
 image: https://source.unsplash.com/feLC4ZCxGqk/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/feLC4ZCxGqk/?fit=max&w=200&q=75

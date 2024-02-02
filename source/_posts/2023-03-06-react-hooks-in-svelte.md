@@ -4,7 +4,7 @@ section: content
 title: React Hooks in Svelte
 date: 2023-03-06
 description: Presenting a static website that shows code examples of React hooks vs Svelte
-categories: [Svelte,React,SvelteKit,TailwindCSS]
+tags: [svelte,react,sveltekit,tailwind]
 featured: false
 image: /assets/img/2023-03-06-useState.jpg
 image_thumb: /assets/img/2023-03-06-useState-thumb.jpg

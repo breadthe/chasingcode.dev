@@ -8,38 +8,37 @@
 @endpush
 
 @section('hero')
-    @include('_partials.hero',[
-        'title' => 'Blog Archive',
-        'description' => "An yearly archive of all the articles posted on $page->siteName",
-    ])
+    <x-hero title="Blog Archive" description="A yearly archive of all the blog posts" />
 @endsection
 
 @section('body')
-    <div class="flex flex-col-reverse sm:flex-row">
-        <section class="w-full bg-white p-4 sm:p-6 sm:mr-8 shadow-xl">
+    <div class="flex flex-col gap-4">
+        <aside class="px-4 mb-4">
+            <x-tag-cloud :tags="$tags" :posts="$posts" />
+        </aside>
+
+        <section class="p-4 sm:p-6 bg-white rounded">
             @foreach ($posts->groupBy(function ($post) { return $post->getDate()->format('Y'); }) as $year => $yearPosts)
                 <div class="mb-8">
-                    <h2 class="flex items-center justify-between text-teal-700">
+                    <h2 class="flex items-center gap-2 mb-2 text-teal-700">
                         {{ $year }}
-                        <small class="text-base text-gray-700 font-light">[{{ $yearPosts->count() }}]</small>
+                        <small class="text-xs text-gray-400 font-light">({{ $yearPosts->count() }})</small>
                     </h2>
 
                     @foreach ($yearPosts as $post)
-                        <div class="mb-4 flex sm:flex-row flex-col justify-between">
-                            <a
-                                    href="{{ $post->getUrl() }}"
-                                    class="font-semibold text-black border-b border-solid border-teal-400 hover:bg-teal-100 hover:border-b hover:border-solid hover:border-black"
-                            >{{ $post->title }}</a>
-
-                            <span class="text-base font-light text-right">
+                        <div class="grid grid-cols-6 mb-2 items-center">
+                            <span class="col-span-1 text-xs text-gray-400 font-mono">
                                 {{ $post->getDate()->format('M d') }}
                             </span>
+
+                            <a
+                                    href="{{ $post->getUrl() }}"
+                                    class="col-span-5 underline underline-offset-2 decoration-teal-200 hover:decoration-teal-400 decoration-2"
+                            >{{ $post->title }}</a>
                         </div>
                     @endforeach
                 </div>
             @endforeach
         </section>
-
-        @include('_partials.tag-cloud')
     </div>
 @stop

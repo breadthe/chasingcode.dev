@@ -4,7 +4,7 @@ section: content
 title: Welcome to Chasingcode.dev
 date: 2019-08-23
 description: An introduction to chasingcode.dev.
-categories: [General]
+tags: [general]
 featured: false
 image: https://source.unsplash.com/6wAGwpsXHE0/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/6wAGwpsXHE0/?fit=max&w=200&q=75

@@ -4,7 +4,7 @@ section: content
 title: A Pattern for Building Reusable Create/Update Forms
 date: 2019-03-04
 description: Create and update forms acting on the same resources very often share much of the same code. This reusable pattern helps keep your code DRY.
-categories: [Patterns, Laravel]
+tags: [patterns, laravel]
 featured: false
 image: 
 image_thumb: 

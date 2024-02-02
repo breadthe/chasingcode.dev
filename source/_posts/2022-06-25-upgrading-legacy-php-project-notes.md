@@ -4,7 +4,7 @@ section: content
 title: Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022
 date: 2022-06-25
 description: Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1
-categories: [PHP]
+tags: [php]
 featured: false
 image: /assets/img/2020-11-03-bankalt.jpg
 image_thumb: /assets/img/2020-11-03-bankalt-thumb.jpg

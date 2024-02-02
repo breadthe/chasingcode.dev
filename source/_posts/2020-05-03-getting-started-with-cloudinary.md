@@ -4,7 +4,7 @@ section: content
 title: Getting Started with Cloudinary
 date: 2020-05-03
 description: A guide for getting your static images hosted with Cloudinary.
-categories: [Cloudinary]
+tags: [cloudinary]
 featured: false
 image: https://res.cloudinary.com/svgxapp/image/upload/f_auto,q_auto:good,e_vectorize,w_848/sample
 image_thumb: https://res.cloudinary.com/svgxapp/image/upload/f_auto,q_auto:good,e_vectorize,w_343/sample

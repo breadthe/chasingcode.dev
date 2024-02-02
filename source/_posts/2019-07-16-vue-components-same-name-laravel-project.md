@@ -4,7 +4,7 @@ section: content
 title: Beware of Vue Components with the Same Name in a Laravel Project
 date: 2019-07-16
 description: The technologies on my personal radar for 2019.
-categories: [Laravel, VueJS]
+tags: [laravel, vue]
 featured: false
 image: 
 image_thumb: 

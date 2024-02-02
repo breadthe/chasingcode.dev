@@ -4,7 +4,7 @@ section: content
 title: Ode to the Mac
 date: 2021-02-20
 description: Reflecting on all the joy the Mac has brought me
-categories: [Mac,Opinion]
+tags: [mac,opinion]
 featured: false
 image: /assets/img/2021-02-20-ode-to-mac.jpg
 image_thumb: /assets/img/2021-02-20-ode-to-mac.jpg

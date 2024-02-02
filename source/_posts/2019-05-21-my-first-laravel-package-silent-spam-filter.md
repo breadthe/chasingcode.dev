@@ -4,7 +4,7 @@ section: content
 title: My First Laravel Package - laravel-silent-spam-filter
 date: 2019-05-21
 description: I created my first open-source Laravel package and I couldn't be happier.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: /assets/img/2019-05-21-my-first-laravel-package-silent-spam-filter.png
 image_thumb: /assets/img/2019-05-21-my-first-laravel-package-silent-spam-filter.png

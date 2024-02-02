@@ -4,7 +4,7 @@ section: content
 title: How to Handle Vue Router Link Mouse Events Properly
 date: 2019-03-24
 description: Simple mouse events on a vue-router generated link seemingly don't work. What gives?
-categories: [VueJS]
+tags: [vue]
 featured: false
 image: /assets/img/2019-03-24-vue-router-mouse-event-handling.png
 image_thumb: /assets/img/2019-03-24-vue-router-mouse-event-handling.png

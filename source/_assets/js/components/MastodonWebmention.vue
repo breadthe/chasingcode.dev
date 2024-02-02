@@ -3,7 +3,7 @@
     <a
         v-if="mastodonTootUrl.length"
         :href="mastodonTootUrl"
-        class="w-full p-2 text-center text-xl text-mastodon-purple hover:text-white bg-indigo-100 hover:bg-mastodon-purple rounded font-bold"
+        class="w-full p-2 no-underline text-center text-mastodon-purple hover:text-white bg-indigo-100 hover:bg-mastodon-purple rounded font-bold"
         target="_blank"
     >
       Discuss this article on Mastodon

@@ -4,7 +4,7 @@ section: content
 title: PHP - Handle Undefined Index Gracefully
 date: 2019-06-09
 description: A more convenient way to handle undefined variables/indexes in PHP even in older versions.
-categories: [PHP]
+tags: [php]
 featured: false
 image: /assets/img/2019-06-09-php-handle-undefined-index-gracefully.png
 image_thumb: /assets/img/2019-06-09-php-handle-undefined-index-gracefully.png

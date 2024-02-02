@@ -4,7 +4,7 @@ section: content
 title: Fix Vagrant Homestead "Can't create database" Error
 date: 2019-11-14
 description: A technique for increasing the size of the MySQL partition in a Vagrant/Homestead local environment.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: /assets/img/2019-11-14-fix-vagrant-homestead-cant-create-database.jpg
 image_thumb: /assets/img/2019-11-14-fix-vagrant-homestead-cant-create-database.jpg

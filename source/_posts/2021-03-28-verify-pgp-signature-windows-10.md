@@ -4,7 +4,7 @@ section: content
 title: How to Verify a PGP Signature on Windows 10  
 date: 2021-03-28
 description: Step-by-step guide on how to check a file's PGP signature on Windows 10
-categories: [Windows10]
+tags: [windows]
 featured: false
 image: 
 image_thumb: 

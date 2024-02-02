@@ -4,7 +4,7 @@ section: content
 title: Build an SVG Icon Component with Laravel 7
 date: 2020-03-28
 description: A guide for building an SVG icon component using Laravel 7's new features.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: /assets/img/2020-03-28-build-svg-icon-component-laravel-7.png
 image_thumb: /assets/img/2020-03-28-build-svg-icon-component-laravel-7.png

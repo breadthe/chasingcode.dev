@@ -4,7 +4,7 @@ section: content
 title: How to Reboot Your Developer Career 
 date: 2020-01-30
 description: How I built the sign up form on 1secret.app using the new alpine.js micro-framework
-categories: [Career]
+tags: [career]
 featured: true
 image: https://source.unsplash.com/JWGsMvqzS_0/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/JWGsMvqzS_0/?fit=max&w=200&q=75

@@ -4,7 +4,7 @@ section: content
 title: SVGX Launched on Product Hunt
 date: 2021-02-16
 description: I launched SVGX, my Electron-Svelte desktop SVG manager, on Product Hunt
-categories: [Electron,Svelte]
+tags: [electron,svelte]
 featured: false
 image: /assets/img/2021-02-16-svgx-app.png
 image_thumb: /assets/img/2021-02-16-svgx-app.png

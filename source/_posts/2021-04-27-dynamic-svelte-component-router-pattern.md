@@ -4,7 +4,7 @@ section: content
 title: The Dynamic Svelte Component Router Pattern
 date: 2021-04-27
 description: Build a pseudo-router in Svelte using dynamic components
-categories: [Svelte,Electron]
+tags: [svelte,electron]
 featured: false
 image: /assets/img/svelte.jpg
 image_thumb: /assets/img/svelte.jpg

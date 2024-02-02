@@ -4,7 +4,7 @@ section: content
 title: My 2022 Programming Stack
 date: 2021-12-09
 description: A summary of my programming/tech stack moving into 2022.
-categories: [Laravel, Livewire, AlpineJS, TailwindCSS, Svelte, Electron]
+tags: [laravel, livewire, alpinejs, tailwind, svelte, electron]
 featured: false
 image: https://source.unsplash.com/2OzdX7F9XPs/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/2OzdX7F9XPs/?fit=max&w=200&q=75

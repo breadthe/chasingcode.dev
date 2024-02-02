@@ -4,7 +4,7 @@ section: content
 title: Fix Routing Issues for a VueJS App Deployed to Netlify
 date: 2019-03-23
 description: Had a WTF moment when I deployed a new Vue project to Netlify, only to be confronted with this message when I refreshed any route that wasn't root. It worked just fine locally! Here's how to fix this.
-categories: [VueJS, Netlify]
+tags: [vue, netlify]
 featured: false
 image: /assets/img/2019-03-23-fix-vuejs-netlify-routing.png
 image_thumb: /assets/img/2019-03-23-fix-vuejs-netlify-routing.png

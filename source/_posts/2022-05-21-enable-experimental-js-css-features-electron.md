@@ -4,7 +4,7 @@ section: content
 title: Enable Experimental JS and CSS Features in Electron
 date: 2022-05-21
 description: How to enable experimental Chromium JS and CSS features in Electron versions that don't support them
-categories: [Electron]
+tags: [electron]
 featured: false
 image: /assets/img/electron-logo.jpg
 image_thumb: /assets/img/electron-logo.jpg

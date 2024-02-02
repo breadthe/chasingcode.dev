@@ -4,7 +4,7 @@ section: content
 title: Convert UTC Server Time to Local with JavaScript
 date: 2019-07-18
 description: The technologies on my personal radar for 2019.
-categories: [JavaScript]
+tags: [javascript]
 featured: false
 image: 
 image_thumb: 

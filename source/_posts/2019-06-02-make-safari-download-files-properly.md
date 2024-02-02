@@ -4,7 +4,7 @@ section: content
 title: How to Make Safari Download Files Properly with Laravel
 date: 2019-06-02
 description: When downloading files with Laravel, Safari may need some coaxing. Here's how.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: https://source.unsplash.com/0LwfbRtQ-ac/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/0LwfbRtQ-ac/?fit=max&w=200&q=75

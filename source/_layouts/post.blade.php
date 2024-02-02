@@ -8,35 +8,56 @@
 @endpush
 
 @section('body')
-    <section class="p-2 sm:p-6 shadow-xl">
-        @if ($page->cover_image)
-            <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
-        @endif
+    <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            @if ($page->cover_image)
+                <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
+            @endif
 
-        <h1 class="font-serif text-3xl mb-2">{{ $page->title }}</h1>
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">{{ $page->title }}</h1>
 
-        <p class="text-base md:mt-0">
-            {{ date('F j, Y', $page->date) }}
-        </p>
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
 
-        @include('_partials.post-hero-image')
+                <small class="hidden md:block">&bull;</small>
 
-        <div class="post sm:text-2xl font-light text-gray-900 tracking-wide pb-4 mt-8 sm:mt-4" v-pre>
+                <small class="font-mono">
+                    {{ date('Y-m-d', $page->date) }}
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <x-tags :tags="$page->tags" />
+            </div>
+
+            @if($page->updated)
+                <div class="mt-2">
+                    <small class="font-mono">
+                        <strong>Updated: </strong>
+                        {{ date('Y-m-d', $page->updated) }}
+                    </small>
+                </div>
+            @endif
+
+            @include('_partials.post-hero-image')
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
             @yield('content')
-
-            @include('_partials.tags')
 
             @include('_partials.social-share-icons')
         </div>
 
         @include('_partials.mastodon-webmention')
 
-        @include('_partials.author')
+        {{--@include('_partials.author')--}}
 
         <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
             <div>
                 @if ($next = $page->getNext())
-                    <a href="{{ $next->getUrl() }}" title="Older Post: {{ $next->title }}">
+                    <a href="{{ $next->getUrl() }}" class="no-underline" title="Older Post: {{ $next->title }}">
                         &LeftArrow; {{ $next->title }}
                     </a>
                 @endif
@@ -44,11 +65,11 @@
 
             <div>
                 @if ($previous = $page->getPrevious())
-                    <a href="{{ $previous->getUrl() }}" title="Newer Post: {{ $previous->title }}">
+                    <a href="{{ $previous->getUrl() }}" class="no-underline" title="Newer Post: {{ $previous->title }}">
                         {{ $previous->title }} &RightArrow;
                     </a>
                 @endif
             </div>
         </nav>
-    </section>
+    </article>
 @endsection

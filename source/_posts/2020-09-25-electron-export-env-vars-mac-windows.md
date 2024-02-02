@@ -4,7 +4,7 @@ section: content
 title: How to Export Environment Variables on Mac and Windows
 date: 2020-09-25
 description: 
-categories: [Electron, Terminal]
+tags: [electron, terminal]
 featured: false
 image: 
 image_thumb: 

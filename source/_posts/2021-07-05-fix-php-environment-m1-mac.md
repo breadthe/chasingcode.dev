@@ -4,7 +4,7 @@ section: content
 title: How to restore a corrupted PHP environment on M1 Mac
 date: 2021-07-05
 description: Steps I took to restore a corrupted PHP/composer local development environment on an M1 Mac Air
-categories: [Mac,PHP,Laravel,DevTools]
+tags: [mac,php,laravel,dev-tools]
 featured: false
 image:
 image_thumb:

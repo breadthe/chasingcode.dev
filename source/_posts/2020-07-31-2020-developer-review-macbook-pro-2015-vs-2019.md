@@ -4,7 +4,7 @@ section: content
 title: Developer review - 2015 15" MacBook Pro vs 2019 16" MacBook Pro
 date: 2020-07-31
 description: A developer's comparison between Apple's best generations of the MacBook Pro.
-categories: [Hardware, Opinion]
+tags: [hardware, opinion]
 featured: false
 image: /assets/img/2020-07-31-2015-vs-2019-macbook-pro.jpg
 image_thumb: /assets/img/2020-07-31-2015-vs-2019-macbook-pro-thumb.jpg

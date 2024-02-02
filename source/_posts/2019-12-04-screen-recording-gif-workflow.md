@@ -4,7 +4,7 @@ section: content
 title: Mac Screen Recoding GIF Workflow
 date: 2019-12-04
 description: My personal workflow for screen recording and converting to GIF on the Mac
-categories: [Mac,Workflow]
+tags: [mac,workflow]
 featured: false
 image: https://media.giphy.com/media/S3VRqjVQsZI5zNAgPQ/giphy.gif
 image_thumb: https://media.giphy.com/media/S3VRqjVQsZI5zNAgPQ/giphy.gif

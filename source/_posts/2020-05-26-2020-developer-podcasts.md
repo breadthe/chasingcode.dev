@@ -4,7 +4,7 @@ section: content
 title: 2020 Developer Podcasts
 date: 2020-05-26
 description: The best developer podcasts I listen to in 2020.
-categories: [Opinion]
+tags: [opinion]
 featured: false
 image: https://source.unsplash.com/cVI8ViAhU04/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/cVI8ViAhU04/?fit=max&w=200&q=75

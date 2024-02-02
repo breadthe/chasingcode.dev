@@ -4,7 +4,7 @@ section: content
 title: Developer Podcasts I Listen To
 date: 2019-06-01
 description: A compendium of the best developer-focused podcasts I listen to.
-categories: [Opinion]
+tags: [opinion]
 featured: false
 image: https://source.unsplash.com/cVI8ViAhU04/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/cVI8ViAhU04/?fit=max&w=200&q=75

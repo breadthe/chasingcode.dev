@@ -4,7 +4,7 @@ section: content
 title: How to Add an Unsplash or Custom Hero Image to a Jigsaw Article
 date: 2020-03-10
 description: A guide for adding a custom hero image programatically to a Jigsaw blog post.
-categories: [Jigsaw, Laravel]
+tags: [jigsaw, laravel]
 featured: false
 image: https://source.unsplash.com/6yjAC0-OwkA/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/6yjAC0-OwkA/?fit=max&w=200&q=75
@@ -41,7 +41,7 @@ section: content
 title: How to Add an Unsplash or Custom Hero Image to a Jigsaw Article
 date: 2020-03-10
 description: A guide for adding a custom hero image programatically to a Jigsaw blog post.
-categories: [Jigsaw, Laravel]
+tags: [jigsaw, laravel]
 featured: false
 ---
 ```

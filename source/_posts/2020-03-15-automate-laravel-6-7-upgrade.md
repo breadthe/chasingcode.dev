@@ -4,7 +4,7 @@ section: content
 title: Automate the Laravel 6 -> 7 Upgrade with PHPStorm
 date: 2020-03-15
 description: How I transplanted a previous Laravel 7 upgrade to a Laravel 6 project, using PHPStorm.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: /assets/img/2020-03-15-automate-laravel-6-7-upgrade-phpstorm.png
 image_thumb: /assets/img/2020-03-15-automate-laravel-6-7-upgrade-phpstorm.png

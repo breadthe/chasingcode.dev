@@ -4,7 +4,7 @@ section: content
 title: Simple HTTP Response Trait in Laravel
 date: 2019-05-17
 description: A very simple trait you can use to make your HTTP responses in Laravel less verbose.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: 
 image_thumb: 

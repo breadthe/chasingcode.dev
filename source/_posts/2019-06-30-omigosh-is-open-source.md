@@ -4,7 +4,7 @@ section: content
 title: Omigo.sh is Open Source
 date: 2019-06-30
 description: I have open-sourced the Omigo.sh codebase.
-categories: [Jigsaw, Laravel]
+tags: [jigsaw, laravel]
 featured: false
 image: /assets/img/2019-06-30-omigosh-is-open-source.jpg
 image_thumb: /assets/img/2019-06-30-omigosh-is-open-source.jpg

@@ -3,8 +3,9 @@ extends: _layouts.post
 section: content
 title: Best Remote Laravel Job Sites in 2023
 date: 2023-03-20
+updated: 2023-03-22
 description: A list of the best remote Laravel job sites in 2023
-categories: [General, Laravel]
+tags: [general, laravel]
 featured: false
 image:
 image_thumb:
@@ -13,8 +14,6 @@ image_author_url:
 image_unsplash:
 mastodon_toot_url: https://indieweb.social/@brbcoding/110057724317287801
 ---
-
-**UPDATED March 22, 2023**
 
 In 2023 I changed jobs. For my next position, I was interested in two things: 100% remote work and Laravel. Thankfully, my job search was successful and I found exactly what I was looking for: a small, remote-first company with good culture and very nice people, that uses Laravel.
 

@@ -4,7 +4,7 @@ section: content
 title: Simulate HTTP Exception Status
 date: 2019-03-27
 description: An easy way to generate an HTTP exception of a certain kind in PHP.
-categories: [PHP]
+tags: [php]
 featured: false
 image: 
 image_thumb: 

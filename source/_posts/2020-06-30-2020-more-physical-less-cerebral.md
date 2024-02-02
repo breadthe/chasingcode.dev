@@ -4,7 +4,7 @@ section: content
 title: More of the Physical, Less of the Cerebral
 date: 2020-06-30
 description: How I ended up coding less and training more.
-categories: [Opinion]
+tags: [opinion]
 featured: false
 image: /assets/img/2020-06-30-mountain-biking.jpg
 image_thumb: /assets/img/2020-06-30-mountain-biking-thumb.jpg

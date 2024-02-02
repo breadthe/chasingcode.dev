@@ -3,8 +3,9 @@ extends: _layouts.post
 section: content
 title: Build an edit in place component with Livewire & Alpine.js
 date: 2020-03-19
+updated: 2020-03-21
 description: A guide for building an edit in place component using Laravel Livewire and Alpine.js.
-categories: [Laravel, Livewire, AlpineJS]
+tags: [laravel, livewire, alpinejs]
 featured: true
 image: /assets/img/2020-03-19-1secret-edit-in-place-livewire-alpine.gif
 image_thumb: /assets/img/2020-03-19-1secret-edit-in-place-livewire-alpine.gif
@@ -22,7 +23,7 @@ What follows is a complete guide on how I built this feature using [Livewire](ht
 
 **TLDR** Don't feel like reading through the entire thing? No problem, here's the [repo](https://github.com/breadthe/laravel-livewire-demo) so you can dive right in.
 
-> **UPDATED March 21, 2020** Additional tinkering revealed some quirks with nested Livewire components in combination with AlpineJS. Instead of rewriting the entire guide (for the 3rd time), I'll show you my solution at the end. The repo has already been updated to reflect the changes.   
+> **Update** Additional tinkering revealed some quirks with nested Livewire components in combination with AlpineJS. Instead of rewriting the entire guide (for the 3rd time), I'll show you my solution at the end. The repo has already been updated to reflect the changes.   
 > <a href="#update-2020-03-21">Jump to the update →</a>
 
 ## Installation
@@ -344,7 +345,7 @@ The [code for the demo](https://github.com/breadthe/laravel-livewire-demo) shoul
 
 <a name="update-2020-03-21"></a>
 
-## Update: March 21, 2020 - Fixing the nested component functionality
+## Update - Fixing the nested component functionality
 
 The purpose of the original guide was to show how inline editing can be done with Livewire and Alpine. Mission accomplished, *however*, I built this functionality on top of an existing project, nesting the edit-in-place component inside the previous Livewire component. So the (now) parent component deals with filtering items (or widgets as I call them) on the page through either text search or tag selection. At the same time, each widget's name can be edited in place.
 

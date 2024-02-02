@@ -4,7 +4,7 @@ section: content
 title: How to Use MySQL CTE to Group by Year and Month with Gaps
 date: 2022-03-26
 description: Group statistics with gaps by year-month using MySQL Common Table Expressions
-categories: [MySQL]
+tags: [mysql]
 featured: false
 image: 
 image_thumb: 

@@ -4,7 +4,7 @@ section: content
 title: AQI Desktop - a NativePHP app
 date: 2023-10-05
 description: Building a desktop app with NativePHP, Laravel Folio, and Laravel Volt.
-categories: [Laravel, NativePHP]
+tags: [laravel, nativephp]
 featured: false
 image: https://user-images.githubusercontent.com/17433578/258668015-9a4d0188-bff7-4dfb-b88e-77f1a2ea3c55.png
 image_thumb: https://user-images.githubusercontent.com/17433578/258668015-9a4d0188-bff7-4dfb-b88e-77f1a2ea3c55.png

@@ -4,7 +4,7 @@ section: content
 title: Laravel Add & Remove URL Query Parameters Helpers
 date: 2019-04-07
 description: Simple helper functions that allow quick removal or addition of URL query parameters.
-categories: [Laravel]
+tags: [laravel]
 featured: false
 image: https://source.unsplash.com/nXt5HtLmlgE/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/nXt5HtLmlgE/?fit=max&w=200&q=75

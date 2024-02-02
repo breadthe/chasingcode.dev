@@ -4,7 +4,7 @@ section: content
 title: Maintenance Procedure for a Laravel Forge Instance
 date: 2019-10-03
 description: Documenting my process for maintaining a Laravel Forge Linux instance.
-categories: [Laravel, Forge]
+tags: [laravel, forge]
 featured: false
 image: https://source.unsplash.com/v_CxSroHKWg/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/v_CxSroHKWg/?fit=max&w=200&q=75

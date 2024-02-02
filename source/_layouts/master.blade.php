@@ -20,25 +20,23 @@
 
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Blog">
 
-        @if ($page->production)
+        {{--@if ($page->production)
             @include('_partials.google-analytics')
-        @endif
+        @endif--}}
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900|Bitter" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <link href="https://github.com/breadthe" rel="me">
         <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
         <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
     </head>
 
-    <body class="flex flex-col justify-between bg-gray-100 text-grey-darkest leading-normal font-sans">
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
 
         @include('_partials.header')
 
-
         <main
             role="main"
-            class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/uses') || $page->belongsTo('/contact') ? 'bg-white max-w-4xl' : 'max-w-6xl' }} mx-auto"
+            class="flex-auto w-full {{ $page->belongsTo('/blog') || $page->belongsTo('/archive') || $page->belongsTo('/uses') || $page->belongsTo('/about') || $page->belongsTo('/contact') ? 'max-w-2xl' : 'max-w-6xl' }} mx-auto"
         >
             @yield('hero')
 

@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-1 justify-end items-center text-right px-4">
+    <div class="flex flex-1 justify-end items-center text-right pl-4 sm:pr-4">
         <div
-            class="absolute sm:relative w-full justify-end top-0 left-0 z-10 py-4 sm:py-0 px-4 sm:px-0 bg-gray-800"
+            class="absolute sm:relative w-full justify-end top-0 left-0 z-20 py-4 sm:py-0 px-4 sm:px-0 bg-gray-50"
             :class="{'hidden sm:flex': ! searching}"
         >
             <label for="search" class="hidden">Search</label>
@@ -10,11 +10,11 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast h-12 w-full sm:w-1/2 sm:focus:w-3/4 bg-gray-900 shadow border border-gray-700 focus:border-teal-400 focus:bg-gray-200 outline-none cursor-pointer px-4 shadow-inner"
+                class="transition-fast h-10 w-full sm:w-1/2 sm:focus:w-3/4 border focus:border-teal-400 outline-none cursor-pointer px-4 shadow-inner"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
-                placeholder="Search"
+                placeholder="Search posts"
                 type="text"
                 aria-label="Search the blog"
                 @keyup.esc="reset"
@@ -32,16 +32,16 @@
                     <div class="flex flex-col bg-white border border-b-0 border-t-0 border-teal-400 rounded-b-lg shadow-lg mx-4 sm:mx-0">
                         <a
                             v-for="(result, index) in results"
-                            class="bg-white hover:bg-gray-100 border-b border-teal-400 text-xl cursor-pointer p-4"
+                            class="group bg-white hover:bg-gray-100 border-b border-teal-400 cursor-pointer p-4"
                             :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                             :href="result.item.link"
                             :title="result.item.title"
                             :key="result.link"
                             @mousedown.prevent
                         >
-                            {{ result.item.title }}
+                            <h2 class="font-serif text-xl leading-snug text-teal-700 group-hover:text-teal-900">{{ result.item.title }}</h2>
 
-                            <span class="block font-normal text-gray-600 text-sm my-1" v-html="result.item.snippet"></span>
+                            <span class="block font-sans font-normal text-gray-600 group-hover:text-black text-sm my-1" v-html="result.item.snippet"></span>
                         </a>
 
                         <div
@@ -58,7 +58,7 @@
         <button
             title="Start searching"
             type="button"
-            class="flex sm:hidden justify-center items-center border rounded-full focus:outline-none h-10 px-3 bg-gray-900 border-gray-700"
+            class="flex sm:hidden items-center bg-white border rounded focus:outline-none w-full h-10 pl-2"
             @click.prevent="showInput"
         >
             <!--
@@ -70,9 +70,7 @@
                 width="13px"
                 height="13px"
                 viewBox="0 0 20 20"
-                version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
             >
                 <defs></defs>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -85,6 +83,7 @@
                     </g>
                 </g>
             </svg>
+          <span class="text-gray-400">Search</span>
         </button>
     </div>
 </template>
@@ -132,7 +131,7 @@ export default {
         axios('/index.json').then(response => {
             this.fuse = new Fuse(response.data, {
                 minMatchCharLength: 4,
-                keys: ['title', 'snippet', 'categories'],
+                keys: ['title', 'snippet', 'tags'],
             });
         });
     },

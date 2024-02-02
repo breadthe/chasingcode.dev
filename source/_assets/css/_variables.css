@@ -12,4 +12,7 @@
     /* Highlight */
     --highlight-yellow: linear-gradient(-100deg,hsla(58,92%,75%,.3),hsla(58,92%,75%,.7) 95%,hsla(58,92%,75%,.1));
     --pastel-yellow: rgba(246,224,94,.4);
+
+    /* Hero title shadow */
+    --hero-title-shadow: 6px 6px 0 0 rgba(45,212,191,1);
 }

@@ -4,7 +4,7 @@ section: content
 title: Useful Linux Commands
 date: 2019-05-19
 description: A collection of useful Linux commands for developers.
-categories: [Linux]
+tags: [linux]
 featured: false
 image: https://source.unsplash.com/Tjbk79TARiE/?fit=max&w=1350
 image_thumb: https://source.unsplash.com/Tjbk79TARiE/?fit=max&w=200&q=75

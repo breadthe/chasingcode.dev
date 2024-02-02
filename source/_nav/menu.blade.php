@@ -1,57 +1,13 @@
-<nav class="hidden sm:flex items-center justify-end text-lg">
-    <a
-        title="{{ $page->siteName }} Blog"
-        href="/blog"
-        class="
-            ml-6 text-teal-200 hover:text-teal-400
-            {{
-                $page->belongsTo('/blog') ?
-                'active border-b-2 border-teal-400' :
-                ''
-            }}"
-    >
-        Blog
-    </a>
+<nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <x-menu-item label="Blog" href="/blog" :page="$page" />
 
-    <a
-        title="Archive"
-        href="/archive"
-        class="
-            ml-6 text-teal-200 hover:text-teal-400
-            {{
-                $page->belongsTo('/archive') ?
-                'active border-b-2 border-teal-400' :
-                ''
-            }}"
-    >
-        Archive
-    </a>
+        <x-menu-item label="Archive" href="/archive" :page="$page" />
 
-    <a
-        title="Uses"
-        href="/uses"
-        class="
-            ml-6 text-teal-200 hover:text-teal-400
-            {{
-                $page->belongsTo('/uses') ?
-                'active border-b-2 border-teal-400' :
-                ''
-            }}"
-    >
-        Uses
-    </a>
+        <x-menu-item label="Uses" href="/uses" :page="$page" />
 
-    <a
-        title="{{ $page->siteName }} Contact"
-        href="/contact"
-        class="
-            ml-6 text-teal-200 hover:text-teal-400
-            {{
-                $page->belongsTo('/contact') ?
-                'active border-b-2 border-teal-400' :
-                ''
-            }}"
-    >
-        Contact
-    </a>
+        <x-menu-item label="About" href="/about" :page="$page" />
+
+        <x-menu-item label="Contact" href="/contact" :page="$page" />
+    </ul>
 </nav>
