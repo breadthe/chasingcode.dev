@@ -3,9 +3,8 @@ extends: _layouts.post
 section: content
 title: Negativity
 date: 2024-01-19
-updated:
 description: Stuck in an indecision loop about posting negative-sounding thoughts and criticism on social media
-categories: [General]
+tags: [general]
 featured: true
 image: 
 image_thumb: 

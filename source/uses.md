@@ -6,7 +6,7 @@ date: 2020-03-21
 description: Hardware, software, and gear I use on a daily basis
 ---
 
-A comprehensive list of my favorite hardware, software, and gear, from the perspective of a Laravel/PHP and Vue/Svelte/JavaScript full stack developer, updated for **2023**.
+A comprehensive list of my favorite hardware, software, and gear, from the perspective of a full stack developer and nerd, updated for **2023**.
 
 ## Work hardware
 

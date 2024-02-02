@@ -3,9 +3,8 @@ extends: _layouts.post
 section: content
 title: The year of SQLite
 date: 2024-01-23
-updated:
 description: 2024 is the year of SQLite for me
-categories: [SQLite]
+tags: [sqlite]
 featured: false
 image: 
 image_thumb: 
