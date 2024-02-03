@@ -11,8 +11,8 @@
                 <img src="/assets/images/fs-sm.jpg" loading="lazy" width="213" height="163" title="FileServer" alt="FileServer">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <strong>FileServer</strong>
             </div>
             <div class="text-black border-black font-light mt-2 border-2 border-dashed p-2 shadow">
@@ -36,8 +36,8 @@
                 <img src="/assets/images/git-diff-sm.jpg" loading="lazy" width="213" height="163" title="GitHub Diff" alt="GitHub Diff">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <span class="font-bold flex items-center">
                     <img src="/assets/images/git-diff-logo.png" class="h-full" width="30" height="30" title="GitHub Diff logo" alt="GitHub Diff logo">&nbsp;
                     GitHub Diff
@@ -68,8 +68,8 @@
                 <img src="/assets/images/craftnautica-sm.jpg" loading="lazy" width="213" height="163" title="Craftnautica" alt="Craftnautica">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <span class="font-bold flex items-center">
                     <img src="/assets/images/craftnautica-logo.png" class="h-full" width="30" height="30" title="Craftnautica logo" alt="Craftnautica logo">&nbsp;
                     Craftnautica
@@ -107,8 +107,8 @@
                 <img src="/assets/images/tw2-colors-sm.jpg" loading="lazy" width="213" height="163" title="Tailwind 2 Colors" alt="Tailwind 2 Colors">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <span class="font-bold flex items-center">
                     Tailwind 2 Colors
                 </span>
@@ -138,11 +138,11 @@
                 <img src="/assets/images/folio-sm.jpg" loading="lazy" width="213" height="166" title="Folio - Crypto coin portfolio" alt="Folio - Crypto coin portfolio">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <strong>Folio</strong>
             </div>
-            <div class="bg-gray-900 text-gray-400 border-gray-400 font-light mt-4 border-2 border-dashed p-2 shadow">
+            <div class="bg-gray-900 text-gray-400 border-gray-400 font-light mt-2 border-2 border-dashed p-2 shadow">
                 Crypto coin portfolio and price tracker desktop app.
             </div>
             <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
@@ -163,15 +163,15 @@
                 <img src="/assets/images/moviebuff-sm.jpg" loading="lazy" width="213" height="154" title="Moviebuff - Movie watchlist" alt="Moviebuff - Movie watchlist">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <strong>Moviebuff</strong>
                 <a href="https://moviebuff.surge.sh" class="inline-flex items-center" target="_blank" rel="noopener" title="Moviebuff on Surge.sh">
                     moviebuff.surge.sh
                     <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 16, 'height' => 16])</span>
                 </a>
             </div>
-            <div class="bg-yellow-500 text-yellow-900 border-yellow-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+            <div class="bg-yellow-500 text-yellow-900 border-yellow-200 font-light mt-2 border-2 border-dashed p-2 shadow">
                 Simple movie watch- and seen-list.
             </div>
             <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
@@ -192,11 +192,11 @@
                 <img src="/assets/images/moviebuff-monolith-sm.jpg" loading="lazy" width="213" height="188" title="Moviebuff monolith - Movie watchlist on Laravel" alt="Moviebuff monolith - Movie watchlist on Laravel">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <strong>Moviebuff monolith</strong>
             </div>
-            <div class="bg-yellow-500 text-yellow-900 border-yellow-200 font-light mt-4 border-2 border-dashed p-2 shadow">
+            <div class="bg-yellow-500 text-yellow-900 border-yellow-200 font-light mt-2 border-2 border-dashed p-2 shadow">
                 Similar to the static Vue app above, this version is more advanced, benefiting from a Laravel back-end. It features more complex list management: move and copy movies between existing and new lists.
             </div>
             <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">

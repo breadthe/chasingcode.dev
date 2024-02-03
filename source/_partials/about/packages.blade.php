@@ -9,8 +9,8 @@
         <div class="w-full sm:w-1/4 flex items-center justify-center text-6xl">
             📦
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <strong>php-contrast</strong>
                 <a href="https://github.com/breadthe/php-contrast" class="inline-flex items-center mt-2 sm:mt-0" title="php-contrast on Github" target="_blank" rel="noopener">
                     @include('_partials.icons._svg', ['icon' => 'github', 'width' => 16, 'height' => 16]) <span class="ml-1">Github</span>
@@ -31,8 +31,8 @@
                 <img src="/assets/images/php-simple-calendar-sm.jpg" loading="lazy" width="213" height="163" title="php-simple-calendar" alt="php-simple-calendar">
             </a>
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <strong>php-simple-calendar</strong>
                 <a href="https://github.com/breadthe/php-simple-calendar" class="inline-flex items-center mt-2 sm:mt-0" title="php-simple-calendar on Github" target="_blank" rel="noopener">
                     @include('_partials.icons._svg', ['icon' => 'github', 'width' => 16, 'height' => 16]) <span class="ml-1">Github</span>
@@ -51,8 +51,8 @@
         <div class="w-full sm:w-1/4 flex items-center justify-center text-6xl">
             📦
         </div>
-        <div class="w-full sm:w-3/4 ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                 <strong>laravel-silent-spam-filter</strong>
                 <a href="https://github.com/breadthe/laravel-silent-spam-filter" class="inline-flex items-center mt-2 sm:mt-0" title="laravel-silent-spam-filter on Github" target="_blank" rel="noopener">
                     @include('_partials.icons._svg', ['icon' => 'github', 'width' => 16, 'height' => 16]) <span class="ml-1">Github</span>
