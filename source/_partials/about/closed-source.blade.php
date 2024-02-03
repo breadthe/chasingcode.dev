@@ -59,29 +59,6 @@
         </div>
     </div>
 
-    {{--<div class="flex flex-col sm:flex-row items- gap-2start mt-8">
-        <div class="w-full sm:w-1/4 flex justify-center">
-            <a href="/assets/images/allmy.sh.jpg" class="cursor-zoom-in" target="_blank" title="Allmy.sh">
-                <img src="/assets/images/allmy.sh-sm.jpg" loading="lazy" width="213" height="250" class="" title="Allmy.sh" alt="Allmy.sh">
-            </a>
-        </div>
-        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
-                <span class="font-bold">AllMySh*</span>
-                <a href="https://allmy.sh" class="inline-flex items-center" target="_blank" rel="noopener" title="Allmy.sh">
-                    allmy.sh
-                    <span class="ml-1 text-gray-700">@include('_partials.icons._svg', ['icon' => 'external-link', 'width' => 16, 'height' => 16])</span>
-                </a>
-            </div>
-            <div class="bg-green-800 text-green-100 border-green-200 font-light mt-2 border-2 border-dashed p-2 shadow">
-                Catalog, track, and document your personal possessions. Lifespan and expense statistics.
-            </div>
-            <div class="mt-4 flex flex-col sm:flex-row items-center justify-between">
-                <span>Laravel &bull; Vue.js &bull; TailwindCSS &bull; Forge &bull; Linode</span>
-            </div>
-        </div>
-    </div>--}}
-
     <hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
 
     <div class="flex flex-col sm:flex-row items-start gap-2 mt-8">
@@ -215,20 +192,4 @@
             </div>
         </div>
     </div>
-
-    {{--<hr class="border-0 border-t border-gray-400 m-0 mt-8 mx-auto w-5/6 sm:w-1/2">
-
-    <div class="flex flex-col sm:flex-row items- gap-2start mt-8">
-        <div class="w-full sm:w-1/4 flex h-32 items-center justify-center text-6xl">
-            🦄
-        </div>
-        <div class="w-full sm:w-3/4 sm:ml-2 flex flex-col">
-            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
-                <span class="font-bold">And more...</span>
-            </div>
-            <div class="bg-teal-700 text-teal-100 border-teal-200 font-light mt-2 border-2 border-dashed p-2 shadow">
-                I have a ton of product and app ideas. On average I get a new one every 2 weeks. Need. More. Time.
-            </div>
-        </div>
-    </div>--}}
 </article>
