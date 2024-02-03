@@ -11,7 +11,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/111813122850702657
 ---
 
 I'm calling it early - this is the year of SQLite (for me at least). If 2024 were to have a specific theme, SQLite is as good as any. This has been building up for a while, and now it's time to fully embrace it as an indie hacker.
