@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: The year of SQLite
 date: 2024-01-23
+updated: 2024-02-03
 description: 2024 is the year of SQLite for me
 tags: [sqlite]
 featured: false
@@ -31,5 +32,7 @@ Easy to **embed in a desktop app** made with [Tauri](/categories/Tauri) or [Elec
 **Taylor Otwell** has been talking about making SQLite the **default connection in Laravel 11**. This is yet to be confirmed, and it might not even happen, but just the fact that it's being considered is a strong indicator that the community is leaning into it.
 
 [Aaron Francis](https://aaronfrancis.com/) has talked on a few podcasts about [building a static site generator with Laravel and SQLite](https://overengineered.fm/episodes/static-site-generators-personal-websites-w-aaron-francis). The details intrigue me a lot and I'm very excited to see what he'll build. It sounds a lot like my use-case.
+
+Here's a great article that explains the strengths (and some weaknesses) of [SQLite compared to "traditional" databases like MySQL and PostgreSQL](https://onfold.sh/blog/is-it-time-to-ditch-mysql-and-postgresql-for-sqlite).
 
 I've already built a small/experimental/throwaway(?) project on SQLite in 2023 and I really like it. In 2024 I would like to start working on a new idea, and it will absolutely be on SQLite.
