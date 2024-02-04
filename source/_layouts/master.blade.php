@@ -12,7 +12,7 @@
             <meta property="og:image" content="{{ Illuminate\Support\Str::contains($image, 'unsplash.com') ? $image : $page->baseUrl . $image }}" />
         @endif
 
-        <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
+        <title>{{ $page->title ? $page->title . ' | ' :  '' }}{{ $page->siteName }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
 

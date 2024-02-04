@@ -1,3 +1,6 @@
+---
+title: My open source projects
+---
 @extends('_layouts.master')
 
 @push('meta')

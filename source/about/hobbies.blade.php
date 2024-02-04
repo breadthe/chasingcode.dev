@@ -1,3 +1,6 @@
+---
+title: My hobbies
+---
 @extends('_layouts.master')
 
 @push('meta')

@@ -1,3 +1,6 @@
+---
+title: My projects
+---
 @extends('_layouts.master')
 
 @push('meta')

@@ -1,3 +1,6 @@
+---
+title: About the site
+---
 @extends('_layouts.master')
 
 @push('meta')
