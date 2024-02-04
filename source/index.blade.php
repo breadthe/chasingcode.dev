@@ -70,7 +70,7 @@
             <x-posts-recent :posts="$posts->sortByDesc('date')->take(5)" seeAll>Recent posts</x-posts-recent>
 
             @if(($recentlyUpdatedPosts = $posts->whereNotNull('updated')->sortByDesc('updated')->take(5)) && count($recentlyUpdatedPosts) > 0)
-                <x-posts-recent :posts="$recentlyUpdatedPosts">Recently updated</x-posts-recent>
+                <x-posts-recent :posts="$recentlyUpdatedPosts" displayUpdatedDate>Recently updated</x-posts-recent>
             @endif
         </div>
         <!-- END Recent posts -->

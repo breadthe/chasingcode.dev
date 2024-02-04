@@ -1,4 +1,4 @@
-@props(['posts', 'seeAll' => false])
+@props(['posts', 'seeAll' => false, 'displayUpdatedDate' => false])
 
 <div class="sm:w-1/2">
     <div class="flex items-center justify-between">
@@ -13,7 +13,7 @@
 
     <div class="flex flex-col gap-4">
         @foreach ($posts as $post)
-            <x-post-recent :post="$post" />
+            <x-post-recent :post="$post" displayUpdatedDate />
         @endforeach
     </div>
 </div>

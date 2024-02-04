@@ -1,4 +1,4 @@
-@props(['post'])
+@props(['post', 'displayUpdatedDate' => false])
 
 <div @class([
     // 'row-span-2' => $loop->first,
@@ -6,7 +6,11 @@
     'flex-col',
 ])>
     <small class="opacity-60">
-        {{ $post->getDate()->format('F j, Y') }}
+        @if($displayUpdatedDate && $post->updated)
+            {{ $post->getUpdatedDate()->format('F j, Y') }}
+        @else
+            {{ $post->getDate()->format('F j, Y') }}
+        @endunless
     </small>
 
     <h3 class="text-base font-semibold font-serif leading-snug mt-0">

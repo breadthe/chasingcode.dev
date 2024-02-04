@@ -36,7 +36,7 @@
                 <div class="mt-2">
                     <small class="font-mono">
                         <strong>Updated: </strong>
-                        {{ date('Y-m-d', $page->updated) }}
+                        {{ $page->getUpdatedDate()->format('Y-m-d') }}
                     </small>
                 </div>
             @endif

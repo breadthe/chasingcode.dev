@@ -36,6 +36,9 @@ return [
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },
+    'getUpdatedDate' => function ($page) {
+        return $page->updated ? Datetime::createFromFormat('U', $page->updated) : null;
+    },
     'getExcerpt' => function ($page, $length = 255) {
         $content = $page->excerpt ?? $page->getContent();
         $cleaned = strip_tags(
