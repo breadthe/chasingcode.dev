@@ -71,11 +71,12 @@
 }
 
 /* =================== Highlight =================== */
-.highlight {
+/* where is this used? nowhere it seems */
+/*.highlight {
   background-image: var(--highlight-yellow);
   -webkit-border-radius: 1em 0;
   -moz-border-radius: 1em 0;
   border-radius: 1em 0;
   padding: 0 .35em;
   margin: 0 -.35em;
-}
+}*/

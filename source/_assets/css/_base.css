@@ -40,7 +40,7 @@ blockquote {
 
 code {
     /*@apply bg-teal-100;*/
-    background-color: var(--pastel-yellow);
+    background-color: var(--highlighter-yellow);
     @apply px-2;
     @apply py-px;
     @apply rounded;
