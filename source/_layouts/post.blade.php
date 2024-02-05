@@ -27,19 +27,19 @@
                     {{ date('Y-m-d', $page->date) }}
                 </small>
 
+                @if($page->updated)
+                    <small class="hidden md:block">&bull;</small>
+
+                    <small class="font-mono">
+                        <strong>updated: </strong>
+                        {{ $page->getUpdatedDate()->format('Y-m-d') }}
+                    </small>
+                @endif
+
                 <small class="hidden md:block">&bull;</small>
 
                 <x-tags :tags="$page->tags" />
             </div>
-
-            @if($page->updated)
-                <div class="mt-2">
-                    <small class="font-mono">
-                        <strong>Updated: </strong>
-                        {{ $page->getUpdatedDate()->format('Y-m-d') }}
-                    </small>
-                </div>
-            @endif
 
             @include('_partials.post-hero-image')
         </header>
