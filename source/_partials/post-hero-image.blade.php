@@ -1,5 +1,5 @@
 @if($image = $page->image)
-    <section class="w-full flex flex-col items-center justify-center relative mt-2">
+    <section class="w-full flex flex-col items-center justify-center relative mt-4">
         @if($imageOverlayText = $page->image_overlay_text)
             <div
                     class="absolute font-black p-12 text-6xl rounded-full"
