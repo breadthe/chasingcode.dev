@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: How to find the owner of a lost GoPro
 date: 2023-12-22
+updated: 2024-02-05
 description: Quick detective work led me to finding the owner of a lost GoPro
 tags: [general]
 featured: true
@@ -70,3 +71,15 @@ If you read this by any chance, Mr Smith & associates, please check your LinkedI
 P.S. I'll make sure to ask some relevant questions to validate the actual owner - partly why I didn't give any personal details.
 
 I'll update this if I manage to contact the owner.
+
+## Epilogue
+
+I'm happy to report that I was finally able to reunite the owner with the GoPro.
+
+To follow up on **step 5**, after waiting a while for Mr Smith to respond on LinkedIn, I noticed that the younger Mr Smith (brother?) had recent activity, so I messaged him with a summary of why I was trying to contact the older Smith.
+
+Sure enough, Mr Smith (the owner) signed in shortly, confirmed ownership, and gave me a home address.
+
+I mailed the GoPro and he received it without issues. I'm very happy that I was able to help.
+
+I'll leave you with a parting tip. During this investigation, various people online were recommending putting a `contact.txt` file with your info in the memory card of a camera or other device that might get lost. Very common-sense advice that hadn't occurred to me until now.
