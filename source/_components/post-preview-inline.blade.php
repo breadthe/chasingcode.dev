@@ -19,10 +19,10 @@
         <x-tags :tags="$post->tags" />
     </div>
 
-    <section class="flex flex-col md:flex-row justify-start">
+    <section class="flex flex-col md:flex-row justify-start gap-4">
         @if($image = $post->image_thumb)
             <div
-                    class="md:w-1/4 md:mr-4 mt-1 mb-2 md:mb-0 md:max-h-[150px]"
+                    class="md:w-1/4 mt-2 md:max-h-[150px]"
             >
                 <a
                         href="{{ $post->getUrl() }}"
@@ -33,7 +33,7 @@
                             src="{{ $image }}"
                             alt="{{ $post->imageAttribution() }}"
                             title="{{ $post->imageAttribution() }}"
-                            class="rounded shadow-lg"
+                            class="mx-auto rounded shadow-lg"
                     >
                 </a>
             </div>
