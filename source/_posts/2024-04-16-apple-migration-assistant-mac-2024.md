@@ -7,12 +7,12 @@ date: 2024-04-16
 description: How good is Apple's Migration Assistant on the Mac in 2024?
 tags: [mac]
 featured: false
-image: 
-image_thumb: 
+image:
+image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url: https://indieweb.social/@brbcoding/112107825931770751
 ---
 
 I bought a new Mac: a 2024 M3 MacBook Air that was just released a couple of weeks ago. This replaces a 2019 Intel i9 MacBook Pro. That machine was heavy and cumbersome, and slow as molasses despite the theoretical firepower.
@@ -47,13 +47,13 @@ My **ssh keys** were in place, and I was able to ssh to my remote server without
 
 ## What needed some tweaking
 
-Some of the apps were made for **x86** and required **Rosetta** on the M3. I opted to uninstall them, and then downloaded the **ARM** version. Unfortunately certain apps are still missing an Apple Silicon build, thus requiring Rosetta (looking at you Garmin Express).
+Some of the apps were made for **x86** and required **Rosetta** on the M3. I opted to uninstall them, and then downloaded the **ARM** version. Unfortunately certain apps are still missing an Apple Silicon build, thus requiring Rosetta (looking at you Garmin Express and Steam).
 
 A few more that I had to replace with Apple Silicon versions are: 1Password, and JetBrains Toolbox.
 
 At the **command line** (I use Warp for my terminal) I had a couple of issues. Bear in mind that all of these are related to migrating from an Intel machine to an Apple Silicon machine, and not really caused by the Assistant.
 
-My **Node** version wasn't compatible with the new machine. It gave a `zsh: bad CPU type in executable: node` error. This was fixed quickly by installing the latest version with Herd. 
+My **Node** version wasn't compatible with the new machine. It gave a `zsh: bad CPU type in executable: node` error. This was fixed quickly by installing the latest version with Herd.
 
 **Homebrew** gave a `Bad CPU type in executable` error when I ran it. I uninstalled it, then reinstalled it. In my `.zprofile` I replaced `eval $(/usr/local/bin/brew shellenv)` with `eval "$(/opt/homebrew/bin/brew shellenv)"`.
 
@@ -65,6 +65,18 @@ My **Node** version wasn't compatible with the new machine. It gave a `zsh: bad 
 
 **cargo** and **rustc** continued to give this error even after updating Rust `error: command failed: 'cargo/rustc': Bad CPU type in executable (os error 86)`. I should have done a fresh Rust install. So I uninstalled everything with `rustup self uninstall`, then ran the installation command again, and all 3 were working.
 
+I ran into some problems with `npm run <any-script>` in a project.
+
+```shell
+npm run dev
+[webpack-cli] Error: spawn Unknown system error -86
+```
+
+This was fixed by installing Rosetta. I had to do that in any case since a few programs refused to run without it, but I wanted to leave it last.
+
+```shell
+softwareupdate --install-rosetta
+```
 ## Conclusion
 
 Apple's Migration Assistant has done a bang-up job in my opinion. Not everybody likes to copy over old settings and apps, but I'm lazy and I don't have any pleasure in setting up a machine from scratch. Besides, the old machine had been setup fresh only a year ago, so it's unlikely that a lot of bitrot had set in.
