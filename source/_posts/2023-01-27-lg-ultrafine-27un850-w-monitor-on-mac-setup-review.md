@@ -4,7 +4,7 @@ section: content
 title: Setting up an LG UltraFine 27UN850-W Monitor on Mac and Mini-Review
 date: 2023-01-27
 description: How I made a 10-year website (including domain and hosting) for less than $100.
-tags: [hardware]
+tags: [hardware,review,mac]
 featured: false
 image: /assets/img/2023-01-27-lg-ultrafine-27un850-w.jpg
 image_thumb: /assets/img/2023-01-27-lg-ultrafine-27un850-w-thumb.jpg

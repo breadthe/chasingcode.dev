@@ -5,7 +5,7 @@ title: Negativity
 date: 2024-01-19
 description: Stuck in an indecision loop about posting negative-sounding thoughts and criticism on social media
 tags: [general]
-featured: true
+featured: false
 image: 
 image_thumb: 
 image_author:
