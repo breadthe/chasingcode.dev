@@ -67,14 +67,14 @@ My **Node** version wasn't compatible with the new machine. It gave a `zsh: bad 
 
 I ran into some problems with `npm run <any-script>` in a project.
 
-```shell
+```bash
 npm run dev
 [webpack-cli] Error: spawn Unknown system error -86
 ```
 
 This was fixed by installing Rosetta. I had to do that in any case since a few programs refused to run without it, but I wanted to leave it last.
 
-```shell
+```bash
 softwareupdate --install-rosetta
 ```
 ## Conclusion
