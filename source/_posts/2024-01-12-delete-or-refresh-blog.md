@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: Delete the blog or refresh it?
 date: 2024-01-12
+updated: 2024-04-19
 description: Should I delete the blog or refresh it in 2024?
 tags: [general, jigsaw]
 featured: true
@@ -44,9 +45,11 @@ After the new year I got over some of the angst and started looking at this prob
 
 As you're reading this, I've already accomplished the first part. The blog is now running on **Jigsaw 1.3.45**. Yet this is not the latest version of Jigsaw (1.7.1). Why? Because it's deployed on Netlify which supports a maximum build version of Ubuntu 20.04, which in turn is limited to PHP 8.1. Jigsaw 1.3.45 is the highest version that runs on PHP 8.1, with higher versions requiring 8.2 (but those don't run on Ubuntu 20.04).
 
-So at this point I am basically held back by Netlify's lack of support for an Ubuntu image with PHP 8.2. Quite disappointing for such a highly regarded service, but thankfully it's not the end of the world. Even this intermediary version of Jigsaw is a lot better than what I was running before, chiefly for two reasons –
+**At this point a retraction is in order**. 3 months later I realized that I could upgrade to Jigsaw 1.7.1 and PHP 8.2 after all. It wasn't Netlify's fault at all, but my own for completely missing out that the `PHP_VERSION` can be set in `netlify.toml`. Simply changing it from 8.1 to 8.2 allowed the latest Jigsaw to build and deploy successfully. A doh moment if there ever was one 🤦‍♂️.
 
-First, it uses Tailwind 3.x. This will make styling more flexible and convenient. Second, the front-end build process is streamlined and easier to use.
+The latest Jigsaw version is a lot better than what I was running before, chiefly for three reasons –
+
+First, it uses Tailwind 3.x. This will make styling more flexible and convenient. Second, the front-end build process is streamlined and easier to use. Third, it uses [league/commonmark](https://commonmark.thephpleague.com/) for markdown parsing, which is a lot more powerful than the Jigsaw parser.
 
 Nothing has changed at this point in the site design except for the fact that the updated Tailwind colors are now either more saturated, or slightly darker than before. I'm fine with this. The other thing is that the [library](https://www.fusejs.io/) behind the search is updated and it feels to me that it returns more relevant results.
 
