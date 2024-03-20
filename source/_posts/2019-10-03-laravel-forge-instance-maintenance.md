@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: Maintenance Procedure for a Laravel Forge Instance
+title: Maintenance procedure for a Laravel Forge instance
 date: 2019-10-03
 updated: 2024-04-19
 description: Documenting my process for maintaining a Laravel Forge Linux instance.
