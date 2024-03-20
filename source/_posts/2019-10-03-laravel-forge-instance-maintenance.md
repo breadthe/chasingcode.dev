@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: Maintenance Procedure for a Laravel Forge Instance
 date: 2019-10-03
+updated: 2024-04-19
 description: Documenting my process for maintaining a Laravel Forge Linux instance.
 tags: [laravel, forge]
 featured: false
@@ -41,6 +42,25 @@ In my case, [1Secret.app](https://1secret.app/) is served from `104.200.17.161` 
 ```bash
 ssh forge@104.200.17.161 -i ~/.ssh/id_rsa
 ```
+
+### Check the distro version
+
+```bash
+lsb_release -a
+
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.6 LTS
+Release:	20.04
+Codename:	focal
+
+# or
+
+cat /etc/issue
+
+Ubuntu 20.04.6 LTS
+```
+
 ### Check and reclaim disk space
 
 **File system**
