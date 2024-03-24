@@ -23,7 +23,7 @@ The core of an RSS reader is a reliable parser. Unfortunately, parsing XML is ha
 
 I am not interested in building a feed parser. My goal is to build the experience - the functionality, the aggregation logic, the UX. My app is Laravel (PHP), so one of the first steps was to search for a pre-built open-source feed parsing library. Tough quest.
 
-After going on the wrong track with a different library (that shall not be named because it's somewhat decent and a lot of work went into it), I came across [SimplePie](http://simplepie.org/.
+After going on the wrong track with a different library (that shall not be named because it's somewhat decent and a lot of work went into it), I came across [SimplePie](http://simplepie.org/).
 
 At first glance, it's easy to discount SimplePie. After all, the website looks like it's frozen in the early 00s and the docs mention *downloading* the library. I mean, ugh, right? I don't mean to sound elitist because I hold a lot of nostalgia for that era, but we've long since moved on from that age with modern [composer](https://getcomposer.org/).
 
