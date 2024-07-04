@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Be a content consumer for once
 date: 2024-06-20
-# updated:
+updated: 2024-07-04
 description: Sometimes it's ok to take a step away from creating
 tags: [opinion, mental-health]
 featured: false
@@ -23,9 +23,9 @@ So here we are. I'm not the first software professional who's had enough hustlin
 
 Speaking of hustling, oh boy don't get me started. Like many, I bought into the software hustle culture, spurred by Twitter and loads of success stories by indie hackers who seem to be able to fart money before I've even had my first coffee. Good for them I say!
 
-Why can't I do the same though? After all, I'm a pretty good developer, I love my craft, I really enjoy coding, and it brings me joy to create software. You see, the obvious thing I'm lacking is the ability to market and sell the things I make. And that's way more important than the ability to code and come up with new ideas, _if_ you want to make money with your software.
+Why can't I do the same though? After all, I'm a pretty good developer, I love my craft, I really enjoy coding, and it brings me joy to create software. You see, the obvious thing I'm lacking is the ability to market and sell the things I make. And that's way more important than the ability to code and come up with new ideas, *if* you want to make money with your software.
 
-I don't know if I'll ever develop that ability to _sell_ stuff. I have a bad habit of being almost ashamed to ask for money. What really kills it for me, though, is the point where the hacking stops and the marketing starts. It feels so distasteful that I usually prefer to release it for free and move on.
+I don't know if I'll ever develop that ability to *sell* stuff. I have a bad habit of being almost ashamed to ask for money. What really kills it for me, though, is the point where the hacking stops and the marketing starts. It feels so distasteful that I usually prefer to release it for free and move on.
 
 I guess I'm going to be a wage slave for the rest of my career. And maybe that's ok - we can't all be entrepreneurs. Let's be real though - there's not much room for "woe is me" here. We in the software industry are truly privileged, whether working for ourselves or someone else. Self-pity not required.
 
@@ -35,7 +35,7 @@ I thought that if I worked on side projects outside of the 9-5 (after all, I hav
 
 At the same time, like a lot of people who suffer from a cocktail of OCD, anxiety, impostor syndrome, a hunger for creativity, and a dash of [FOMO](https://en.wikipedia.org/wiki/Fear_of_missing_out), I feel compelled to "produce" something as opposed to consuming. Compounded with memories of a "wasted" youth in the form of playing too many video games, my older (and methinks wiser) brain is trying to compensate by over-assimilating and overproducing.
 
-Unfortunately, with age comes a diminished capacity for mental stress. For a while now I've reached a point of saturation where I'm bouncing between hobbies, but mostly _away_ from side-projects-as-a-hobby.
+Unfortunately, with age comes a diminished capacity for mental stress. For a while now I've reached a point of saturation where I'm bouncing between hobbies, but mostly *away* from side-projects-as-a-hobby.
 
 All this to say that my mental capacity is just about filled up at the end of the workday, and all I have left in me is an acute need to squeeze the brain-strain out through intense physical exercise. At the end of it I'm drained both ways and the only thing I can still handle is a mindless - and purely hedonistic - activity such as playing a game, watching a movie or a show, or reading a book or comic.
 
@@ -44,3 +44,25 @@ This is probably a phase. I go through them periodically. There are game phases 
 I think I'm done with forcing myself to spend my free time in a rigid manner. My mental health has benefited from letting myself go with the flow.
 
 If you feel stuck in a similar grind, I recommend it. Give it a try. You might enjoy being a consumer for once.
+
+## Things I've consumed recently
+
+Because people have asked, here are some shows and (PC) games I've enjoyed during this burnout spell.
+
+**Shows**
+
+- Captain Fall	- Season 1 (2024)
+- True Detective - Season	4 (2024)
+- Fallout - Season 1 (2024)
+- The 3 Body Problem - Season 1 (2024)
+- Scavengers Reign - Season 1 (2023)
+- Beef - Season 1 (2023)
+- Tour de France Unchained - Season 1, 2 (2024)
+- Delicious in Dungeon - Season 1 (2024)
+
+**Games**
+
+- Witchfire
+- Last Epoch (replay on V1)
+- Ostranauts
+- Valheim (yeah, I'm replaying this)
