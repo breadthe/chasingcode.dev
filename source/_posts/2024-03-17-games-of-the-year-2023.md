@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Top games of 2023
 date: 2024-03-17
-# updated:
+updated:
 description: The best games I played in 2023
 tags: [games,review]
 featured: false

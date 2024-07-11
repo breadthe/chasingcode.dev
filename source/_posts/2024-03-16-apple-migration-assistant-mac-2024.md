@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Apple Migration Assistant on the Mac in 2024
 date: 2024-03-16
-# updated:
+updated:
 description: How good is Apple's Migration Assistant on the Mac in 2024?
 tags: [mac]
 featured: false

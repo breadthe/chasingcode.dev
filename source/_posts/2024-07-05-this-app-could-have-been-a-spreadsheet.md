@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: This app could have been a spreadsheet
 date: 2024-07-05
-# updated:
+updated:
 description: Developers like to re-invent the wheel, but perhaps we should take a step back, use the simple tools at our disposal, and move on with our lives
 tags: [side-project]
 featured: false

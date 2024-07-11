@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: How to upgrade a Ubuntu server from 20.04 to 22.04
 date: 2024-03-19
-# updated:
+updated:
 description: Procedure for upgrading Ubuntu from 20.04 to 22.04
 tags: [linux]
 featured: false
@@ -12,7 +12,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url:
 ---
 
 I operate a $5 Linode VPS and I just upgraded Ubuntu from 20.04 to 22.04.

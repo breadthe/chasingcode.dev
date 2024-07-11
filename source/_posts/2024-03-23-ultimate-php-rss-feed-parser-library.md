@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: The ultimate PHP RSS feed parser library
 date: 2024-03-23
-# updated:
+updated:
 description: This is the best PHP library for parsing RSS and Atom feeds
 tags: [php,rss]
 featured: false
@@ -12,7 +12,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url:
 ---
 
 The quest is over - I have found the perfect PHP library for parsing RSS and Atom feeds. I present you [SimplePie](http://simplepie.org/).

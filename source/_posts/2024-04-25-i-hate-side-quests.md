@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: I hate side quests
 date: 2024-04-05
-# updated:
+updated:
 description: Everything goes haywire right when you find a bit of time to work on a side project
 tags: [rant]
 featured: false
@@ -12,7 +12,7 @@ image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url:
 ---
 
 Picture this: it's late in the evening and you have a couple of hours to work on a side project.
