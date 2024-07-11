@@ -3,7 +3,6 @@ extends: _layouts.post
 section: content
 title: I hate side quests
 date: 2024-04-05
-updated:
 description: Everything goes haywire right when you find a bit of time to work on a side project
 tags: [rant]
 featured: false

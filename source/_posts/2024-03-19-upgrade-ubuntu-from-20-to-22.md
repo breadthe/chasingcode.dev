@@ -3,7 +3,6 @@ extends: _layouts.post
 section: content
 title: How to upgrade a Ubuntu server from 20.04 to 22.04
 date: 2024-03-19
-updated:
 description: Procedure for upgrading Ubuntu from 20.04 to 22.04
 tags: [linux]
 featured: false

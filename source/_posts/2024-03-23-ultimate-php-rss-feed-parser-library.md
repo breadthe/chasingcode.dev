@@ -3,7 +3,6 @@ extends: _layouts.post
 section: content
 title: The ultimate PHP RSS feed parser library
 date: 2024-03-23
-updated:
 description: This is the best PHP library for parsing RSS and Atom feeds
 tags: [php,rss]
 featured: false

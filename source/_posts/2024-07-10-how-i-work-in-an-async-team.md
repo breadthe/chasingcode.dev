@@ -3,7 +3,6 @@ extends: _layouts.post
 section: content
 title: How I work in an async team
 date: 2024-07-10
-updated:
 description: My daily routine as an async remote worker
 tags: [career]
 featured: true
