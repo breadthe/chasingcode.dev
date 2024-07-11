@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="A guide for installing a Windows 10 virtual machine on a Mac, for cross-platform testing.">
+
+            <meta property="og:title" content="How to Install a Windows 10 VM on a Mac" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chasingcode.dev/blog/install-windows-10-vm-on-mac"/>
+    <meta property="og:description" content="A guide for installing a Windows 10 virtual machine on a Mac, for cross-platform testing." />
+
+                    <meta property="og:image" content="https://chasingcode.dev/assets/img/2020-04-12-windows-10-vm-initial-state.jpg" />
+        
+        <title>How to Install a Windows 10 VM on a Mac | Chasing Code</title>
+
+        <link rel="home" href="https://chasingcode.dev">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Chasing Code Blog">
+
+        
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3824d15a7550cadd6feea53f638e89ad">
+        <link href="https://github.com/breadthe" rel="me">
+        <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
+        <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
+    </head>
+
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+
+        <header class="flex items-center py-4" role="banner">
+    <div class="container flex items-center max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+            <a href="/" title="Chasing Code home" class="flex items-center justify-center gap-2 mr-2">
+                <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="Chasing Code logo" />
+
+                <span class="text-xl leading-none font-bold text-teal-700">Chasing Code</span>
+            </a>
+        </div>
+
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+                            <search
+                    data-belongs-to-blog="1"
+                ></search>
+            
+            <nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+            <button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-6 text-teal-400" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current w-6 text-teal-400" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </div>
+    </div>
+</header>
+
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
+    <ul class="my-0 flex flex-col gap-4 px-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+        <main
+            role="main"
+            class="flex-auto w-full max-w-2xl mx-auto"
+        >
+            
+                <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">How to Install a Windows 10 VM on a Mac</h1>
+
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
+                    2020-04-12
+                </small>
+
+                
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="flex flex-wrap gap-2">
+                    <a
+        href="/blog/tags/windows"
+        title=" posts in View posts in #windows"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #windows
+</a>
+                    <a
+        href="/blog/tags/mac"
+        title=" posts in View posts in #mac"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #mac
+</a>
+            </small>
+            </div>
+
+            <section class="w-full flex flex-col items-center justify-center relative mt-4">
+        
+        <img src="/assets/img/2020-04-12-windows-10-vm-initial-state.jpg" alt="How to Install a Windows 10 VM on a Mac" class="rounded">
+
+            </section>
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
+            <p>When building desktop or mobile cross-platform apps it is very important to test across devices. However, operating separate hardware for each platform can be daunting or cost-prohibitive. Virtual machines to the rescue!</p>
+
+<p>In this guide I'll explain how Mac developers can install a Windows 10 Virtual Machine on their Apple computer, using <strong>VirtualBox</strong>.</p>
+
+<p>A VM for a different platform than you are building on can be invaluable in testing:</p>
+
+<ul>
+<li>websites or web apps in Internet Explorer 11 or Microsoft Edge</li>
+<li>desktop software such as Electron apps</li>
+<li>file system differences (paths, directory structure, etc)</li>
+<li>device drivers</li>
+<li>and many more</li>
+</ul>
+
+<h2>Prerequisites</h2>
+
+<p>Microsoft is kindly provinding a free Windows 10 virtual machine that you can <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">download here</a> and use for 90 days. Do so, after picking your VM platform of choice.</p>
+
+<p>Since my Mac environment is setup mainly for Laravel development, and since I prefer Vagrant instead of Valet, that means I have both Vagrant and VirtualBox already installed.</p>
+
+<p>My personal preference for the Windows 10 VM is to use <strong>VirtualBox</strong>, since I am partial to the GUI.</p>
+
+<p><a href="https://www.virtualbox.org/">Download VirtualBox</a></p>
+
+<p><a href="https://www.vagrantup.com/">Download Vagrant</a></p>
+
+<p><strong>Make sure you have ~ 30 GB of space on your computer initially</strong> The VM comes in a ZIP file that is pretty substantial at > 7 GB and you'll have to unzip it as well. When you import the VM into VirtualBox, another ~14 GB will be created. You may delete the original download after importing, however.</p>
+
+<h2>Install the VM</h2>
+
+<p>For VirtualBox, you will have downloaded a file called <code>MSEdge.Win10.VirtualBox.zip</code>.</p>
+
+<p>After the download completes, extract the archive.</p>
+
+<h2>Import the VM into VirtualBox</h2>
+
+<p>Go to the folder that was just extracted (it should be called <code>MSEdge - Win10</code>). If VirtualBox is already installed, you can double-click the <code>MSEdge - Win10.ovf</code> file to import it into VirtualBox. A settings window will appear. Accept the defaults and hit <em>Import</em>.</p>
+
+<p><img src="/assets/img/2020-04-12-import-windows-10-vm-virtualbox.jpg" alt="VirtualBox VM appliance settings" /></p>
+
+<p>⏱ wait a few minutes for the import to finish. You should see something like the following.</p>
+
+<p><img src="/assets/img/2020-04-12-windows-10-vm-virtualbox-start.jpg" alt="New Windows 10 VM" /></p>
+
+<p>Select the Win10 VM and click <em>Start</em>.</p>
+
+<p>There will be a security prompt asking you go give VirtualBox access to your keyboard. Go to <em>System Preferences</em> > <em>Security &amp; Privacy</em> > <em>Privacy</em> > <em>Input Monitoring</em> and check VirtualBox after unlocking the settings with your root password. This will require VirtualBox to restart, so if the VM has already booted, shut it down, then open VirtualBox and start the VM once again.</p>
+
+<p>If everything worked correctly, you should see the following screen.</p>
+
+<p><img src="/assets/img/2020-04-12-windows-10-vm-login.jpg" alt="Windows 10 VM login" /></p>
+
+<h2>Login</h2>
+
+<p>User: <strong>IEUser</strong><br />
+Password: <strong>Passw0rd!</strong></p>
+
+<p>Boom, you're in!</p>
+
+<p><img src="/assets/img/2020-04-12-windows-10-vm-initial-state.jpg" alt="Windows 10 VM initial state" /></p>
+
+<h2>Take a snapshot of the VM</h2>
+
+<p>Before starting any actual work, it's <strong>a very good idea to take a snapshot of the initial state</strong>. Why? Because this will allow you to use the VM even after the original 90 days have expired. Once it stops working you can restore it to this point and use it for another 90 days. Don't worry, this is not illegal, even Microsoft suggests this on the page you've just downloaded the VM from.</p>
+
+<p>To take the snapshot, once the VM has booted and with the VM window active, in the <em>VirtualBox VM</em> application menu, select <em>Machine</em> > <em>Take Snapshot...</em> then give it a name and optional description when prompted, and click OK.</p>
+
+<h2>Restoring a snapshot</h2>
+
+<p>With the VM powered off, click the menu next to the name of the VM.</p>
+
+<p>Then select the snapshot you wish to restore and click Start (for the latest), or Restore (for older snapshots).</p>
+
+<p><strong>Restore the latest (current) state of the VM</strong></p>
+
+<p><img src="/assets/img/2020-04-12-windows-10-vm-start-latest.jpg" alt="Windows 10 VM login" /></p>
+
+<p><strong>Restore a previous snapshot</strong></p>
+
+<p><img src="/assets/img/2020-04-12-windows-10-vm-restore-snapshot.jpg" alt="Windows 10 VM login" /></p>
+
+<h2>Snapshot backups</h2>
+
+<p>You can back up the snapshots individually if you wish. The files are located in <code>/Users/YourUser/VirtualBox VMs/MSEdge - Win10/Snapshots</code>.</p>
+
+<p>Keep in mind that snapshots require additional storage space, and that can be a pretty steep price to pay. In my case, 3 snapshots take 26.7 GB. Ouch!</p>
+
+<p><img src="/assets/img/2020-04-12-windows-10-vm-snapshot-storage-space.jpg" alt="Windows 10 VM login" /></p>
+
+<h2>Transferring files &amp; shared clipboard</h2>
+
+<p>To transfer files back and forth between your computer and the VM, while the VM is running, in the VirtualBox application menu select <em>Devices</em> > <em>Drag and Drop</em> > <em>Bidirectional</em>.</p>
+
+<p>Now you should be able to open a File Explorer window in the VM, then drag a file over from your Mac.</p>
+
+<p>Similarly, you'll likely want to be able to copy/paste between your computer and the VM, so make sure to check  <em>Devices</em> > <em>Shared Clipboard</em> > <em>Bidirectional</em>.</p>
+
+<h2>A note on keyboard shortcuts</h2>
+
+<p>You'll find that some of the keyboard shortcuts you're used to on the Mac behave differently in the Windows VM. Here are a couple of the mappings I've discovered so far (as a general rule, use Control where you would use CMD):</p>
+
+<ul>
+<li>CMD+C/V/X → Control+C/V/X</li>
+<li>Delete → Fn+Delete</li>
+<li>CMD+Tab → Control+Tab</li>
+</ul>
+
+<h2>Where to next?</h2>
+
+<p>If you are using this VM for development, I would highly recommend setting up the environment to your exact specs, then <strong>taking another snapshot</strong>. Do this at the beginning, so that you can still take advantage of the full 90 day activation period.</p>
+
+<p>Some of the tools I installed on my fresh installation, for example, include:</p>
+
+<ul>
+<li>Chrome &amp; Firefox</li>
+<li><a href="https://gitforwindows.org/">Git Bash</a></li>
+<li>create/configure Bash aliases</li>
+<li><a href="https://nodejs.org/en/">generate an SSH key</a> and add the key to the Github (or equivalent) account</li>
+<li><a href="https://nodejs.org/en/">Node</a></li>
+<li>Yarn <a href="https://classic.yarnpkg.com/lang/en/">classic (V1)</a> or <a href="https://yarnpkg.com/">V2</a></li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+</ul>
+
+<p>I'll leave you with a screenshot of a new Svelte + Electron cross-platform app I'm working on, and how it looks on the Windows VM. Pretty nifty!</p>
+
+<p><img src="/assets/img/2020-04-12-windows-10-vm-electron-app.jpg" alt="Windows 10 VM login" /></p>
+
+            <section class="mt-8">
+    <div class="font-semibold">
+        Liked this article? Share it on your favorite platform.
+    </div>
+
+    <div class="mt-2 flex flex-wrap gap-2">
+        <a href="javascript:void(0);"
+                id="mastodon-share"
+                data-src="A guide for installing a Windows 10 virtual machine on a Mac, for cross-platform testing.&amp;url=https://chasingcode.dev/blog/install-windows-10-vm-on-mac"
+                class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Mastodon</a>
+
+        <a href="https://twitter.com/share?url=https://chasingcode.dev/blog/install-windows-10-vm-on-mac&text=A guide for installing a Windows 10 virtual machine on a Mac, for cross-platform testing.&via=brbcoding"
+           style="background: #55acee;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Twitter</a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chasingcode.dev/blog/install-windows-10-vm-on-mac"
+           style="background: #3B5998;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Facebook</a>
+
+        <a href="https://reddit.com/submit?url=https://chasingcode.dev/blog/install-windows-10-vm-on-mac&title=How to Install a Windows 10 VM on a Mac"
+           style="background: #ff5700;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Reddit</a>
+
+        <a href="https://news.ycombinator.com/submitlink?u=https://chasingcode.dev/blog/install-windows-10-vm-on-mac&t=How to Install a Windows 10 VM on a Mac"
+           style="background: #ff6600;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Hacker News</a>
+
+        <a href="https://www.linkedin.com/shareArticle?url=https://chasingcode.dev/blog/install-windows-10-vm-on-mac&title=How to Install a Windows 10 VM on a Mac&summary=A guide for installing a Windows 10 virtual machine on a Mac, for cross-platform testing.&source=https://chasingcode.dev"
+           style="background: #4875B4;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >LinkedIn</a>
+
+        <a href="mailto:?subject=How to Install a Windows 10 VM on a Mac&body=https://chasingcode.dev/blog/install-windows-10-vm-on-mac"
+           style="background: #444444;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Email</a>
+    </div>
+</section>
+
+<script>
+    // @see https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
+    doDocumentReady(enableMastodonShare);
+
+    /* Generate a share link for the user's Mastodon domain */
+    function mastodonShare(e) {
+
+        // Get the source text
+        const src = e.target.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
+
+        if (domain === "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        const url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doDocumentReady(fn) {
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function enableMastodonShare() {
+        document.getElementById('mastodon-share').addEventListener('click', mastodonShare);
+    }
+</script>        </div>
+
+        <section id="mastodon-webmention">
+    <mastodon-webmention page-url="https://chasingcode.dev/blog/install-windows-10-vm-on-mac" mastodon-toot-url=""></mastodon-webmention>
+</section>
+
+        
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
+            <div>
+                                    <a href="https://chasingcode.dev/blog/build-svg-icon-component-laravel-7" class="no-underline" title="Older Post: Build an SVG Icon Component with Laravel 7">
+                        &LeftArrow; Build an SVG Icon Component with Laravel 7
+                    </a>
+                            </div>
+
+            <div>
+                                    <a href="https://chasingcode.dev/blog/svelte-persist-state-to-localstorage" class="no-underline" title="Newer Post: Svelte - Persist State to localStorage">
+                        Svelte - Persist State to localStorage &RightArrow;
+                    </a>
+                            </div>
+        </nav>
+    </article>
+        </main>
+
+        <footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
+    <div class="w-full flex flex-row justify-center gap-4">
+        <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">RSS</span>
+        </a>
+
+        <a href="https://indieweb.social/@brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">Mastodon</span>
+        </a>
+
+        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-twitter"
+>
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Twitter</span>
+        </a>
+
+        <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Github</span>
+        </a>
+    </div>
+    <small class="italic opacity-60">
+        2018-2024 🦄&nbsp; All content & opinions my own
+    </small>
+</footer>
+
+        <script src="/assets/build/js/main.js?id=e27301064934efeda72c2d9e59dcaac9" async></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>

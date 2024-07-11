@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1">
+
+            <meta property="og:title" content="Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chasingcode.dev/blog/upgrading-legacy-php-project-notes"/>
+    <meta property="og:description" content="Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1" />
+
+                    <meta property="og:image" content="https://chasingcode.dev/assets/img/2020-11-03-bankalt.jpg" />
+        
+        <title>Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022 | Chasing Code</title>
+
+        <link rel="home" href="https://chasingcode.dev">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Chasing Code Blog">
+
+        
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3824d15a7550cadd6feea53f638e89ad">
+        <link href="https://github.com/breadthe" rel="me">
+        <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
+        <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
+    </head>
+
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+
+        <header class="flex items-center py-4" role="banner">
+    <div class="container flex items-center max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+            <a href="/" title="Chasing Code home" class="flex items-center justify-center gap-2 mr-2">
+                <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="Chasing Code logo" />
+
+                <span class="text-xl leading-none font-bold text-teal-700">Chasing Code</span>
+            </a>
+        </div>
+
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+                            <search
+                    data-belongs-to-blog="1"
+                ></search>
+            
+            <nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+            <button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-6 text-teal-400" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current w-6 text-teal-400" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </div>
+    </div>
+</header>
+
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
+    <ul class="my-0 flex flex-col gap-4 px-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+        <main
+            role="main"
+            class="flex-auto w-full max-w-2xl mx-auto"
+        >
+            
+                <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022</h1>
+
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
+                    2022-06-25
+                </small>
+
+                
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="flex flex-wrap gap-2">
+                    <a
+        href="/blog/tags/php"
+        title=" posts in View posts in #php"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #php
+</a>
+            </small>
+            </div>
+
+            <section class="w-full flex flex-col items-center justify-center relative mt-4">
+        
+        <img src="/assets/img/2020-11-03-bankalt.jpg" alt="Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022" class="rounded">
+
+            </section>
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
+            <p>I talked before about <a href="/blog/my-first-side-project/">BankAlt.com</a>, the first side-project with dynamic PHP/MySQL functionality I ever shipped. In that article I expressed my desire to resurrect the legacy PHP 5.X project and make it run on PHP 8.1.</p>
+
+<p>What follows is a list of notes I made while reviving BankAlt. It is by no means an exhaustive guide, rather a list of steps I took to declare myself satisfied with the outcome.</p>
+
+<h2>The framework</h2>
+
+<p>BankAlt was created circa 2009 when it was still acceptable to roll your own framework. As a result, it is based on a PHP mini-framework someone at work had written. I simplified it even further since I didn't need all the features of the original.</p>
+
+<p>The code is all procedural, which is fine for such a small project. It does not implement MVC.</p>
+
+<h2>The stack</h2>
+
+<ul>
+<li>Apache</li>
+<li>PHP 5.2 (or 5.3) - hard to tell exactly</li>
+<li>MySQL 5.1.20, with lots of stored procedures</li>
+<li>jQuery</li>
+<li>plain CSS</li>
+<li>hosted on a shared server run by a friend</li>
+<li>no SSL</li>
+</ul>
+
+<h2>Revival goals</h2>
+
+<p>Why revive this project at all? Why not let it fade into memory? Nostalgia. BankAlt was a labor of love and very dear to me at the time. Besides, I was curious how much of a lift it would be to update it to a modern 2022 stack.</p>
+
+<p><strong>Main goals:</strong></p>
+
+<ul>
+<li>run in a local environment on Nginx</li>
+<li>replace SVN with Git</li>
+<li>use Composer to manage dependencies</li>
+<li>get it working on PHP 8.1</li>
+<li>upgrade the database from MySQL 5.1 to 8</li>
+<li>refactor deprecated code + folder structure</li>
+<li>do NOT rewrite the code if I don't need to</li>
+</ul>
+
+<p><strong>Bonus goals:</strong></p>
+
+<ul>
+<li>replace msqli with PDO</li>
+<li>use modern tooling to bundle JS + CSS</li>
+<li>replace jQuery with Alpine.js</li>
+</ul>
+
+<p><strong>Super bonus goal</strong> (that will likely never be attempted): rebuild it on Laravel with Livewire.</p>
+
+<h2>Local environment setup</h2>
+
+<p><strong>Note</strong> All my coding is done on a Mac, so if you're on a different platform this won't apply.</p>
+
+<p>Since I'm already using <a href="https://laravel.com/docs/9.x/valet#main-content">Valet</a> for my local environment, I wanted to use it for this as well. You can run pretty much any PHP project locally with it.</p>
+
+<p>For the local database server I used <a href="https://dbngin.com/">DBngin</a> running on localhost.</p>
+
+<p>Valet uses Nginx as the webserver.</p>
+
+<h2>Replace SVN with Git</h2>
+
+<p>Originally, I built BankAlt on a Windows machine. The code was versioned using SVN, specifically <a href="https://tortoisesvn.net/">TortoiseSVN</a>.</p>
+
+<p>Before switching to Git, I wanted to get rid of all traces of SVN. To do this, I deleted all the <code>.svn</code> folders from the codebase. Unlike Git which creates a single <code>.git</code> file in the root of the project, SVN creates a <code>.svn</code> folder in each nested folder that is under version control.</p>
+
+<p>Next, add the entire project to Git by running <code>git init</code>, followed by <code>git add . &amp;&amp; git commit -m "init"</code></p>
+
+<p>Add a <code>.gitignore</code> file in the project root with the following contents:</p>
+
+<pre><code>.env
+/vendor
+/storage
+</code></pre>
+
+<ul>
+<li><code>.env</code> contains actual credentials, so it should never be under version control</li>
+<li><code>vendor</code> is Composer's default package vendor location which, under 99.99% of situations, should not be version controlled</li>
+<li><code>storage</code> in this case contains only one subfolder <code>logs</code> which should not be version controlled for obvious reasonss</li>
+</ul>
+
+<p>Push to GitHub.</p>
+
+<p>Phew, now I can safely start slicing and dicing the codebase.</p>
+
+<h2>Remove PHP closing tags</h2>
+
+<p>One of the first thing I did, just because it was griding my gears, was to remove all the PHP closing tags from the code. You see, back in the day it wasn't universally agreed upon whether to use the closing tags or not. So now I deleted all the <code>?&gt;</code> tags and made sure every <code>.php</code> script ended in a blank line.</p>
+
+<h2>Replace hardcoded DB credentials with .env file</h2>
+
+<p>Another big legacy <em>faux pas</em> was to hardcode the database credentials in the code AND VERSION CONTROL IT. So that had to be refactored pronto to a modern <code>.env</code> file.</p>
+
+<p>First I tried to build my own <code>.env</code> parser. Very soon I realized that it's harder than it sounds, so I decided to use an off-the-shelf popular package called <a href="https://github.com/vlucas/phpdotenv">vlucas/dotenv</a>.</p>
+
+<p>But wait, this requires Composer. Fast forward... After adding Composer:</p>
+
+<pre><code class="language-php">// call this after the autoloader
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv-&gt;load();
+</code></pre>
+
+<p>Now access <code>.env</code> variables from anywhere in the code with <code>$_ENV['DB_HOST']</code> etc.</p>
+
+<p>I also added a <code>.env.example</code> file to the project root containing:</p>
+
+<pre><code>APP_NAME=BankAlt
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=https://bankalt-2022.test
+
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=
+DB_USERNAME=root
+DB_PASSWORD=
+</code></pre>
+
+<p>Notice how it looks identical to a Laravel project. This is by intent.</p>
+
+<h2>Add Composer</h2>
+
+<p>Run <code>composer init</code> in the project root.</p>
+
+<p>Allow it to add PSR-4 autoloading from <code>src/</code>.</p>
+
+<p>Originally the project had an entrypoint via <code>index.php</code> in the root, with logic inside <code>module</code> and <code>include</code> folders. I moved those two folders to <code>src</code>.</p>
+
+<p>Add this line at the top of <code>index.php</code>:</p>
+
+<pre><code class="language-php">require __DIR__ . '/vendor/autoload.php';
+</code></pre>
+
+<p>Here's what <code>composer.json</code> looks like:</p>
+
+<pre><code class="language-json">{
+    "name": "xxx/xxx",
+    "description": "2022 edition of the original BankAlt.com code",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "xxx",
+            "email": "xxx@xxx.xxx"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
+</code></pre>
+
+<h2>Use a Laravel-like directory structure</h2>
+
+<p>The original project structure was a bit archaic:</p>
+
+<pre><code class="language-bash">.svn
+css
+data
+images
+include
+module
+index.php
+application.inc.php
+</code></pre>
+
+<p>I changed it to more closely resemble a Laravel project:</p>
+
+<ul>
+<li>Make <code>public</code> folder and move old <code>css</code>, <code>images</code>, <code>include/js</code> to it.</li>
+<li>Rename <code>images</code> to <code>img</code>.</li>
+<li>Move the old <code>application.inc.php</code> (aka bootloader) to <code>src</code>.</li>
+<li>Move <code>include</code> folder to <code>src</code>.</li>
+</ul>
+
+<p>The new structure looks like this:</p>
+
+<pre><code class="language-bash">.git
+public
+src
+storage
+vendor
+.gitignore
+.env
+.env.example
+composer.json
+composer.lock
+index.php
+</code></pre>
+
+<h2>Fix asset paths</h2>
+
+<p>Relocating the CSS + JS assets broke all the static links, so I had to search/replace the paths globally.</p>
+
+<h2>Replace <code>define</code> constants with <code>const</code></h2>
+
+<p>Read this <a href="https://stackoverflow.com/a/3193704">excellent explanation</a> on why you might prefer <code>const</code> over <code>define</code>, especially in a modern codebase.</p>
+
+<pre><code class="language-php">define('_DIR_MODULE',   _DIR . 'module/');
+// =&gt;
+const _DIR_INCLUDE = __DIR__ . '/include/';
+</code></pre>
+
+<h2>Restore DB, stored procedures, and one function</h2>
+
+<p>Thank goodness for keeping solid backups of ALL the data, including stored procedures! The zip archive contained the entire codebase, graphic assets, full database backups with the SQL tables, stored procedures, and functions, as well as raw design assets (PSD, etc) that should have lived elsewhere, but ultimately I was glad I had them all in one place.</p>
+
+<p>The app is heavily reliant on stored procedures, 43 in fact. Those were the days when I preferred to put a lot of the business logic in stored procedures.</p>
+
+<p>I created a new MySQL 8.1 database and restored from the backup easily. There were no issues restoring SQL exported from MySQL 5.1. I also removed unused stored procedures (present in the DB but not used in the code). Trimmed them down from 43 -> 16.</p>
+
+<p>Later I realized that a stored procedure was also using a stored function. Running it gave a cryptic error.</p>
+
+<pre><code>This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)
+</code></pre>
+
+<p>A quick web-search later yielded these 2 solutions (I chose #1, as #2 appears to be less safe):</p>
+
+<pre><code class="language-sql">/* before */    
+DELIMITER $$
+
+CREATE FUNCTION `bla_bla`() RETURNS varchar(255) CHARSET utf8
+-- function body
+
+
+/* after - solution 1 */    
+DELIMITER $$
+
+CREATE FUNCTION `bla_bla`() RETURNS varchar(255) CHARSET utf8 DETERMINISTIC
+-- function body
+
+
+/* after - solution 2 */    
+DELIMITER $$
+
+SET GLOBAL log_bin_trust_function_creators = 1;
+
+CREATE FUNCTION `bla_bla`() RETURNS varchar(255) CHARSET utf8
+-- function body
+</code></pre>
+
+<h2>Add basic logging</h2>
+
+<p>With respect to keeping dependencies to a minimum I decided to throw together a quick logging class. I made it a singleton, and it does one thing only: appends a new line to the <code>error.log</code> file.</p>
+
+<pre><code class="language-php">namespace App;
+
+/**
+ * Barebones error logging class
+ * 
+ * Location: &lt;project root&gt;/src/Log.php
+ * 
+ * Usage: 
+ * App\Log::error('Your error message');
+ * 
+ * Output (&lt;project root&gt;/storage/logs/error.log):
+ * [2022-04-02 16:20:46] Your error message
+ */
+class Log
+{
+    private const PATH = __DIR__ . '/../storage/logs';
+    private const FILENAME = 'error.log';
+
+    private static self|null $singleton = null;
+
+    protected function __construct()
+    {
+        self::createStorageFolderIfNotExists();
+    }
+
+    public static function singleton(): ?Log
+    {
+        if (self::$singleton === null) {
+            self::$singleton = new self;
+        }
+
+        return self::$singleton;
+    }
+
+    public static function error(string $message): void
+    {
+        (new self)-&gt;writeError($message);
+    }
+
+    private static function createStorageFolderIfNotExists(): void
+    {
+        if (!file_exists(self::PATH)) {
+            mkdir(self::PATH, 0755, true);
+        }
+    }
+
+    private function writeError(string $message): void
+    {
+        $line = '['. self::timestamp() . '] ' . $message;
+        $filename = self::PATH . DIRECTORY_SEPARATOR . self::FILENAME;
+        file_put_contents($filename, $line, FILE_APPEND);
+    }
+
+    private static function timestamp(): string
+    {
+        return date('Y-m-d H:i:s');
+    }
+}
+</code></pre>
+
+<p>Feel free to use it in your own code. Here's the <a href="https://gist.github.com/breadthe/b8a7952bf2bbdf4f6df33ac75ec870f8">gist</a>.</p>
+
+<h2>Fix more image links</h2>
+
+<p>Now that the stored procedures are in place more pieces of the site are beginning to work. The professions pages (containing datatables) work nicely but all the images are missing.</p>
+
+<p>These come from JS/Ajax, so the src paths need to be updated in all the <code>.js</code> files. What used to be <code>/images/</code> is now <code>/img/</code>.</p>
+
+<h2>Fix <code>addslashes</code> deprecation... the lazy way</h2>
+
+<p>There was liberal usage of <code>addslashes($some_string_variable)</code> throughout the app (in ~100 places). Unfortunately I was getting <em>"Deprecated:  addslashes(): Passing null to parameter #1 ($string) of type string is deprecated"</em> errors in various places. I guess in PHP 5.X it wasn't a problem to pass <code>null</code> to this function, but 8.1 complains.</p>
+
+<p>Sometimes it's ok to be lazy to quickly fix or get around a problem. Instead of putting null checks in all 100 places I opted to create a similarly-named global function called <code>__addslashes</code> with built-in null checking. Then I did a global search-replace of all instances of <code>addslashes</code> with the new <code>__addslashes</code> function.</p>
+
+<pre><code class="language-php">function __addslashes(string|null $string): string
+{
+    return addslashes($string ?? '');
+}
+</code></pre>
+
+<h2>Fix <code>preg_replace</code> deprecation</h2>
+
+<p>I came across a couple functions that were calling <code>preg_replace</code> without handling null strings. Quick fix here: typehint and initialize the parameter with empty string, and return early if null.</p>
+
+<pre><code class="language-php">// before
+function blaBla($q)
+{
+    $patterns = [...];
+    $replacements = [...];
+    return preg_replace($patterns, $replacements, $q);
+}
+
+//after
+function blaBla(string|null $q = '')
+{
+    if (!$q) return ''; // put this line at the top
+
+    //...
+}
+</code></pre>
+
+<h2>Admin section</h2>
+
+<p>Because it is hidden from the public, I had totally forgotten about the admin/CMS section. It has tooling for managing site content such as items, images, icons and a few other bits.</p>
+
+<p>Part of its functionality depends on 3rd party sites (from where I scraped item icons for example), but those links are no longer valid. That's just fine, as this site will remain frozen in time and so will the admin section.</p>
+
+<h2>Other considerations &amp; potential improvements</h2>
+
+<p>If this were an operational project, I would strongly consider the following:</p>
+
+<ul>
+<li>Replace <code>msqli</code> with <code>PDO</code></li>
+<li>Make the DB connector class a singleton instead of instantiating it all over the place</li>
+<li>Bundle JS + CSS with a modern tool (such as Vite or Mix)</li>
+<li>Replace jQuery with <a href="alpinejs.dev/">Alpine.js</a></li>
+<li>Generate migrations for the DB tables</li>
+<li>Pull in a package that can execute DB migration</li>
+<li>Pull in a testing package and write some tests</li>
+</ul>
+
+<h2>Even more improvements</h2>
+
+<p>One day when I'm very old and bored I might re-build BankAlt from scratch with Laravel/TALL stack, but for now the effort is not justified.</p>
+
+<h2>Closing words</h2>
+
+<p>I went into this revival with general goals in mind but unsure what exactly to expect. I am very happy to have accomplished 80-90% of my goals in a couple of hours of surgical hacking.</p>
+
+<p>Modernizing a 10-12 year old PHP codebase can be done in stages, starting with the lowest hanging fruit, and this is what I've done here. I employed Composer, limited dependencies to just one, and updated the project structure to match Laravel. The main goal was to load the project in a browser locally and be able to navigate all the pages without errors. This mission was accomplished successfully in less time than I had anticipated.</p>
+
+<p>There's always more that could be improved, but I will hang my hat up here and call it a job well done.</p>
+
+            <section class="mt-8">
+    <div class="font-semibold">
+        Liked this article? Share it on your favorite platform.
+    </div>
+
+    <div class="mt-2 flex flex-wrap gap-2">
+        <a href="javascript:void(0);"
+                id="mastodon-share"
+                data-src="Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1&amp;url=https://chasingcode.dev/blog/upgrading-legacy-php-project-notes"
+                class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Mastodon</a>
+
+        <a href="https://twitter.com/share?url=https://chasingcode.dev/blog/upgrading-legacy-php-project-notes&text=Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1&via=brbcoding"
+           style="background: #55acee;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Twitter</a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chasingcode.dev/blog/upgrading-legacy-php-project-notes"
+           style="background: #3B5998;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Facebook</a>
+
+        <a href="https://reddit.com/submit?url=https://chasingcode.dev/blog/upgrading-legacy-php-project-notes&title=Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022"
+           style="background: #ff5700;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Reddit</a>
+
+        <a href="https://news.ycombinator.com/submitlink?u=https://chasingcode.dev/blog/upgrading-legacy-php-project-notes&t=Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022"
+           style="background: #ff6600;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Hacker News</a>
+
+        <a href="https://www.linkedin.com/shareArticle?url=https://chasingcode.dev/blog/upgrading-legacy-php-project-notes&title=Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022&summary=Notes and observations about reviving an old PHP 5.X project and making it run on PHP 8.1&source=https://chasingcode.dev"
+           style="background: #4875B4;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >LinkedIn</a>
+
+        <a href="mailto:?subject=Notes on Upgrading a Legacy PHP 5.X Project to a Modern Stack in 2022&body=https://chasingcode.dev/blog/upgrading-legacy-php-project-notes"
+           style="background: #444444;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Email</a>
+    </div>
+</section>
+
+<script>
+    // @see https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
+    doDocumentReady(enableMastodonShare);
+
+    /* Generate a share link for the user's Mastodon domain */
+    function mastodonShare(e) {
+
+        // Get the source text
+        const src = e.target.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
+
+        if (domain === "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        const url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doDocumentReady(fn) {
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function enableMastodonShare() {
+        document.getElementById('mastodon-share').addEventListener('click', mastodonShare);
+    }
+</script>        </div>
+
+        <section id="mastodon-webmention">
+    <mastodon-webmention page-url="https://chasingcode.dev/blog/upgrading-legacy-php-project-notes" mastodon-toot-url=""></mastodon-webmention>
+</section>
+
+        
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
+            <div>
+                                    <a href="https://chasingcode.dev/blog/refactor-laravel-eloquent-conditions-to-trait" class="no-underline" title="Older Post: Refactor Laravel Eloquent Query Conditions to a Trait">
+                        &LeftArrow; Refactor Laravel Eloquent Query Conditions to a Trait
+                    </a>
+                            </div>
+
+            <div>
+                                    <a href="https://chasingcode.dev/blog/build-desktop-apps-tauri-php" class="no-underline" title="Newer Post: How to Build Desktop Apps with Tauri and PHP">
+                        How to Build Desktop Apps with Tauri and PHP &RightArrow;
+                    </a>
+                            </div>
+        </nav>
+    </article>
+        </main>
+
+        <footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
+    <div class="w-full flex flex-row justify-center gap-4">
+        <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">RSS</span>
+        </a>
+
+        <a href="https://indieweb.social/@brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">Mastodon</span>
+        </a>
+
+        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-twitter"
+>
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Twitter</span>
+        </a>
+
+        <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Github</span>
+        </a>
+    </div>
+    <small class="italic opacity-60">
+        2018-2024 🦄&nbsp; All content & opinions my own
+    </small>
+</footer>
+
+        <script src="/assets/build/js/main.js?id=e27301064934efeda72c2d9e59dcaac9" async></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Wink and Jigsaw blogging engines, compared.">
+
+            <meta property="og:title" content="Wink vs Jigsaw" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chasingcode.dev/blog/wink-vs-jigsaw"/>
+    <meta property="og:description" content="Wink and Jigsaw blogging engines, compared." />
+
+                    <meta property="og:image" content="https://chasingcode.dev/assets/img/2019-02-03-wink-vs-jigsaw-1200.jpg" />
+        
+        <title>Wink vs Jigsaw | Chasing Code</title>
+
+        <link rel="home" href="https://chasingcode.dev">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Chasing Code Blog">
+
+        
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3824d15a7550cadd6feea53f638e89ad">
+        <link href="https://github.com/breadthe" rel="me">
+        <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
+        <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
+    </head>
+
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+
+        <header class="flex items-center py-4" role="banner">
+    <div class="container flex items-center max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+            <a href="/" title="Chasing Code home" class="flex items-center justify-center gap-2 mr-2">
+                <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="Chasing Code logo" />
+
+                <span class="text-xl leading-none font-bold text-teal-700">Chasing Code</span>
+            </a>
+        </div>
+
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+                            <search
+                    data-belongs-to-blog="1"
+                ></search>
+            
+            <nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+            <button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-6 text-teal-400" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current w-6 text-teal-400" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </div>
+    </div>
+</header>
+
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
+    <ul class="my-0 flex flex-col gap-4 px-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+        <main
+            role="main"
+            class="flex-auto w-full max-w-2xl mx-auto"
+        >
+            
+                <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">Wink vs Jigsaw</h1>
+
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
+                    2019-02-03
+                </small>
+
+                
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="flex flex-wrap gap-2">
+                    <a
+        href="/blog/tags/jigsaw"
+        title=" posts in View posts in #jigsaw"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #jigsaw
+</a>
+                    <a
+        href="/blog/tags/laravel"
+        title=" posts in View posts in #laravel"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #laravel
+</a>
+                    <a
+        href="/blog/tags/wink"
+        title=" posts in View posts in #wink"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #wink
+</a>
+            </small>
+            </div>
+
+            <section class="w-full flex flex-col items-center justify-center relative mt-4">
+        
+        <img src="/assets/img/2019-02-03-wink-vs-jigsaw-1200.jpg" alt="Wink vs Jigsaw" class="rounded">
+
+            </section>
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
+            <p>In my <a href="/blog/welcome-new-new-blog/">previous post</a> I said I would give my reasons for switching from Wink to Jigsaw and also explain what my needs are in relation to a blogging platform.</p>
+
+<h2>Intro</h2>
+
+<p><a href="https://wink.themsaid.com/">Wink</a> is a new open-source blogging platform from <a href="https://themsaid.com/">Mohamed Said</a> (a core Laravel contributor) that was released in late 2018. I follow Mohamed's work with a lot of interest and I was stoked when he announced this project. At the time I was actively searching for an engine to drive my future (and current) blog but nothing felt right. Wordpress was out of the question, for many reasons. Wink seemed just right, because it was built on top of Laravel, my favorite (and day-to-day) PHP framework. Match made in heaven, right?</p>
+
+<p>To make a long story short, I installed Wink as soon as it came out, and integrated it into Omigo.sh. It worked really well, but at the time I had just launched the site and deployed it to Linode. The site itself was also built on Laravel. Soon after, I realized that what I had done was overkill. I needed a much simpler solution.</p>
+
+<p>You see, my plan for Omigo.sh is to have it serve as a central hub that will showcase my personal projects, with a dev blog attached. Realistically I would never need the full power of a Laravel/MySQL server. Static pages would be just what the doctor ordered. This meant Wink was not really a good match, despite its ease of integration.</p>
+
+<p>Enter <a href="https://jigsaw.tighten.co/">Jigsaw</a>, an open-source static site framework also built on Laravel, from the good people at Tighten.co. I'd heard about it before but never really gave it much thought, not really sure why. I had a vague feeling that Jigsaw was a static site generator which was in line with my needs, but I was afraid it didn't come with all the other features I would require for a blog. Boy was I wrong.</p>
+
+<p>One day I had a little extra time on my hands and decided to give Jigsaw a whirl. An hour was enough to convince me to switch to it.</p>
+
+<h2>Engine</h2>
+
+<p><strong>Wink</strong> is built on Laravel, as I mentioned, but it requires a PHP server to run, as well as a database (MySQL). In that respect it is similar to Wordpress (though a great deal less complex).</p>
+
+<p><strong>Jigsaw</strong> also uses Laravel but mostly under the hood, to build the static site bundle. It also lets you use Laravel's familiar templating system to customize the generated output in almost any way you want. Jigsaw is also more flexible than Wink in that it can generate a full site (with various pages and content), not just a blog.</p>
+
+<p>I really wanted a static blogging platform, one that saves posts and blog settings as simple text files that you can version control in a Git repository instead of saving them in a database.</p>
+
+<p>+1 for Jigsaw.</p>
+
+<h2>Content Authoring</h2>
+
+<p><strong>Wink's</strong> bread and butter is the back-end used to author blog posts. It has a rich-text editor that allows you to apply formatting, insert images, etc. Love it, except for the fact that I very much prefer to write technical posts and articles in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>. For that, I don't need a back-end, just a text editor.</p>
+
+<p><strong>Jigsaw</strong> on the other hand uses Markdown as the default way to author content.</p>
+
+<p>+1 for Jigsaw.</p>
+
+<h2>Content Rendering and Templating</h2>
+
+<p><strong>Wink</strong> does not (at the time of this writing) come with any front-end templates. It's up to you to render the blog content in any way you want, preferably with Laravel. And this is just what I did for the first iteration of this blog. It's a fairly trivial process, for a Laravel dev, but at the same time it would be nice to have a starter template that you can customize.</p>
+
+<p><strong>Jigsaw</strong> has 2 starter templates that you can pull in optionally when you install it the first time. One is a blog, the other is a documentation site (I already have a few good uses in mind for the latter). The blog template basically scaffolds the entire blog so you can go ahead and use it right out of the box if you want.</p>
+
+<p>What I really liked about Jigsaw is that the front-end is all built on <a href="https://tailwindcss.com/">TailwindCSS</a>, my all-time favorite CSS framework. And this makes it super-easy to customize.</p>
+
+<p>+1 for Jigsaw.</p>
+
+<h2>Extra Features</h2>
+
+<p>There are a few critical features that I need in a tech blog. <strong>Wink</strong> doesn't render any content out of the box so I would have to build all that myself. Not really something I looked forward to.</p>
+
+<p><strong>Jigsaw</strong> comes with all these configured and ready to go:</p>
+
+<ul>
+<li><em>Search</em> - some sort of JS black magic indexes your content (pages and posts) when you build the static bundle and then lets you search it using the built-in search bar.</li>
+<li><em>Sitemap</em> - automatically generated on build.</li>
+<li><em>Atom feed</em> - once again, generated automatically.</li>
+<li><em>Responsive nav</em> - yet another thing I don't have to worry about.</li>
+</ul>
+
+<p>+1 for Jigsaw.</p>
+
+<h2>Hosting and Deployment</h2>
+
+<p>There's another, very important, area where Jigsaw shines over a classic DB-driven engine like Wink or Wordpress. It's the tiny matter of hosting the site/blog and storing the content. A static site generator means that I don't need a PHP server, nor a database to store my content. It also provides the added benefit of being able to host the entire site with a free service such as <a href="https://www.netlify.com/">Netlify</a> or <a href="https://surge.sh/">Surge</a>.</p>
+
+<p>+1 for Jigsaw.</p>
+
+<h2>Jigsaw's Drawbacks</h2>
+
+<p>OK, I'll hand it to you. A solution such as <strong>Jigsaw</strong> is not perfect for every use-case. There are more complex features that would be very hard, if not impossible, to implement without a server-side language and a database. One of them (correct me if I'm wrong) is a custom commenting system. Yes, you can easily integrate third-party systems (which I will very likely do in the future) but if you want to have full control over users and comments, then you'll need a fully-fledged blogging framework. And this is where <strong>Wink</strong> has the potential to beat Jigsaw.</p>
+
+<p>+1 for Wink.</p>
+
+<h2>Maturity</h2>
+
+<p>While this is not necessarily a critical point, <strong>Jigsaw</strong> does happen to be more mature than <strong>Wink</strong>. Which means that a lot of the kinks have been ironed out by a wider range of contributors, and less breaking changes can be expected going forward. I'll give Jigsaw the advantage here again.</p>
+
+<p>+1 for Jigsaw.</p>
+
+<h2>Conclusion</h2>
+
+<p>Once I found out Jigsaw supported all the features that I wanted in a blogging platform, I was all over it. While custom-building these features is entirely doable, my end-goal in this case was to be able to blog as soon as possible, not to engage in endless coding exercises, regardless how educational they might be.</p>
+
+<p>The Omigo.sh blog is in its very early stages but I very much doubt I'll be changing the engine again anytime soon.</p>
+
+<p>The reality is that platforms like Wink and Jigsaw are very developer-, language-, and framework-centric. If you're not a developer, or don't like tinkering with code, or not a PHP developer, or not even a Laravel developer, neither of these might be the right solution for you. It so happens that Jigsaw checks all the tech boxes for me: static, markdown, Laravel, Vue, TailwindCSS. Which just happens to be the entire focus of this blog.</p>
+
+            <section class="mt-8">
+    <div class="font-semibold">
+        Liked this article? Share it on your favorite platform.
+    </div>
+
+    <div class="mt-2 flex flex-wrap gap-2">
+        <a href="javascript:void(0);"
+                id="mastodon-share"
+                data-src="Wink and Jigsaw blogging engines, compared.&amp;url=https://chasingcode.dev/blog/wink-vs-jigsaw"
+                class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Mastodon</a>
+
+        <a href="https://twitter.com/share?url=https://chasingcode.dev/blog/wink-vs-jigsaw&text=Wink and Jigsaw blogging engines, compared.&via=brbcoding"
+           style="background: #55acee;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Twitter</a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chasingcode.dev/blog/wink-vs-jigsaw"
+           style="background: #3B5998;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Facebook</a>
+
+        <a href="https://reddit.com/submit?url=https://chasingcode.dev/blog/wink-vs-jigsaw&title=Wink vs Jigsaw"
+           style="background: #ff5700;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Reddit</a>
+
+        <a href="https://news.ycombinator.com/submitlink?u=https://chasingcode.dev/blog/wink-vs-jigsaw&t=Wink vs Jigsaw"
+           style="background: #ff6600;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Hacker News</a>
+
+        <a href="https://www.linkedin.com/shareArticle?url=https://chasingcode.dev/blog/wink-vs-jigsaw&title=Wink vs Jigsaw&summary=Wink and Jigsaw blogging engines, compared.&source=https://chasingcode.dev"
+           style="background: #4875B4;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >LinkedIn</a>
+
+        <a href="mailto:?subject=Wink vs Jigsaw&body=https://chasingcode.dev/blog/wink-vs-jigsaw"
+           style="background: #444444;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Email</a>
+    </div>
+</section>
+
+<script>
+    // @see https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
+    doDocumentReady(enableMastodonShare);
+
+    /* Generate a share link for the user's Mastodon domain */
+    function mastodonShare(e) {
+
+        // Get the source text
+        const src = e.target.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
+
+        if (domain === "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        const url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doDocumentReady(fn) {
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function enableMastodonShare() {
+        document.getElementById('mastodon-share').addEventListener('click', mastodonShare);
+    }
+</script>        </div>
+
+        <section id="mastodon-webmention">
+    <mastodon-webmention page-url="https://chasingcode.dev/blog/wink-vs-jigsaw" mastodon-toot-url=""></mastodon-webmention>
+</section>
+
+        
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
+            <div>
+                                    <a href="https://chasingcode.dev/blog/welcome-new-new-blog" class="no-underline" title="Older Post: Welcome to the New New Blog">
+                        &LeftArrow; Welcome to the New New Blog
+                    </a>
+                            </div>
+
+            <div>
+                                    <a href="https://chasingcode.dev/blog/supercharged-dynamic-vue-svg-icon-component" class="no-underline" title="Newer Post: Supercharged Dynamic Vue SVG Icon Component">
+                        Supercharged Dynamic Vue SVG Icon Component &RightArrow;
+                    </a>
+                            </div>
+        </nav>
+    </article>
+        </main>
+
+        <footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
+    <div class="w-full flex flex-row justify-center gap-4">
+        <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">RSS</span>
+        </a>
+
+        <a href="https://indieweb.social/@brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">Mastodon</span>
+        </a>
+
+        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-twitter"
+>
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Twitter</span>
+        </a>
+
+        <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Github</span>
+        </a>
+    </div>
+    <small class="italic opacity-60">
+        2018-2024 🦄&nbsp; All content & opinions my own
+    </small>
+</footer>
+
+        <script src="/assets/build/js/main.js?id=e27301064934efeda72c2d9e59dcaac9" async></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>

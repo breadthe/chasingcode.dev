@@ -1,5 +1,5 @@
 _drafts
-/build_*/
+/build_local/
 /cache
 /node_modules/
 /source/assets/build/
