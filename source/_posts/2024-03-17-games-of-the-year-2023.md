@@ -6,13 +6,13 @@ date: 2024-03-17
 # updated:
 description: The best games I played in 2023
 tags: [games,review]
-featured: true
-image: 
-image_thumb: 
+featured: false
+image:
+image_thumb:
 image_author:
 image_author_url:
 image_unsplash:
-mastodon_toot_url: 
+mastodon_toot_url:
 ---
 
 I don't, as a rule, pay full price for any game (with some exceptions). Like many people spoiled by Steam sales and a huge Steam library, I am patient enough to wait until a game goes on sale before pulling the trigger. I've got plenty to play until then.
@@ -30,9 +30,9 @@ A word on **Switch vs PC**. These are the two gaming platforms I currently own. 
 **Genre** 1st/3rd person open world exploration, factory building and automation
 **Platform** Steam/PC
 
-Take [Factorio](https://www.factorio.com/), add 3D and some unique mechanics, subtract a bunch of anxiety, and you get Satisfactory. The overarching story is also similar: you're stranded on an alien planet and need to survive and evolve the technology to the point where you can leave. I like it because I have a soft spot for sandbox games, especially ones that let you alter the environment permanently. 
+Take [Factorio](https://www.factorio.com/), add 3D and some unique mechanics, subtract a bunch of anxiety, and you get Satisfactory. The overarching story is also similar: you're stranded on an alien planet and need to survive and evolve the technology to the point where you can leave. I like it because I have a soft spot for sandbox games, especially ones that let you alter the environment permanently.
 
-There's a lot to like here. There are multiple technology tiers (up to 9 at last count), each progressively harder to reach due to requiring increasingly complex materials and factories to produce said materials. There's a lot of open world exploration, first on foot, later with vehicles. 
+There's a lot to like here. There are multiple technology tiers (up to 9 at last count), each progressively harder to reach due to requiring increasingly complex materials and factories to produce said materials. There's a lot of open world exploration, first on foot, later with vehicles.
 
 Exploration will take a lot of your time (something I enjoy), because you will be searching for various resources you'll need to progress. Along the way you'll discover crashed ships with scattered materials that you can pilfer and new technology that you can assimilate, but also alien denizens that'll get rather annoyed to have you around, not to mention toxic or radioactive areas that are off-limits until you can research appropriate PPE.
 
@@ -177,7 +177,7 @@ Every time you complete a loop, monster levels go up but so does the loot. So ne
 Monsters also drop two other kinds of resources. There are materials that you use for meta progression in between runs (after you ded) to expand your base, hence giving you various bonuses. Then there's the meat-and-potatoes of this game: building and terrain cards that go into a deck and can be placed on the map strategically. Beware though: older cards that overflow the deck will be automatically discarded, so you should use the best ones soon.
 
 The terrain cards fall in several categories.
- 
+
 For starters, there are map tiles that will give you resources when you place them on your map. When similar tiles are adjacent, they reinforce each other, giving you survivability bonuses (like more HP, or regen after each loop). At the same time, if a "mini-biome" becomes too large it will spawn additional enemy types. For example the mountain biome will spawn harpies when it reaches a certain size.
 
 Then there are enemy structures that you can place either on the path itself, or next to it. They will spawn new enemies roughly every day cycle. Juggling how many buildings you add before you are overwhelmed with spawns is a key part of the strategy.
@@ -186,7 +186,7 @@ Finally there are buff tiles that can be placed near the loop path. You'll get s
 
 There are several hero classes themed around the standard melee, rogue, magic, etc. One of my favorite is the necromancer who auto-summons skeletons to fight for them. With this class your equipment is focused around skeleton survivability and damage. With other classes you can play defensive, offensive, vampiric, or evasion builds. Evasion is particularly satisfying, as you will take very few hits when you have a ton of evasion, with the downside that your defense will suffer hence making even small hits feel painful.
 
-The end goal is to survive enough loops in order to trigger an arch-boss. There's probably more to it, but that's all I can say as I haven't got to that part yet. 
+The end goal is to survive enough loops in order to trigger an arch-boss. There's probably more to it, but that's all I can say as I haven't got to that part yet.
 
 **The good** - Unique gameplay. Can be left to run in the background and do its thing, with sporadic interaction to place tiles or equip better gear. This reviewer finds the retro art very pleasing.
 **The bad** - Long grind to beat it.
