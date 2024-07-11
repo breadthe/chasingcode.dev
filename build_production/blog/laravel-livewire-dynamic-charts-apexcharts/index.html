@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Full stack dev in Chicago | PHP | Laravel | Livewire | Svelte | Tailwind | Tauri">
+
+            <meta property="og:title" content="How to Create Dynamic Charts with Laravel Livewire and ApexCharts" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts"/>
+    <meta property="og:description" content="" />
+
+                    <meta property="og:image" content="https://chasingcode.dev/assets/img/2020-10-20-livewire-apexcharts.jpg" />
+        
+        <title>How to Create Dynamic Charts with Laravel Livewire and ApexCharts | Chasing Code</title>
+
+        <link rel="home" href="https://chasingcode.dev">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Chasing Code Blog">
+
+        
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3824d15a7550cadd6feea53f638e89ad">
+        <link href="https://github.com/breadthe" rel="me">
+        <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
+        <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
+    </head>
+
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+
+        <header class="flex items-center py-4" role="banner">
+    <div class="container flex items-center max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+            <a href="/" title="Chasing Code home" class="flex items-center justify-center gap-2 mr-2">
+                <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="Chasing Code logo" />
+
+                <span class="text-xl leading-none font-bold text-teal-700">Chasing Code</span>
+            </a>
+        </div>
+
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+                            <search
+                    data-belongs-to-blog="1"
+                ></search>
+            
+            <nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+            <button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-6 text-teal-400" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current w-6 text-teal-400" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </div>
+    </div>
+</header>
+
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
+    <ul class="my-0 flex flex-col gap-4 px-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+        <main
+            role="main"
+            class="flex-auto w-full max-w-2xl mx-auto"
+        >
+            
+                <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">How to Create Dynamic Charts with Laravel Livewire and ApexCharts</h1>
+
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
+                    2020-10-20
+                </small>
+
+                
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="flex flex-wrap gap-2">
+                    <a
+        href="/blog/tags/laravel"
+        title=" posts in View posts in #laravel"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #laravel
+</a>
+                    <a
+        href="/blog/tags/livewire"
+        title=" posts in View posts in #livewire"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #livewire
+</a>
+                    <a
+        href="/blog/tags/apex-charts"
+        title=" posts in View posts in #apex-charts"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #apex-charts
+</a>
+            </small>
+            </div>
+
+            <section class="w-full flex flex-col items-center justify-center relative mt-4">
+        
+        <img src="/assets/img/2020-10-20-livewire-apexcharts.jpg" alt="How to Create Dynamic Charts with Laravel Livewire and ApexCharts" class="rounded">
+
+            </section>
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
+            <p>Cycling has become one of my most cherished hobbies in 2020, and I did what every developer does when they love a hobby: built an app for it.</p>
+
+<p>I'm using <a href="https://developers.strava.com/">Strava's API</a> to pull my rides into a Laravel 8 app. I use this data to create statistics for various metrics that are important to me.</p>
+
+<p>I want to display the data in 2 forms: tabular and charts. I also want to be able to filter it dynamically, without page loads, and I chose <a href="https://laravel-livewire.com/">Livewire</a> 2.x for this. As an avid cyclist, I ride both road and trail/singletrack. I have 2 bikes (road + mountain), and I want to track total stats, as well as individual stats for each bike.</p>
+
+<p>For charting, I decided to use <a href="https://apexcharts.com/">ApexCharts</a>, a JavaScript charting library that meets my modest needs.</p>
+
+<p>Now that I have these building blocks, how do I put them together? One of my requirements is to be able to <strong>update the charts dynamically</strong> with Livewire. It took me a while to figure out how to do this, but here it is.</p>
+
+<p><strong>Note</strong> During the time it took me to write this article, <a href="https://twitter.com/asantibanez">Andrés Santibáñez</a> released a <a href="https://github.com/asantibanez/livewire-charts">Livewire package</a> for ApexCharts that should be more flexible for the general population. I think there is value in my own solution, not just for the learning aspect, but also because it's customized to my very specific requirements.</p>
+
+<h2>What I'm making</h2>
+
+<p>The first chart I wanted is a total of riding miles per year (as tracked by Strava). In addition, I also wanted to be able to filter the chart by bike, using a dropdown. So when I select a specific bike, the chart should update to display only the yearly distances for that bike.</p>
+
+<p>Here's a gif of the final chart.</p>
+
+<p><img src="https://media.giphy.com/media/UJ497lGjwE5EIGkki2/giphy.gif" alt="Dynamic chart filtering with Livewire" /></p>
+
+<h2>The components</h2>
+
+<p>A Laravel app can be structured in many ways, but I ♥️ the Blade component system that was introduced in v7, so that's what I'm using. First, I started out by creating a regular view (<code>resources/views/stats.blade.php</code>) where I can display my chart(s).</p>
+
+<p>Then there are 2 components that do the heavy lifting:</p>
+
+<ul>
+<li>a Livewire component which retrieves the chart data from the database and filters it when needed</li>
+<li>a regular Laravel component acting as a wrapper for ApexCharts</li>
+</ul>
+
+<p>Each generated component comes with a controller and a view.  Here's a <a href="https://gist.github.com/breadthe/1ed8eec0b464d511877b06a04898bbef">gist</a> for the 2 controllers + 2 views, also embedded below:</p>
+
+<script src="https://gist.github.com/breadthe/1ed8eec0b464d511877b06a04898bbef.js"></script>
+
+<p><strong>Note</strong> File paths in the gist appear as <code>app%Http%Livewire%Stats%DistanceByYear.php</code> instead of <code>app/Http/Livewire/Stats/DistanceByYear.php</code> due to GitHub's inability to use slashes in the file name.</p>
+
+<h2>Livewire tricks and gotchas</h2>
+
+<p>👉 The <code>stats.blade.php</code> view is where I render multiple Livewire chart components. This also contains a bit of code which links the ApexCharts script from the official CDN and pushes it to the top of my JS scripts stack. For context, in my <code>app.blade.php</code> I have a corresponding <code>@stack('scripts')</code> right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+<p>👉 The chart wrapper <code>ApexCharts.php</code> must have a unique id <code>$chartId</code>, to allow multiple chart instances on the same page. I experimented with passing a UUID but settled on a static identifier like "distance-by-year".</p>
+
+<p>👉 To refresh the chart data when a filter is applied, I need to emit an event. Notice this part <code>$this-&gt;emit("refreshChartData-{$this-&gt;chartId}", [...])</code> in <code>DistanceByYear.php</code>. The event has a dynamic identifier which ensures that only a specific chart gets updated (in situations where multiple charts are on the same page). In this case, the event id resolves to <code>refreshChartData-distance-by-year</code>. But on the same page I have another chart which is identified as <code>distance-by-month</code>, and the corresponding event is <code>refreshChartData-distance-by-month</code>. The second argument of the event emitter is the (optional) data payload. If you've used events in <a href="/blog/tags/vue/">Vue</a>, this pattern should look familiar.</p>
+
+<p>👉 Emitting an event is only half the equation. To actually get the chart to update, I need to listen for the event, then call a couple of ApexCharts methods responsible for updating the chart data.</p>
+
+<p>👉 Listening and reacting to a Livewire event turned out to be the hardest part to figure out. It's just not very clearly explained in the <a href="https://laravel-livewire.com/docs/2.x/events">official documentation</a>, or at least not in a way that makes sense to me. So after much experimentation and web searches, I arrived at the following ugly-duckling-yet-functional solution (see <code>apex-charts-blade.php</code>):</p>
+
+<pre><code class="language-js">document.addEventListener('livewire:load', () =&gt; {
+    @this.on('refreshChartData-{!! $chartId !!}', (chartData) =&gt; {
+        chart.updateOptions({
+            xaxis: {
+                categories: chartData.categories
+            }
+        });
+        chart.updateSeries([{
+            data: chartData.seriesData,
+            name: chartData.seriesName,
+        }]);
+    });
+});
+</code></pre>
+
+<p>👉 The key part to listening in JavaScript to an event emitted in PHP/Livewire, seems to be wrapping everything in this:</p>
+
+<pre><code class="language-js">document.addEventListener('livewire:load', () =&gt; {
+    @this.on('refreshChartData-{!! $chartId !!}', (chartData) =&gt; {
+        // do JavaScripty stuff with chartData
+    });
+});
+</code></pre>
+
+<p>👉 Notice that I'm wrapping the entire JavaScript logic in a auto-executing function call <code>(function () {...}())</code>. Tangentially, here's a good explainer for <a href="https://coolaj86.com/articles/how-and-why-auto-executing-function.html">auto-executing functions in JavaScript</a>. The reason I'm doing this is to isolate the scope of the <code>chart</code> object to each individual instance. This allows me to refresh the chart data without re-instantiating the ApexCharts object, and prevents weird behavior with multiple globally defined <code>chart</code> objects.</p>
+
+<h2>Conclusion</h2>
+
+<p>I hope this shed some light on how you might create a Livewire wrapper for the ApexCharts library.</p>
+
+<p>There are several caveats to my approach:</p>
+
+<ul>
+<li>It is not the most elegant solution, but <em>it works</em> for what I'm building. If you have a better solution, hit me up on <a href="https://twitter.com/brbcoding">Twitter</a>.</li>
+<li>It's not very reusable either, but thankfully there's the package I mentioned at the top of the article for those who prefer that</li>
+<li>I'm using just a tiny fraction of ApexCharts' capabilities and options, and I'm exposing very little of that to Livewire. And I'm fine with that for now, because I can always add more later as the need arises.</li>
+</ul>
+
+<p>Having said that, I'm happy with the way this turned out, especially with the learning process figuring out the intricacies of integrating Livewire and ApexCharts.</p>
+
+<p>Finally, here's how two independently filtering charts behave on the same page.</p>
+
+<p><img src="https://media.giphy.com/media/H2xHUVXlbTjZJFLzpC/giphy.gif" alt="Multiple independently filtering charts with Livewire" /></p>
+
+            <section class="mt-8">
+    <div class="font-semibold">
+        Liked this article? Share it on your favorite platform.
+    </div>
+
+    <div class="mt-2 flex flex-wrap gap-2">
+        <a href="javascript:void(0);"
+                id="mastodon-share"
+                data-src="&amp;url=https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts"
+                class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Mastodon</a>
+
+        <a href="https://twitter.com/share?url=https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts&text=&via=brbcoding"
+           style="background: #55acee;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Twitter</a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts"
+           style="background: #3B5998;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Facebook</a>
+
+        <a href="https://reddit.com/submit?url=https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts&title=How to Create Dynamic Charts with Laravel Livewire and ApexCharts"
+           style="background: #ff5700;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Reddit</a>
+
+        <a href="https://news.ycombinator.com/submitlink?u=https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts&t=How to Create Dynamic Charts with Laravel Livewire and ApexCharts"
+           style="background: #ff6600;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Hacker News</a>
+
+        <a href="https://www.linkedin.com/shareArticle?url=https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts&title=How to Create Dynamic Charts with Laravel Livewire and ApexCharts&summary=&source=https://chasingcode.dev"
+           style="background: #4875B4;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >LinkedIn</a>
+
+        <a href="mailto:?subject=How to Create Dynamic Charts with Laravel Livewire and ApexCharts&body=https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts"
+           style="background: #444444;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Email</a>
+    </div>
+</section>
+
+<script>
+    // @see https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
+    doDocumentReady(enableMastodonShare);
+
+    /* Generate a share link for the user's Mastodon domain */
+    function mastodonShare(e) {
+
+        // Get the source text
+        const src = e.target.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
+
+        if (domain === "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        const url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doDocumentReady(fn) {
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function enableMastodonShare() {
+        document.getElementById('mastodon-share').addEventListener('click', mastodonShare);
+    }
+</script>        </div>
+
+        <section id="mastodon-webmention">
+    <mastodon-webmention page-url="https://chasingcode.dev/blog/laravel-livewire-dynamic-charts-apexcharts" mastodon-toot-url=""></mastodon-webmention>
+</section>
+
+        
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
+            <div>
+                                    <a href="https://chasingcode.dev/blog/electron-generate-mac-windows-app-icons" class="no-underline" title="Older Post: How to Generate Mac and Windows Icons for an Electron Forge App">
+                        &LeftArrow; How to Generate Mac and Windows Icons for an Electron Forge App
+                    </a>
+                            </div>
+
+            <div>
+                                    <a href="https://chasingcode.dev/blog/my-first-side-project" class="no-underline" title="Newer Post: My First Side Project - BankAlt.com">
+                        My First Side Project - BankAlt.com &RightArrow;
+                    </a>
+                            </div>
+        </nav>
+    </article>
+        </main>
+
+        <footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
+    <div class="w-full flex flex-row justify-center gap-4">
+        <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">RSS</span>
+        </a>
+
+        <a href="https://indieweb.social/@brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">Mastodon</span>
+        </a>
+
+        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-twitter"
+>
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Twitter</span>
+        </a>
+
+        <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Github</span>
+        </a>
+    </div>
+    <small class="italic opacity-60">
+        2018-2024 🦄&nbsp; All content & opinions my own
+    </small>
+</footer>
+
+        <script src="/assets/build/js/main.js?id=e27301064934efeda72c2d9e59dcaac9" async></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>

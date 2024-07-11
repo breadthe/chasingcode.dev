@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="A guide for building an edit in place component using Laravel Livewire and Alpine.js.">
+
+            <meta property="og:title" content="Build an edit in place component with Livewire &amp; Alpine.js" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs"/>
+    <meta property="og:description" content="A guide for building an edit in place component using Laravel Livewire and Alpine.js." />
+
+                    <meta property="og:image" content="https://chasingcode.dev/assets/img/2020-03-19-1secret-edit-in-place-livewire-alpine.gif" />
+        
+        <title>Build an edit in place component with Livewire &amp; Alpine.js | Chasing Code</title>
+
+        <link rel="home" href="https://chasingcode.dev">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Chasing Code Blog">
+
+        
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3824d15a7550cadd6feea53f638e89ad">
+        <link href="https://github.com/breadthe" rel="me">
+        <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
+        <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
+    </head>
+
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+
+        <header class="flex items-center py-4" role="banner">
+    <div class="container flex items-center max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+            <a href="/" title="Chasing Code home" class="flex items-center justify-center gap-2 mr-2">
+                <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="Chasing Code logo" />
+
+                <span class="text-xl leading-none font-bold text-teal-700">Chasing Code</span>
+            </a>
+        </div>
+
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+                            <search
+                    data-belongs-to-blog="1"
+                ></search>
+            
+            <nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+            <button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-6 text-teal-400" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current w-6 text-teal-400" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </div>
+    </div>
+</header>
+
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
+    <ul class="my-0 flex flex-col gap-4 px-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+        <main
+            role="main"
+            class="flex-auto w-full max-w-2xl mx-auto"
+        >
+            
+                <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">Build an edit in place component with Livewire &amp; Alpine.js</h1>
+
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
+                    2020-03-19
+                </small>
+
+                                    <small class="hidden md:block">&bull;</small>
+
+                    <small class="font-mono">
+                        <strong>updated: </strong>
+                        2020-03-21
+                    </small>
+                
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="flex flex-wrap gap-2">
+                    <a
+        href="/blog/tags/laravel"
+        title=" posts in View posts in #laravel"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #laravel
+</a>
+                    <a
+        href="/blog/tags/livewire"
+        title=" posts in View posts in #livewire"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #livewire
+</a>
+                    <a
+        href="/blog/tags/alpinejs"
+        title=" posts in View posts in #alpinejs"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #alpinejs
+</a>
+            </small>
+            </div>
+
+            <section class="w-full flex flex-col items-center justify-center relative mt-4">
+        
+        <img src="/assets/img/2020-03-19-1secret-edit-in-place-livewire-alpine.gif" alt="Build an edit in place component with Livewire &amp; Alpine.js" class="rounded">
+
+            </section>
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
+            <p>I recently implemented an "edit in place" feature on my SaaS <a href="https://1secret.app/">1Secret</a>, following the addition of labels for secrets. In 1Secret, you can see all the ongoing secrets on the dashboard, and they are identified by the unique short URL. This, however, is tedious to remember. While it is a minor feature, the addition of optional labels - to more clearly identify the contents of secret without opening it - was something that had been bothering me for a while.</p>
+
+<p>A label is a short text description, and it can be initially created with the secret. I also wanted the ability to edit it later, directly from the dashboard. Hence the idea of "in place or inline editing".</p>
+
+<p>What follows is a complete guide on how I built this feature using <a href="https://laravel-livewire.com/">Livewire</a> and <a href="https://github.com/alpinejs/alpine/">AlpineJS</a>, a deadly combo on top of Laravel, that makes a lot of SPA-like behavior possible without writing complex JavaScript. Livewire brings the back-end reactivity while Alpine handles the UI interactions. So if you're a fan of PHP and Laravel in particular, give this a 👀.</p>
+
+<p><strong>TLDR</strong> Don't feel like reading through the entire thing? No problem, here's the <a href="https://github.com/breadthe/laravel-livewire-demo">repo</a> so you can dive right in.</p>
+
+<blockquote>
+  <p><strong>Update</strong> Additional tinkering revealed some quirks with nested Livewire components in combination with AlpineJS. Instead of rewriting the entire guide (for the 3rd time), I'll show you my solution at the end. The repo has already been updated to reflect the changes.<br />
+  <a href="#update-2020-03-21">Jump to the update →</a></p>
+</blockquote>
+
+<h2>Installation</h2>
+
+<blockquote>
+  <p>You'll find the code for this demo <a href="https://github.com/breadthe/laravel-livewire-demo">here</a>. Currently it contains an additional Livewire component that handles real-time tag &amp; text search filtering.</p>
+</blockquote>
+
+<p>In your Laravel project (preferably Laravel 7.x), you'll need to install Livewire and AlpineJS.</p>
+
+<h3>Livewire</h3>
+
+<p>Follow the official <a href="https://laravel-livewire.com/docs/installation">installation instructions</a>. I skipped the config &amp; vendor assets publishing part and did only the bare minimum:</p>
+
+<pre><code class="language-bash">composer require livewire/livewire
+</code></pre>
+
+<p>In <code>resources/views/layouts/app.blade.php</code> import the Livewire assets (css + js):</p>
+
+<pre><code class="language-html">    ...
+    &lt;!-- Laravel &lt;= 7 --&gt;
+    @livewireStyles
+
+    &lt;!-- optional for Laravel &gt;= 7 --&gt;
+    &lt;livewire:styles/&gt;
+&lt;/head&gt;
+...
+    &lt;!-- Laravel &lt;= 7 --&gt;
+    @livewireScripts
+
+    &lt;!-- optional for Laravel &gt;= 7 --&gt;
+    &lt;livewire:scripts/&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p>Notice the 2 ways of importing the assets, depending on your Laravel version. The first method works in all versions.</p>
+
+<h3>AlpineJS</h3>
+
+<p>AlpineJS can be loaded from the CDN, which works just fine for me. Add it to <code>app.blade.php</code> right above <code>@livewireScripts</code>:</p>
+
+<pre><code class="language-html">...
+    &lt;script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.1.2/dist/alpine.js" defer&gt;&lt;/script&gt;
+
+    @livewireScripts
+&lt;/body&gt;
+</code></pre>
+
+<h2>Finding a use-case for editing in place</h2>
+
+<p>Luckily the <a href="https://github.com/breadthe/laravel-livewire-demo">demo project</a> I created is already setup with data that can be reused. We're talking a list of "widgets" (random sentences), to which I randomly assigned a variable number of tags. The tags are color names.</p>
+
+<p>Not shown is a column belonging to <code>widgets</code> called <code>short_id</code>, which mimics the short URL on 1Secret. Its purpose here is simply presentational - I want to display it as a default when the widget name is empty. This is what I'm starting from:</p>
+
+<p><img src="/assets/img/2020-03-19-starting-point.png" alt="Starting point" /></p>
+
+<p>For this guide, I want to be able to edit the widget names in place. I won't be showing exactly what I did in 1Secret, to avoid exposing the internals, but the idea is similar.</p>
+
+<h2>Specifications</h2>
+
+<p>Let's whip up a few simple requirements for this feature.</p>
+
+<p><strong>Data</strong></p>
+
+<ul>
+<li>Limit the length of the string to 100 characters without explicit validation</li>
+<li>Trim whitespace</li>
+<li>Empty values are saved as <code>NULL</code> in the database</li>
+</ul>
+
+<p><strong>UI</strong></p>
+
+<ul>
+<li>Click the widget name to edit it</li>
+<li>ESC cancels editing and preserves the original value</li>
+<li>ENTER saves it</li>
+<li>Buttons that mirror the 2 functions above</li>
+<li>You may save an empty widget, whereby the <code>short_id</code> will be displayed instead</li>
+<li>Just to get a little fancy, let's make an actual widget name bold, while keeping the short_id placeholder normal</li>
+</ul>
+
+<h2>Locating the view</h2>
+
+<p>The view we're aiming to enhance is <code>resources/views/livewire/widgets.blade.php</code>. The code that displays the widget name:</p>
+
+<pre><code class="language-html">...
+@foreach($widgets as $widget)
+    &lt;div class="flex items-center justify-between p-2 -mx-2 hover:bg-gray-100"&gt;
+        {{ $widget-&gt;name }}
+...
+</code></pre>
+
+<p>The first task is to replace the static widget name with a Livewire component.</p>
+
+<h2>Generating the Livewire component</h2>
+
+<p>This guide requires a single Livewire component that can be generated at the command line (I use <code>a</code> as an alias for <code>php artisan</code>).</p>
+
+<pre><code class="language-bash">php artisan livewire:make EditName
+</code></pre>
+
+<p><img src="/assets/img/2020-03-19-generate-livewire-component.png" alt="Generate a Livewire component" /></p>
+
+<p>Two files will be generated: a view and a controller class.</p>
+
+<p>The public properties in the controller are accessible from the view. Data flows back and forth as if by magic, no JS required. Of course, <em>there is</em> JS behind the scenes but the developer need not know about it. To achieve the desired interactivity, a little something extra is needed, and that's where AlpineJS comes in.</p>
+
+<h2>Replacing the static part of the view with Livewire</h2>
+
+<p>Back in  <code>resources/views/livewire/widgets.blade.php</code>, let's perform a simple swap with the newly created Livewire view component. Replace <code>{{ $widget-&gt;name }}</code> with a Livewire directive:</p>
+
+<pre><code class="language-html">...
+@foreach($widgets as $widget)
+    &lt;div class="flex items-center justify-between p-2 -mx-2 hover:bg-gray-100"&gt;
+        @livewire('edit-name', compact('widget'), key($widget-&gt;id))
+...
+</code></pre>
+
+<p>Notice that the syntax is identical to Laravel's <code>@include</code> directive. In addition, I'm passing the <code>$widget</code> object to the Livewire component. For nested Livewire components (which is the case here, but may not be for you) it is strongly recommended to pass a unique value to <code>key()</code>, just like in Vue. This will help Livewire identify the child item when the parent is updated.</p>
+
+<p>In the newly created Livewire view:</p>
+
+<pre><code class="language-html">&lt;div class="p-2"&gt;
+    {{ $origName }}
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>CAUTION</strong> The Blade view must have <strong>one, and only one</strong> root element, in this case the <code>div</code>. If you omit it and just use <code>{{ $origName }}</code>, you'll get a <code>ErrorException Undefined offset: 1</code> error, then spend half an hour like a doofus trying to figure out what you did wrong.</p>
+
+<p>Before this can work, there's additional work to be done in <code>EditName</code>, so let's open it up and add the following:</p>
+
+<pre><code class="language-php">class EditName extends Component
+{
+    public $origName; // initial widget name state
+
+    public function mount(Widget $widget)
+    {
+        $this-&gt;origName = $widget-&gt;name;
+    }
+
+    public function render()
+    {
+        return view('livewire.edit-name');
+    }
+}
+</code></pre>
+
+<p><code>mount</code> essentially acts like <code>__construct</code> and we can use it to initialize certain properties, such as the widget that I passed from the view. Here, <code>$origName</code> will automatically become available to the view - just remember that it must be declared public.</p>
+
+<p><strong>CAUTION</strong> Though you may be tempted to do this...</p>
+
+<pre><code class="language-php">public $widget;
+
+public function mount(Widget $widget)
+{
+    $this-&gt;widget = $widget;
+}
+</code></pre>
+
+<p>... don't. Any public property will be exposed to the front-end via JavaScript, so if your widget object contains sensitive info (not the case here), you'll want to extract only the properties you actually need.</p>
+
+<p>Now if we reload the page, everything should have been "rewired" but still look the same.</p>
+
+<h2>UI interactions - make each widget name editable</h2>
+
+<p>So I want the widget name to change into a text input when I click it. I suspect this might be doable with pure Livewire, but the additional server requests aren't justified especially since we're not passing data, but merely toggling the UI. That's where AlpineJS comes in. We've already installed it earlier so we're good to go.</p>
+
+<p>First I'll show you the complete code for the UI interactions, then I'll explain it.</p>
+
+<p>resources/views/livewire/<strong>edit-name.blade.php</strong></p>
+
+<pre><code class="language-html">&lt;div
+    x-data="
+        {
+             isEditing: false,
+             isName: '{{ $isName }}',
+             focus: function() {
+                const textInput = this.$refs.textInput;
+                textInput.focus();
+                textInput.select();
+             }
+        }
+    "
+    x-cloak
+&gt;
+    &lt;div
+        class="p-2"
+        x-show=!isEditing
+    &gt;
+        &lt;span
+            x-bind:class="{ 'font-bold': isName }"
+            x-on:click="isEditing = true; $nextTick(() =&gt; focus())"
+        &gt;{{ $origName }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div x-show=isEditing class="flex flex-col"&gt;
+        &lt;form class="flex" wire:submit.prevent="save"&gt;
+            &lt;input
+                type="text"
+                class="px-2 border border-gray-400 text-lg shadow-inner"
+                placeholder="100 characters max."
+                x-ref="textInput"
+                wire:model.lazy="newName"
+                x-on:keydown.enter="isEditing = false"
+                x-on:keydown.escape="isEditing = false"
+            &gt;
+            &lt;button type="button" class="px-1 ml-2 text-3xl" title="Cancel" x-on:click="isEditing = false"&gt;𐄂&lt;/button&gt;
+            &lt;button
+                type="submit"
+                class="px-1 ml-1 text-3xl font-bold text-green-600"
+                title="Save"
+                x-on:click="isEditing = false"
+            &gt;✓&lt;/button&gt;
+        &lt;/form&gt;
+        &lt;small class="text-xs"&gt;Enter to save, Esc to cancel&lt;/small&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><img src="/assets/img/2020-03-19-ui-interactions-alpinejs.gif" alt="UI interactions with AlpineJS" /></p>
+
+<p>Cool! Now that we have the UI interaction basics in place, some explanations are in order. Essentially there are two divs inside the root element, each holding a span and a form with an input field, respectively.</p>
+
+<p>Right at the top, in the wrapper div, there's a <code>x-data</code> Alpine directive (should look very familiar to Vue devs) that holds the state of the component as an object.</p>
+
+<ul>
+<li><code>isEditing: false,</code> toggles the visibility of the span/input; it's what gives the illusion that we are editing the item inline</li>
+<li><code>isName: '{{ $isName }}',</code> is calculated on the back-end and controls the font weight of the item (bold for actual widgets)</li>
+<li><code>focus</code> is a function that is used to place the cursor inside the text input and select the contents</li>
+</ul>
+
+<p>Below, <code>x-cloak</code> is used to prevent the browser from flashing hidden content before styling is applied.</p>
+
+<p>Moving on to the <code>span</code> element, it is nested inside a parent <code>div</code> whose visibility is... well... visible.</p>
+
+<ul>
+<li><code>x-bind:class="{ 'font-bold': isName }"</code> will apply the <code>font-bold</code> class if <code>isName</code> is true. This isn't functional yet, it needs the logic from the back-end.</li>
+<li><code>x-on:click="isEditing = true; $nextTick(() =&gt; focus())"</code> performs two functions: first it hides the span while revealing the text input, second it calls the function that places the cursor in the input and selects the contents.</li>
+<li><strong>ATTENTION</strong> In this particular situation, <code>$nextTick</code> is a savior. Without it, Alpine will try to invoke <code>focus()</code> at the same time that it toggles visibility, but the DOM has not yet finished updating, so the input will not be focused after it becomes visible. With <code>$nextTick</code> we are performing the two actions in a synchronous fashion, allowing the input to be rendered before interacting with it.</li>
+</ul>
+
+<p>The <code>form</code> element containing the text input and the two buttons is inside a parent <code>div</code> that is hidden by default. If we hadn't used <code>x-cloak</code>, the form and its contents would briefly flash when the page is first loaded (or hard-reloaded).</p>
+
+<ul>
+<li>the form intercepts a <code>submit</code> event using a Livewire directive this time, <code>wire:submit.prevent="save"</code>. In English: "prevent the form from being submitted the usual way, instead call the <code>save()</code> method on the back-end"</li>
+<li><code>x-ref="textInput"</code> provides a reference to the text input, that we can use in the <code>focus()</code> function to focus inside it</li>
+<li><code>wire:model.lazy="newName"</code> is the second Livewire directive and its purpose is to bind the contents of the text input to the <code>$newName</code> variable. This variable is not yet defined on the back-end, which is why the input is not pre-filled with the widget name. The <code>lazy</code> modifier ensures that only 1 request is made to the back-end, when the input loses focus, instead of every keypress.</li>
+<li><code>x-on:keydown.enter</code> and <code>x-on:keydown.escape</code> both perform the same action, namely to exit "edit mode"</li>
+<li>the two buttons have an <code>x-on:click</code> directive that also exits "edit mode"</li>
+</ul>
+
+<p>Attempting to save the new value will error out, of course, since the back-end isn't wired properly yet. Let's go and do that.</p>
+
+<h2>On to the back-end</h2>
+
+<p>Once again, I'll dump the code in the Livewire controller class, then I'll explain it.</p>
+
+<p>app/Http/Livewire/<strong>EditName.php</strong></p>
+
+<pre><code class="language-php">class EditName extends Component
+{
+    public $widgetId;
+    public $shortId;
+    public $origName; // initial widget name state
+    public $newName; // dirty widget name state
+    public $isName; // determines whether to display it in bold text
+
+    public function mount(Widget $widget)
+    {
+        $this-&gt;widgetId = $widget-&gt;id;
+        $this-&gt;shortId = $widget-&gt;short_id;
+        $this-&gt;origName = $widget-&gt;name;
+
+        $this-&gt;init($widget); // initialize the component state
+    }
+
+    public function render()
+    {
+        return view('livewire.edit-name');
+    }
+
+    public function save()
+    {
+        $widget = Widget::findOrFail($this-&gt;widgetId);
+        $newName = (string)Str::of($this-&gt;newName)-&gt;trim()-&gt;substr(0, 100); // trim whitespace &amp; more than 100 characters
+        $newName = $newName === $this-&gt;shortId ? null : $newName; // don't save it as widget name it if it's identical to the short_id
+
+        $widget-&gt;name = $newName ?? null;
+        $widget-&gt;save();
+
+        $this-&gt;init($widget); // re-initialize the component state with fresh data after saving
+    }
+
+    private function init(Widget $widget)
+    {
+        $this-&gt;origName = $widget-&gt;name ?: $this-&gt;shortId;
+        $this-&gt;newName = $this-&gt;origName;
+        $this-&gt;isName = $widget-&gt;name ?? false;
+    }
+}
+</code></pre>
+
+<p>The <code>mount()</code> method has grown quite a bit in size.</p>
+
+<p>Now in addition to the widget name (<code>origName</code>), I'm saving the widget id (so I can locate the record when I update it), the short id (will be used as a placeholder when the widget name is empty), a dirty state (<code>newName</code>) that is used to bind the text input to, and a flag that toggles the font weight of the item.</p>
+
+<p>An <code>init()</code> method take care of setting the initial state whenever 1) the component is initiated, and 2) an item is saved/updated.</p>
+
+<p>Finally the <code>save()</code> method (which needs to be public) is the same we called earlier in the template with <code>wire:submit.prevent="save"</code>.</p>
+
+<h2>Putting it all together</h2>
+
+<p>At this point both the view and the controller should be wired up correctly. Let's fire it up.</p>
+
+<p>Notice that the dirty state represented by <code>$newName</code> will persist in the text input, should you cancel halfway through editing. This is a design choice I made, though it could have just as well cleared the input or reset it to the original value.</p>
+
+<p><img src="/assets/img/2020-03-19-putting-it-all-together.gif" alt="Putting it all together" /></p>
+
+<p>There you go, awesome inline editing capabilities with a minimum of JavaScript. If this isn't a new golden age for the monolith, I don't know what is!</p>
+
+<p>The <a href="https://github.com/breadthe/laravel-livewire-demo">code for the demo</a> should you wish to peruse it.</p>
+
+<p><a name="update-2020-03-21"></a></p>
+
+<h2>Update - Fixing the nested component functionality</h2>
+
+<p>The purpose of the original guide was to show how inline editing can be done with Livewire and Alpine. Mission accomplished, <em>however</em>, I built this functionality on top of an existing project, nesting the edit-in-place component inside the previous Livewire component. So the (now) parent component deals with filtering items (or widgets as I call them) on the page through either text search or tag selection. At the same time, each widget's name can be edited in place.</p>
+
+<p>Livewire has some rules and, dare I say, limitations around nested components. Here are some of these:</p>
+
+<ul>
+<li>The child component must have a single root element.</li>
+<li>(undocumented) That root element must be a <code>div</code>.</li>
+<li>If the child component is part of a loop, it must have a <code>key</code> prop with a unique value, otherwise Livewire will get confused when it tries to update the DOM (e.g. filtering items). An example of a unique value would be the current items's id.</li>
+<li>(undocumented) If the child is inside a loop (typically <code>@foreach</code>), it should be the first line in the loop, i.e. it cannot be nested inside, say, another div.</li>
+<li>The root <code>div</code> in the child component must not have Alpine directives assigned to it. In other words, if you want put <code>x-data</code> on the root div, you'll have to nest another div inside it, and initiate Alpine inside <em>that one</em>. While this rule is illustrated in the code samples from the <a href="https://laravel-livewire.com/docs/alpine-js">official documentation</a> it is not explicitly mentioned. A fellow dev pointed it out on Github before I noticed it.</li>
+</ul>
+
+<p>I ran into some of these limitations while experimenting on how to fix the issues that started appearing after my original implementation.</p>
+
+<p>Essentially what happened was that initial filtering (whether through text or tags) of widgets succeeded, meaning that the list of items was reduced properly. Removing the filter by deleting the text in the search box or deselecting the tags, however, produced garbled content, e.g. items not being actually restored to the correct state, or items being restored with the wrong tags. In addition, errors were thrown in the browser dev console and the JS functionality broke at this point, requiring a page reload before functionality could be restored.</p>
+
+<p>So here's what I did to fix this. First, in the parent component <code>resources/views/livewire/widgets.blade.php</code>.</p>
+
+<p><strong>Before</strong></p>
+
+<p>Inside the <code>@foreach</code> is a div which contains, in order: the edit-in-place Livewire child component, and the list of tags for the current widget in the loop. This wrapper div is part of the problem, as it relates to the rules above.</p>
+
+<pre><code class="language-html">...
+@foreach($widgets as $widget)
+    &lt;div class="flex items-center justify-between p-2 -mx-2 hover:bg-gray-100"&gt;
+        @livewire('edit-name', compact('widget'), key($widget-&gt;id))
+
+        @if($tags = $widget-&gt;tags)
+            &lt;div class="-mx-1 text-right"&gt;
+                @foreach($tags as $tag)
+                    &lt;small class="mx-1 {{ in_array($tag-&gt;id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-2 shadow"&gt;
+                        {{ $tag-&gt;name }}
+                    &lt;/small&gt;
+                @endforeach
+            &lt;/div&gt;
+        @endif
+    &lt;/div&gt;
+@endforeach
+</code></pre>
+
+<p><strong>After</strong></p>
+
+<p>Now the Livewire child component becomes the first element in the loop. This takes care of one problem.</p>
+
+<p>If you're wondering why this works now, I'm pretty certain it relates to the <code>key</code> part I mentioned earlier. Previously, the wrapper div had no unique identifier assigned to it. This confused Livewire when the filters were removed, but now the first element in the loop is identified by <code>key($widget-&gt;id)</code>, so items can be redrawn properly.</p>
+
+<pre><code class="language-html">...
+@foreach($widgets as $widget)
+    @livewire('edit-name', compact('widget'), key($widget-&gt;id))
+
+    @if($tags = $widget-&gt;tags)
+        &lt;div class="mb-4 -mt-1 -mx-2"&gt;
+            @foreach($tags as $tag)
+                &lt;small class="mx-1 {{ in_array($tag-&gt;id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-2 shadow"&gt;
+                    {{ $tag-&gt;name }}
+                &lt;/small&gt;
+            @endforeach
+        &lt;/div&gt;
+    @endif
+@endforeach
+</code></pre>
+
+<p>Moving on to the child component, where the inline editing is handled, <code>resources/views/livewire/edit-name.blade.php</code>.</p>
+
+<p><strong>Before</strong></p>
+
+<p>Alpine directives are on the root div. Now I know that this is not OK.</p>
+
+<pre><code class="language-html">&lt;div
+    x-data="
+        {
+             isEditing: false,
+             isName: '{{ $isName }}',
+             focus: function() {
+                const textInput = this.$refs.textInput;
+                textInput.focus();
+                textInput.select();
+             }
+        }
+    "
+    x-cloak
+&gt;
+    &lt;!-- the rest of the code --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>After</strong></p>
+
+<p>Instead, I've added a wrapper div with some of the styling pulled from the parent component (after removing the div that previously wrapped the child). Now the desired functionality has been restored.</p>
+
+<pre><code class="language-html">&lt;div class="flex items-center justify-between -mx-2 hover:bg-gray-100"&gt;
+    &lt;div
+        class="p-2"
+        x-show=!isEditing
+        class="flex items-center justify-between w-full"
+        x-data="
+            {
+                 isEditing: false,
+                 isName: '{{ $isName }}',
+                 focus: function() {
+                    const textInput = this.$refs.textInput;
+                    textInput.focus();
+                    textInput.select();
+                 }
+            }
+        "
+        x-cloak
+    &gt;
+        &lt;!-- the rest of the code --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>But...</strong></p>
+
+<p>There still remains a minor annoyance that I'm momentarily at a loss for how to fix. Take a look:</p>
+
+<p><img src="/assets/img/2020-03-21-livewire-nested-components-fix.png" alt="After fixing nested Livewire components" /></p>
+
+<p>This newly-discovered paradigm forced me to change the layout a little. While previously the widget name and tag list were displayed inline (name on the left, tags on the right), now the tags are below. Why? Because of what goes on in the loop:</p>
+
+<p><strong>Before</strong></p>
+
+<pre><code class="language-html">...
+@foreach($widgets as $widget)
+    &lt;div class="flex items-center justify-between"&gt;
+        &lt;div&gt;
+            &lt;!-- Widget name --&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;!-- Widget tags --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+@endforeach
+</code></pre>
+
+<p><strong>After</strong></p>
+
+<pre><code class="language-html">...
+@foreach($widgets as $widget)
+    &lt;div&gt;
+        &lt;!-- Widget name --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- Widget tags --&gt;
+    &lt;/div&gt;
+@endforeach
+</code></pre>
+
+<p>Now granted, I have also experimented with moving the tags inside the child component, while also passing through the <code>$filters</code> array from the parent. This worked, but now the filtered tags weren't highlighted anymore.</p>
+
+<p>I suspect the broken highlighting micro-feature comes from the lack of reactivity between parent -> child, as <a href="https://laravel-livewire.com/docs/nesting-components">documented here</a>. To quote: "<em>Nested components CAN accept data parameters from their parents, HOWEVER they are not reactive like props from a Vue component.</em>".</p>
+
+<p>And this makes a lot of sense, since I update the <code>$filters</code> array in the parent.</p>
+
+<p>At the end of the day this little annoyance is something that I managed to work around, but at the same time I believe it was worth mentioning for posterity.</p>
+
+            <section class="mt-8">
+    <div class="font-semibold">
+        Liked this article? Share it on your favorite platform.
+    </div>
+
+    <div class="mt-2 flex flex-wrap gap-2">
+        <a href="javascript:void(0);"
+                id="mastodon-share"
+                data-src="A guide for building an edit in place component using Laravel Livewire and Alpine.js.&amp;url=https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs"
+                class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Mastodon</a>
+
+        <a href="https://twitter.com/share?url=https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs&text=A guide for building an edit in place component using Laravel Livewire and Alpine.js.&via=brbcoding"
+           style="background: #55acee;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Twitter</a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs"
+           style="background: #3B5998;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Facebook</a>
+
+        <a href="https://reddit.com/submit?url=https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs&title=Build an edit in place component with Livewire &amp; Alpine.js"
+           style="background: #ff5700;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Reddit</a>
+
+        <a href="https://news.ycombinator.com/submitlink?u=https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs&t=Build an edit in place component with Livewire &amp; Alpine.js"
+           style="background: #ff6600;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Hacker News</a>
+
+        <a href="https://www.linkedin.com/shareArticle?url=https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs&title=Build an edit in place component with Livewire &amp; Alpine.js&summary=A guide for building an edit in place component using Laravel Livewire and Alpine.js.&source=https://chasingcode.dev"
+           style="background: #4875B4;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >LinkedIn</a>
+
+        <a href="mailto:?subject=Build an edit in place component with Livewire &amp; Alpine.js&body=https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs"
+           style="background: #444444;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Email</a>
+    </div>
+</section>
+
+<script>
+    // @see https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
+    doDocumentReady(enableMastodonShare);
+
+    /* Generate a share link for the user's Mastodon domain */
+    function mastodonShare(e) {
+
+        // Get the source text
+        const src = e.target.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
+
+        if (domain === "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        const url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doDocumentReady(fn) {
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function enableMastodonShare() {
+        document.getElementById('mastodon-share').addEventListener('click', mastodonShare);
+    }
+</script>        </div>
+
+        <section id="mastodon-webmention">
+    <mastodon-webmention page-url="https://chasingcode.dev/blog/edit-in-place-component-livewire-alpinejs" mastodon-toot-url=""></mastodon-webmention>
+</section>
+
+        
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
+            <div>
+                                    <a href="https://chasingcode.dev/blog/automate-laravel-6-7-upgrade" class="no-underline" title="Older Post: Automate the Laravel 6 -&gt; 7 Upgrade with PHPStorm">
+                        &LeftArrow; Automate the Laravel 6 -&gt; 7 Upgrade with PHPStorm
+                    </a>
+                            </div>
+
+            <div>
+                                    <a href="https://chasingcode.dev/blog/build-svg-icon-component-laravel-7" class="no-underline" title="Newer Post: Build an SVG Icon Component with Laravel 7">
+                        Build an SVG Icon Component with Laravel 7 &RightArrow;
+                    </a>
+                            </div>
+        </nav>
+    </article>
+        </main>
+
+        <footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
+    <div class="w-full flex flex-row justify-center gap-4">
+        <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">RSS</span>
+        </a>
+
+        <a href="https://indieweb.social/@brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">Mastodon</span>
+        </a>
+
+        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-twitter"
+>
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Twitter</span>
+        </a>
+
+        <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Github</span>
+        </a>
+    </div>
+    <small class="italic opacity-60">
+        2018-2024 🦄&nbsp; All content & opinions my own
+    </small>
+</footer>
+
+        <script src="/assets/build/js/main.js?id=e27301064934efeda72c2d9e59dcaac9" async></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="A technique for increasing the size of the MySQL partition in a Vagrant/Homestead local environment.">
+
+            <meta property="og:title" content="Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database"/>
+    <meta property="og:description" content="A technique for increasing the size of the MySQL partition in a Vagrant/Homestead local environment." />
+
+                    <meta property="og:image" content="https://chasingcode.dev/assets/img/2019-11-14-fix-vagrant-homestead-cant-create-database.jpg" />
+        
+        <title>Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error | Chasing Code</title>
+
+        <link rel="home" href="https://chasingcode.dev">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Chasing Code Blog">
+
+        
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3824d15a7550cadd6feea53f638e89ad">
+        <link href="https://github.com/breadthe" rel="me">
+        <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
+        <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
+    </head>
+
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+
+        <header class="flex items-center py-4" role="banner">
+    <div class="container flex items-center max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+            <a href="/" title="Chasing Code home" class="flex items-center justify-center gap-2 mr-2">
+                <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="Chasing Code logo" />
+
+                <span class="text-xl leading-none font-bold text-teal-700">Chasing Code</span>
+            </a>
+        </div>
+
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+                            <search
+                    data-belongs-to-blog="1"
+                ></search>
+            
+            <nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+            <button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-6 text-teal-400" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current w-6 text-teal-400" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </div>
+    </div>
+</header>
+
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
+    <ul class="my-0 flex flex-col gap-4 px-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+        <main
+            role="main"
+            class="flex-auto w-full max-w-2xl mx-auto"
+        >
+            
+                <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error</h1>
+
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
+                    2019-11-14
+                </small>
+
+                
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="flex flex-wrap gap-2">
+                    <a
+        href="/blog/tags/laravel"
+        title=" posts in View posts in #laravel"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #laravel
+</a>
+            </small>
+            </div>
+
+            <section class="w-full flex flex-col items-center justify-center relative mt-4">
+        
+        <img src="/assets/img/2019-11-14-fix-vagrant-homestead-cant-create-database.jpg" alt="Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error" class="rounded">
+
+            </section>
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
+            <p>Ever ran out of disk space on your Vagrant/Homestead database partition? Neither did I... until recently. Here's how it happened and how I fixed it.</p>
+
+<h2>How did this even happen?</h2>
+
+<p>The image above is a screenshot of the error thrown by my HeidiSQL (Windows) DB client.</p>
+
+<p>I had just imported a large amount of data into a few different databases for a Laravel project. I use <a href="https://laravel.com/docs/6.x/homestead">Homestead</a> as my local dev environment for Laravel projects on both Mac and Windows.</p>
+
+<p>Now this error in particular is not very helpful. It states that it can't create the database, without any context. It took some investigating before I found out what really caused it.</p>
+
+<p>As you will later learn, Homestead creates a separate partition for storing the databases, and it provisions 10GB for this purpose. That should be more than enough for any amount of local apps, right? Well, sure, until you need to import production data on which to test certain functionality that you can't test without actual, live data.</p>
+
+<blockquote>
+  <p><strong>Sidenote</strong> I'm well aware that one way to handle this would be to write seeders but that particular project wasn't well suited for that. I needed not just live data but <em>historical</em> data as well. Finally, it was a lot quicker to import from prod than to write complex seeders.</p>
+</blockquote>
+
+<h2>How do you even fix this?</h2>
+
+<p><strong>Disclaimer</strong> This process was a lot of trial-and-error and I bungled some steps, but as I've mentioned before, my specialty is not sysadmin and the end result is close to what I wanted.</p>
+
+<p><strong>WARNING</strong> Try this at your own risk and only in your local environment, never in production, unless you really know what you're doing. But then you wouldn't be reading this article 😉</p>
+
+<p>First thing was to find out more about this error. So I <code>SSH</code>ed into my Vagrant box (<code>vagrant ssh</code>) and ran <code>perror</code> on error <code>1006</code>:</p>
+
+<pre><code class="language-bash">$ perror 1006
+
+MySQL error code 1006 (ER_CANT_CREATE_DB): Can't create database '%-.192s' (errno: %d)
+</code></pre>
+
+<p>Digging around the web I found a suggestion to fix this using <code>mysql_upgrade</code> (spoiler: it doesn't):</p>
+
+<pre><code class="language-bash">$ mysql_upgrade
+
+Checking if update is needed.
+Checking server version.
+Running queries to upgrade MySQL server.
+mysql_upgrade: [ERROR] 3: Error writing file './mysql/#sql-4876_5.frm' (Errcode: 28 - No space left on device)
+</code></pre>
+
+<p>Let's run <code>perror</code> again, on error <code>28</code> this time:</p>
+
+<pre><code class="language-bash">$ perror 28
+
+OS error code  28:  No space left on device
+</code></pre>
+
+<p>Ah now I'm getting somewhere. Let me check the disk space real quick (more helpful <a href="/blog/useful-linux-commands/">Linux commands here</a>):</p>
+
+<pre><code class="language-bash">$ df -h
+
+Filesystem                               Size  Used Avail Use% Mounted on
+udev                                     967M     0  967M   0% /dev
+tmpfs                                    200M  7.0M  193M   4% /run
+/dev/mapper/homestead--vg-root            18G  5.1G   12G  31% /
+tmpfs                                    997M  8.0K  997M   1% /dev/shm
+tmpfs                                    5.0M     0  5.0M   0% /run/lock
+tmpfs                                    997M     0  997M   0% /sys/fs/cgroup
+/dev/mapper/homestead--vg-mysql--master  9.8G  9.3G     0 100% /homestead-vg/master
+vagrant                                  953G  167G  786G  18% /vagrant
+home_vagrant_dbone                       953G  167G  786G  18% /home/vagrant/dbone
+home_vagrant_dbtwo                       953G  167G  786G  18% /home/vagrant/dbtwo
+home_vagrant_dbthree                     953G  167G  786G  18% /home/vagrant/dbthree
+...
+tmpfs                                    200M     0  200M   0% /run/user/1000
+</code></pre>
+
+<p>Note that I anonymized the actual databases to "dbone, dbtwo, etc" for this example.</p>
+
+<p>The line <code>/dev/mapper/homestead--vg-mysql--master  9.8G  9.3G     0 100% /homestead-vg/master</code> indicates that the MySQL partition is full.</p>
+
+<p>How do I know it is the DB partition? The database files are usually stored in <code>/var/lib/mysql</code> on Ubuntu Linux.</p>
+
+<pre><code class="language-bash">$ ls -al /var/lib/mysql
+
+lrwxrwxrwx 1 root root 20 Sep 29 12:53 /var/lib/mysql -&gt; /homestead-vg/master
+</code></pre>
+
+<p>This shows that <code>/var/lib/mysql</code> is aliased to <code>/homestead-vg/master</code>.</p>
+
+<p>Run again with trailing <code>/</code> to see the actual contents:</p>
+
+<pre><code class="language-bash">$ ls -al /var/lib/mysql/
+
+total 188552
+drwxr-xr-x 23 mysql mysql     4096 Nov  9 20:23 .
+drwxr-xr-x  3 root  root      4096 Sep 29 12:53 ..
+-rw-r-----  1 mysql mysql       56 Sep 29 12:52 auto.cnf
+drwxr-x---  2 mysql mysql     4096 Nov  9 18:35 dbone
+drwxr-x---  2 mysql mysql     4096 Nov  9 18:45 dbtwo
+drwxr-x---  2 mysql mysql     4096 Nov  9 18:49 dbthree
+drwxr-x---  2 mysql mysql     4096 Nov  4 14:27 dbfour
+-rw-r--r--  1 root  root         0 Sep 29 12:52 debian-5.7.flag
+drwxr-x---  2 mysql mysql    12288 Nov  9 17:31 dbfive
+drwxr-x---  2 mysql mysql     4096 Sep 29 12:53 homestead
+-rw-r-----  1 mysql mysql      895 Nov  5 15:11 ib_buffer_pool
+-rw-r-----  1 mysql mysql        0 Nov  9 19:53 ib_buffer_pool.incomplete
+-rw-r-----  1 mysql mysql 79691776 Nov  9 20:18 ibdata1
+-rw-r-----  1 mysql mysql 50331648 Nov  9 20:18 ib_logfile0
+-rw-r-----  1 mysql mysql 50331648 Nov  9 19:11 ib_logfile1
+-rw-r-----  1 mysql mysql 12582912 Nov  9 20:23 ibtmp1
+...
+drwx------  2 root  root     16384 Sep 29 12:53 lost+found
+drwxr-x---  2 mysql mysql     4096 Nov  9 20:23 mysql
+...
+drwxr-x---  2 mysql mysql     4096 Nov  9 20:23 performance_schema
+...
+drwxr-x---  2 mysql mysql    12288 Sep 29 12:52 sys
+...
+</code></pre>
+
+<p>Let's check how much space my databases take. The following command lists all the databases and their sizes on disk, sorted by size in descending order.</p>
+
+<pre><code class="language-bash">$ sudo du -ch -d 1 /var/lib/mysql/ | sort -shr
+
+9.3G    /var/lib/mysql/
+9.3G    total
+4.0G    /var/lib/mysql/dbone
+1.4G    /var/lib/mysql/dbtwo
+1.1G    /var/lib/mysql/dbthree
+833M    /var/lib/mysql/dbfour
+831M    /var/lib/mysql/dbfive
+495M    /var/lib/mysql/x
+376M    /var/lib/mysql/xx
+133M    /var/lib/mysql/xxx
+75M     /var/lib/mysql/xxxx
+25M     /var/lib/mysql/mysql
+20M     /var/lib/mysql/xxxxx
+2.2M    /var/lib/mysql/xxxxxx
+1.1M    /var/lib/mysql/performance_schema
+676K    /var/lib/mysql/sys
+16K     /var/lib/mysql/lost+found
+8.0K    /var/lib/mysql/xxxxxxx
+8.0K    /var/lib/mysql/xxxxxxxx
+8.0K    /var/lib/mysql/xxxxxxxxx
+8.0K    /var/lib/mysql/xxxxxxxxxx
+8.0K    /var/lib/mysql/homestead
+8.0K    /var/lib/mysql/xxxxxxxxxxx
+</code></pre>
+
+<p>Next, I thought I should dig into the <a href="https://github.com/laravel/settler/blob/master/scripts/provision.sh">Homestead provisioning script</a>. Line 372 mentions that the MySQL storage partition is 10GB and can be expanded with <code>lvextend</code>. Looking at the total disk usage it's clear that I was hitting the limit.</p>
+
+<h2>Increasing the size of the database partition</h2>
+
+<p>So now I know that I need to increase the size of the partition. Let's go with 20GB. Here's a <a href="https://linux.die.net/man/8/lvextend">good explainer on lvextend</a>.</p>
+
+<p><strong>Take 1</strong> What is the logical volume? After some trial-error, I figure it's <code>homestead-vg/thinpool</code> (get it from the Homestead provisioning script).</p>
+
+<pre><code class="language-bash">$ sudo lvextend -L +10G homestead-vg/thinpool
+
+  Size of logical volume homestead-vg/thinpool_tdata changed from 40.00 GiB (10240 extents) to 50.00 GiB (12800 extents).
+  Logical volume homestead-vg/thinpool_tdata successfully resized.
+</code></pre>
+
+<p><strong>Take 2</strong> Read some more <a href="https://www.rootusers.com/how-to-increase-the-size-of-a-linux-lvm-by-expanding-the-virtual-machine-disk/">here</a>.
+Actually no, it's <code>homestead-vg/mysql-master</code>. It comes from <code>homestead--vg-mysql--master</code>. The previous command just increased the size of my entire Vagrant box. Let's try this again...</p>
+
+<pre><code class="language-bash">$ sudo lvextend -L +10G homestead-vg/mysql-master
+
+  Size of logical volume homestead-vg/mysql-master changed from 10.00 GiB (2560 extents) to 20.00 GiB (5120 extents).
+  Logical volume homestead-vg/mysql-master successfully resized.
+</code></pre>
+
+<p><strong>Take 3</strong> Extend the logical volume over the partition at <code>/dev/sda1</code>. Probably this is what I should have done initially.</p>
+
+<pre><code class="language-bash">$ sudo lvextend homestead-vg/mysql-master /dev/sda1
+
+  WARNING: Sum of all thin volume sizes (79.29 GiB) exceeds the size of thin pool homestead-vg/thinpool and the amount of free space in volume group (59.29 GiB).
+  WARNING: You have not turned on protection against thin pools running out of space.
+  WARNING: Set activation/thin_pool_autoextend_threshold below 100 to trigger automatic extension of thin pools before they get full.
+  Size of logical volume homestead-vg/mysql-master changed from 20.00 GiB (5120 extents) to 79.29 GiB (20299 extents).
+  Logical volume homestead-vg/mysql-master successfully resized.
+</code></pre>
+
+<p>Oops, I think I might have accidentally increased the size of the MySQL partition to 80GB. Which is cool in my case, I have plenty of disk space on that particular dev machine.</p>
+
+<pre><code class="language-bash">$ sudo fdisk -l
+
+...
+Disk /dev/mapper/homestead--vg-mysql--master: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 65536 bytes / 65536 bytes
+</code></pre>
+
+<p>For some reason the MySQL database partition is still taking 20GB. Hmm... List the logical volumes:</p>
+
+<pre><code class="language-bash">$ sudo lvdisplay
+
+...
+--- Logical volume ---
+  LV Path                /dev/homestead-vg/mysql-master
+  LV Name                mysql-master
+  VG Name                homestead-vg
+  LV UUID                rYcEGB-dEB2-xJ4F-i8n4-u1KX-R7CU-xHmMhL
+  LV Write Access        read/write
+  LV Creation host, time vagrant, 2019-09-29 12:53:09 +0000
+  LV Pool name           thinpool
+  LV Status              available
+  # open                 1
+  LV Size                79.29 GiB
+  Mapped size            12.03%
+  Current LE             20299
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:6
+</code></pre>
+
+<p>Finally I found out that I needed to resize the file system so it can use the additional space:</p>
+
+<pre><code class="language-bash">$ sudo resize2fs /dev/homestead-vg/mysql-master
+
+resize2fs 1.44.1 (24-Mar-2018)
+Filesystem at /dev/homestead-vg/mysql-master is mounted on /homestead-vg/master; on-line resizing required
+old_desc_blocks = 2, new_desc_blocks = 10
+The filesystem on /dev/homestead-vg/mysql-master is now 20786176 (4k) blocks long.
+</code></pre>
+
+<p>Check the partition size again:</p>
+
+<pre><code class="language-bash">$ sudo fdisk -l
+
+...
+Disk /dev/mapper/homestead--vg-mysql--master: 79.3 GiB, 85140176896 bytes, 166289408 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 65536 bytes / 65536 bytes
+</code></pre>
+
+<p>Check the disk size one final time:</p>
+
+<pre><code class="language-bash">$ df -h
+
+Filesystem                               Size  Used Avail Use% Mounted on
+udev                                     967M     0  967M   0% /dev
+tmpfs                                    200M  7.0M  193M   4% /run
+/dev/mapper/homestead--vg-root            18G  5.1G   12G  31% /
+tmpfs                                    997M  8.0K  997M   1% /dev/shm
+tmpfs                                    5.0M     0  5.0M   0% /run/lock
+tmpfs                                    997M     0  997M   0% /sys/fs/cgroup
+/dev/mapper/homestead--vg-mysql--master   78G  9.3G   66G  13% /homestead-vg/master
+vagrant                                  953G  167G  786G  18% /vagrant
+home_vagrant_dbone                       953G  167G  786G  18% /home/vagrant/dbone
+home_vagrant_dbtwo                       953G  167G  786G  18% /home/vagrant/dbtwo
+home_vagrant_dbthree                     953G  167G  786G  18% /home/vagrant/dbthree
+...
+tmpfs                                    200M     0  200M   0% /run/user/1000
+</code></pre>
+
+<p>Well now it's way bigger than I wanted (80GB instead of 20GB) but at least it <em>should</em> have more space than I'll ever need.</p>
+
+<h2>Conclusion</h2>
+
+<p>Don't try this at home kids. Or do, rather, as long as you stay away from production and limit it to your Vagrant environment. Keep in mind that starting at <strong>Take 1</strong> above I screwed up some steps by running an additional resize or two, which happened because I didn't understand correctly how logical and physical volume resizing works. I still don't 😬 but I was able to correct the problem and continue working.</p>
+
+            <section class="mt-8">
+    <div class="font-semibold">
+        Liked this article? Share it on your favorite platform.
+    </div>
+
+    <div class="mt-2 flex flex-wrap gap-2">
+        <a href="javascript:void(0);"
+                id="mastodon-share"
+                data-src="A technique for increasing the size of the MySQL partition in a Vagrant/Homestead local environment.&amp;url=https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database"
+                class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Mastodon</a>
+
+        <a href="https://twitter.com/share?url=https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database&text=A technique for increasing the size of the MySQL partition in a Vagrant/Homestead local environment.&via=brbcoding"
+           style="background: #55acee;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Twitter</a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database"
+           style="background: #3B5998;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Facebook</a>
+
+        <a href="https://reddit.com/submit?url=https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database&title=Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error"
+           style="background: #ff5700;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Reddit</a>
+
+        <a href="https://news.ycombinator.com/submitlink?u=https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database&t=Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error"
+           style="background: #ff6600;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Hacker News</a>
+
+        <a href="https://www.linkedin.com/shareArticle?url=https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database&title=Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error&summary=A technique for increasing the size of the MySQL partition in a Vagrant/Homestead local environment.&source=https://chasingcode.dev"
+           style="background: #4875B4;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >LinkedIn</a>
+
+        <a href="mailto:?subject=Fix Vagrant Homestead &quot;Can&#039;t create database&quot; Error&body=https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database"
+           style="background: #444444;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Email</a>
+    </div>
+</section>
+
+<script>
+    // @see https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
+    doDocumentReady(enableMastodonShare);
+
+    /* Generate a share link for the user's Mastodon domain */
+    function mastodonShare(e) {
+
+        // Get the source text
+        const src = e.target.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
+
+        if (domain === "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        const url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doDocumentReady(fn) {
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function enableMastodonShare() {
+        document.getElementById('mastodon-share').addEventListener('click', mastodonShare);
+    }
+</script>        </div>
+
+        <section id="mastodon-webmention">
+    <mastodon-webmention page-url="https://chasingcode.dev/blog/fix-vagrant-homestead-cant-create-database" mastodon-toot-url=""></mastodon-webmention>
+</section>
+
+        
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
+            <div>
+                                    <a href="https://chasingcode.dev/blog/fix-laravel-no-input-file-specified" class="no-underline" title="Older Post: How to Fix Laravel&#039;s Dreaded &quot;No input file specified&quot; Error">
+                        &LeftArrow; How to Fix Laravel&#039;s Dreaded &quot;No input file specified&quot; Error
+                    </a>
+                            </div>
+
+            <div>
+                                    <a href="https://chasingcode.dev/blog/install-or-renew-ssl-certificate-ubuntu-nginx" class="no-underline" title="Newer Post: How to Install or Renew a SSL Certificate in Ubuntu with Nginx">
+                        How to Install or Renew a SSL Certificate in Ubuntu with Nginx &RightArrow;
+                    </a>
+                            </div>
+        </nav>
+    </article>
+        </main>
+
+        <footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
+    <div class="w-full flex flex-row justify-center gap-4">
+        <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">RSS</span>
+        </a>
+
+        <a href="https://indieweb.social/@brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">Mastodon</span>
+        </a>
+
+        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-twitter"
+>
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Twitter</span>
+        </a>
+
+        <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Github</span>
+        </a>
+    </div>
+    <small class="italic opacity-60">
+        2018-2024 🦄&nbsp; All content & opinions my own
+    </small>
+</footer>
+
+        <script src="/assets/build/js/main.js?id=e27301064934efeda72c2d9e59dcaac9" async></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>

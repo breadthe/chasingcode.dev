@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="How to build a basic Strava webhook with Laravel.">
+
+            <meta property="og:title" content="A possible Laravel-Strava webhook solution" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chasingcode.dev/blog/laravel-strava-webhook-solution"/>
+    <meta property="og:description" content="How to build a basic Strava webhook with Laravel." />
+
+                    <meta property="og:image" content="https://source.unsplash.com/6sB8gMRlEAU/?fit=max&amp;w=1350" />
+        
+        <title>A possible Laravel-Strava webhook solution | Chasing Code</title>
+
+        <link rel="home" href="https://chasingcode.dev">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Chasing Code Blog">
+
+        
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3824d15a7550cadd6feea53f638e89ad">
+        <link href="https://github.com/breadthe" rel="me">
+        <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
+        <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
+    </head>
+
+    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+
+        <header class="flex items-center py-4" role="banner">
+    <div class="container flex items-center max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+            <a href="/" title="Chasing Code home" class="flex items-center justify-center gap-2 mr-2">
+                <img width="48" height="48" src="/assets/images/chasingcode-logo.png" alt="Chasing Code logo" />
+
+                <span class="text-xl leading-none font-bold text-teal-700">Chasing Code</span>
+            </a>
+        </div>
+
+        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+                            <search
+                    data-belongs-to-blog="1"
+                ></search>
+            
+            <nav class="hidden sm:flex items-center justify-end gap-8 text-lg">
+    <ul class="flex gap-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+            <button class="flex justify-center items-center h-10 px-4 rounded-full sm:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-6 text-teal-400" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current w-6 text-teal-400" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </div>
+    </div>
+</header>
+
+<nav id="js-nav-menu" class="hidden sm:hidden mb-4">
+    <ul class="my-0 flex flex-col gap-4 px-4">
+        <li>
+    <a
+        href=/blog
+        class="text-teal-700 hover:text-teal-900 text-teal-900 underline underline-offset-4 decoration-4 decoration-teal-400"
+    >Blog</a>
+</li>
+
+        <li>
+    <a
+        href=/archive
+        class="text-teal-700 hover:text-teal-900"
+    >Archive</a>
+</li>
+
+        <li>
+    <a
+        href=/games
+        class="text-teal-700 hover:text-teal-900"
+    >Games</a>
+</li>
+
+        <li>
+    <a
+        href=/uses
+        class="text-teal-700 hover:text-teal-900"
+    >Uses</a>
+</li>
+
+        <li>
+    <a
+        href=/about
+        class="text-teal-700 hover:text-teal-900"
+    >About</a>
+</li>
+
+        <li>
+    <a
+        href=/contact
+        class="text-teal-700 hover:text-teal-900"
+    >Contact</a>
+</li>
+    </ul>
+</nav>
+
+        <main
+            role="main"
+            class="flex-auto w-full max-w-2xl mx-auto"
+        >
+            
+                <article class="p-4 sm:p-6 bg-white rounded">
+        <header class="mb-2">
+            
+            <h1 class="font-serif text-3xl mb-1 md:mb-2">A possible Laravel-Strava webhook solution</h1>
+
+            <div class="flex flex-col md:flex-row gap-2">
+                <small class="font-mono">
+                    by <a href="/about">webmaster</a>
+                </small>
+
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="font-mono">
+                    2021-07-11
+                </small>
+
+                
+                <small class="hidden md:block">&bull;</small>
+
+                <small class="flex flex-wrap gap-2">
+                    <a
+        href="/blog/tags/laravel"
+        title=" posts in View posts in #laravel"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #laravel
+</a>
+                    <a
+        href="/blog/tags/strava"
+        title=" posts in View posts in #strava"
+        class="category--tag font-mono font-light text-teal-700"
+        >
+    #strava
+</a>
+            </small>
+            </div>
+
+            <section class="w-full flex flex-col items-center justify-center relative mt-4">
+        
+        <img src="https://source.unsplash.com/6sB8gMRlEAU/?fit=max&amp;w=1350" alt="Photo by Steve Johnson on Unsplash (https://unsplash.com)" class="rounded">
+
+                    <em class="block text-center text-xs opacity-60 mt-1">
+                Photo by <a href="https://unsplash.com/@steve_j" title="Steve Johnson">Steve Johnson</a> on <a href="https://unsplash.com" title="Unsplash">Unsplash</a>
+            </em>
+            </section>
+        </header>
+
+        <div class="post font-light text-gray-900 tracking-wide pb-4" v-pre>
+            <h2>The need for webhooks</h2>
+
+<p>When building an app around <a href="https://developers.strava.com/">Strava's API</a>, webhooks become critical, first to avoid unnecessarily polling the API, and second to enable automatic updates for activities and user profile.</p>
+
+<p>The latter is particularly important in order to abide by Strava's terms &amp; conditions. <a href="https://developers.strava.com/docs/getting-started/#webhooks">Quote</a>: <em>"Per our API terms, you need to implement webhooks to know when an athlete has deauthorized your API application"</em>.</p>
+
+<h2>Preamble</h2>
+
+<p>At the moment, the most popular Laravel Strava package is <a href="https://github.com/RichieMcMullen/laravel-strava">https://github.com/RichieMcMullen/laravel-strava</a>. I have contributed to it previously, in order to further development of my own app.</p>
+
+<p>The package, however, does not have webhook support. I am considering contributing to that, but it's a double-edged sword. Between the design difficulties and the maintenance burden, I'm not sure I want to take on that responsibility.</p>
+
+<p>So in the meantime I hacked together some fairly decent, but basic, webhook functionality directly inside my Laravel 8 app.</p>
+
+<h2>Basic design considerations</h2>
+
+<p>Parsing <a href="https://developers.strava.com/docs/webhooks/">Strava's webhook docs</a>, the basic idea is that an app can subscribe to Strava webhooks, and also unsubscribe from it later. While subscribed, any athlete or activity event triggers an event that gets pushed to the app. The app must be previously authorized from within the Strava web UI.</p>
+
+<p>For example, I finish a bicycle ride and save it on my Garmin device, which pushes it to Strava, which in turn fires off a <code>create</code> event for a new <code>activity</code>.</p>
+
+<p>Unfortunately, that's all it does - it doesn't send any activity data, so the developer would need to make an additional request. This additional request can be done with the <a href="https://github.com/RichieMcMullen/laravel-strava">laravel-strava</a> package.</p>
+
+<p>Here's how the communication flow looks like:</p>
+
+<ul>
+<li>App → Strava: subscribe</li>
+<li>Strava → App: verify (needs GET route)</li>
+<li>App: subscribed</li>
+<li>Strava → App: event (needs POST route)</li>
+<li>App: view subscription</li>
+<li>App: unsubscribe</li>
+</ul>
+
+<p>I'll go over each in detail. For now, here's a top-level view of how I designed this feature. <em>Keep in mind that I am not overly concerned with best practices, testing, etc</em>. It's all experimental at this point, and made for my own needs, however you can use it as a starting point for your own projects.</p>
+
+<p>I built this inside my existing Laravel 8 app in 4 main components:</p>
+
+<ul>
+<li>A webhook service (class) registered as a singleton in the <code>app</code> container.</li>
+<li>A series of <code>artisan</code> commands that I can use to quickly subscribe/view/unsubscribe from the command line.</li>
+<li>A couple of <code>GET/POST webhook</code> routes in <code>routes/web.php</code>.</li>
+<li>A handful of configuration/environment keys.</li>
+</ul>
+
+<p>Let's dig into the details.</p>
+
+<h2>The Strava webhook service</h2>
+
+<p>The service class lives in <code>app/Services/StravaWebhookService.php</code>. It contains methods for making/processing outbound/incoming Strava HTTP requests.</p>
+
+<p>Here's the skeleton (leaving out method implementation for later).</p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Services;
+
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Http;
+
+class StravaWebhookService
+{
+    private string $client_id;
+    private string $client_secret;
+    private string $url;
+    private string $callback_url;
+    private string $verify_token;
+
+    public function __construct()
+    {
+        $this-&gt;client_id = config('ct_strava.client_id');
+        $this-&gt;client_secret = config('ct_strava.client_secret');
+        $this-&gt;url = config('services.strava.push_subscriptions_url');
+        $this-&gt;callback_url = config('services.strava.webhook_callback_url');
+        $this-&gt;verify_token = config('services.strava.webhook_verify_token');
+    }
+
+    public function subscribe(): int|null
+    {
+        //
+    }
+
+    public function unsubscribe(): bool
+    {
+        //
+    }
+
+    public function view(): int|null
+    {
+        //
+    }
+
+    public function validate(string $mode, string $token, string $challenge): Response|JsonResponse
+    {
+        //
+    }
+}
+</code></pre>
+
+<p><strong>Note</strong> If I had done this "by the book" (protip: there is no such thing in programming, don't let anyone tell you that), I might have implemented a more generic interface, say <code>WebhookServiceInterface</code>. Since I only care about a single webhook service for the foreseeable future - and since my app is all about Strava - I don't need the additional complexity at this point.</p>
+
+<p>The constructor is pretty straightforward; it simply assigns a bunch of configuration options.</p>
+
+<p>Config keys prefixed with <code>ct_strava</code> come from <code>config/ct_strava.php</code> which is the config for <a href="https://github.com/RichieMcMullen/laravel-strava">laravel-strava</a>. Read the docs to see how it works. <em>This package is pretty much a requirement for my implementation of Strava webhooks.</em></p>
+
+<p>Keys prefixed with <code>services.strava.</code> are my own webhook-specific configuration. Here's how to configure them:</p>
+
+<p><strong><code>config/services.php</code></strong> - webhook service config</p>
+
+<pre><code class="language-php">return [
+    // ...
+
+    'strava' =&gt; [
+       'push_subscriptions_url' =&gt; env('STRAVA_PUSH_SUBSCRIPTIONS_URL'),
+       'webhook_callback_url' =&gt; env('STRAVA_WEBHOOK_CALLBACK_URL'),
+       'webhook_verify_token' =&gt; env('STRAVA_WEBHOOK_VERIFY_TOKEN'),
+    ],
+];
+</code></pre>
+
+<p><strong><code>.env</code></strong> - application config</p>
+
+<pre><code class="language-php">#...
+STRAVA_PUSH_SUBSCRIPTIONS_URL="https://www.strava.com/api/v3/push_subscriptions"
+
+# The app webhook callback URL that Strava uses to fire GET/POST events
+STRAVA_WEBHOOK_CALLBACK_URL="https://www.yoursite.com/webhook"
+
+# A random string generated by my app that Strava uses to verify the request
+STRAVA_WEBHOOK_VERIFY_TOKEN=ABC123defXYZ4567
+</code></pre>
+
+<p>A word about the verify token. This is a string (preferably random) that you will have to generate somehow. There are many ways to do it. I chose to do it the lazy way, by running <code>Str::random();</code> once, and dumping the result in <code>.env</code>. It's probably worth regenerating this token every once in a while in case it gets leaked on Strava's side somehow. If your <code>.env</code> file gets hacked, you have bigger problems to worry about. I'm fine with the way it works now.</p>
+
+<h2>Register the service as a singleton</h2>
+
+<p>Now that the service skeleton is ready, let's take a detour and bind it to the Laravel app container as a singleton. Why a singleton? Because we want this to be instantiated only once throughout the app's lifecycle. Quoting from the <a href="https://developers.strava.com/docs/webhooks/">Strava webhook docs</a> <em>"Each application may only have one subscription"</em>.</p>
+
+<p>To bind the service, open <code>app/Providers/AppServiceProvider.php</code> and add the following:</p>
+
+<pre><code class="language-php">use App\Services\StravaWebhookService;
+
+class AppServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+        $this-&gt;app-&gt;singleton(StravaWebhookService::class, function ($app) {
+            return new StravaWebhookService();
+        });
+    }
+
+    // ...
+}
+</code></pre>
+
+<p>This allows us to call the methods on the singleton from anywhere on the app, without needing to instantiate it. For example:</p>
+
+<pre><code class="language-php">$id = app(StravaWebhookService::class)-&gt;subscribe();
+</code></pre>
+
+<h2>The <code>subscribe()</code> method</h2>
+
+<p>I'll preface this by saying that I don't like to return mixed types. Here I'm returning a subscription id as an integer, or null for any other reason. Ideally I would return an object with additional information, such as response status and errors. For what I need, this does the job.</p>
+
+<p>To subscribe to Strava's webhooks, my app needs to <code>POST</code> the following data. If successful, Strava will respond with a JSON string in the form of <code>"{"id": 1234}"</code>. You can use this id to store it in the DB if you want to keep track of it, but I'm not doing that.</p>
+
+<pre><code class="language-php">public function subscribe(): int|null
+{
+    $response = Http::post($this-&gt;url, [
+        'client_id' =&gt; $this-&gt;client_id,
+        'client_secret' =&gt; $this-&gt;client_secret,
+        'callback_url' =&gt; $this-&gt;callback_url,
+        'verify_token' =&gt; $this-&gt;verify_token,
+    ]);
+
+    if ($response-&gt;status() === Response::HTTP_CREATED) {
+        return json_decode($response-&gt;body())-&gt;id;
+    }
+
+    return null;
+}
+</code></pre>
+
+<h2>The <code>validate()</code> method</h2>
+
+<p>This is translated to Laravel/PHP from the Node example in the <a href="https://developers.strava.com/docs/webhookexample/">docs webhook example</a>.</p>
+
+<p>It runs when Strava makes a <code>GET</code> request to my app's webhook callback. For example: <code>GET https://www.yoursite.com/webhook?hub.verify_token=RANDOMSTRING&amp;hub.challenge=15f7d1a91c1f40f8a748fd134752feb3&amp;hub.mode=subscribe</code>.</p>
+
+<p>If successful, this method responds with a JSON object containing the Strava challenge string. For example: <code>{"hub.challenge": "15f7d1a91c1f40f8a748fd134752feb3"}</code>. If it fails for any reason, it returns <code>403 Forbidden</code>.</p>
+
+<pre><code class="language-php">public function validate(string $mode, string $token, string $challenge): Response|JsonResponse
+{
+    // Checks if a token and mode is in the query string of the request
+    if ($mode &amp;&amp; $token) {
+        // Verifies that the mode and token sent are valid
+        if ($mode === 'subscribe' &amp;&amp; $token === $this-&gt;verify_token) {
+            // Responds with the challenge token from the request
+            return response()-&gt;json(['hub.challenge' =&gt; $challenge]);
+        } else {
+            // Responds with '403 Forbidden' if verify tokens do not match
+            return response('', Response::HTTP_FORBIDDEN);
+        }
+    }
+
+    return response('', Response::HTTP_FORBIDDEN);
+}
+</code></pre>
+
+<h2>The <code>view()</code> method</h2>
+
+<p>This utility method is useful to check the status of a subscription. Once again, it returns mixed types.</p>
+
+<p>If there's a valid subscription, it returns an integer id. Otherwise, it returns null.</p>
+
+<p>As with the <code>subscribe()</code> method, this could be improved by returning an object with more context. It's good enough for what I need.</p>
+
+<pre><code class="language-php">public function view(): int|null
+{
+    $response = Http::get($this-&gt;url, [
+        'client_id' =&gt; $this-&gt;client_id,
+        'client_secret' =&gt; $this-&gt;client_secret,
+    ]);
+
+    if ($response-&gt;status() === Response::HTTP_OK) {
+        $body = json_decode($response-&gt;body());
+
+        if ($body) {
+            return $body[0]-&gt;id; // each application can have only 1 subscription
+        } else {
+            return null; // no subscription found
+        }
+    }
+
+    return null;
+}
+</code></pre>
+
+<h2>The <code>unsubscribe()</code> method</h2>
+
+<p>Unsubscribing from the Strava webhooks will delete the subscription, and disconnect the app from receiving additional push notifications.</p>
+
+<p>It has 2 parts:</p>
+
+<ul>
+<li>first, it calls the <code>view()</code> method on the singleton to check if there's an active subscription. This will return the subscription id, with the advantage that we don't have to store it on the app side.</li>
+<li>second, it sends a <code>DELETE</code> request with the id in the URL.</li>
+</ul>
+
+<p>This method has only 2 possible outcomes: either the entire operation succeeded, or it failed.</p>
+
+<pre><code class="language-php">public function unsubscribe(): bool
+{
+    $id = app(StravaWebhookService::class)-&gt;view(); // use the singleton
+
+    if (!$id) {
+        return false;
+    }
+
+    $response = Http::delete("$this-&gt;url/$id", [
+        'client_id' =&gt; $this-&gt;client_id,
+        'client_secret' =&gt; $this-&gt;client_secret,
+    ]);
+
+    if ($response-&gt;status() === Response::HTTP_NO_CONTENT) {
+        return true;
+    }
+
+    return false;
+}
+</code></pre>
+
+<h2>The web routes</h2>
+
+<p><strong><code>GET /webhook</code> callback</strong></p>
+
+<p>This is the callback used by Strava to validate the subscription request. As explained earlier, Strava will send a <code>GET https://www.yoursite.com/webhook?hub.verify_token=RANDOMSTRING&amp;hub.challenge=15f7d1a91c1f40f8a748fd134752feb3&amp;hub.mode=subscribe</code> request that my app needs to handle.</p>
+
+<p>All the work can be done directly in the route callback method by returning the singleton <code>validate</code> method with the request parameters.</p>
+
+<p><strong>Note</strong> Query string parameters in the form of <code>hub.verify_token=RANDOMSTRING</code> are parsed by Laravel like this <code>$request-&gt;query('hub_verify_token')</code> (underscore replaces period).</p>
+
+<pre><code class="language-php">Route::get('/webhook', function (Request $request) {
+    $mode = $request-&gt;query('hub_mode'); // hub.mode
+    $token = $request-&gt;query('hub_verify_token'); // hub.verify_token
+    $challenge = $request-&gt;query('hub_challenge'); // hub.challenge
+
+    return app(StravaWebhookService::class)-&gt;validate($mode, $token, $challenge);
+});
+</code></pre>
+
+<p><strong><code>POST /webhook</code> callback</strong></p>
+
+<p>Whenever there's an event, Strava will fire a <code>POST /webhook</code> request with the following data.</p>
+
+<p>The app needs respond with <code>200 OK</code> within 2s, otherwise Strava will retry 3 more times before it stops.</p>
+
+<pre><code class="language-php">Route::post('/webhook', function (Request $request) {
+    $aspect_type = $request['aspect_type']; // "create" | "update" | "delete"
+    $event_time = $request['event_time']; // time the event occurred
+    $object_id = $request['object_id']; // activity ID | athlete ID
+    $object_type = $request['object_type']; // "activity" | "athlete"
+    $owner_id = $request['owner_id']; // athlete ID
+    $subscription_id = $request['subscription_id']; // push subscription ID receiving the event
+    $updates = $request['updates']; // activity update: {"title" | "type" | "private": true/false} ; app deauthorization: {"authorized": false}
+
+    Log::channel('strava')-&gt;info(json_encode($request-&gt;all()));
+
+    return response('EVENT_RECEIVED', Response::HTTP_OK);
+})-&gt;withoutMiddleware(VerifyCsrfToken::class);
+</code></pre>
+
+<p>Notice that at this point I'm simply logging the payload, so that I can parse it later and figure out how to handle it.</p>
+
+<p>Also notice the quick'n'lazy way of disabling CSRF token checking. By default, Laravel will require a CSRF token from any POST request, which is not needed in this situation. I could have created a separate middleware for webhooks, but it's a lot quicker to do it inline for the single endpoint.</p>
+
+<h2>The artisan commands</h2>
+
+<p>To make it easy to subscribe/view/unsubscribe, I created 3 very basic artisan commands as follows:</p>
+
+<p><strong><code>app/Console/Commands/SubscribeToStravaWebhookCommand.php</code></strong></p>
+
+<p>Run as: <code>php artisan strava:subscribe</code></p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Console\Commands;
+
+use App\Services\StravaWebhookService;
+use Illuminate\Console\Command;
+
+class SubscribeToStravaWebhookCommand extends Command
+{
+    protected $signature = 'strava:subscribe';
+
+    protected $description = 'Subscribes to a Strava webhook';
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function handle()
+    {
+        $id = app(StravaWebhookService::class)-&gt;subscribe();
+
+        if ($id) {
+            $this-&gt;info("Successfully subscribed ID: {$id}");
+        } else {
+            $this-&gt;warn('Unable to subscribe');
+        }
+
+        return 0;
+    }
+}
+</code></pre>
+
+<p><strong><code>app/Console/Commands/ViewStravaWebhookCommand.php</code></strong></p>
+
+<p>Run as: <code>php artisan strava:view-subscription</code></p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Console\Commands;
+
+use App\Services\StravaWebhookService;
+use Illuminate\Console\Command;
+
+class ViewStravaWebhookCommand extends Command
+{
+    protected $signature = 'strava:view-subscription';
+
+    protected $description = 'Views a Strava webhook subscription';
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function handle()
+    {
+        $id = app(StravaWebhookService::class)-&gt;view();
+
+        if ($id) {
+            $this-&gt;info("Subscription ID: $id");
+        } else {
+            $this-&gt;warn('Error or no subscription found');
+        }
+
+        return 0;
+    }
+}
+</code></pre>
+
+<p><strong><code>app/Console/Commands/UnsubscribeStravaWebhookCommand.php</code></strong></p>
+
+<p>Run as: <code>php artisan strava:unsubscribe</code></p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Console\Commands;
+
+use App\Services\StravaWebhookService;
+use Illuminate\Console\Command;
+
+class UnsubscribeStravaWebhookCommand extends Command
+{
+    protected $signature = 'strava:unsubscribe';
+
+    protected $description = 'Deletes a Strava webhook subscription';
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function handle()
+    {
+        if (app(StravaWebhookService::class)-&gt;unsubscribe()) {
+            $this-&gt;info("Successfully unsubscribed");
+        } else {
+            $this-&gt;warn('Error or no subscription found');
+        }
+
+        return 0;
+    }
+}
+</code></pre>
+
+<h2>Putting it all together</h2>
+
+<p>You can find all the pieces assembled in this <a href="https://gist.github.com/breadthe/2787c4f6d6ac805ef9eb698a91b6a750">Gist</a>. If you look closely, you'll notice some additional logging in the service methods, in lieu of returning explicit errors.</p>
+
+<h2>Next steps</h2>
+
+<p>The goal of this project was to complete the Strava webhook subscription flow, without overengineering it. I have achieved that successfully, with a little extra polish that I hadn't planned on initially. This code is now running in production, with an active webhook subscription that accepts Strava events, and logs them for analysis.</p>
+
+<p>To actually make use of the event data I'm collecting, I need to do more work. Here are some of the things that I would like to eventually accomplish using the foundation I've established.</p>
+
+<ul>
+<li>use the webhook to make requests for activity &amp; athlete information</li>
+<li>use the webhook to disconnect the app if the user de-authorizes it</li>
+<li>improve some of the coding &amp; design shortcuts/liberties taken above</li>
+<li>schedule a periodic check to see if the subscription is active, and renew it if not</li>
+<li>integrate it into the <a href="https://github.com/RichieMcMullen/laravel-strava/">laravel-strava</a> package</li>
+</ul>
+
+<p>I consider the last point to be quite important for the Laravel-Strava dev community at large. It is a long term goal of mine to eventually have all the Laravel-Strava API+webhook functionality in one package. There are a few caveats, though.</p>
+
+<p>For one thing, the author of the package is not very active - understandably so! It is a huge responsibility to maintain a popular package, and it can become a burden if you're not actively vested in. If I were to get this functionality merged in, it would become my responsibility, at least partly.</p>
+
+<p>For another, I'm having constant doubts about the API for this kind of functionality. What works for me may not work for others, and I'm not keen on endless debates or covering every possible scenario/use-case.</p>
+
+<p>I have the option of building it into my own fork <a href="https://github.com/breadthe/laravel-strava">breadthe/laravel-strava</a>, so keep an eye on that in case you're interested.</p>
+
+<p>Hopefully this was a helpful explanation of how I implemented Strava webhooks in my Laravel app. Feel free to use the code in any way you see fit, and hit me up on <a href="https://twitter.com/brbcoding">Twitter</a> for ideas or suggestions.</p>
+
+            <section class="mt-8">
+    <div class="font-semibold">
+        Liked this article? Share it on your favorite platform.
+    </div>
+
+    <div class="mt-2 flex flex-wrap gap-2">
+        <a href="javascript:void(0);"
+                id="mastodon-share"
+                data-src="How to build a basic Strava webhook with Laravel.&amp;url=https://chasingcode.dev/blog/laravel-strava-webhook-solution"
+                class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Mastodon</a>
+
+        <a href="https://twitter.com/share?url=https://chasingcode.dev/blog/laravel-strava-webhook-solution&text=How to build a basic Strava webhook with Laravel.&via=brbcoding"
+           style="background: #55acee;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Twitter</a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chasingcode.dev/blog/laravel-strava-webhook-solution"
+           style="background: #3B5998;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Facebook</a>
+
+        <a href="https://reddit.com/submit?url=https://chasingcode.dev/blog/laravel-strava-webhook-solution&title=A possible Laravel-Strava webhook solution"
+           style="background: #ff5700;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Reddit</a>
+
+        <a href="https://news.ycombinator.com/submitlink?u=https://chasingcode.dev/blog/laravel-strava-webhook-solution&t=A possible Laravel-Strava webhook solution"
+           style="background: #ff6600;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Hacker News</a>
+
+        <a href="https://www.linkedin.com/shareArticle?url=https://chasingcode.dev/blog/laravel-strava-webhook-solution&title=A possible Laravel-Strava webhook solution&summary=How to build a basic Strava webhook with Laravel.&source=https://chasingcode.dev"
+           style="background: #4875B4;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >LinkedIn</a>
+
+        <a href="mailto:?subject=A possible Laravel-Strava webhook solution&body=https://chasingcode.dev/blog/laravel-strava-webhook-solution"
+           style="background: #444444;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+        >Email</a>
+    </div>
+</section>
+
+<script>
+    // @see https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
+    doDocumentReady(enableMastodonShare);
+
+    /* Generate a share link for the user's Mastodon domain */
+    function mastodonShare(e) {
+
+        // Get the source text
+        const src = e.target.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        const domain = prompt("Enter your Mastodon domain (enable browser pop-ups)", "mastodon.social");
+
+        if (domain === "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        const url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doDocumentReady(fn) {
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            fn();
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function enableMastodonShare() {
+        document.getElementById('mastodon-share').addEventListener('click', mastodonShare);
+    }
+</script>        </div>
+
+        <section id="mastodon-webmention">
+    <mastodon-webmention page-url="https://chasingcode.dev/blog/laravel-strava-webhook-solution" mastodon-toot-url=""></mastodon-webmention>
+</section>
+
+        
+
+        <nav class="flex justify-between text-sm md:text-base my-4 sm:mb-0">
+            <div>
+                                    <a href="https://chasingcode.dev/blog/fix-php-environment-m1-mac" class="no-underline" title="Older Post: How to restore a corrupted PHP environment on M1 Mac">
+                        &LeftArrow; How to restore a corrupted PHP environment on M1 Mac
+                    </a>
+                            </div>
+
+            <div>
+                                    <a href="https://chasingcode.dev/blog/laracon-summer-2021-links" class="no-underline" title="Newer Post: Laracon Summer 2021 Links">
+                        Laracon Summer 2021 Links &RightArrow;
+                    </a>
+                            </div>
+        </nav>
+    </article>
+        </main>
+
+        <footer class="flex flex-col gap-4 max-w-2xl m-8 sm:mx-auto text-center">
+    <div class="w-full flex flex-row justify-center gap-4">
+        <a href="/blog/feed.atom" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">RSS</span>
+        </a>
+
+        <a href="https://indieweb.social/@brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
+                </svg>
+            </span>
+            <span class="group-hover:text-teal-400">Mastodon</span>
+        </a>
+
+        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-twitter"
+>
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Twitter</span>
+        </a>
+
+        <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </span>
+            <span class="group-hover:text-teal-400">Github</span>
+        </a>
+    </div>
+    <small class="italic opacity-60">
+        2018-2024 🦄&nbsp; All content & opinions my own
+    </small>
+</footer>
+
+        <script src="/assets/build/js/main.js?id=e27301064934efeda72c2d9e59dcaac9" async></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>
