@@ -5,7 +5,7 @@ title: How I work in an async team
 date: 2024-07-10
 updated:
 description: My daily routine as an async remote worker
-categories: [career]
+tags: [career]
 featured: true
 image:
 image_thumb:
