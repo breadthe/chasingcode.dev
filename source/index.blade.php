@@ -69,7 +69,7 @@
         <div class="flex flex-col sm:flex-row gap-8">
             <x-posts-recent :posts="$posts->sortByDesc('date')->take(5)" seeAll>Recent posts</x-posts-recent>
 
-            @if(($recentlyUpdatedPosts = $posts->whereNotNull('updated')->sortByDesc('updated')->take(5)) && count($recentlyUpdatedPosts) > 0)
+            @if(($recentlyUpdatedPosts = !empty($posts->updated) && $posts->whereNotNull('updated')->sortByDesc('updated')->take(5)) && count($recentlyUpdatedPosts) > 0)
                 <x-posts-recent :posts="$recentlyUpdatedPosts" displayUpdatedDate>Recently updated</x-posts-recent>
             @endif
         </div>
