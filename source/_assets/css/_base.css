@@ -2,29 +2,34 @@ body {
     @apply text-base;
     @apply text-gray-700;
     @apply leading-relaxed;
-    font-weight: theme('fontWeight.light');
+    font-weight: theme("fontWeight.light");
 }
 
 main {
     a {
         @apply underline underline-offset-2 decoration-2 decoration-teal-200;
-        font-weight: theme('fontWeight.semibold');
+        font-weight: theme("fontWeight.semibold");
 
         &:hover {
             @apply decoration-teal-400;
-            color: theme('colors.black')
+            color: theme("colors.black");
         }
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     a {
         text-decoration: none;
     }
 }
 
 strong {
-    font-weight: theme('fontWeight.semibold');
+    font-weight: theme("fontWeight.semibold");
 }
 
 blockquote {
@@ -164,7 +169,8 @@ pre {
 
 table {
     @apply w-full;
-    @apply text-xl;
+    @apply mt-4;
+
     thead {
         th {
             @apply border-b-4;
