@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Namecheap ain't so cheap
 date: 2024-07-22
-# updated:
+updated: 2024-07-23
 description: I moved my domains from Namecheap and saved a bunch of cash
 tags: [general]
 featured: false
@@ -25,8 +25,8 @@ Enough hyperbole! To get down to brass tacks, I moved a `.dev` (this very site i
 
 |      | Namecheap                     | Cloudflare |
 | ---- | ----------------------------- | ---------- |
-| `.dev` | $16.98 / y + $0.18 ICANN fee  | $10.18 / y |
 | `.app` | $16.98 / y + $0.18 ICANN fee  | $12.18 / y |
+| `.dev` | $16.98 / y + $0.18 ICANN fee  | $10.18 / y |
 | `.com` | $13.98 / y ($8.98 first year) | $9.77 / y  |
 
 Cloudflare prices include the ICANN fee.
@@ -48,3 +48,26 @@ If this is starting to smell like a big fat ad, I can assure you it's not, thoug
 ## Takeaway
 
 Cloudflare's core business is not domain registration, but this makes it possible for them to sell domains at cost, while also bundling a lot of related features that would cost quite a few buckaroos with other companies, aside from the inflated price of the domain itself. But just as the universe is in a state of increasing entropy, so is the eventual [enshittification](https://en.wikipedia.org/wiki/Enshittification) of every good product or service. Until then, I'll enjoy the superior experience and save a chunk of cash with the Flare In The Cloud.
+
+## Literally hours later...
+
+... as I signed in for work, I saw this email from Namecheap announcing a price increase on a few TLDs, including `.dev` and `.app`.
+
+![Namecheap domain price increase](/assets/img/2024-07-22-namecheap-price-increase.jpg)
+
+To be fair, this is an upstream Registry wholesale price increase that will affect all resellers including Cloudflare. Here's a comparison for the TLDs I care about:
+
+|      | Namecheap | Cloudflare |
+| ---- | ------------- | -------------- |
+| `.app` | $16.98 -> $19.98 | $12.18 -> $14.18 |
+| `.dev` | $16.98 -> $17.98 | $10.18 -> $12.18 |
+
+In the end, there's still a $5 gap here that I would rather not pay.
+
+## But wait, there's (even) more!
+
+Later in the day I came across an older Cloudflare announcement about yet another free feature, this time for [blocking AI bots](https://blog.cloudflare.com/declaring-your-aindependence-block-ai-bots-scrapers-and-crawlers-with-a-single-click).
+
+Outstanding! It's exactly what I wanted to do programatically, though it would have been quite an undertaking. Thankfully Cloudflare made it a simple toggle switch, so I turned it on for all my domains.
+
+![Namecheap domain price increase](/assets/img/2024-07-22-cloudflare-ai-bot-blocking.jpg)
