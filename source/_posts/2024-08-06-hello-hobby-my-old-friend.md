@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: Hello hobby my old friend
+title: Hello hobby, my old friend
 date: 2024-08-06
 description: Old hobby, meet new domain
 tags: [general,side-project]
