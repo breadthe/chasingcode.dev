@@ -1,6 +1,6 @@
 @props(['tags', 'posts'])
 
-<div class="flex flex-wrap gap-2">
+<div class="flex flex-wrap items-center gap-2">
     @foreach ($tags->sortByDesc(function ($tag) use ($posts) { return $tag->posts($posts)->count(); }) as $tag_name => $tag)
         @php
             $count = $tag->posts($posts)->count();
