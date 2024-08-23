@@ -34,10 +34,12 @@ title: Archive
                                 {{ $post->getDate()->format('M d') }}
                             </span>
 
-                            <a
-                                    href="{{ $post->getUrl() }}"
-                                    class="col-span-5 underline underline-offset-2 decoration-teal-200 hover:decoration-teal-400 decoration-2"
-                            >{{ $post->title }}</a>
+                            <span class="col-span-5">
+                                <a
+                                        href="{{ $post->getUrl() }}"
+                                        class="underline underline-offset-2 decoration-sky-200 hover:decoration-sky-400 decoration-2"
+                                >{{ $post->title }}</a>
+                            </span>
                         </div>
                     @endforeach
                 </div>
