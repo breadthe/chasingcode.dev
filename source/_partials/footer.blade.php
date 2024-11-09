@@ -18,11 +18,18 @@
             <span class="group-hover:text-teal-400">Mastodon</span>
         </a>
 
-        <a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
+        {{--<a href="https://twitter.com/brbcoding" class="group w-full flex flex-col items-center justify-center gap-2">
             <span class="group-hover:text-teal-400">
                 @include('_partials.icons._svg', ['icon' => 'twitter', 'width' => 24, 'height' => 24])
             </span>
             <span class="group-hover:text-teal-400">Twitter</span>
+        </a>--}}
+
+        <a href="https://bsky.app/profile/brbcoding.bsky.social" class="group w-full flex flex-col items-center justify-center gap-2">
+            <span class="group-hover:text-teal-400">
+                @include('_partials.icons._svg', ['icon' => 'bluesky', 'width' => 24, 'height' => 24])
+            </span>
+            <span class="group-hover:text-teal-400">Bluesky</span>
         </a>
 
         <a href="https://github.com/breadthe" class="group w-full flex flex-col items-center justify-center gap-2">

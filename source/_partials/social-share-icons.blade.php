@@ -10,10 +10,16 @@
                 class="bg-mastodon-purple social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
         >Mastodon</a>
 
-        <a href="https://twitter.com/share?url={{ $page->getUrl() }}&text={{ $page->description }}&via={{ $page->twitterHandle }}"
+        {{--<a href="https://twitter.com/share?url={{ $page->getUrl() }}&text={{ $page->description }}&via={{ $page->twitterHandle }}"
            style="background: #55acee;"
            class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
-        >Twitter</a>
+        >Twitter</a>--}}
+
+        <a href="https://bsky.app/intent/compose?text={{ $page->title }} {{ urlencode($page->getUrl()) }}"
+           style="background: #0085ff;"
+           class="social--share--icon no-underline text-white hover:text-white rounded font-mono px-2 py-1"
+           target="_blank"
+        >Bluesky</a>
 
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ $page->getUrl() }}"
            style="background: #3B5998;"
