@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Svelte 5 $state rune Class vs Object reactivity
 date: 2024-11-07
-# updated:
+updated: 2024-11-08
 description: Exploring how storing a Class object vs a regular Object in a Svelte 5 $state rune differs
 tags: [svelte]
 featured: true
@@ -26,6 +26,8 @@ Now, the objects in my arrays are actual JavaScript class instances. I thought i
 I got stuck on an issue though. When I updated a property of an object (class instance) in the array (incrementing a counter), it wasn't responsive. It took a while to figure out (my JS isn't my strong suit).
 
 Long story short, it turns out that if you store a class instance using `$state`, its properties are not reactive. *While you can modify the internal state of the object, it won't re-render in the browser.*
+
+**Note** You _can_, in fact, make class properties reactive. Read all the way down for the best solution. 
 
 So what **can** you do? I found 2 solutions (you might know more):
 
@@ -81,3 +83,21 @@ And here's a GIF of the 3 scenarios.
 ![Svelte 5 state rune reactivity Class vs Object comparison](/assets/img/2024-11-07-svelte-5-state-rune-class-vs-object-reactivity.gif)
 
 I hope this is helpful in case you run into the same problem. It sure enough got me unstuck and helped me understand Svelte 5's reactivity just a tiny bit more.
+
+---
+
+But wait, there's more. It turns out you can actually make the 1st scenario (Class properties) reactive by wrapping the class properties in `$state`. Who woulda thunk it? Here's an [updated REPL](https://svelte.dev/playground/e6fec79bd1a2490ba948dbf2e931865a?version=5.1.13). There's no need for the `toJSON` function with this approach.
+
+```html
+<script>
+	let collection = $state([])
+
+	class Ob {
+        id = $state(null)
+        name = $state('')
+        count = $state(1)
+
+	collection.push(new Ob(1, '✅ Class'))
+```
+
+Thanks to [Pablopang.svelte](https://bsky.app/profile/ricciuti.me) over on Bluesky for helping with this!
