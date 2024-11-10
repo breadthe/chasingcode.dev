@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Svelte 5 $state rune Class vs Object reactivity
 date: 2024-11-07
-updated: 2024-11-08
+updated: 2024-11-10
 description: Exploring how storing a Class object vs a regular Object in a Svelte 5 $state rune differs
 tags: [svelte]
 featured: true
@@ -101,3 +101,7 @@ But wait, there's more. It turns out you can actually make the 1st scenario (Cla
 ```
 
 Thanks to [Pablopang.svelte](https://bsky.app/profile/ricciuti.me) over on Bluesky for helping with this!
+
+---
+
+**Mea Culpa** I must be a dumbass. After all this, I discovered that Class reactivity is [clearly laid out in the docs](https://svelte.dev/docs/svelte/$state#Classes). I could swear it wasn't there the first 5 times I read that entire page. But it was - my brain probably skipped it for some reason. So all I did here was to find a couple of non-optimal solutions and waste someone's time on social media, when I could have just RTFM more carefully 🤦‍♂️ 
