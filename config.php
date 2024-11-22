@@ -21,6 +21,14 @@ return [
                 return "blog/$slug";
             },
         ],
+        'games' => [
+            'author' => 'Constantin', // Default author, if not provided in a post
+            'sort' => '-date',
+            'path' => function ($page) {
+                $slug = preg_replace('/[0-9]{4}-[0-9]{2}-[0-9]{2}-/i', '', $page->getFilename());
+                return "games/$slug";
+            },
+        ],
         'tags' => [
             'path' => '/blog/tags/{filename}',
             'sort' => '-title',
