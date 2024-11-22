@@ -6,11 +6,11 @@ date: 2021-07-11
 description: How to build a basic Strava webhook with Laravel.
 tags: [laravel,strava]
 featured: false
-image: https://source.unsplash.com/6sB8gMRlEAU/?fit=max&w=1350
-image_thumb: https://source.unsplash.com/6sB8gMRlEAU/?fit=max&w=200&q=75
-image_author: Steve Johnson
-image_author_url: https://unsplash.com/@steve_j
-image_unsplash: true
+image: 
+image_thumb: 
+image_author: 
+image_author_url: 
+image_unsplash: 
 ---
 
 ## The need for webhooks
