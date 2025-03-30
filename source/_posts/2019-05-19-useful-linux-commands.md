@@ -6,11 +6,11 @@ date: 2019-05-19
 description: A collection of useful Linux commands for developers.
 tags: [linux]
 featured: false
-image: https://source.unsplash.com/Tjbk79TARiE/?fit=max&w=1350
-image_thumb: https://source.unsplash.com/Tjbk79TARiE/?fit=max&w=200&q=75
-image_author: Sai Kiran Anagani
-image_author_url: https://unsplash.com/@_imkiran
-image_unsplash: true
+image:
+image_thumb:
+image_author:
+image_author_url:
+image_unsplash:
 ---
 
 This is my collection of useful Linux shell commands from the perspective of a developer who is not primarily a sysadmin, yet uses Linux on a daily basis to test and deploy code in local, staging, and production environments.
