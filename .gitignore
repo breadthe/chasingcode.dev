@@ -6,3 +6,8 @@ _drafts
 /vendor/
 .DS_Store
 .idea
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/sdks
+.yarn/patches
