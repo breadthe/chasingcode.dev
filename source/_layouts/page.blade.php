@@ -14,7 +14,7 @@
 @section('body')
 
 <section class="p-4 sm:p-6 bg-white rounded">
-    <div class="post font-light text-grey-darkest">
+    <div class="post font-light text-gray-900">
         @yield('content')
     </div>
 </section>

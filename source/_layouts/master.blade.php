@@ -33,7 +33,7 @@
         <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
     </head>
 
-    <body class="flex flex-col justify-between bg-gray-50 text-grey-darkest leading-normal font-sans">
+    <body class="flex flex-col justify-between bg-gray-50 text-gray-900 leading-normal font-sans">
 
         @include('_partials.header')
 

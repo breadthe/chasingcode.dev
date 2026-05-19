@@ -1,44 +1,52 @@
-window.axios = require('axios');
-import Vue from 'vue';
-
+import {createApp} from 'vue';
 import MastodonWebmention from './components/MastodonWebmention.vue';
 import Search from './components/Search.vue';
 // import VIcon from './components/icons/VIcon';
 import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/monokai-sublime.css';
+import bash from 'highlight.js/lib/languages/bash';
+import css from 'highlight.js/lib/languages/css';
+import html from 'highlight.js/lib/languages/xml';
+import javascript from 'highlight.js/lib/languages/javascript';
+import json from 'highlight.js/lib/languages/json';
+import markdown from 'highlight.js/lib/languages/markdown';
+import php from 'highlight.js/lib/languages/php';
+import scss from 'highlight.js/lib/languages/scss';
+import yaml from 'highlight.js/lib/languages/yaml';
+import sql from 'highlight.js/lib/languages/sql';
+import rust from 'highlight.js/lib/languages/rust';
+import typescript from 'highlight.js/lib/languages/typescript';
 
 // Syntax highlighting
-hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));
-hljs.registerLanguage('css', require('highlight.js/lib/languages/css'));
-hljs.registerLanguage('html', require('highlight.js/lib/languages/xml'));
-hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
-hljs.registerLanguage('json', require('highlight.js/lib/languages/json'));
-hljs.registerLanguage('markdown', require('highlight.js/lib/languages/markdown'));
-hljs.registerLanguage('php', require('highlight.js/lib/languages/php'));
-hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
-hljs.registerLanguage('yaml', require('highlight.js/lib/languages/yaml'));
-hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));
-hljs.registerLanguage('rust', require('highlight.js/lib/languages/rust'));
-hljs.registerLanguage('ts', require('highlight.js/lib/languages/typescript'));
+hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('css', css);
+hljs.registerLanguage('html', html);
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('json', json);
+hljs.registerLanguage('markdown', markdown);
+hljs.registerLanguage('php', php);
+hljs.registerLanguage('scss', scss);
+hljs.registerLanguage('yaml', yaml);
+hljs.registerLanguage('sql', sql);
+hljs.registerLanguage('rust', rust);
+hljs.registerLanguage('ts', typescript);
 
 document.querySelectorAll('pre code').forEach((block) => {
     hljs.highlightBlock(block);
 });
 
-Vue.config.productionTip = false;
+const mastodonWebmention = document.getElementById('mastodon-webmention');
 
-if (document.getElementById('mastodon-webmention')) {
-    new Vue({
-        components: {
-            MastodonWebmention
-        },
-    }).$mount('#mastodon-webmention');
+if (mastodonWebmention) {
+    createApp(MastodonWebmention, {
+        pageUrl: mastodonWebmention.dataset.pageUrl,
+        mastodonTootUrl: mastodonWebmention.dataset.mastodonTootUrl,
+    }).mount(mastodonWebmention);
 }
 
-new Vue({
-    components: {
-        Search,
-        // VIcon,
-    },
-}).$mount('#vue-search');
+const vueSearch = document.getElementById('vue-search');
 
+if (vueSearch) {
+    createApp(Search, {
+        dataBelongsToBlog: vueSearch.dataset.belongsToBlog,
+    }).mount(vueSearch);
+}

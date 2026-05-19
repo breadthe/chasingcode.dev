@@ -8,11 +8,13 @@
             </a>
         </div>
 
-        <div id="vue-search" class="w-full flex justify-end items-center sm:gap-4">
+        <div class="w-full flex justify-end items-center sm:gap-4">
             @if($page->belongsTo('/blog'))
-                <search
-                    data-belongs-to-blog="{{ $page->belongsTo('/blog') }}"
-                ></search>
+                <div
+                    id="vue-search"
+                    class="w-full"
+                    data-belongs-to-blog="{{ $page->belongsTo('/blog') ? '1' : '0' }}"
+                ></div>
             @endif
 
             @include('_nav.menu')

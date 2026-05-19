@@ -80,7 +80,7 @@ h6 {
 
     @apply mt-4;
 
-    @screen md {
+    @media (min-width: 48rem) {
         @apply mt-8;
     }
 
@@ -145,7 +145,7 @@ ul {
 p {
     @apply mt-3;
 
-    @screen md {
+    @media (min-width: 48rem) {
         @apply mt-5;
     }
 }

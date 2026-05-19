@@ -23,18 +23,18 @@ title: Contact
         name="contact"
         method="post"
         data-netlify="true"
-        class="w-full flex flex-col items-end gap-4 mt-4 mx-auto max-w-md p-4 bg-gray-100 border rounded"
+        class="w-full flex flex-col items-end gap-4 mt-4 mx-auto max-w-md p-4 bg-gray-100 border border-gray-200 rounded"
     >
         <div class="w-full">
-            <input class="w-full rounded p-2 shadow-inner border" placeholder="Your Name" type="text" id="name" name="name" />
+            <input class="w-full rounded p-2 bg-white inset-shadow-sm border border-gray-200" placeholder="Your Name" type="text" id="name" name="name" />
         </div>
 
         <div class="w-full">
-            <input class="w-full rounded p-2 shadow-inner border" placeholder="Your Email" type="email" id="email" name="email" />
+            <input class="w-full rounded p-2 bg-white inset-shadow-sm border border-gray-200" placeholder="Your Email" type="email" id="email" name="email" />
         </div>
 
         <div class="w-full">
-            <textarea class="w-full rounded p-2 shadow-inner border" placeholder="Message" id="message" name="message"></textarea>
+            <textarea class="w-full rounded p-2 bg-white inset-shadow-sm border border-gray-200" placeholder="Message" id="message" name="message"></textarea>
         </div>
 
         <button

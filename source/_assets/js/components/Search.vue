@@ -10,7 +10,7 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast h-10 w-full sm:w-1/2 sm:focus:w-3/4 border focus:border-teal-400 outline-none cursor-pointer px-4 shadow-inner"
+                class="transition h-10 w-full sm:w-1/2 sm:focus:w-3/4 bg-white border border-gray-200 focus:border-teal-400 outline-none cursor-pointer px-4 inset-shadow-sm"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
@@ -58,7 +58,7 @@
         <button
             title="Start searching"
             type="button"
-            class="flex sm:hidden items-center bg-white border rounded focus:outline-none w-full h-10 pl-2"
+            class="flex sm:hidden items-center bg-white border border-gray-200 rounded inset-shadow-sm focus:outline-none w-full h-10 pl-2"
             @click.prevent="showInput"
         >
             <!--
@@ -89,6 +89,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Fuse from 'fuse.js';
 
 export default {
@@ -137,33 +138,3 @@ export default {
     },
 };
 </script>
-
-<style>
-input[name='search'] {
-    background-image: url('/assets/images/magnifying-glass.svg');
-    background-position: 0.8em;
-    background-repeat: no-repeat;
-    border-radius: 4px;
-    text-indent: 1.2em;
-}
-
-input[name='search'].transition-border {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    /*border-top-left-radius: .5rem;*/
-    /*border-top-right-radius: .5rem;*/
-}
-
-.fade-enter-active {
-    transition: opacity .5s;
-}
-
-.fade-leave-active {
-    transition: opacity 0s;
-}
-
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
-}
-</style>

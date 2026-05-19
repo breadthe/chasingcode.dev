@@ -55,7 +55,7 @@
       font-weight: theme('fontWeight.semibold');
     }
 
-    @screen sm {
+    @media (min-width: 40rem) {
       @apply ml-8;
     }
   }
@@ -77,6 +77,32 @@
   iframe[src*="youtube.com"] {
     @apply mx-auto;
   }
+}
+
+input[name='search'] {
+    background-image: url('/assets/images/magnifying-glass.svg');
+    background-position: 0.8em;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    text-indent: 1.2em;
+}
+
+input[name='search'].transition-border {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.fade-enter-active {
+    transition: opacity .5s;
+}
+
+.fade-leave-active {
+    transition: opacity 0s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 
 /* =================== Highlight =================== */
