@@ -12,3 +12,4 @@ _drafts
 .yarn/build-state.yml
 .yarn/sdks
 .yarn/patches
+hot

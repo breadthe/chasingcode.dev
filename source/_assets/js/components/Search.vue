@@ -28,7 +28,7 @@
             >&times;</button>
 
             <transition name="fade">
-                <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full lg:w-3/4 text-left mb-4 mt-[3.5rem] sm:mt-10">
+                <div v-if="query" class="absolute top-0 inset-x-0 sm:inset-auto w-full lg:w-3/4 text-left mb-4 mt-14 sm:mt-10">
                     <div class="flex flex-col bg-white border border-b-0 border-teal-400 rounded-b-lg shadow-lg mx-4 sm:mx-0">
                         <a
                             v-for="(result, index) in results"
