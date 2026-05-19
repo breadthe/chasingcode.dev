@@ -5,11 +5,11 @@
 @import "tailwindcss/utilities.css" layer(utilities) important;
 
 /* Code syntax highlighting, powered by https://highlightjs.org */
-@import 'highlight.js/styles/a11y-light.css';
+@import "highlight.js/styles/a11y-light.css";
 
-@import './_variables.css';
-@import './_base.css';
-@import './_mailchimp.css';
-@import './_blog.css';
+@import "_variables.css";
+@import "_base.css";
+@import "_mailchimp.css";
+@import "_blog.css";
 
-@config '../../../tailwind.config.js';
+@config "../../../tailwind.config.js";
