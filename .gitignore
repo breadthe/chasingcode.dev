@@ -5,6 +5,7 @@ _drafts
 /source/assets/build/
 /vendor/
 .DS_Store
+.env
 .idea
 .yarn/cache
 .yarn/unplugged

@@ -24,7 +24,10 @@
             @include('_partials.google-analytics')
         @endif--}}
 
-        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+        @viteRefresh()
+        <link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
+        <script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
+
         <link href="https://github.com/breadthe" rel="me">
         <link rel="webmention" href="https://webmention.io/chasingcode.dev/webmention" />
         <link rel="pingback" href="https://webmention.io/chasingcode.dev/xmlrpc" />
@@ -44,8 +47,6 @@
         </main>
 
         @include('_partials.footer')
-
-        <script src="{{ mix('js/main.js', 'assets/build') }}" async></script>
 
         @stack('scripts')
     </body>
