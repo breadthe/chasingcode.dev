@@ -4,12 +4,12 @@
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities) important;
 
-/* Code syntax highlighting, powered by https://highlightjs.org */
-@import "highlight.js/styles/a11y-light.css";
-
 @import "_variables.css";
 @import "_base.css";
 @import "_mailchimp.css";
 @import "_blog.css";
+
+/* Code syntax highlighting, powered by https://highlightjs.org */
+@import "highlight.js/styles/monokai-sublime.css";
 
 @config "../../../tailwind.config.js";
