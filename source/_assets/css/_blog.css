@@ -80,7 +80,7 @@
 }
 
 input[name='search'] {
-    background-image: url('/assets/images/magnifying-glass.svg');
+    background-image: url('/source/assets/images/magnifying-glass.svg');
     background-position: 0.8em;
     background-repeat: no-repeat;
     border-radius: 4px;
