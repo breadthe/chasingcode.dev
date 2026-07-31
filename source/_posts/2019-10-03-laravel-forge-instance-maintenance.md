@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Maintenance procedure for a Laravel Forge instance
 date: 2019-10-03
-updated: 2024-04-19
+updated: 2026-07-31
 description: Documenting my process for maintaining a Laravel Forge Linux instance.
 tags: [laravel, forge]
 featured: false
