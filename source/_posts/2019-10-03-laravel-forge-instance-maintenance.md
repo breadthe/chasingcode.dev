@@ -7,10 +7,10 @@ updated: 2024-04-19
 description: Documenting my process for maintaining a Laravel Forge Linux instance.
 tags: [laravel, forge]
 featured: false
-image: https://source.unsplash.com/v_CxSroHKWg/?fit=max&w=1350
-image_thumb: https://source.unsplash.com/v_CxSroHKWg/?fit=max&w=200&q=75
-image_author: Matthew Hamilton
-image_author_url: https://unsplash.com/@thatsmrbio
+image: 
+image_thumb: 
+image_author: 
+image_author_url: 
 image_unsplash: true
 ---
 
