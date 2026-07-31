@@ -16,7 +16,7 @@ image_unsplash: true
 
 ## Preamble
 
-I've been using [Laravel Forge](https://forge.laravel.com) for over a year at my day job, but also to provision and deploy my side project [1Secret.app](https://1secret.app/). To me, the biggest benefit that Forge brings is the ability to easily and quickly provision Laravel-ready server instances, whether on AWS, DigitalOcean, Linode or others.
+I've been using [Laravel Forge](https://forge.laravel.com) both at work to host and serve production apps, and separately for my personal projects. To me, the biggest benefit that Forge brings is the ability to easily and quickly provision Laravel-ready server instances, whether on AWS, DigitalOcean, Linode or others.
 
 My server OS of choice is Ubuntu, and Forge has been doing some sort of magic to keep it updated to the latest version. This means I'm currently running 18.04 on multiple instances. This is all good, however there's still some maintenance that I need to perform manually from time to time, namely OS security patch and package updates. I also like to keep an eye on disk space and clear some of that if necessary.
 
