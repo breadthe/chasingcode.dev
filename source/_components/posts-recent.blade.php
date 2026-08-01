@@ -13,7 +13,7 @@
 
     <div class="flex flex-col gap-4">
         @foreach ($posts as $post)
-            <x-post-recent :post="$post" displayUpdatedDate />
+            <x-post-recent :post="$post" :displayUpdatedDate="$displayUpdatedDate" />
         @endforeach
     </div>
 </div>
