@@ -23,6 +23,7 @@ This list is relatively short because I follow the principle "avoid packages unt
 
 * [livewire/livewire](https://github.com/livewire/livewire) - Laravel Livewire.
 * [wire-elements/modal](https://github.com/wire-elements/modal) - Wire Elements Modal, a modal component for Laravel Livewire.
+* [laravel/head](https://github.com/laravel/head) - 1st party API for managing your application's document `<head>`.
 * [spatie/laravel-google-fonts](https://github.com/spatie/laravel-google-fonts) - Manage self-hosted Google Fonts in Laravel apps.
 * [spatie/laravel-backup](https://github.com/spatie/laravel-backup) - A modern backup solution for Laravel apps.
 * [opcodesio/log-viewer](https://github.com/opcodesio/log-viewer) - Easy-to-use, fast, and beautiful log viewer for Laravel apps.
@@ -49,6 +50,8 @@ This list is relatively short because I follow the principle "avoid packages unt
 * [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork) - PHP tools in your browser. Dev-only package. Unmaintained since 2024, may not be relevant anymore in 2026.
 
 ## My packages
+
+**Note** I haven't updated these in a long time so there's a good chance that they won't work with modern PHP.
 
 * [breadthe/php-simple-calendar](https://github.com/breadthe/php-simple-calendar) - Generate a 7 x 6 (42) or 7 x 5 (35) element array of the days of the month for any date in PHP.
 * [breadthe/laravel-silent-spam-filter](https://github.com/breadthe/laravel-silent-spam-filter) - Silently ignore messages submitted via contact forms in Laravel.
